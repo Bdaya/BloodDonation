@@ -1,0 +1,174 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-04-20 19:25:31 +0200
+Served asset /rails.png - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-04-20 19:28:05 +0200
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/donors" for 127.0.0.1 at 2014-04-20 19:28:09 +0200
+Processing by DonorsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3027ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=donors selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.1353ms)
+  Rendered donors/index.html.erb within layouts/application (6.4ms)
+Warning. Error encountered while saving cache /home/ahmedzaleh/Websites/ROR/BloodDonation/tmp/cache/sass/e7835d03ce6f1129626fcfe6d9bb3b9005c4bfb2/donors.css.scssc: can't dump anonymous class #<Class:0x00000004485518>
+Compiled donors.css  (38ms)  (pid 3040)
+Warning. Error encountered while saving cache /home/ahmedzaleh/Websites/ROR/BloodDonation/tmp/cache/sass/e7835d03ce6f1129626fcfe6d9bb3b9005c4bfb2/scaffolds.css.scssc: can't dump anonymous class #<Class:0x00000004485518>
+Compiled scaffolds.css  (8ms)  (pid 3040)
+Compiled application.css  (72ms)  (pid 3040)
+Compiled jquery.js  (4ms)  (pid 3040)
+Compiled jquery_ujs.js  (0ms)  (pid 3040)
+Compiled donors.js  (195ms)  (pid 3040)
+Compiled application.js  (259ms)  (pid 3040)
+Completed 200 OK in 437ms (Views: 436.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:10 +0200
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:10 +0200
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:10 +0200
+Served asset /jquery.js - 200 OK (8ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:10 +0200
+Served asset /donors.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:10 +0200
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:10 +0200
+Served asset /donors.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:10 +0200
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/donors/new" for 127.0.0.1 at 2014-04-20 19:28:12 +0200
+Processing by DonorsController#new as HTML
+  Rendered donors/_form.html.erb (49.7ms)
+  Rendered donors/new.html.erb within layouts/application (104.3ms)
+Completed 200 OK in 114ms (Views: 113.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:12 +0200
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:12 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:12 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:12 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:12 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:12 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:12 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/donors" for 127.0.0.1 at 2014-04-20 19:28:49 +0200
+Processing by DonorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9UeBt2pnOMSVz/x94RrCMvOgnMoRvaG+bcypU6Zrk4w=", "donor"=>{"name"=>"ahmed", "age"=>"19", "blood_type"=>"A+", "email"=>"example@domain.com", "password"=>"[FILTERED]", "phone_number"=>"01111111111", "latitude"=>"15", "longitude"=>"18"}, "commit"=>"Create Donor"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1878ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=donors documents=[{"_id"=>"535403d1960f42c893000001", "name"=>"ahmed", "age"=>19, "blood_type"=>"A+", "email"=>"example@domain.com", "password"=>"12345678", "phone_number"=>1111111111, "latitude"=>"15", "longitude"=>"18"}] flags=[] (0.2425ms)
+Redirected to http://0.0.0.0:3000/donors/535403d1960f42c893000001
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/donors/535403d1960f42c893000001" for 127.0.0.1 at 2014-04-20 19:28:49 +0200
+Processing by DonorsController#show as HTML
+  Parameters: {"id"=>"535403d1960f42c893000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=donors selector={"_id"=>"535403d1960f42c893000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3841ms)
+  Rendered donors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:49 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:49 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:49 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:49 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:49 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:49 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:49 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/donors" for 127.0.0.1 at 2014-04-20 19:28:52 +0200
+Processing by DonorsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1244ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=donors selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4811ms)
+  Rendered donors/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 23ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:52 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:52 +0200
+Served asset /donors.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:52 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-20 19:28:52 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:52 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-20 19:28:52 +0200
+Served asset /application.js - 304 Not Modified (0ms)
