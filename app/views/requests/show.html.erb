@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Patient name:</b>
+  <%= @request.patient_name %>
+</p>
+
+<p>
+  <b>Contact name:</b>
+  <%= @request.contact_name %>
+</p>
+
+<p>
+  <b>National:</b>
+  <%= @request.national_id %>
+</p>
+
+<p>
+  <b>Blood type:</b>
+  <%= @request.blood_type %>
+</p>
+
+<p>
+  <b>Req type:</b>
+  <%= @request.req_type %>
+</p>
+
+<p>
+  <b>Due date:</b>
+  <%= @request.due_date %>
+</p>
+
+<p>
+  <b>Hospital adress:</b>
+  <%= @request.hospital_adress %>
+</p>
+
+<p>
+  <b>Hospital phone:</b>
+  <%= @request.hospital_phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @request.email %>
+</p>
+
+<p>
+  <b>Blood bags:</b>
+  <%= @request.blood_bags %>
+</p>
+
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
