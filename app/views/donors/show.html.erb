@@ -40,6 +40,24 @@
   <%= @donor.longitude %>
 </p>
 
+<p>
+  <b>Availablity:</b>
+  <%= @donor.is_available %>
+</p>
+
+<p>
+  <b>Can Donate:</b>
+  <%= @donor.can_donate %>
+</p>
+
+<p>
+  <b>Lives Saved:</b>
+  <%= @donor.no_of_donates %>
+</p>
+
+<p>
+  <b>Trophies:</b>
+  <%= @trophies_txt %></p>
 
 <%= link_to 'Edit', edit_donor_path(@donor) %> |
 <%= link_to 'Back', donors_path %>

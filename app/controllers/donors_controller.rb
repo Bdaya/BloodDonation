@@ -15,10 +15,20 @@ class DonorsController < ApplicationController
   def show
     @donor = Donor.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @donor }
+
+    @donor.no_of_trophies = @donor.no_of_donates/2
+    if @donor.no_of_trophies == 0
+      @trophies_txt = "You Have NOT Started Yet :)"
+    else
+      @trophies_txt = "Great, You Have #{@donor.no_of_trophies} Trophies."
     end
+
+
+    
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.json { render json: @donor }
+    # end
   end
 
   # GET /donors/new
