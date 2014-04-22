@@ -1,4 +1,16 @@
 BloodDonation::Application.routes.draw do
+  devise_for :admins
+
+  devise_for :users
+
+  resources :users do 
+   collection do
+     get 'home'
+    end
+  end
+
+  root :to  => "users#home"
+  #map.root :controller => "users"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
