@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @donor.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @donor.age %>
+</p>
+
+<p>
+  <b>Blood type:</b>
+  <%= @donor.blood_type %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @donor.email %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @donor.password %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @donor.phone_number %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @donor.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @donor.longitude %>
+</p>
+
+<p>
+  <b>Availablity:</b>
+  <%= @donor.is_available %>
+</p>
+
+<p>
+  <b>Can Donate:</b>
+  <%= @donor.can_donate %>
+</p>
+
+<p>
+  <b>Lives Saved:</b>
+  <%= @donor.no_of_donates %>
+</p>
+
+<p>
+  <b>Trophies:</b>
+  <%= @trophies_txt %></p>
+
+<%= link_to 'Edit', edit_donor_path(@donor) %> |
+<%= link_to 'Back', donors_path %>
