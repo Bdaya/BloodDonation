@@ -1,0 +1,41 @@
+<h1>Listing requests</h1>
+
+<table>
+  <tr>
+    <th>Patient name</th>
+    <th>Contact name</th>
+    <th>National</th>
+    <th>Blood type</th>
+    <th>Req type</th>
+    <th>Due date</th>
+    <th>Hospital adress</th>
+    <th>Hospital phone</th>
+    <th>Email</th>
+    <th>Blood bags</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @requests.each do |request| %>
+  <tr>
+    <td><%= request.patient_name %></td>
+    <td><%= request.contact_name %></td>
+    <td><%= request.national_id %></td>
+    <td><%= request.blood_type %></td>
+    <td><%= request.req_type %></td>
+    <td><%= request.due_date %></td>
+    <td><%= request.hospital_adress %></td>
+    <td><%= request.hospital_phone %></td>
+    <td><%= request.email %></td>
+    <td><%= request.blood_bags %></td>
+    <td><%= link_to 'Show', request %></td>
+    <td><%= link_to 'Edit', edit_request_path(request) %></td>
+    <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Request', new_request_path %>
