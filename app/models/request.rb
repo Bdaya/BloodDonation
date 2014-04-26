@@ -38,4 +38,8 @@ class Request
   validates_presence_of :email, :message=> "Must enter your email!"
 
   field :blood_bags, type: Integer
+
+
+  has_many :replies, clas_name: 'Reply' , inverse_of: :request
+  
 end
