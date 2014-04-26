@@ -38,6 +38,8 @@ class User
   
   field :blood_type, type: String
   field :age , type: Integer
+  field :latitude, type: String
+  field :longitude, type: String
   validates_presence_of :phone, :message=> "Must enter your Age!"
   field :ID , type: String
   validates_presence_of :ID, :message=> "Must enter your ID!"
@@ -53,6 +55,8 @@ class User
   
   #  is_available is for the user to choose whether to toggle his availibilty button or NOT
   field :is_available, type: Boolean, default: true
+  #  here,, a user can only donate once in every 3 months (taqreeban)
+  field :can_donate, type: Boolean, default: true
   #  here,, a user can only donate once in every 3 months (taqreeban)
   ## Confirmable
   # field :confirmation_token,   type: String

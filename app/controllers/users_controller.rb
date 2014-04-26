@@ -84,7 +84,7 @@ class UsersController < ApplicationController
   def my_requests
     @user = User.find(params[:id])
     @requests = Request.all
-    if @user.is_available 
+    if (@user.is_available && @user.can_donate) 
       @requests = Request.where(blood_type: @user.blood_type)
        
     end
