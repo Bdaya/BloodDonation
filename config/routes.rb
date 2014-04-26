@@ -15,7 +15,7 @@ BloodDonation::Application.routes.draw do
   resources :requests
 
 
-  resources :donors
+  resources :users
 
 
 

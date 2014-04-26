@@ -1,5 +1,63 @@
 <p id="notice"><%= notice %></p>
-<h>ana aho </h>
 
-<%= link_to 'Edit', edit_user_path(@user) %> 
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
 
+<p>
+  <b>Age:</b>
+  <%= @user.age %>
+</p>
+
+<p>
+  <b>Blood type:</b>
+  <%= @user.blood_type %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @user.password %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @user.phone_number %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @user.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @user.longitude %>
+</p>
+
+<p>
+  <b>Availablity:</b>
+  <%= @user.is_available %>
+</p>
+
+<p>
+  <b>Can Donate:</b>
+  <%= @user.can_donate %>
+</p>
+
+<p>
+  <b>Lives Saved:</b>
+  <%= @user.no_of_donates %>
+</p>
+
+<p>
+  <b>Trophies:</b>
+  <%= @trophies_txt %></p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
