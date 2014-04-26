@@ -59,5 +59,7 @@
   <b>Trophies:</b>
   <%= @trophies_txt %></p>
 
+  
+<%= button_to 'My requests' , my_requests_user_path(@user) %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

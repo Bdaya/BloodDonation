@@ -105,4 +105,17 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def my_requests
+    @user = User.find(params[:id])
+    @requests = Request.all
+    if @user.is_available 
+      @requests = Request.where(blood_type: @user.blood_type)
+       
+    end
+  end
+
+  def home
+   
+  end  
 end

@@ -20,12 +20,24 @@
     <%= f.text_field :contact_name %>
   </div>
   <div class="field">
+    <%= f.label :contact_phone_number %><br />
+    <%= f.text_field :contact_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
     <%= f.label :national_id %><br />
     <%= f.text_field :national_id %>
   </div>
-  <div class="field">
-    <%= f.label :blood_type %><br />
-    <%= f.text_field :blood_type %>
+ <div class="field">
+    <%= f.label :Blood_type %><br> 
+    <%= f.select :blood_type, options_for_select(["Select Blood type",["A+","A+"],["A-","A-"],
+                                                ["B+","B+"],["B-","B-"],
+                                                ["O+","O+"],["O-","O-"],
+                                                ["AB+","AB+"],["AB-","AB-"]],@request) %>
+                                                
   </div>
   <div class="field">
     <%= f.label :req_type %><br />
@@ -36,16 +48,16 @@
     <%= f.text_field :due_date %>
   </div>
   <div class="field">
-    <%= f.label :hospital_adress %><br />
-    <%= f.text_field :hospital_adress %>
+    <%= f.label :hospital_name %><br />
+    <%= f.text_field :hospital_name %>
+  </div>
+  <div class="field">
+    <%= f.label :hospital_address %><br />
+    <%= f.text_field :hospital_address %>
   </div>
   <div class="field">
     <%= f.label :hospital_phone %><br />
     <%= f.text_field :hospital_phone %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
   </div>
   <div class="field">
     <%= f.label :blood_bags %><br />

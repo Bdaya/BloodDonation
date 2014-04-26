@@ -6,8 +6,11 @@ BloodDonation::Application.routes.draw do
 
   resources :users do 
    collection do
-     get 'home'
+     get "home"
     end
+    member do
+     post "my_requests"
+    end  
   end
 
   root :to  => "users#home"
