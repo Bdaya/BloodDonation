@@ -1,0 +1,22 @@
+<h>My Requests </h>
+
+<% if !@requests.empty? %>
+<table border=1>
+ <tr>
+  <th>Case Type</th>
+  <th>Due Date</th>
+  <th>Contact person name </th>
+  <th>Contact person number </th>
+  <th>Blood type </th>
+ </tr> 
+ <% @requests.each do |r| %>
+  <tr>
+   <td><%= r.req_type %></td>
+   <td><%= r.due_date %></td>
+   <td><%= r.contact_name %></td>
+   <td><%= r.contact_phone%></td>
+   <td><%= r.blood_type%></td> 
+  </tr> 
+ <%end%>
+</table>
+<%end%> 

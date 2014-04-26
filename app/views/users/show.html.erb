@@ -1,5 +1,35 @@
 <p id="notice"><%= notice %></p>
-<h>ana aho </h>
 
-<%= link_to 'Edit', edit_user_path(@user) %> 
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
 
+<p>
+  <b>Age:</b>
+  <%= @user.age %>
+</p>
+
+<p>
+  <b>Blood type:</b>
+  <%= @user.blood_type %>
+</p>
+
+<p>
+  <b>Availablity:</b>
+  <%= @user.is_available %>
+</p>
+
+<p>
+  <b>Lives Saved:</b>
+  <%= @user.no_of_donates %>
+</p>
+
+<p>
+  <b>Trophies:</b>
+  <%= @trophies_txt %></p>
+
+  
+<%= button_to 'My requests' , my_requests_user_path(@user) %>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
