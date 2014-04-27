@@ -7,7 +7,7 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :phone,:ID, :email, :password, :password_confirmation, :remember_me , :blood_type , :age
+  attr_accessible :name, :phone,:ID, :email, :password, :password_confirmation, :remember_me , :blood_type ,:age
 
   ## Database authenticatable
   field :email,              type: String, default: ""
@@ -37,10 +37,10 @@ class User
   validates_uniqueness_of :phone, :message=> "This mobile number is already associated with another user!"
   
   field :blood_type, type: String
-  field :age , type: Integer
   field :latitude, type: String
   field :longitude, type: String
-  validates_presence_of :phone, :message=> "Must enter your Age!"
+  field :age , type: Integer
+  validates_presence_of :age, :message=> "Must enter your Age!"
   field :ID , type: String
   validates_presence_of :ID, :message=> "Must enter your ID!"
   field :state , type: Boolean , default: true
@@ -69,5 +69,7 @@ class User
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
 
+
   has_many :replies, class_name: 'Reply' , inverse_of: :replies
+
 end

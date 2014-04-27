@@ -14,11 +14,20 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @user }
+    @user.no_of_trophies = @user.no_of_donates/2
+    if @user.no_of_trophies == 0
+      @trophies_txt = "You Have NOT Started Yet :)"
+    else
+      @trophies_txt = "Great, You Have #{@user.no_of_trophies} Trophies."
     end
+
+
+    
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.json { render json: @user }
+    # end
+
   end
 
   # GET /users/new
@@ -44,7 +53,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user, notice: 'Donor was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }

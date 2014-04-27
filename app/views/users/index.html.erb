@@ -1,7 +1,15 @@
 <h1>Listing users</h1>
 
-<table>
+<table border="1">
   <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Blood type</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Phone number</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
     <th></th>
     <th></th>
     <th></th>
@@ -9,6 +17,14 @@
 
 <% @users.each do |user| %>
   <tr>
+    <td><%= user.name %></td>
+    <td><%= user.age %></td>
+    <td><%= user.blood_type %></td>
+    <td><%= user.email %></td>
+    <td><%= user.password %></td>
+    <td><%= user.phone %></td>
+    <td><%= user.latitude %></td>
+    <td><%= user.longitude %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -17,3 +33,7 @@
 </table>
 
 <br />
+
+
+<%= link_to 'New Donor', new_user_path %>
+

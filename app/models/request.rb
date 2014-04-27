@@ -5,7 +5,7 @@ class Request
   validates_presence_of :patient_name, :message=> "Must enter the patient name!"
 
   field :contact_name, type: String
-  validates_presence_of :contact_phone, :message=> "Must enter the contact name!"
+  validates_presence_of :contact_name, :message=> "Must enter the contact name!"
   
   field :contact_phone, type: String
   validates_presence_of :contact_phone, :message=> "Must enter your Mobile number!"
@@ -23,7 +23,7 @@ class Request
   
   field :req_type, type: String
   
-  field :due_date, type: String
+  field :due_date, type: Date
   #validates_presence_of :due_date, :message=> "Must enter the due date!"
 
   field :hospital_name, type: String
