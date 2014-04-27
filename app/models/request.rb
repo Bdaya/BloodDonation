@@ -40,6 +40,6 @@ class Request
   field :blood_bags, type: Integer
 
 
-  has_many :replies, clas_name: 'Reply' , inverse_of: :request
+  has_many :replies, class_name: 'Reply' , inverse_of: :request
   
 end
