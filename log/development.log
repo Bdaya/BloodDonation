@@ -7144,3 +7144,511 @@ Served asset /requests.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 16:58:33 +0200
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/donors" for 127.0.0.1 at 2014-04-30 08:58:31 +0200
+
+ActionController::RoutingError (No route matches [GET] "/donors"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (18.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-30 08:58:34 +0200
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (1.0ms)
+Warning. Error encountered while saving cache /home/ahmedzaleh/Websites/ROR/BloodDonation/tmp/cache/sass/e7835d03ce6f1129626fcfe6d9bb3b9005c4bfb2/users.css.scssc: can't dump anonymous class #<Class:0x00000004075bd0>
+Compiled users.css  (61ms)  (pid 3266)
+Compiled application.css  (89ms)  (pid 3266)
+Compiled users.js  (220ms)  (pid 3266)
+Compiled application.js  (231ms)  (pid 3266)
+Completed 200 OK in 633ms (Views: 632.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-30 08:58:35 +0200
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-04-30 08:58:35 +0200
+Served asset /donors.css - 200 OK (2ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-04-30 08:58:35 +0200
+Served asset /requests.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-30 08:58:35 +0200
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:35 +0200
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-30 08:58:35 +0200
+Served asset /users.css - 200 OK (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:35 +0200
+Served asset /donors.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:35 +0200
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:35 +0200
+Served asset /requests.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:35 +0200
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:35 +0200
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-30 08:58:44 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0796ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (47.6389ms)
+  Rendered users/index.html.erb within layouts/application (90.3ms)
+Completed 500 Internal Server Error in 122ms
+
+ActionView::Template::Error (undefined method `phone_number' for #<User:0x007f35c432e5c8>):
+    31:     <td><%= user.blood_type %></td>
+    32:     <td><%= user.email %></td>
+    33:     <td><%= user.password %></td>
+    34:     <td><%= user.phone_number %></td>
+    35:     <td><%= user.latitude %></td>
+    36:     <td><%= user.longitude %></td>
+    37: >>>>>>> master
+  app/views/users/index.html.erb:34:in `block in _app_views_users_index_html_erb__4402098341405589711_44555780'
+  app/views/users/index.html.erb:25:in `_app_views_users_index_html_erb__4402098341405589711_44555780'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2014-04-30 08:58:47 +0200
+
+ActionController::RoutingError (No route matches [GET] "/user"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started POST "/requests/new" for 127.0.0.1 at 2014-04-30 08:58:53 +0200
+
+ActionController::RoutingError (No route matches [POST] "/requests/new"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (97.1ms)
+Completed 200 OK in 131ms (Views: 129.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-30 08:58:55 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2014-04-30 08:59:39 +0200
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-30 08:59:58 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6459ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3905ms)
+  Rendered users/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `phone_number' for #<User:0x007f35b810cc10>):
+    31:     <td><%= user.blood_type %></td>
+    32:     <td><%= user.email %></td>
+    33:     <td><%= user.password %></td>
+    34:     <td><%= user.phone_number %></td>
+    35:     <td><%= user.latitude %></td>
+    36:     <td><%= user.longitude %></td>
+    37: >>>>>>> master
+  app/views/users/index.html.erb:34:in `block in _app_views_users_index_html_erb__4402098341405589711_44555780'
+  app/views/users/index.html.erb:25:in `_app_views_users_index_html_erb__4402098341405589711_44555780'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-30 09:01:24 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6812ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3500ms)
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `phone_number' for #<User:0x007f35b82ac980>):
+    23:     <td><%= user.blood_type %></td>
+    24:     <td><%= user.email %></td>
+    25:     <td><%= user.password %></td>
+    26:     <td><%= user.phone_number %></td>
+    27:     <td><%= user.latitude %></td>
+    28:     <td><%= user.longitude %></td>
+    29:     <td><%= link_to 'Show', user %></td>
+  app/views/users/index.html.erb:26:in `block in _app_views_users_index_html_erb__4402098341405589711_69934349777640'
+  app/views/users/index.html.erb:19:in `_app_views_users_index_html_erb__4402098341405589711_69934349777640'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-30 09:01:44 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4809ms)
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `number' for #<User:0x000000044ab920>):
+    23:     <td><%= user.blood_type %></td>
+    24:     <td><%= user.email %></td>
+    25:     <td><%= user.password %></td>
+    26:     <td><%= user.number %></td>
+    27:     <td><%= user.latitude %></td>
+    28:     <td><%= user.longitude %></td>
+    29:     <td><%= link_to 'Show', user %></td>
+  app/views/users/index.html.erb:26:in `block in _app_views_users_index_html_erb__4402098341405589711_69934247871080'
+  app/views/users/index.html.erb:19:in `_app_views_users_index_html_erb__4402098341405589711_69934247871080'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6306ms)
+  Rendered users/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 26ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-30 09:01:58 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5352f544960f42f7fa000001" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5352f544960f42f7fa000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7310ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5352f544960f42f7fa000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2542ms)
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:02 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/5352f544960f42f7fa000001/my_requests" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Processing by UsersController#my_requests as HTML
+  Parameters: {"authenticity_token"=>"+4rl0v/SN0JdhVxyFzOVm3Iu9Qs3MryJoYOiWUNVuVE=", "id"=>"5352f544960f42f7fa000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7005ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5352f544960f42f7fa000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2930ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"blood_type"=>"F"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.5033ms)
+  Rendered users/my_requests.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 84ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Served asset /donors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Served asset /requests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-30 09:02:06 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/new" for 127.0.0.1 at 2014-04-30 09:02:16 +0200
+
+ActionController::RoutingError (No route matches [POST] "/requests/new"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+Connecting to database specified by database.yml
