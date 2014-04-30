@@ -1,5 +1,0 @@
-<p id="notice"><%= notice %></p>
-<h>ana aho </h>
-
-<%= link_to 'Edit', edit_user_path(@user) %> 
-

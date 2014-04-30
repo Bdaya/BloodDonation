@@ -19,14 +19,13 @@ class UsersController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @user }
     end
-
     @user.no_of_trophies = @user.no_of_donates/2
     if @user.no_of_trophies == 0
       @trophies_txt = "You Have NOT Started Yet :)"
     else
       @trophies_txt = "Great, You Have #{@user.no_of_trophies} Trophies."
-    end
   end
+end
 
   # GET /users/new
   # GET /users/new.json
@@ -91,13 +90,11 @@ class UsersController < ApplicationController
   def my_requests
     @user = User.find(params[:id])
     @requests = Request.all
-    if @user.is_available 
+    if (@user.is_available && @user.can_donate) 
       @requests = Request.where(blood_type: @user.blood_type)
-       
     end
   end
 
   def home
-   
   end  
 end
