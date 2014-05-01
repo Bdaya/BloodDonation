@@ -7,7 +7,7 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :phone,:ID, :email, :password, :password_confirmation, :remember_me , :blood_type , :age
+  attr_accessible :name, :phone,:ID, :email, :password, :password_confirmation, :remember_me , :blood_type ,:age
 
   ## Database authenticatable
   field :email, type: String, default: ""
@@ -37,23 +37,28 @@ class User
   validates_uniqueness_of :phone, :message=> "This mobile number is already associated with another user!"
   
   field :blood_type, type: String
+  field :latitude, type: String
+  field :longitude, type: String
   field :age , type: Integer
-  validates_presence_of :phone, :message=> "Must enter your Age!"
+  validates_presence_of :age, :message=> "Must enter your Age!"
   field :ID , type: String
   validates_presence_of :ID, :message=> "Must enter your ID!"
   field :state , type: Boolean , default: true
  
-  # how many times this user REALLY donated through the system
+
+  #  how many times this user REALLY donated through the system
   field :no_of_donates, type: Integer, default: 0
 
-  # this is to denote trophies level (say 2 trophies = level 1)
-  field :no_of_trophies, type: Integer, default: 0
-  # and this one is to denote the type of the tropy (say level 2 = silver star)
-  field :trophies_level, type: Integer, default: 0
+  #  this is to denote trophies level (say 2 trophies = level 1)
+  field :no_of_trophies, type: Integer, default: 0  
+  #  and this one is to denote the type of the tropy (say level 2 = silver star)
+  field :trophies_level, type: Integer, default: 0  
   
-  # is_available is for the user to choose whether to toggle his availibilty button or NOT
+  #  is_available is for the user to choose whether to toggle his availibilty button or NOT
   field :is_available, type: Boolean, default: true
-  # here,, a user can only donate once in every 3 months (taqreeban)
+  #  here,, a user can only donate once in every 3 months (taqreeban)
+  field :can_donate, type: Boolean, default: true
+  #  here,, a user can only donate once in every 3 months (taqreeban)
   ## Confirmable
   # field :confirmation_token, type: String
   # field :confirmed_at, type: Time
@@ -62,6 +67,11 @@ class User
 
   ## Lockable
   # field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
-  # field :unlock_token, type: String # Only if unlock strategy is :email or :both
-  # field :locked_at, type: Time
+
+  # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
+  # field :locked_at,       type: Time
+
+
+  has_many :replies, class_name: 'Reply' , inverse_of: :replies
+
 end
