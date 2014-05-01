@@ -14,7 +14,6 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
@@ -89,14 +88,14 @@ class UsersController < ApplicationController
        
     end
   end
-def reply_on_request()
+def reply_on_request
     @user = User.find(params[:id])
     @request=Request.find([:request_id])
     @reply = Reply.new
-    reply.Creator = @user
+    reply.user = @user
     reply.request = @request
     @reply.save
-  def home
-   
-  end
+ end   
+ def home 
+ end
 end

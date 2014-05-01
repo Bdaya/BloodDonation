@@ -4,19 +4,21 @@ BloodDonation::Application.routes.draw do
 
   devise_for :users
 
-  resources :users do 
+  resources :users do
    collection do
-     get 'home'
+     get "home"
+    end
+    member do
+     post "my_requests"
     end
   end
 
-  root :to  => "users#home"
+  root :to => "users#home"
 
   resources :requests
 
 
-  resources :donors
-
+  resources :users
 
 
   # The priority is based upon order of creation:
