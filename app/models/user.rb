@@ -74,4 +74,5 @@ class User
 
   has_many :replies, class_name: 'Reply' , inverse_of: :replies
 
+  has_many :locations, inverse_of: :user_location
 end
