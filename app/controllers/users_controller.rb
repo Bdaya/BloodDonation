@@ -80,4 +80,23 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def my_requests
+    @user = User.find(params[:id])
+    @requests = Request.all
+    if @user.is_available
+      @requests = Request.where(blood_type: @user.blood_type)
+       
+    end
+  end
+def reply_on_request()
+    @user = User.find(params[:id])
+    @request=Request.find([:request_id])
+    @reply = Reply.new
+    reply.Creator = @user
+    reply.request = @request
+    @reply.save
+  def home
+   
+  end
 end
