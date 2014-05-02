@@ -16,7 +16,7 @@
    <td><%= r.contact_name %></td>
    <td><%= r.contact_phone%></td>
    <td><%= r.blood_type%></td> 
-  </tr> 
+   <td><%= button_to 'Confirm',reply_on_request_user_path(@user,:request_id =>r.id, method: :post)%> </td>  </tr> 
  <%end%>
 </table>
 <%end%> 

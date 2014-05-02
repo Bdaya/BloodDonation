@@ -24,8 +24,8 @@ class UsersController < ApplicationController
       @trophies_txt = "You Have NOT Started Yet :)"
     else
       @trophies_txt = "Great, You Have #{@user.no_of_trophies} Trophies."
+    end
   end
-end
 
   # GET /users/new
   # GET /users/new.json
@@ -90,11 +90,29 @@ end
   def my_requests
     @user = User.find(params[:id])
     @requests = Request.all
+
     if (@user.is_available && @user.can_donate) 
       @requests = Request.where(blood_type: @user.blood_type)
     end
   end
 
-  def home
+  def reply_on_request
+    @user = User.find(params[:id])
+    @request=Request.find(params[:request_id])
+    @reply = Reply.new
+    @reply.user = @user
+    @reply.request = @request
+    @reply.is_confirmed=true
+    @reply.save
+
+    if (@reply.save)
+     @request.number_of_replies+=1
+     @request.save
+     redirect_to @user, :notice => "Request is confirmed"
+    end
   end  
+
+ def home 
+ end
+ 
 end
