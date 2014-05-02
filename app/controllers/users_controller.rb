@@ -15,11 +15,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @user }
-    end
-
     if @user.last_donated != nil
       @donation_date_txt = @user.last_donated.strftime("%Y-%m-%d")
     else
@@ -31,6 +26,10 @@ class UsersController < ApplicationController
       @trophies_txt = "You Have NOT Started Yet :)"
     else
       @trophies_txt = "Great, You Have #{@user.no_of_trophies} Trophies."
+    end
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @user }
     end
   end
 

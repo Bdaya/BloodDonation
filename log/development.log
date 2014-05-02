@@ -31841,3 +31841,2162 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 17:40:46 +0200
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started POST "/requests/new" for 127.0.0.1 at 2014-05-02 17:55:27 +0200
+
+ActionController::RoutingError (No route matches [POST] "/requests/new"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (17.7ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Processing by RequestsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (17.8769ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2439ms)
+  Rendered requests/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Served asset /requests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:34 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/requests/new" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Processing by RequestsController#new as HTML
+  Rendered requests/_form.html.erb (34.2ms)
+  Rendered requests/new.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 17:55:35 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HPWsRbou4OUynbTLRe7Ahl8asI+g7pVwSmVUjaRAYxk=", "request"=>{"patient_name"=>"Ahmed Saleh Mohamed", "contact_name"=>"Ahmed Saleh Mohamed", "contact_phone"=>"01115228310", "email"=>"ana.mareed.nafsy@rehab.com", "national_id"=>"00000000000000", "blood_type"=>"A+", "req_type"=>"Rehabilation", "due_date"=>"12/05/2014", "hospital_name"=>"psychiatrist", "hospital_address"=>"here and there", "hospital_phone"=>"00000000055", "blood_bags"=>"7"}, "commit"=>"Create Request"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6597ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"contact_phone"=>"01115228310"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2615ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"national_id"=>"00000000000000"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2017ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=requests documents=[{"_id"=>"5363c03d960f42171b000001", "number_of_replies"=>0, "state"=>"Not confirmed", "patient_name"=>"Ahmed Saleh Mohamed", "contact_name"=>"Ahmed Saleh Mohamed", "contact_phone"=>"01115228310", "email"=>"ana.mareed.nafsy@rehab.com", "national_id"=>"00000000000000", "blood_type"=>"A+", "req_type"=>"Rehabilation", "due_date"=>2014-05-12 00:00:00 UTC, "hospital_name"=>"psychiatrist", "hospital_address"=>"here and there", "hospital_phone"=>"00000000055", "blood_bags"=>7, "reply_is_confirmed"=>false}] flags=[] (0.1895ms)
+Redirected to http://0.0.0.0:3000/requests/5363c03d960f42171b000001
+Completed 302 Found in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/5363c03d960f42171b000001" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"5363c03d960f42171b000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5363c03d960f42171b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3254ms)
+  Rendered requests/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:45 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Processing by RequestsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5379ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2608ms)
+  Rendered requests/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:47 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/requests/new" for 127.0.0.1 at 2014-05-02 17:56:49 +0200
+Processing by RequestsController#new as HTML
+  Rendered requests/_form.html.erb (5.7ms)
+  Rendered requests/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:50 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:50 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:50 +0200
+Served asset /requests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:50 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 17:56:50 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:50 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:50 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:50 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:50 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:50 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 17:56:50 +0200
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HPWsRbou4OUynbTLRe7Ahl8asI+g7pVwSmVUjaRAYxk=", "request"=>{"patient_name"=>"mareed", "contact_name"=>"sa7eb el mareed", "contact_phone"=>"01115228210", "email"=>"mareed.mareed@domain.com", "national_id"=>"00000000000002", "blood_type"=>"A+", "req_type"=>"3ayez dam", "due_date"=>"10/5/2015", "hospital_name"=>"moshtashfa", "hospital_address"=>"fi maasr OOm el donia", "hospital_phone"=>"00000000010", "blood_bags"=>"5"}, "commit"=>"Create Request"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6387ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"contact_phone"=>"01115228210"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3271ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"national_id"=>"00000000000002"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2148ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=requests documents=[{"_id"=>"5363c063960f426410000002", "number_of_replies"=>0, "state"=>"Not confirmed", "patient_name"=>"mareed", "contact_name"=>"sa7eb el mareed", "contact_phone"=>"01115228210", "email"=>"mareed.mareed@domain.com", "national_id"=>"00000000000002", "blood_type"=>"A+", "req_type"=>"3ayez dam", "due_date"=>2015-05-10 00:00:00 UTC, "hospital_name"=>"moshtashfa", "hospital_address"=>"fi maasr OOm el donia", "hospital_phone"=>"00000000010", "blood_bags"=>5, "reply_is_confirmed"=>false}] flags=[] (0.1647ms)
+Redirected to http://0.0.0.0:3000/requests/5363c063960f426410000002
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/5363c063960f426410000002" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"5363c063960f426410000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5363c063960f426410000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2880ms)
+  Rendered requests/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:23 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Processing by RequestsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4687ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3240ms)
+  Rendered requests/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Served asset /requests.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:25 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/requests/new" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Processing by RequestsController#new as HTML
+  Rendered requests/_form.html.erb (4.3ms)
+  Rendered requests/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 17:57:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HPWsRbou4OUynbTLRe7Ahl8asI+g7pVwSmVUjaRAYxk=", "request"=>{"patient_name"=>"Ta3baan", "contact_name"=>"sa7eb el ta3baan", "contact_phone"=>"01115228218", "email"=>"ta3baan@domain.com", "national_id"=>"00000000000001", "blood_type"=>"B+", "req_type"=>"ma 2olna Ta3baan", "due_date"=>"12/1/2015", "hospital_name"=>"El galaa' lel welada", "hospital_address"=>"henak hena", "hospital_phone"=>"00000000009", "blood_bags"=>"1"}, "commit"=>"Create Request"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5963ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"contact_phone"=>"01115228218"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2630ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"national_id"=>"00000000000001"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.1960ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=requests documents=[{"_id"=>"5363c091960f422a85000003", "number_of_replies"=>0, "state"=>"Not confirmed", "patient_name"=>"Ta3baan", "contact_name"=>"sa7eb el ta3baan", "contact_phone"=>"01115228218", "email"=>"ta3baan@domain.com", "national_id"=>"00000000000001", "blood_type"=>"B+", "req_type"=>"ma 2olna Ta3baan", "due_date"=>2015-01-12 00:00:00 UTC, "hospital_name"=>"El galaa' lel welada", "hospital_address"=>"henak hena", "hospital_phone"=>"00000000009", "blood_bags"=>1, "reply_is_confirmed"=>false}] flags=[] (0.1428ms)
+Redirected to http://0.0.0.0:3000/requests/5363c091960f422a85000003
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/5363c091960f422a85000003" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"5363c091960f422a85000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5363c091960f422a85000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3099ms)
+  Rendered requests/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:09 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2014-05-02 17:58:12 +0200
+Processing by RequestsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5560ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5565ms)
+  Rendered requests/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 17:58:13 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 17:58:13 +0200
+Served asset /donors.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 17:58:13 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 17:58:13 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 17:58:13 +0200
+Served asset /users.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:13 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:13 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:13 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:13 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:13 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 17:58:13 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-02 18:02:51 +0200
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/home/ahmedzaleh/Websites/ROR/BloodDonation/app/models/user.rb:61: syntax error, unexpected '\n', expecting tASSOC):
+  activesupport (3.2.13) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:554:in `get'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:588:in `constantize'
+  devise (3.2.4) lib/devise.rb:297:in `get'
+  devise (3.2.4) lib/devise/mapping.rb:77:in `to'
+  devise (3.2.4) lib/devise/strategies/rememberable.rb:44:in `remember_key'
+  devise (3.2.4) lib/devise/strategies/rememberable.rb:48:in `remember_cookie'
+  devise (3.2.4) lib/devise/strategies/rememberable.rb:13:in `valid?'
+  warden (1.2.3) lib/warden/proxy.rb:351:in `block in _run_strategies_for'
+  warden (1.2.3) lib/warden/proxy.rb:349:in `each'
+  warden (1.2.3) lib/warden/proxy.rb:349:in `_run_strategies_for'
+  warden (1.2.3) lib/warden/proxy.rb:319:in `_perform_authentication'
+  warden (1.2.3) lib/warden/proxy.rb:104:in `authenticate'
+  warden (1.2.3) lib/warden/proxy.rb:114:in `authenticate?'
+  devise (3.2.4) app/controllers/devise_controller.rb:103:in `require_no_authentication'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:407:in `_run__3707326944698896766__process_action__88198927422935512__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/mapper.rb:42:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__4006611969167473467__call__2085335668359097811__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-02 18:03:14 +0200
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/home/ahmedzaleh/Websites/ROR/BloodDonation/app/models/user.rb:61: syntax error, unexpected '='
+  field :last_donated, type: Integer, default: = 0
+                                                ^):
+  activesupport (3.2.13) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:554:in `get'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:588:in `constantize'
+  devise (3.2.4) lib/devise.rb:297:in `get'
+  devise (3.2.4) lib/devise/mapping.rb:77:in `to'
+  devise (3.2.4) lib/devise/strategies/rememberable.rb:44:in `remember_key'
+  devise (3.2.4) lib/devise/strategies/rememberable.rb:48:in `remember_cookie'
+  devise (3.2.4) lib/devise/strategies/rememberable.rb:13:in `valid?'
+  warden (1.2.3) lib/warden/proxy.rb:351:in `block in _run_strategies_for'
+  warden (1.2.3) lib/warden/proxy.rb:349:in `each'
+  warden (1.2.3) lib/warden/proxy.rb:349:in `_run_strategies_for'
+  warden (1.2.3) lib/warden/proxy.rb:319:in `_perform_authentication'
+  warden (1.2.3) lib/warden/proxy.rb:104:in `authenticate'
+  warden (1.2.3) lib/warden/proxy.rb:114:in `authenticate?'
+  devise (3.2.4) app/controllers/devise_controller.rb:103:in `require_no_authentication'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:407:in `_run__3707326944698896766__process_action__88198927422935512__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/mapper.rb:42:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__4006611969167473467__call__2085335668359097811__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/ahmedzaleh/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 54ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:03:21 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-05-02 18:03:47 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HPWsRbou4OUynbTLRe7Ahl8asI+g7pVwSmVUjaRAYxk=", "user"=>{"name"=>"Leila", "email"=>"Leila@domain.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "ID"=>"012345678910133", "age"=>"22", "phone"=>"01049668772", "blood_type"=>"A+"}, "commit"=>"Sign up"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6342ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"email"=>"leila@domain.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2465ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"phone"=>"01049668772"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.1750ms)
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=users documents=[{"_id"=>"5363c1e4960f42e19d000004", "email"=>"leila@domain.com", "encrypted_password"=>"$2a$10$ab1vT62VY7y/Rxv52sUylOoIvGNzQtklt2xyAs3LuCoXDv9FNj2pS", "sign_in_count"=>0, "state"=>true, "no_of_donates"=>0, "no_of_trophies"=>0, "trophies_level"=>0, "is_available"=>true, "can_donate"=>true, "last_donated"=>0, "name"=>"Leila", "ID"=>"012345678910133", "age"=>22, "phone"=>"01049668772", "blood_type"=>"A+", "updated_at"=>2014-05-02 16:03:48 UTC, "created_at"=>2014-05-02 16:03:48 UTC}] flags=[] (0.1397ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} update={"$set"=>{"last_sign_in_at"=>2014-05-02 16:03:48 UTC, "current_sign_in_at"=>2014-05-02 16:03:48 UTC, "last_sign_in_ip"=>"127.0.0.1", "current_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>1, "updated_at"=>2014-05-02 16:03:48 UTC}} flags=[] (0.0913ms)
+Redirected to http://0.0.0.0:3000/users/5363c1e4960f42e19d000004
+Completed 302 Found in 123ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:03:48 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3595ms)
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3257ms)
+Completed 500 Internal Server Error in 20ms
+
+NoMethodError (undefined method `strftime' for 0:Fixnum):
+  app/controllers/users_controller.rb:24:in `show'
+
+
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/ahmedzaleh/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5019ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2561ms)
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3846ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Served asset /donors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:04:20 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:07:44 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5281ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2298ms)
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3712ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:07:45 +0200
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:07:45 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:07:45 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:07:45 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:07:45 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:07:45 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:07:45 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:07:45 +0200
+Served asset /donors.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:07:45 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:07:45 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:07:45 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6330ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3362ms)
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3560ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:12 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5352ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3111ms)
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5126ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:13 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6142ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3350ms)
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4504ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /requests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4506ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2527ms)
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4153ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /donors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:08:14 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4961ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2964ms)
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3822ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:13 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5140ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2503ms)
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3703ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4740ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2029ms)
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3650ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:14 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4830ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2248ms)
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3483ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5009ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2823ms)
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4139ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /donors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /requests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:15 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5238ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2961ms)
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4041ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:09:52 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c1e4960f42e19d000004" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c1e4960f42e19d000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5264ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c1e4960f42e19d000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3126ms)
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3903ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Served asset /donors.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:10:37 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5639ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2434ms)
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2933ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Served asset /requests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:11:06 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-05-02 18:14:31 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6440ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.1876ms)
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c1e4960f42e19d000004"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2487ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:32 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:32 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:32 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:32 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:32 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:32 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:32 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:32 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:32 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:32 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:32 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Served asset /donors.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HPWsRbou4OUynbTLRe7Ahl8asI+g7pVwSmVUjaRAYxk=", "user"=>{"name"=>"Leila", "email"=>"Leila@domain.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "ID"=>"012345678910111", "age"=>"22", "phone"=>"01049668772", "blood_type"=>"A+"}, "commit"=>"Sign up"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6056ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"email"=>"leila@domain.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2913ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"phone"=>"01049668772"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2263ms)
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=users documents=[{"_id"=>"5363c47e960f427f18000005", "email"=>"leila@domain.com", "encrypted_password"=>"$2a$10$9D9jNqyFrjiTsZ6c2fkqMuz/10Ra/uf6DnfQfvO2Kwo/BYbKMF0Sq", "sign_in_count"=>0, "state"=>true, "no_of_donates"=>0, "no_of_trophies"=>0, "trophies_level"=>0, "is_available"=>true, "can_donate"=>true, "name"=>"Leila", "ID"=>"012345678910111", "age"=>22, "phone"=>"01049668772", "blood_type"=>"A+", "updated_at"=>2014-05-02 16:14:54 UTC, "created_at"=>2014-05-02 16:14:54 UTC}] flags=[] (0.1471ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=blood_donation_development collection=users selector={"_id"=>"5363c47e960f427f18000005"} update={"$set"=>{"last_sign_in_at"=>2014-05-02 16:14:54 UTC, "current_sign_in_at"=>2014-05-02 16:14:54 UTC, "last_sign_in_ip"=>"127.0.0.1", "current_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>1, "updated_at"=>2014-05-02 16:14:54 UTC}} flags=[] (0.0894ms)
+Redirected to http://0.0.0.0:3000/users/5363c47e960f427f18000005
+Completed 302 Found in 119ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/5363c47e960f427f18000005" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c47e960f427f18000005"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c47e960f427f18000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4117ms)
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c47e960f427f18000005"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3579ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:54 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5271ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3562ms)
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c47e960f427f18000005"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4184ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Served asset /donors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:14:58 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c47e960f427f18000005" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c47e960f427f18000005"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6669ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c47e960f427f18000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3412ms)
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c47e960f427f18000005"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4165ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:10 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/5363c47e960f427f18000005/my_requests" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Processing by UsersController#my_requests as HTML
+  Parameters: {"authenticity_token"=>"HPWsRbou4OUynbTLRe7Ahl8asI+g7pVwSmVUjaRAYxk=", "id"=>"5363c47e960f427f18000005"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5901ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c47e960f427f18000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2627ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4790ms)
+  Rendered users/my_requests.html.erb within layouts/application (1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c47e960f427f18000005"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4010ms)
+Completed 200 OK in 36ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:46 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/users/5363c47e960f427f18000005/reply_on_request?method=post&request_id=5363c03d960f42171b000001" for 127.0.0.1 at 2014-05-02 18:15:48 +0200
+Processing by UsersController#reply_on_request as HTML
+  Parameters: {"authenticity_token"=>"HPWsRbou4OUynbTLRe7Ahl8asI+g7pVwSmVUjaRAYxk=", "method"=>"post", "request_id"=>"5363c03d960f42171b000001", "id"=>"5363c47e960f427f18000005"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6890ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c47e960f427f18000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3827ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5363c03d960f42171b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3283ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=replies documents=[{"_id"=>"5363c4b4960f424469000006", "is_confirmed"=>true, "user_id"=>"5363c47e960f427f18000005", "request_id"=>"5363c03d960f42171b000001", "updated_at"=>2014-05-02 16:15:48 UTC, "created_at"=>2014-05-02 16:15:48 UTC}] flags=[] (0.1073ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=blood_donation_development collection=requests selector={"_id"=>"5363c03d960f42171b000001"} update={"$set"=>{"number_of_replies"=>1, "state"=>"pending", "reply_is_confirmed"=>true}} flags=[] (0.1233ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=blood_donation_development collection=users selector={"_id"=>"5363c47e960f427f18000005"} update={"$set"=>{"can_donate"=>false, "last_donated"=>2014-05-02 16:15:48 UTC, "no_of_donates"=>1, "updated_at"=>2014-05-02 16:15:48 UTC}} flags=[] (0.0939ms)
+Redirected to http://0.0.0.0:3000/users/5363c47e960f427f18000005
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/5363c47e960f427f18000005" for 127.0.0.1 at 2014-05-02 18:15:48 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c47e960f427f18000005"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c47e960f427f18000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4480ms)
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c47e960f427f18000005"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4203ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:49 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:49 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:49 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:49 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:49 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:49 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:49 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:49 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:49 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:49 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:49 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/5363c47e960f427f18000005/my_requests" for 127.0.0.1 at 2014-05-02 18:15:52 +0200
+Processing by UsersController#my_requests as HTML
+  Parameters: {"authenticity_token"=>"HPWsRbou4OUynbTLRe7Ahl8asI+g7pVwSmVUjaRAYxk=", "id"=>"5363c47e960f427f18000005"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6533ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c47e960f427f18000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3128ms)
+  Rendered text template (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4840ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3760ms)
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c47e960f427f18000005"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4253ms)
+Completed 200 OK in 45ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Served asset /donors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/5363c47e960f427f18000005" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5363c47e960f427f18000005"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5348ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c47e960f427f18000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3281ms)
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5363c47e960f427f18000005"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3374ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 18:15:57 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/5363c47e960f427f18000005/my_requests" for 127.0.0.1 at 2014-05-02 18:15:59 +0200
+Processing by UsersController#my_requests as HTML
+  Parameters: {"authenticity_token"=>"HPWsRbou4OUynbTLRe7Ahl8asI+g7pVwSmVUjaRAYxk=", "id"=>"5363c47e960f427f18000005"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5965ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5363c47e960f427f18000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3474ms)
+  Rendered text template (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4416ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms)
