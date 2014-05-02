@@ -8469,6 +8469,7 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 16:58:33
 Served asset /application.js - 304 Not Modified (0ms)
 >>>>>>> ac22b26d38f25b66ed9d89d420d9fcf7ab9a4a6a
 Connecting to database specified by database.yml
+<<<<<<< HEAD
 
 
 Started GET "/" for 127.0.0.1 at 2014-05-02 01:23:07 +0100
@@ -8963,3 +8964,388 @@ ActionController::ActionControllerError (Cannot redirect to nil!):
   Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
   Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
   Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+=======
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2031ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3340ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4472ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4379ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4563ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4441ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4791ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4539ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4789ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5049ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6141ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (23.1616ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4071ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5020ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3731ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5051ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4069ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2980ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4589ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4732ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7481ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4670ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4069ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4920ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4637ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7521ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3471ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5309ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3931ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5717ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6310ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6630ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4269ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4799ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5762ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8640ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2550ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5998ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4548ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5709ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6639ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3499ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4358ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1981ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5571ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4520ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6184ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4846ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4200ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5290ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4720ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4460ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3211ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5421ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (22.0261ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3409ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3850ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3852ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4119ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4563ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1301ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5380ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4338ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1961ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2321ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2391ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5929ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9680ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4372ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4699ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4458ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4791ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3571ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5056ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1079ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4789ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3170ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3890ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3552ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3850ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5278ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3871ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5061ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4710ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4317ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4272ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5628ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3902ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3869ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4038ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4491ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6241ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4751ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6778ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5471ms)
+  MOPED: Retrying connection to primary for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2941ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362cc42565c016947000002", "location"=>[{:latitude=>1222.42, :longitude=>1233.4122}], "updated_at"=>2014-05-01 22:35:45 UTC, "created_at"=>2014-05-01 22:35:45 UTC}] flags=[] (0.1700ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362cc4b565c016947000003", "location"=>[{:latitude=>12131322.42, :longitude=>33.4122}], "updated_at"=>2014-05-01 22:35:55 UTC, "created_at"=>2014-05-01 22:35:55 UTC}] flags=[] (0.1853ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362cc52565c016947000004", "location"=>[{:latitude=>1212.42, :longitude=>3422424243.4122}], "updated_at"=>2014-05-01 22:36:02 UTC, "created_at"=>2014-05-01 22:36:02 UTC}] flags=[] (0.2041ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362cc54565c016947000005", "location"=>[{:latitude=>1212.42, :longitude=>34224243.4122}], "updated_at"=>2014-05-01 22:36:04 UTC, "created_at"=>2014-05-01 22:36:04 UTC}] flags=[] (0.2003ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362cc59565c016947000006", "location"=>[{:latitude=>121123122.42, :longitude=>34224243.4122}], "updated_at"=>2014-05-01 22:36:09 UTC, "created_at"=>2014-05-01 22:36:09 UTC}] flags=[] (0.1700ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$near"=>[{:latitude=>11.3, :longitude=>2444.2}]}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (11.6508ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$near"=>[{:latitude=>11.3, :longitude=>2444.2}]}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8149ms)
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5488ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5283ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362cdb3565c016947000007", "location"=>[{:latitude=>1212.42, :longitude=>34224243.4122}], "updated_at"=>2014-05-01 22:41:55 UTC, "created_at"=>2014-05-01 22:41:55 UTC}] flags=[] (0.2770ms)
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362cde2565c016947000008", "location"=>[{:latitude=>1212.42, :longitude=>34224243.4122}], "updated_at"=>2014-05-01 22:42:42 UTC, "created_at"=>2014-05-01 22:42:42 UTC}] flags=[] (0.2391ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362ce03565c016947000009", "location"=>[42.700149, -74.922767], "updated_at"=>2014-05-01 22:43:15 UTC, "created_at"=>2014-05-01 22:43:15 UTC}] flags=[] (0.2000ms)
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362ce14565c01694700000a", "location"=>[42.700149, -74.922767], "updated_at"=>2014-05-01 22:43:32 UTC, "created_at"=>2014-05-01 22:43:32 UTC}] flags=[] (0.1740ms)
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362ce76565c01694700000b", "location"=>[42.700149, -74.922767], "updated_at"=>2014-05-01 22:45:10 UTC, "created_at"=>2014-05-01 22:45:10 UTC}] flags=[] (0.2131ms)
+Creating scope :near. Overwriting existing method Location.near.
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4108ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362cfa9565c01694700000d", "location"=>[42.700149, -74.922767], "address"=>"Antarctica", "updated_at"=>2014-05-01 22:50:17 UTC, "created_at"=>2014-05-01 22:50:17 UTC}] flags=[] (0.1209ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4079ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d0da565c01694700000e", "location"=>[42.700149, -74.922], "address"=>"Antarctica", "updated_at"=>2014-05-01 22:55:22 UTC, "created_at"=>2014-05-01 22:55:22 UTC}] flags=[] (0.1299ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d0de565c01694700000f", "location"=>[42.700149, -100.922], "updated_at"=>2014-05-01 22:55:26 UTC, "created_at"=>2014-05-01 22:55:26 UTC}] flags=[] (0.1731ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d0e7565c016947000010", "location"=>[42.700149, -1.922], "updated_at"=>2014-05-01 22:55:35 UTC, "created_at"=>2014-05-01 22:55:35 UTC}] flags=[] (0.1619ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d0ec565c016947000011", "location"=>[4.700149, -1.922], "updated_at"=>2014-05-01 22:55:40 UTC, "created_at"=>2014-05-01 22:55:40 UTC}] flags=[] (0.1791ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d0f0565c016947000012", "location"=>[4.700149, -141.922], "updated_at"=>2014-05-01 22:55:44 UTC, "created_at"=>2014-05-01 22:55:44 UTC}] flags=[] (0.1361ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d13a565c016947000013", "location"=>[82.700866, 138.710938], "updated_at"=>2014-05-01 22:56:58 UTC, "created_at"=>2014-05-01 22:56:58 UTC}] flags=[] (0.1361ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d14c565c016947000014", "location"=>[82.700866, -13.710938], "updated_at"=>2014-05-01 22:57:16 UTC, "created_at"=>2014-05-01 22:57:16 UTC}] flags=[] (0.1700ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d150565c016947000015", "location"=>[8.700866, -13.710938], "updated_at"=>2014-05-01 22:57:20 UTC, "created_at"=>2014-05-01 22:57:20 UTC}] flags=[] (0.1810ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d155565c016947000016", "location"=>[811.700866, -13.710938], "updated_at"=>2014-05-01 22:57:25 UTC, "created_at"=>2014-05-01 22:57:25 UTC}] flags=[] (0.1779ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9561ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8128ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-13.710938, 811.700866], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0121ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-13.710938, 811.700866], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.7169ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-13.710938, 811.700866], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.7012ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7548ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=blood_donation_development command={:dropDatabase=>1} (17.9532ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8800ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d2fd565c0140e2000001", "location"=>[82.700866, -13.710938], "updated_at"=>2014-05-01 23:04:29 UTC, "created_at"=>2014-05-01 23:04:29 UTC}] flags=[] (0.1190ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d311565c0140e2000002", "location"=>[8.700866, -13.710938], "updated_at"=>2014-05-01 23:04:49 UTC, "created_at"=>2014-05-01 23:04:49 UTC}] flags=[] (0.1650ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d341565c0140e2000003", "location"=>[42.700149, -74.922], "address"=>"Antarctica", "updated_at"=>2014-05-01 23:05:37 UTC, "created_at"=>2014-05-01 23:05:37 UTC}] flags=[] (0.2060ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-13.710938, 811.700866], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9341ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8309ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=system.indexes documents=[{:min=>-180, :max=>180, :ns=>"blood_donation_development.locations", :key=>{:location=>"2d"}, :name=>"location_2d"}] flags=[] (0.0820ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6981ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-13.710938, 811.700866], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.1768ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d3ae565c016240000001", "location"=>[42.700149, -74.922], "address"=>"Antarctica", "updated_at"=>2014-05-01 23:07:26 UTC, "created_at"=>2014-05-01 23:07:26 UTC}] flags=[] (0.1752ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7343ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=blood_donation_development command={:dropDatabase=>1} (27.2887ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8001ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=system.indexes documents=[{:min=>-180, :max=>180, :ns=>"blood_donation_development.locations", :key=>{:location=>"2d"}, :name=>"location_2d"}] flags=[] (0.0811ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7830ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d3df565c012705000001", "location"=>[8.700866, -13.710938], "updated_at"=>2014-05-01 23:08:15 UTC, "created_at"=>2014-05-01 23:08:15 UTC}] flags=[] (0.1280ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d3e6565c012705000002", "location"=>[42.700149, -100.922], "updated_at"=>2014-05-01 23:08:22 UTC, "created_at"=>2014-05-01 23:08:22 UTC}] flags=[] (0.1638ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d3ea565c012705000003", "location"=>[43.700149, -100.922], "updated_at"=>2014-05-01 23:08:26 UTC, "created_at"=>2014-05-01 23:08:26 UTC}] flags=[] (0.2160ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d3ee565c012705000004", "location"=>[43.700149, -100.922], "updated_at"=>2014-05-01 23:08:30 UTC, "created_at"=>2014-05-01 23:08:30 UTC}] flags=[] (0.1700ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-13.710938, 811.700866], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9439ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-13.710938, 11.700866], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0760ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-100.922, 42.700149], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0810ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-100.922, 32.700149], "$maxDistance"=>0.025260461475666178}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8099ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-100.922, 32.700149], "$maxDistance"=>0.025260461475666178}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8140ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5670ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d468565c012705000005", "location"=>[43.700149, 100.922], "updated_at"=>2014-05-01 23:10:32 UTC, "created_at"=>2014-05-01 23:10:32 UTC}] flags=[] (0.1769ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d46d565c012705000006", "location"=>[43.700149, 10.922], "address"=>"Saylac, Somalia", "updated_at"=>2014-05-01 23:10:37 UTC, "created_at"=>2014-05-01 23:10:37 UTC}] flags=[] (0.1910ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d46f565c012705000007", "location"=>[43.700149, 11.922], "updated_at"=>2014-05-01 23:10:39 UTC, "created_at"=>2014-05-01 23:10:39 UTC}] flags=[] (0.1781ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d472565c012705000008", "location"=>[43.700149, 12.922], "address"=>"Lahij, Yemen", "updated_at"=>2014-05-01 23:10:42 UTC, "created_at"=>2014-05-01 23:10:42 UTC}] flags=[] (0.1748ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d475565c012705000009", "location"=>[43.700149, 13.922], "address"=>"طريق عزله المسيل، Branch Al Odain, Yemen", "updated_at"=>2014-05-01 23:10:45 UTC, "created_at"=>2014-05-01 23:10:45 UTC}] flags=[] (0.1779ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d479565c01270500000a", "location"=>[43.700149, 14.922], "address"=>"W901, Yemen", "updated_at"=>2014-05-01 23:10:49 UTC, "created_at"=>2014-05-01 23:10:49 UTC}] flags=[] (0.1709ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d47e565c01270500000b", "location"=>[43.700149, 15.922], "address"=>"Hajjah, Yemen", "updated_at"=>2014-05-01 23:10:54 UTC, "created_at"=>2014-05-01 23:10:54 UTC}] flags=[] (0.1757ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d484565c01270500000c", "location"=>[43.700149, 16.922], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:11:00 UTC, "created_at"=>2014-05-01 23:11:00 UTC}] flags=[] (0.1621ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d488565c01270500000d", "location"=>[43.700149, 17.922], "address"=>"66371, Saudi Arabia", "updated_at"=>2014-05-01 23:11:04 UTC, "created_at"=>2014-05-01 23:11:04 UTC}] flags=[] (0.1779ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-100.922, 32.700149], "$maxDistance"=>0.025260461475666178}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8261ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-100.922, 32.700149], "$maxDistance"=>25.260461475666176}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.1761ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[-10.922, 32.700149], "$maxDistance"=>25.260461475666176}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0099ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5760ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8240ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.7949ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8190ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8240ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.7820ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"_id"=>{:_id=>"5362d3e6565c012705000002"}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3760ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"_id"=>{:id=>"5362d3e6565c012705000002"}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3891ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"_id"=>{:id=>"5362d3e6565c012705000002"}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3700ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7160ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=blood_donation_development command={:dropDatabase=>1} (19.5980ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8080ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d6b9565c011d3a000001", "location"=>[43.700149, 17.922], "address"=>"66371, Saudi Arabia", "updated_at"=>2014-05-01 23:20:25 UTC, "created_at"=>2014-05-01 23:20:25 UTC}] flags=[] (0.1340ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d6bf565c011d3a000002", "location"=>[43.700149, 12.922], "address"=>"Lahij, Yemen", "updated_at"=>2014-05-01 23:20:31 UTC, "created_at"=>2014-05-01 23:20:31 UTC}] flags=[] (0.2391ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d6c2565c011d3a000003", "location"=>[43.700149, 15.922], "address"=>"Hajjah, Yemen", "updated_at"=>2014-05-01 23:20:34 UTC, "created_at"=>2014-05-01 23:20:34 UTC}] flags=[] (0.1652ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d6c5565c011d3a000004", "location"=>[43.700149, 16.922], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:20:37 UTC, "created_at"=>2014-05-01 23:20:37 UTC}] flags=[] (0.1829ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d6ca565c011d3a000005", "location"=>[43.700149, 26.922], "address"=>"6280 52618, Saudi Arabia", "updated_at"=>2014-05-01 23:20:42 UTC, "created_at"=>2014-05-01 23:20:42 UTC}] flags=[] (0.1769ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[26.922, 43.700149], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9041ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7770ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=system.indexes documents=[{:min=>-180, :max=>180, :ns=>"blood_donation_development.locations", :key=>{:location=>"2d"}, :name=>"location_2d"}] flags=[] (0.1023ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6979ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[26.922, 43.700149], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.7024ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[26.922, 43.700149], "$maxDistance"=>0.025260461475666178}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.4331ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.922, 43.700149], "$maxDistance"=>0.025260461475666178}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8891ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.922, 43.700149], "$maxDistance"=>2.5260461475666176}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8981ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.922, 43.700149], "$maxDistance"=>0.2526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8302ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d720565c01a329000001", "location"=>[43.700149, 16.921], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:22:08 UTC, "created_at"=>2014-05-01 23:22:08 UTC}] flags=[] (0.1652ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d723565c01a329000002", "location"=>[43.700149, 16.92], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:22:11 UTC, "created_at"=>2014-05-01 23:22:11 UTC}] flags=[] (0.1731ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d726565c01a329000003", "location"=>[43.700149, 16.91], "address"=>"N 1, Yemen", "updated_at"=>2014-05-01 23:22:14 UTC, "created_at"=>2014-05-01 23:22:14 UTC}] flags=[] (0.1781ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d728565c01a329000004", "location"=>[43.700149, 16.92], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:22:16 UTC, "created_at"=>2014-05-01 23:22:16 UTC}] flags=[] (0.1757ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d72a565c01a329000005", "location"=>[43.700149, 16.93], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:22:18 UTC, "created_at"=>2014-05-01 23:22:18 UTC}] flags=[] (0.1781ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.93, 43.700149], "$maxDistance"=>0.005052092295133236}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9506ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.93, 43.700149], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9530ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.93, 43.700149], "$maxDistance"=>0.025260461475666178}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0641ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.91, 43.700149], "$maxDistance"=>0.025260461475666178}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0433ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.91, 43.700149], "$maxDistance"=>0.2526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8252ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.91, 43.700149], "$maxDistance"=>2.5260461475666176}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0469ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d771565c01a329000006", "location"=>[43.700149, 16.930220000001], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:23:29 UTC, "created_at"=>2014-05-01 23:23:29 UTC}] flags=[] (0.1731ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d774565c01a329000007", "location"=>[43.700149, 16.930220000002], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:23:32 UTC, "created_at"=>2014-05-01 23:23:32 UTC}] flags=[] (0.1721ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d776565c01a329000008", "location"=>[43.700149, 16.930220000003], "address"=>"P 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:23:34 UTC, "created_at"=>2014-05-01 23:23:34 UTC}] flags=[] (0.1719ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d778565c01a329000009", "location"=>[43.700149, 16.930220000004], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:23:36 UTC, "created_at"=>2014-05-01 23:23:36 UTC}] flags=[] (0.1731ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d77b565c01a32900000a", "location"=>[43.700149, 16.930220000005], "address"=>"P 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:23:39 UTC, "created_at"=>2014-05-01 23:23:39 UTC}] flags=[] (0.1788ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d77d565c01a32900000b", "location"=>[43.700149, 16.930220000006], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:23:41 UTC, "created_at"=>2014-05-01 23:23:41 UTC}] flags=[] (0.1731ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d77f565c01a32900000c", "location"=>[43.700149, 16.930220000007], "address"=>"P 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:23:43 UTC, "created_at"=>2014-05-01 23:23:43 UTC}] flags=[] (0.1850ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.002526046147566618}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9778ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.012630230737833089}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0259ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.025260461475666178}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0428ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.025260461475666178}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0569ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.025260461475666178}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0433ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.025260461478472895}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0259ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>253.72718966464038}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.2519ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>2.537160750615911}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.2319ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.2536150332156884}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8419ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.2538676378304451}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8299ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.40543040668444214}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.1489ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7880ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=blood_donation_development command={:dropDatabase=>1} (19.8829ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6800ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d8ad565c01c47d000001", "location"=>[43.700149, 16.930220000006], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:28:45 UTC, "created_at"=>2014-05-01 23:28:45 UTC}] flags=[] (0.1070ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.40543040668444214}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9141ms)
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d908565c01c47d000002", "location"=>[43.700149, 16.930220000006], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:30:16 UTC, "created_at"=>2014-05-01 23:30:16 UTC}] flags=[] (0.2270ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.40543040668444214}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8631ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7150ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=blood_donation_development command={:dropDatabase=>1} (30.1390ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7219ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=locations documents=[{"_id"=>"5362d91c565c015c84000001", "location"=>[43.700149, 16.930220000006], "address"=>"N 1, Sa'dah, Yemen", "updated_at"=>2014-05-01 23:30:36 UTC, "created_at"=>2014-05-01 23:30:36 UTC}] flags=[] (0.1030ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=locations selector={"location"=>{"$nearSphere"=>[16.930220000007, 43.700149], "$maxDistance"=>0.40543040668444214}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9160ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8111ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=blood_donation_development command={:dropDatabase=>1} (20.6549ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8800ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=system.indexes documents=[{:min=>-180, :max=>180, :ns=>"blood_donation_development.locations", :key=>{:location=>"2d"}, :name=>"location_2d"}] flags=[] (0.0854ms)
+>>>>>>> aed625cf8c939b9146d797fcdcc3fb3a96894fd1
