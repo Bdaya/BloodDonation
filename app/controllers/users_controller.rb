@@ -19,6 +19,13 @@ class UsersController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @user }
     end
+
+    if @user.last_donated != nil
+      @donation_date_txt = @user.last_donated.strftime("%Y-%m-%d")
+    else
+      @donation_date_txt = "You Haven't Donated Yet"
+    end
+
     @user.no_of_trophies = @user.no_of_donates/2
     if @user.no_of_trophies == 0
       @trophies_txt = "You Have NOT Started Yet :)"
@@ -109,7 +116,14 @@ class UsersController < ApplicationController
     end
   end
 
-  def reply_on_request
+
+  def my_replies
+    @user = User.find(params[:id])
+    @replies = Reply.all.where(user: @user)
+  end
+
+def reply_on_request
+
     @user = User.find(params[:id])
     @request=Request.find(params[:request_id])
     @reply = Reply.new
@@ -117,15 +131,16 @@ class UsersController < ApplicationController
     @reply.request = @request
     @reply.is_confirmed=true
     @reply.save
-
+    
     if (@reply.save)
-     @request.number_of_replies += 1
-     @request.reply_is_confirmed = true
-     @request.save
-     @user.can_donate = false
-     @user.last_donated = (@reply.created_at)
-     @user.no_of_donates += 1
-     @user.save
+    @request.number_of_replies+=1
+    @request.state = "pending"
+    @request.reply_is_confirmed = true
+    @request.save
+    @user.can_donate = false
+    @user.last_donated = @reply.created_at
+    @user.no_of_donates += 1
+    @user.save
      redirect_to @user, :notice => "Request is confirmed"
     end
   end  

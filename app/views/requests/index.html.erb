@@ -13,6 +13,7 @@
     <th>Email</th>
     <th>Blood bags</th>
     <th>Number of replies</th>
+    <th>State</th>
 
     <th></th>
     <th></th>
@@ -32,6 +33,8 @@
     <td><%= request.email %></td>
     <td><%= request.blood_bags %></td>
     <td><%= request.number_of_replies %></td>
+    <td><%= request.state %></td>
+
     <td><%= link_to 'Show', request %></td>
     <td><%= link_to 'Edit', edit_request_path(request) %></td>
     <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,0 +1,27 @@
+<h>My activity </h>
+
+<% if !@replies.empty? %>
+<table border=3>
+ <tr>
+  <th> Patient name </th>
+  <th> Case type </th>
+  <th>Hospital address</th>
+  <th>Hospital phone </th>
+  <th>State </th>
+
+
+
+ </tr> 
+ <% @replies.each do |r| %>
+  <tr>
+    <td><%= r.request.patient_name%></td>
+     <td><%= r.request.req_type%></td>
+      <td><%= r.request.hospital_address%></td>
+      <td><%= r.request.hospital_phone%></td>
+      <td><%= r.request.state%></td>
+
+
+</tr>
+ <%end%>
+</table>
+<%end%> 

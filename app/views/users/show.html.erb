@@ -52,7 +52,7 @@
 
 <p>
   <b>Last Donated was At: </b>
-  <%= @user.last_donated.strftime("%Y-%m-%d") %>
+  <%= @donation_date_txt %>
 </p>
 
 <p>
@@ -66,5 +66,7 @@
 
   
 <%= button_to 'My requests' , my_requests_user_path(@user) %>
+<%= button_to 'Activity log' , my_replies_user_path(@user) %>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
