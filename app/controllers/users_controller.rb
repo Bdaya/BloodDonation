@@ -99,16 +99,23 @@ class UsersController < ApplicationController
 
 def reply_on_request
     @user = User.find(params[:id])
-    @request=Request.find([:request_id])
+    @request=Request.find(params[:request_id])
     @reply = Reply.new
-    reply.user = @user
-    reply.request = @request
+    @reply.user = @user
+    @reply.request = @request
+    @reply.is_confirmed=true
     @reply.save
+
     
-    if @reply.save
+    if (@reply.save)
+   @request.number_of_replies+=1
+   @request.save
      redirect_to @user, :notice => "Request is confirmed"
     end
- end   
+
+
+ end  
+
  def home 
  end
 end

@@ -9349,3 +9349,18 @@ Creating scope :near. Overwriting existing method Location.near.
   MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8800ms)
   MOPED: 127.0.0.1:27017 INSERT       database=blood_donation_development collection=system.indexes documents=[{:min=>-180, :max=>180, :ns=>"blood_donation_development.locations", :key=>{:location=>"2d"}, :name=>"location_2d"}] flags=[] (0.0854ms)
 >>>>>>> aed625cf8c939b9146d797fcdcc3fb3a96894fd1
+Connecting to database specified by database.yml
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8039ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8600ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8018ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9081ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7749ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8614ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"$query"=>{"_id"=>"53628d551d41c8e58a000002"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4315ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9327ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"$query"=>{"_id"=>"53628d551d41c8e58a000002"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6313ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6373ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8209ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"$query"=>{"_id"=>"53628d551d41c8e58a000002"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7205ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9222ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"$query"=>{"_id"=>"53628d551d41c8e58a000002"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6769ms)

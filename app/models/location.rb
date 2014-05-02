@@ -3,12 +3,12 @@ class Location
   include Mongoid::Timestamps
   include Geocoder::Model::Mongoid
 
-  ## Location
+   Location
   field :location, type: Array  # [latitude:float, longitude:float]
   field :address, type: String
   
   reverse_geocoded_by :location
-  after_validation :reverse_geocode  # auto-fetch ad
+  fter_validation :reverse_geocode  # auto-fetch ad
 
   belongs_to :user_location, class_name: 'User' , inverse_of: :locations
 

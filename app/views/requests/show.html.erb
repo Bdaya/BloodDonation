@@ -50,6 +50,10 @@
   <%= @request.blood_bags %>
 </p>
 
+<p>
+  <b>Number of replies on request:</b>
+  <%= @request.number_of_replies %>
+</p>
 
 <%= link_to 'Edit', edit_request_path(@request) %> |
 <%= link_to 'Back', requests_path %>
