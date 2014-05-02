@@ -6,12 +6,13 @@ BloodDonation::Application.routes.draw do
 
   resources :users do
    collection do
-     get "home"
+     get :home
     end
     member do
-     post "my_requests"
-     post "reply_on_request"
-     post "my_replies"
+     get :change_availability
+     post :my_requests
+     post :reply_on_request
+     post :my_replies
     end
   end
 

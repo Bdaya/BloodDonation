@@ -93,6 +93,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def change_availability
+    @user = User.find(params[:id])
+
+    if @user.is_available == true
+      @user.is_available = false
+    else
+      @user.is_available = true
+    end
+
+    if @user.save
+      redirect_to @user
+    end
+  end
+
   def my_requests
     @user = User.find(params[:id])
     @all_requests = Request.all
