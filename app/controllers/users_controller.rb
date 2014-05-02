@@ -107,11 +107,6 @@ class UsersController < ApplicationController
         @requests.push(r)
       end
     end
-    # if (@requests.reply_is_confirmed == false)
-    #   if (@user.is_available && @user.can_donate) 
-    #     @requests = Request.where(blood_type: @user.blood_type)
-    #   end
-    # end
   end
 
   def reply_on_request
