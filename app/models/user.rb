@@ -58,7 +58,7 @@ class User
   field :is_available, type: Boolean, default: true
   #  here,, a user can only donate once in every 3 months (taqreeban)
   field :can_donate, type: Boolean, default: true
-  #  here,, a user can only donate once in every 3 months (taqreeban)
+  field :last_donated, type: Time
   ## Confirmable
   # field :confirmation_token, type: String
   # field :confirmed_at, type: Time

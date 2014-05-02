@@ -51,6 +51,11 @@
 </p>
 
 <p>
+  <b>Last Donated was At: </b>
+  <%= @user.last_donated.strftime("%Y-%m-%d") %>
+</p>
+
+<p>
   <b>Lives Saved:</b>
   <%= @user.no_of_donates %>
 </p>

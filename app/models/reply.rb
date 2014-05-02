@@ -1,6 +1,7 @@
 class Reply
   include Mongoid::Document
-  
+  include Mongoid::Timestamps
+
   field :is_confirmed, type: Boolean, default: false
   field :requester_report , type: String
   field :donor_report , type: String

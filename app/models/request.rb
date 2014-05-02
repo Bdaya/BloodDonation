@@ -40,6 +40,8 @@ class Request
   field :blood_bags, type: Integer
   field :number_of_replies, type: Integer,default: 0
 
+  field :reply_is_confirmed, type: Boolean, default: false
+
 
   has_many :replies, class_name: 'Reply' , inverse_of: :request
 

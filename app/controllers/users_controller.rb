@@ -89,11 +89,29 @@ class UsersController < ApplicationController
 
   def my_requests
     @user = User.find(params[:id])
-    @requests = Request.all
+    @all_requests = Request.all
 
-    if (@user.is_available && @user.can_donate) 
-      @requests = Request.where(blood_type: @user.blood_type)
+    #  a user can donate once every 3 months (90 days)
+    if @user.last_donated != nil
+      time = ((Time.now - @user.last_donated)/(60*60*24)).to_i       
+      if (time > 90)
+        @user.can_donate = true
+      else
+        render(:text => "You cannot Donate now, You have #{90 - time} days left so you can donate OR You will Die :D")
+      end
     end
+
+    @requests = []
+    @all_requests.each do |r|          
+      if (@user.is_available && @user.can_donate && (r.blood_type == @user.blood_type) && !r.reply_is_confirmed) 
+        @requests.push(r)
+      end
+    end
+    # if (@requests.reply_is_confirmed == false)
+    #   if (@user.is_available && @user.can_donate) 
+    #     @requests = Request.where(blood_type: @user.blood_type)
+    #   end
+    # end
   end
 
   def reply_on_request
@@ -106,8 +124,13 @@ class UsersController < ApplicationController
     @reply.save
 
     if (@reply.save)
-     @request.number_of_replies+=1
+     @request.number_of_replies += 1
+     @request.reply_is_confirmed = true
      @request.save
+     @user.can_donate = false
+     @user.last_donated = (@reply.created_at)
+     @user.no_of_donates += 1
+     @user.save
      redirect_to @user, :notice => "Request is confirmed"
     end
   end  
