@@ -11,6 +11,7 @@ BloodDonation::Application.routes.draw do
     member do
      post "my_requests"
      post "reply_on_request"
+     post "my_replies"
     end
   end
 

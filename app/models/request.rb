@@ -39,9 +39,21 @@ class Request
 
   field :blood_bags, type: Integer
   field :number_of_replies, type: Integer,default: 0
+  field :state, type: String ,default: "Not confirmed"
 
 
   has_many :replies, class_name: 'Reply' , inverse_of: :request
 
-  
+ 
+  def self.get_users_on_replies
+    users = []
+    @replies = self.replies
+    replies.each do |p|
+      if(p.request==self)
+        users << p.user
+      end
+    end
+    return users
+  end
+
 end

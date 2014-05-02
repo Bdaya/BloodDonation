@@ -89,12 +89,18 @@ class UsersController < ApplicationController
 
   def my_requests
     @user = User.find(params[:id])
-    @requests = Request.all
-
+    @requests=Request.all
+  
     if (@user.is_available && @user.can_donate) 
+      
       @requests = Request.where(blood_type: @user.blood_type)
        
     end
+  end
+
+  def my_replies
+    @user = User.find(params[:id])
+    @replies = Reply.all.where(user: @user)
   end
 
 def reply_on_request
@@ -105,10 +111,9 @@ def reply_on_request
     @reply.request = @request
     @reply.is_confirmed=true
     @reply.save
-
-    
     if (@reply.save)
    @request.number_of_replies+=1
+   @request.state = "pending"
    @request.save
      redirect_to @user, :notice => "Request is confirmed"
     end
