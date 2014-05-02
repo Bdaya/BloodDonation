@@ -15,16 +15,16 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @user }
+    end
     @user.no_of_trophies = @user.no_of_donates/2
     if @user.no_of_trophies == 0
       @trophies_txt = "You Have NOT Started Yet :)"
     else
       @trophies_txt = "Great, You Have #{@user.no_of_trophies} Trophies."
     end
-
-
-  
-
   end
 
   # GET /users/new
@@ -66,7 +66,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to @user, notice: 'Donor was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -94,9 +94,9 @@ class UsersController < ApplicationController
     if (@user.is_available && @user.can_donate) 
       
       @requests = Request.where(blood_type: @user.blood_type)
-       
     end
   end
+
 
   def my_replies
     @user = User.find(params[:id])
@@ -104,6 +104,7 @@ class UsersController < ApplicationController
   end
 
 def reply_on_request
+
     @user = User.find(params[:id])
     @request=Request.find(params[:request_id])
     @reply = Reply.new
@@ -115,12 +116,12 @@ def reply_on_request
    @request.number_of_replies+=1
    @request.state = "pending"
    @request.save
+
      redirect_to @user, :notice => "Request is confirmed"
     end
-
-
- end  
+  end  
 
  def home 
  end
+ 
 end

@@ -1,6 +1,7 @@
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -44,7 +45,6 @@ class User
   field :ID , type: String
   validates_presence_of :ID, :message=> "Must enter your ID!"
   field :state , type: Boolean , default: true
- 
 
   #  how many times this user REALLY donated through the system
   field :no_of_donates, type: Integer, default: 0
@@ -70,8 +70,6 @@ class User
 
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
-
-
   has_many :replies, class_name: 'Reply' , inverse_of: :replies
 
   has_many :locations, inverse_of: :user_location

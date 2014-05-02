@@ -8,7 +8,7 @@ class Location
   field :address, type: String
   
   reverse_geocoded_by :location
-  fter_validation :reverse_geocode  # auto-fetch ad
+  after_validation :reverse_geocode  # auto-fetch ad
 
   belongs_to :user_location, class_name: 'User' , inverse_of: :locations
 
