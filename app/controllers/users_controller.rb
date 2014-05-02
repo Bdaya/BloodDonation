@@ -14,25 +14,16 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-<<<<<<< HEAD
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @user }
-=======
+
     @user.no_of_trophies = @user.no_of_donates/2
     if @user.no_of_trophies == 0
       @trophies_txt = "You Have NOT Started Yet :)"
     else
       @trophies_txt = "Great, You Have #{@user.no_of_trophies} Trophies."
->>>>>>> ac22b26d38f25b66ed9d89d420d9fcf7ab9a4a6a
     end
 
 
-    
-    # respond_to do |format|
-    #   format.html # show.html.erb
-    #   format.json { render json: @user }
-    # end
+  
 
   end
 
