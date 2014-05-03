@@ -18,7 +18,12 @@ BloodDonation::Application.routes.draw do
 
   root :to => "users#home"
 
-  resources :requests
+  resources :requests do
+    member do
+    post :confirm
+  end
+end
+
 
   resources :users
 

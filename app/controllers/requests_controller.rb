@@ -69,6 +69,24 @@ class RequestsController < ApplicationController
     end
   end
 
+def confirm 
+ @request = Request.find(params[:id])
+    @user=User.find(params[:user_id])
+    @reply= Reply.find(params[:reply_id])
+    @request.number_of_confirmed_users+=1
+        @reply.is_confirmed="true"
+         
+           @reply.save
+
+    if(@request.blood_bags==@request.number_of_confirmed_users)
+
+    @request.state="confirmed"
+      @request.save
+      redirect_to @request, :notice => "Request is confirmed"
+else redirect_to @request, :notice => "You confirmed a donor"
+
+end
+end
   # DELETE /requests/1
   # DELETE /requests/1.json
   def destroy

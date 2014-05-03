@@ -36743,3 +36743,2346 @@ Served asset /application.js - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
   MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7653ms)
   MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4013ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 20:55:13 +0100
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (3.3ms)
+Compiled application.js  (79ms)  (pid 10792)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7319ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.9814ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=blood_donation_development collection=users selector={"_id"=>"5362e6541d41c8f0be000001"} update={"$set"=>{"last_sign_in_at"=>2014-05-02 10:09:31 UTC, "current_sign_in_at"=>2014-05-03 19:55:14 UTC, "sign_in_count"=>4, "updated_at"=>2014-05-03 19:55:14 UTC}} flags=[] (0.1442ms)
+Completed 200 OK in 422ms (Views: 421.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:14 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:14 +0100
+Served asset /requests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:14 +0100
+Served asset /donors.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:14 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:14 +0100
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:14 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:14 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:14 +0100
+Served asset /donors.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:14 +0100
+Served asset /requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:14 +0100
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:14 +0100
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started POST "/requests/new" for 127.0.0.1 at 2014-05-03 20:55:18 +0100
+
+ActionController::RoutingError (No route matches [POST] "/requests/new"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/mayarelmohr/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/mayarelmohr/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/mayarelmohr/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/requests/new" for 127.0.0.1 at 2014-05-03 20:55:21 +0100
+Processing by RequestsController#new as HTML
+  Rendered requests/_form.html.erb (91.5ms)
+  Rendered requests/new.html.erb within layouts/application (118.4ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5577ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3350ms)
+Completed 200 OK in 137ms (Views: 136.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:22 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:22 +0100
+Served asset /donors.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:22 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:22 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:22 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:22 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:22 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:22 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:22 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:22 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:22 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Processing by RequestsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9243ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.3361ms)
+  Rendered requests/index.html.erb within layouts/application (21.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3548ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 20:55:32 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Processing by RequestsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5658ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0905ms)
+  Rendered requests/index.html.erb within layouts/application (13.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5479ms)
+Completed 200 OK in 54ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Served asset /requests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 21:15:16 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/requests/5351a4001d41c8f41b000001" for 127.0.0.1 at 2014-05-03 21:15:19 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"5351a4001d41c8f41b000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5355ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5351a4001d41c8f41b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2184ms)
+ERROR: compiling _app_views_requests_show_html_erb__1275798402678409289_70057762240180 RAISED /home/mayarelmohr/Desktop/BloodDonation/app/views/requests/show.html.erb:73: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/mayarelmohr/Desktop/BloodDonation/app/views/requests/show.html.erb:75: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_requests_show_html_erb__1275798402678409289_70057762240180(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "requests/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<p id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Patient name:</b>
+  ');@output_buffer.append= ( @request.patient_name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Contact name:</b>
+  ');@output_buffer.append= ( @request.contact_name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>National:</b>
+  ');@output_buffer.append= ( @request.national_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Blood type:</b>
+  ');@output_buffer.append= ( @request.blood_type );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Req type:</b>
+  ');@output_buffer.append= ( @request.req_type );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Due date:</b>
+  ');@output_buffer.append= ( @request.due_date );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Hospital address:</b>
+  ');@output_buffer.append= ( @request.hospital_address );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Hospital phone:</b>
+  ');@output_buffer.append= ( @request.hospital_phone );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Email:</b>
+  ');@output_buffer.append= ( @request.email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Blood bags:</b>
+  ');@output_buffer.append= ( @request.blood_bags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Donors who replied on the request</b>
+');   @replies=[] 
+      @replies = @request.get_users_who_replied 
+@output_buffer.safe_concat('
+
+');  if !@replies.empty? 
+ @replies.each do |r| 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( r.name );@output_buffer.safe_concat('
+');end
+@output_buffer.safe_concat('
+</p>
+<p>
+  <b>Current state of request:</b>
+  ');@output_buffer.append= ( @request.state );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+');@output_buffer.append= ( link_to 'Edit', edit_request_path(@request) );@output_buffer.safe_concat(' |
+');@output_buffer.append= ( link_to 'Back', requests_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `module_eval'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `compile'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/mayarelmohr/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/home/mayarelmohr/Desktop/BloodDonation/app/controllers/requests_controller.rb:18:in `show'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__1589643722490100479__process_action__2479962123913895213__callbacks'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/mongoid-3.1.6/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/mongoid-3.1.6/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/mongoid-3.1.6/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activerecord-3.2.13/lib/active_record/query_cache.rb:64:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__1490947834225141282__call__3281217118245686256__callbacks'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/railties-3.2.13/lib/rails/engine.rb:479:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/railties-3.2.13/lib/rails/application.rb:223:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/mayarelmohr/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/mayarelmohr/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/mayarelmohr/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered requests/show.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (/home/mayarelmohr/Desktop/BloodDonation/app/views/requests/show.html.erb:73: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/mayarelmohr/Desktop/BloodDonation/app/views/requests/show.html.erb:75: syntax error, unexpected $end, expecting keyword_end):
+    70: <%= link_to 'Edit', edit_request_path(@request) %> |
+    71: <%= link_to 'Back', requests_path %>
+  app/controllers/requests_controller.rb:18:in `show'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/requests/5351a4001d41c8f41b000001" for 127.0.0.1 at 2014-05-03 21:16:06 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"5351a4001d41c8f41b000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8142ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5351a4001d41c8f41b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3378ms)
+  Rendered requests/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `get_users_who_replied' for #<Request:0x007f6f1c4c7218>):
+    53: <p>
+    54:   <b>Donors who replied on the request</b>
+    55:   <% @replies=[] %>
+    56:      <% @replies = @request.get_users_who_replied %>
+    57: 
+    58: 
+    59:  <% if !@replies.empty? %>
+  app/views/requests/show.html.erb:56:in `_app_views_requests_show_html_erb__1275798402678409289_70057596429580'
+  app/controllers/requests_controller.rb:18:in `show'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.2ms)
+
+
+Started GET "/requests/5351a4001d41c8f41b000001" for 127.0.0.1 at 2014-05-03 21:40:46 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"5351a4001d41c8f41b000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6700ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5351a4001d41c8f41b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6225ms)
+  Rendered requests/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `getUsers' for #<Request:0x007f6f307f8e00>):
+    53: <p>
+    54:   <b>Donors who replied on the request</b>
+    55:   <% @replies=[] %>
+    56:      <% @replies = @request.getUsers %>
+    57: 
+    58: 
+    59:  <% if !@replies.empty? %>
+  app/views/requests/show.html.erb:56:in `_app_views_requests_show_html_erb__1275798402678409289_70057765891140'
+  app/controllers/requests_controller.rb:18:in `show'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 21:41:42 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6659ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6354ms)
+  Rendered requests/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `new' for #<Request:0x007f6f301bddb0>):
+    53: <p>
+    54:   <b>Donors who replied on the request</b>
+    55:   <% @replies=[] %>
+    56:      <% @replies = @request.new.getUsers %>
+    57: 
+    58: 
+    59:  <% if !@replies.empty? %>
+  app/views/requests/show.html.erb:56:in `_app_views_requests_show_html_erb__1275798402678409289_70057762142620'
+  app/controllers/requests_controller.rb:18:in `show'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/requests/5351a4001d41c8f41b000001" for 127.0.0.1 at 2014-05-03 21:44:33 +0100
+
+ActionController::RoutingError (undefined method `replies' for Request:Class):
+  app/models/request.rb:52:in `getUsers'
+  app/models/request.rb:60:in `<class:Request>'
+  app/models/request.rb:1:in `<top (required)>'
+  app/controllers/requests_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/requests/5353acd71d41c82a56000002" for 127.0.0.1 at 2014-05-03 21:45:05 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"5353acd71d41c82a56000002"}
+  Rendered requests/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `patient_name' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Patient name:</b>
+    5:   <%= @request.patient_name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/requests/show.html.erb:5:in `_app_views_requests_show_html_erb__1275798402678409289_70057560410280'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.5ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 21:45:43 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  Rendered requests/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `patient_name' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Patient name:</b>
+    5:   <%= @request.patient_name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/requests/show.html.erb:5:in `_app_views_requests_show_html_erb__1275798402678409289_70057560410280'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 21:46:37 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  Rendered requests/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `patient_name' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Patient name:</b>
+    5:   <%= @request.patient_name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/requests/show.html.erb:5:in `_app_views_requests_show_html_erb__1275798402678409289_70057765917040'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 21:47:07 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4532ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.1853ms)
+  Rendered requests/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `getUsers' for #<Request:0x007f6f20220218>):
+    53: <p>
+    54:   <b>Donors who replied on the request</b>
+    55:   <% @replies=[] %>
+    56:      <% @replies = @request.getUsers %>
+    57: 
+    58: 
+    59:  <% if !@replies.empty? %>
+  app/views/requests/show.html.erb:56:in `_app_views_requests_show_html_erb__1275798402678409289_70057628621240'
+  app/controllers/requests_controller.rb:18:in `show'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+Connecting to database specified by database.yml
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2574ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8154ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8130ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:09:55 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7241ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6855ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=blood_donation_development command={:count=>"replies", :query=>{"request_id"=>"53628d551d41c8e58a000002"}} (0.7014ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8688ms)
+  Rendered requests/show.html.erb within layouts/application (50.7ms)
+Completed 500 Internal Server Error in 59ms
+
+ActionView::Template::Error (undefined local variable or method `replies' for #<#<Class:0x007f6f2c00e680>:0x007f6f24017030>):
+    57:    <% @replies = @request.replies %>
+    58:     <%   if !@replies.empty? %>
+    59: 
+    60:     <% replies.each do |p| %>
+    61:         <%= p.user.name %>
+    62:      <%end%>
+    63: <% end %>
+  app/views/requests/show.html.erb:60:in `_app_views_requests_show_html_erb__1275798402678409289_70057661082620'
+  app/controllers/requests_controller.rb:18:in `show'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:11:30 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4983ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2482ms)
+  Rendered requests/show.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `Replies' for #<Request:0x007f6f3050d3a8>):
+    54:   <b>Donors who replied on the request</b>
+    55: 
+    56:  
+    57:    <% @replies = @request.Replies %>
+    58:     <%   if !@replies.empty? %>
+    59: 
+    60:     <% replies.each do |p| %>
+  app/views/requests/show.html.erb:57:in `_app_views_requests_show_html_erb__1275798402678409289_70057766327100'
+  app/controllers/requests_controller.rb:18:in `show'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:12:06 +0100
+
+SyntaxError (/home/mayarelmohr/Desktop/BloodDonation/app/models/request.rb:50: unterminated regexp meets end of file):
+  app/controllers/requests_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:12:36 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9329ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2422ms)
+  Rendered requests/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `Replies' for #<Request:0x000000055f9588>):
+    54:   <b>Donors who replied on the request</b>
+    55: 
+    56:  
+    57:    <% @replies = @request.Replies %>
+    58:     <%   if !@replies.empty? %>
+    59: 
+    60:     <% replies.each do |p| %>
+  app/views/requests/show.html.erb:57:in `_app_views_requests_show_html_erb__1275798402678409289_70057766327100'
+  app/controllers/requests_controller.rb:18:in `show'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:14:03 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5996ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2339ms)
+  Rendered requests/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `Reply' for #<Request:0x007f6f307610c8>):
+    54:   <b>Donors who replied on the request</b>
+    55: 
+    56:  
+    57:    <% @replies = @request.Reply %>
+    58:     <%   if !@replies.empty? %>
+    59: 
+    60:     <% replies.each do |p| %>
+  app/views/requests/show.html.erb:57:in `_app_views_requests_show_html_erb__1275798402678409289_70057766694440'
+  app/controllers/requests_controller.rb:18:in `show'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:15:32 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5465ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2086ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3426ms)
+  Rendered requests/show.html.erb within layouts/application (18.9ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined local variable or method `replies' for #<#<Class:0x000000055f7f80>:0x007f6f180289b8>):
+    58: 
+    59:     <%   if !@replies.empty? %>
+    60: 
+    61:     <% replies.each do |p| %>
+    62:         <%= p.user.name %>
+    63:      <%end%>
+    64: <% end %>
+  app/views/requests/show.html.erb:61:in `_app_views_requests_show_html_erb__1275798402678409289_70057560455720'
+  app/controllers/requests_controller.rb:18:in `show'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:16:09 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3602ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6223ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.5484ms)
+  Rendered requests/show.html.erb within layouts/application (45.6ms)
+Completed 500 Internal Server Error in 55ms
+
+ActionView::Template::Error (undefined local variable or method `replies' for #<#<Class:0x000000055f7f80>:0x007f6f202ce9a8>):
+    58: 
+    59:     <%   if !Reply.all.where(request: @request).empty? %>
+    60: 
+    61:     <% replies.each do |p| %>
+    62:         <%= p.user.name %>
+    63:      <%end%>
+    64: <% end %>
+  app/views/requests/show.html.erb:61:in `_app_views_requests_show_html_erb__1275798402678409289_70057628953280'
+  app/controllers/requests_controller.rb:18:in `show'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3607ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.5968ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.3604ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6292ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5400ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5324ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5240ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5245ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2453ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2081ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2592ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.1996ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.1957ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2761ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.1845ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.1836ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.1843ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.1984ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2713ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2677ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5364ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7393ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7064ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7253ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6936ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6747ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6585ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6690ms)
+  Rendered requests/show.html.erb within layouts/application (65.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5522ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:16:32 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Creating scope :near. Overwriting existing method Location.near.
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3556ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6871ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3817ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4976ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3328ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2878ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2937ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2437ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2542ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3216ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2604ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3221ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3006ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3917ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3896ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3703ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3116ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3984ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3984ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3943ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3936ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3893ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3185ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3321ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3917ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3893ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3994ms)
+  Rendered requests/show.html.erb within layouts/application (47.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4394ms)
+Completed 200 OK in 73ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Served asset /donors.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Served asset /scaffolds.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:38:21 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/53628d551d41c8e58a000002/confirm?method=post&reply_id=5362954b1d41c8ceaf000007&user_id=53628e891d41c80154000003" for 127.0.0.1 at 2014-05-03 22:38:25 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362954b1d41c8ceaf000007", "user_id"=>"53628e891d41c80154000003", "id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7739ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6623ms)
+Completed 500 Internal Server Error in 8ms
+
+NameError (undefined local variable or method `user' for #<RequestsController:0x007f6f3095d2f0>):
+  app/controllers/requests_controller.rb:74:in `confirm'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.1ms)
+
+
+Started POST "/requests/53628d551d41c8e58a000002/confirm?method=post&reply_id=5362954b1d41c8ceaf000007&user_id=53628e891d41c80154000003" for 127.0.0.1 at 2014-05-03 22:40:05 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362954b1d41c8ceaf000007", "user_id"=>"53628e891d41c80154000003", "id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6564ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3932ms)
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `user' for #<RequestsController:0x007f6f24049850>):
+  app/controllers/requests_controller.rb:74:in `confirm'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started POST "/requests/53628d551d41c8e58a000002/confirm?method=post&reply_id=5362954b1d41c8ceaf000007&user_id=53628e891d41c80154000003" for 127.0.0.1 at 2014-05-03 22:40:24 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362954b1d41c8ceaf000007", "user_id"=>"53628e891d41c80154000003", "id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5996ms)
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `user' for #<RequestsController:0x007f6f2020a940>):
+  app/controllers/requests_controller.rb:74:in `confirm'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.9ms)
+
+
+Started POST "/requests/53628d551d41c8e58a000002/confirm?method=post&reply_id=5362954b1d41c8ceaf000007&user_id=53628e891d41c80154000003" for 127.0.0.1 at 2014-05-03 22:41:45 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362954b1d41c8ceaf000007", "user_id"=>"53628e891d41c80154000003", "id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9718ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2065ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"53628e891d41c80154000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6349ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"5362954b1d41c8ceaf000007"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5167ms)
+Completed 500 Internal Server Error in 75ms
+
+ActionView::MissingTemplate (Missing template requests/confirm, application/confirm with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/home/mayarelmohr/Desktop/BloodDonation/app/views"
+  * "/home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/devise-3.2.4/app/views"
+):
+  actionpack (3.2.13) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.13) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.13) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.13) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/mayarelmohr/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:414:in `_run__1589643722490100479__process_action__1730462849545799967__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__1490947834225141282__call__3281217118245686256__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/mayarelmohr/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/mayarelmohr/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/mayarelmohr/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.1ms)
+
+
+Started POST "/requests/53628d551d41c8e58a000002/confirm?method=post&reply_id=5362954b1d41c8ceaf000007&user_id=53628e891d41c80154000003" for 127.0.0.1 at 2014-05-03 22:45:50 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362954b1d41c8ceaf000007", "user_id"=>"53628e891d41c80154000003", "id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6380ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6759ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"53628e891d41c80154000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4318ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"5362954b1d41c8ceaf000007"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2556ms)
+Redirected to http://localhost:3000/requests/53628d551d41c8e58a000002
+Completed 302 Found in 94ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9642ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.8783ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.3733ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7846ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8132ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8457ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5033ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4005ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3843ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2925ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2773ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2806ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2921ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3364ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2942ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2847ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3252ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2809ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2828ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3288ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2806ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2811ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3200ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2759ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2751ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2902ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2673ms)
+  Rendered requests/show.html.erb within layouts/application (52.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4089ms)
+Completed 200 OK in 78ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:45:51 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/53628d551d41c8e58a000002/confirm?method=post&reply_id=5362f2ee1d41c84c43000005&user_id=5362e6541d41c8f0be000001" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362f2ee1d41c84c43000005", "user_id"=>"5362e6541d41c8f0be000001", "id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4928ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2854ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5362e6541d41c8f0be000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2646ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"5362f2ee1d41c84c43000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2007ms)
+Redirected to http://localhost:3000/requests/53628d551d41c8e58a000002
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3748ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4780ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.4000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3698ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8974ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7522ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8495ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8430ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3395ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4058ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2601ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2663ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4027ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3786ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (38.1629ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3591ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4234ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3409ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2458ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7823ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6285ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5758ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5224ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6433ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5081ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3009ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4604ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3915ms)
+  Rendered requests/show.html.erb within layouts/application (96.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7205ms)
+Completed 200 OK in 122ms (Views: 121.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Served asset /requests.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:01 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/53628d551d41c8e58a000002/confirm?method=post&reply_id=5362f2ee1d41c84c43000005&user_id=5362e6541d41c8f0be000001" for 127.0.0.1 at 2014-05-03 22:46:10 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362f2ee1d41c84c43000005", "user_id"=>"5362e6541d41c8f0be000001", "id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0231ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6571ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5362e6541d41c8f0be000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5500ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"5362f2ee1d41c84c43000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5744ms)
+Redirected to http://localhost:3000/requests/53628d551d41c8e58a000002
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2964ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4890ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5102ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6132ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7379ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7899ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8132ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6599ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4721ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6847ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7386ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3099ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2890ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3080ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3376ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4218ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3951ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3633ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7064ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2644ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2136ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2074ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2217ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2527ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2756ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3219ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3667ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8473ms)
+  Rendered requests/show.html.erb within layouts/application (65.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3927ms)
+Completed 200 OK in 87ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:11 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/53628d551d41c8e58a000002/confirm?method=post&reply_id=5362970c1d41c8db6b000009&user_id=53628e891d41c80154000003" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362970c1d41c8db6b000009", "user_id"=>"53628e891d41c80154000003", "id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6988ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.1769ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"53628e891d41c80154000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.1879ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"5362970c1d41c8db6b000009"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.1388ms)
+Redirected to http://localhost:3000/requests/53628d551d41c8e58a000002
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/53628d551d41c8e58a000002" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53628d551d41c8e58a000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0052ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2787ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53628d551d41c8e58a000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.5197ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8402ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6020ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5872ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5798ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (40.9248ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3872ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2337ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7925ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3095ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3071ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3719ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2558ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5491ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5455ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5352ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5252ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5088ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3173ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2561ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3600ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5603ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2570ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4842ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4988ms)
+  Rendered requests/show.html.erb within layouts/application (93.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4733ms)
+Completed 200 OK in 123ms (Views: 119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Served asset /donors.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:46:14 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/requests/" for 127.0.0.1 at 2014-05-03 22:47:51 +0100
+Processing by RequestsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7071ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6716ms)
+  Rendered requests/index.html.erb within layouts/application (12.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5636ms)
+Completed 200 OK in 90ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:47:52 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:47:52 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:47:52 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:47:52 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:47:52 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:47:52 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:47:52 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:47:52 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:47:52 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:47:52 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:47:52 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7563ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6962ms)
+
+
+Started GET "/requests/5362ee911d41c854f2000002" for 127.0.0.1 at 2014-05-03 22:48:48 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"5362ee911d41c854f2000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6167ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5362ee911d41c854f2000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6628ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"5362ee911d41c854f2000002"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.5405ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"5362ee911d41c854f2000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4027ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7951ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8097ms)
+  Rendered requests/show.html.erb within layouts/application (31.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9298ms)
+Completed 200 OK in 99ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:48:49 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:48:49 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:48:49 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:48:49 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:48:49 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:48:49 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:48:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:48:49 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:48:49 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:48:49 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:48:49 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/5362ee911d41c854f2000002/confirm?method=post&reply_id=536377ea1d41c87f49000001&user_id=5362e6541d41c8f0be000001" for 127.0.0.1 at 2014-05-03 22:48:53 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"536377ea1d41c87f49000001", "user_id"=>"5362e6541d41c8f0be000001", "id"=>"5362ee911d41c854f2000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5879ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5362ee911d41c854f2000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2213ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5362e6541d41c8f0be000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2792ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"536377ea1d41c87f49000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2408ms)
+Redirected to http://localhost:3000/requests/5362ee911d41c854f2000002
+Redirected to 
+Completed 500 Internal Server Error in 6ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/requests_controller.rb:82:in `confirm'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0645ms)
+
+
+Started POST "/requests/5362ee911d41c854f2000002/confirm?method=post&reply_id=536377ea1d41c87f49000001&user_id=5362e6541d41c8f0be000001" for 127.0.0.1 at 2014-05-03 22:50:32 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"536377ea1d41c87f49000001", "user_id"=>"5362e6541d41c8f0be000001", "id"=>"5362ee911d41c854f2000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6332ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5362ee911d41c854f2000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5634ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5362e6541d41c8f0be000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5448ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"536377ea1d41c87f49000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3462ms)
+Redirected to http://localhost:3000/requests/5362ee911d41c854f2000002
+Redirected to 
+Completed 500 Internal Server Error in 84ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/requests_controller.rb:82:in `confirm'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5968ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"$query"=>{"_id"=>"53628d551d41c8e58a000002"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8790ms)
+
+
+Started POST "/requests/5362ee911d41c854f2000002/confirm?method=post&reply_id=536377ea1d41c87f49000001&user_id=5362e6541d41c8f0be000001" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"536377ea1d41c87f49000001", "user_id"=>"5362e6541d41c8f0be000001", "id"=>"5362ee911d41c854f2000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9987ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5362ee911d41c854f2000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.7603ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5362e6541d41c8f0be000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3831ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"536377ea1d41c87f49000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5031ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=blood_donation_development collection=replies selector={"_id"=>"536377ea1d41c87f49000001"} update={"$set"=>{"number_of_confirmed_users"=>1, "updated_at"=>2014-05-03 21:53:55 UTC}} flags=[] (0.3028ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=blood_donation_development collection=requests selector={"_id"=>"5362ee911d41c854f2000002"} update={"$set"=>{"reply_is_confirmed"=>false, "state"=>"confirmed"}} flags=[] (0.1104ms)
+Redirected to http://localhost:3000/requests/5362ee911d41c854f2000002
+Completed 302 Found in 52ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/5362ee911d41c854f2000002" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"5362ee911d41c854f2000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"5362ee911d41c854f2000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0452ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"5362ee911d41c854f2000002"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4160ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"5362ee911d41c854f2000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3047ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3126ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4215ms)
+  Rendered requests/show.html.erb within layouts/application (7.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3672ms)
+Completed 200 OK in 33ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Served asset /donors.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:53:55 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7291ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6504ms)
+
+
+Started GET "/requests/53629f411d41c80a3c000011" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6678ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5832ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.5820ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5007ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6595ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5841ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5503ms)
+  Rendered requests/show.html.erb within layouts/application (79.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4799ms)
+Completed 200 OK in 105ms (Views: 101.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:57:20 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/53629f411d41c80a3c000011/confirm?method=post&reply_id=5362a24d1d41c81b77000013&user_id=53628e891d41c80154000003" for 127.0.0.1 at 2014-05-03 22:57:26 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362a24d1d41c81b77000013", "user_id"=>"53628e891d41c80154000003", "id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5081ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2549ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"53628e891d41c80154000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3479ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"5362a24d1d41c81b77000013"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2227ms)
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `number_of_confirmed_users' for nil:NilClass):
+  app/controllers/requests_controller.rb:76:in `confirm'
+
+
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mayarelmohr/.rvm/gems/ruby-1.9.3-p484@gemset/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started POST "/requests/53629f411d41c80a3c000011/confirm?method=post&reply_id=5362a24d1d41c81b77000013&user_id=53628e891d41c80154000003" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362a24d1d41c81b77000013", "user_id"=>"53628e891d41c80154000003", "id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4671ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2120ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"53628e891d41c80154000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5665ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"5362a24d1d41c81b77000013"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3397ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=blood_donation_development collection=replies selector={"_id"=>"5362a24d1d41c81b77000013"} update={"$set"=>{"reply_is_confirmed"=>false, "updated_at"=>2014-05-03 21:58:50 UTC}} flags=[] (0.1066ms)
+Redirected to http://localhost:3000/requests/53629f411d41c80a3c000011
+Completed 302 Found in 36ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/53629f411d41c80a3c000011" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5465ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3719ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2997ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4795ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4051ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2751ms)
+  Rendered requests/show.html.erb within layouts/application (8.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4237ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Served asset /requests.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Served asset /donors.css - 304 Not Modified (48ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:50 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/53629f411d41c80a3c000011/confirm?method=post&reply_id=536397301d41c81444000003&user_id=5362e6541d41c8f0be000001" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"536397301d41c81444000003", "user_id"=>"5362e6541d41c8f0be000001", "id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6719ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6230ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5362e6541d41c8f0be000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6444ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"536397301d41c81444000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4590ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=blood_donation_development collection=replies selector={"_id"=>"536397301d41c81444000003"} update={"$set"=>{"reply_is_confirmed"=>false, "updated_at"=>2014-05-03 21:58:54 UTC}} flags=[] (0.2747ms)
+Redirected to http://localhost:3000/requests/53629f411d41c80a3c000011
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/53629f411d41c80a3c000011" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4859ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.6397ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3850ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2844ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3598ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2666ms)
+  Rendered requests/show.html.erb within layouts/application (6.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4797ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Served asset /donors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/53629f411d41c80a3c000011/confirm?method=post&reply_id=536397301d41c81444000003&user_id=5362e6541d41c8f0be000001" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"536397301d41c81444000003", "user_id"=>"5362e6541d41c8f0be000001", "id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6163ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2983ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5362e6541d41c8f0be000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3579ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"536397301d41c81444000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3562ms)
+Redirected to http://localhost:3000/requests/53629f411d41c80a3c000011
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/53629f411d41c80a3c000011" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5860ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.5364ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5598ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5589ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8578ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7863ms)
+  Rendered requests/show.html.erb within layouts/application (14.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4821ms)
+Completed 200 OK in 68ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Served asset /donors.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:58:57 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/53629f411d41c80a3c000011/confirm?method=post&reply_id=536397301d41c81444000003&user_id=5362e6541d41c8f0be000001" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"536397301d41c81444000003", "user_id"=>"5362e6541d41c8f0be000001", "id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7873ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9408ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5362e6541d41c8f0be000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3288ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"536397301d41c81444000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2146ms)
+Redirected to http://localhost:3000/requests/53629f411d41c80a3c000011
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/53629f411d41c80a3c000011" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9687ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.6196ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4671ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4041ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7048ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4592ms)
+  Rendered requests/show.html.erb within layouts/application (13.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3762ms)
+Completed 200 OK in 90ms (Views: 87.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Served asset /requests.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 22:59:01 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7217ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8194ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0676ms)
+
+
+Started GET "/requests/53629f411d41c80a3c000011" for 127.0.0.1 at 2014-05-03 23:04:51 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6511ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6711ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.5610ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5102ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4735ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5753ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5336ms)
+  Rendered requests/show.html.erb within layouts/application (83.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9379ms)
+Completed 200 OK in 109ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:51 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:51 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:51 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:51 +0100
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:52 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:52 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:52 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:52 +0100
+Served asset /requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:52 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:52 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:52 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/53629f411d41c80a3c000011/confirm?method=post&reply_id=5362f9931d41c80173000011&user_id=53628e891d41c80154000003" for 127.0.0.1 at 2014-05-03 23:04:56 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362f9931d41c80173000011", "user_id"=>"53628e891d41c80154000003", "id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7298ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5417ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"53628e891d41c80154000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5729ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"5362f9931d41c80173000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5929ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=blood_donation_development collection=replies selector={"_id"=>"5362f9931d41c80173000011"} update={"$set"=>{"reply_is_confirmed"=>false, "updated_at"=>2014-05-03 22:04:56 UTC}} flags=[] (0.3333ms)
+Redirected to http://localhost:3000/requests/53629f411d41c80a3c000011
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/53629f411d41c80a3c000011" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2997ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3486ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2241ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2527ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2868ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5965ms)
+  Rendered requests/show.html.erb within layouts/application (8.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3881ms)
+Completed 200 OK in 69ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Served asset /application.css - 304 Not Modified (67ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:57 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/53629f411d41c80a3c000011/confirm?method=post&reply_id=536397301d41c81444000003&user_id=5362e6541d41c8f0be000001" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"536397301d41c81444000003", "user_id"=>"5362e6541d41c8f0be000001", "id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0276ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6731ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"5362e6541d41c8f0be000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.7448ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"536397301d41c81444000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5529ms)
+Redirected to http://localhost:3000/requests/53629f411d41c80a3c000011
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/53629f411d41c80a3c000011" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6034ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3231ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3049ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2778ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8924ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2682ms)
+  Rendered requests/show.html.erb within layouts/application (8.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3469ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Served asset /donors.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 23:04:59 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/requests/53629f411d41c80a3c000011/confirm?method=post&reply_id=5362f9931d41c80173000011&user_id=53628e891d41c80154000003" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Processing by RequestsController#confirm as HTML
+  Parameters: {"authenticity_token"=>"+fX8JLn0oeyg3rE0O8iT2rRT3NCgyt3d0LiwpICL41o=", "method"=>"post", "reply_id"=>"5362f9931d41c80173000011", "user_id"=>"53628e891d41c80154000003", "id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8025ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8287ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"_id"=>"53628e891d41c80154000003"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.7260ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"_id"=>"5362f9931d41c80173000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.1998ms)
+Redirected to http://localhost:3000/requests/53629f411d41c80a3c000011
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/requests/53629f411d41c80a3c000011" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"53629f411d41c80a3c000011"}
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=requests selector={"_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6840ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.7915ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=replies selector={"request_id"=>"53629f411d41c80a3c000011"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8078ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7770ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8504ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"53628e891d41c80154000003"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8366ms)
+  Rendered requests/show.html.erb within layouts/application (16.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=blood_donation_development collection=users selector={"$query"=>{"_id"=>"5362e6541d41c8f0be000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6986ms)
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/donors.css?body=1" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Served asset /donors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/donors.js?body=1" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Served asset /donors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 23:05:02 +0100
+Served asset /application.js - 304 Not Modified (0ms)

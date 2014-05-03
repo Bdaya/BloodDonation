@@ -33,6 +33,15 @@ class UsersController < ApplicationController
     end
   end
 
+def confirm 
+ @user = User.find(params[:id])
+    @request=Request.find(params[:request_id])
+    @reply= Reply.find(params[:reply_id])
+    if(@request.blood_bags==@reply.number_of_confirmed_users)
+    @request.state="confirmed"
+    @reply.is_confirmed="true"
+  end
+end
   # GET /users/new
   # GET /users/new.json
   def new

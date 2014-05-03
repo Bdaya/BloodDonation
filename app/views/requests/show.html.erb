@@ -51,8 +51,22 @@
 </p>
 
 <p>
-  <b>Number of replies on request:</b>
-  <%= @request.number_of_replies %>
+  <b>Donors who replied on the request</b>
+
+ 
+  <%  @replies = Reply.all.where(request: @request) %>
+
+    <%   if !@replies.empty? %>
+<table>
+    <% @replies.each do |p| %>
+            <%@user=p.user%>
+      <tr><td>  <%= p.user.name %></td>
+    <td>    <%= button_to 'Confirm',confirm_request_path(@request,:user_id =>@user.id,:reply_id =>p.id, method: :post)%></td></tr>
+
+     <%end%>
+     </table>
+<% end %>
+
 </p>
 <p>
   <b>Current state of request:</b>
