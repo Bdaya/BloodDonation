@@ -18,6 +18,8 @@ BloodDonation::Application.routes.draw do
 
   root :to => "content#index"
 
+  
+
   resources :requests do
     member do
     post :confirm
