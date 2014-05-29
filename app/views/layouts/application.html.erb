@@ -1,14 +1,191 @@
 <!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="ar" dir="rtl">
 <head>
-  <title>BloodDonation</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <title>فصيلتي | Faselty</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag    "app", :media => "all" %>
+    <%= stylesheet_link_tag    "font-awesome", :media => "all" %>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css"></link>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+
+    <!-- Top Navigation Bar -->
+    <nav class="top-bar row" data-topbar data-options="is_hover: false">
+
+      <!-- Top Navigation Bar Logo -->
+      <ul class="logo title-area">
+        <li><img src="<%=  image_path( "logo.png")%>" alt="Faselty Logo" /></li>
+        <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+      </ul>
+      
+      <!--Top Navigation Menu -->
+      <section class="top-bar-section">
+        <ul class="left">
+
+          <!-- Register Page -->
+          <li <%= render "devise/shared/nav" %>
+      	  </li>
+
+          <!-- Donation Info. Menu -->
+          <li <% if current_page?(about_content_path) -%> class="active" <% end %>> <%= link_to "عن فصيلتي", about_content_path %></li>
+          <li <% if current_page?(donation_info_content_path) or current_page?(donator_info_content_path) or current_page?(patient_info_content_path) or current_page?(blood_info_content_path) -%> class="active has-dropdown" <% else %> class="has-dropdown" <% end %> >
+            <a href="#">التبرع</a>
+            <ul class="dropdown">
+
+              <!-- Donation Info. Page -->
+              <li><%= link_to "عن التبرع", donation_info_content_path %></li>
+
+              <!-- Donator Info. Page -->
+              <li><%= link_to "عن المتبرع", donator_info_content_path %></li>
+
+              <!-- Patient Info. Page -->
+              <li><%= link_to "معلومات المريض", patient_info_content_path %></li>
+
+              <!-- Blood Info. Page -->
+              <li><%= link_to "عن الدم", blood_info_content_path %></li>
+            </ul>
+          </li>
+
+          <!-- News And Activities Page -->
+          <li <% if current_page?(news_content_path) -%> class="active" <% end %> ><%= link_to "أخبار ودعاية", news_content_path %></li>
+
+          <!-- Contact Us Page -->
+          <li <% if current_page?(contact_content_path) -%> class="active" <% end %>><%= link_to "للتواصل", contact_content_path %></li>
+        </ul>        
+      </section>
+      <!-- End of Navigation Menu -->
+    </nav>
+    <!-- End of Navigation Bar -->
+
+
+    <!-- Main Content-->
+    <div class="row content main_content">
+      <div id="myModal" class="reveal-modal" data-reveal>
+            <div class="row" style="text-align:center;">
+              <div class="column small-6 small-centered">
+                <h2>تسجيل حساب جديد</h2>
+                <%= link_to "متبرع جديد", new_user_path, :class=>"button expand" %>
+                <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button expand" %>
+                <h2>تسجيل دخول</h2>
+                <%= link_to "تسجيل دخول متبرع", new_user_session_path, :class=> "button expand" %>
+              </div>
+            </div>
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+
+	<%= yield %>
+    </div>
+
+    <!-- Footer -->
+    <div class="row footer">
+
+      <!-- Copyright Notice -->
+      <div class="column large-6">
+        <p>كل الحقوق محفوظة لموقع فصيلتي © 2014</p>
+      </div>
+
+      <!-- Social Sites Links -->
+      <div class="column large-6 contact">  
+        <div class="social">
+          <p>تواصل معنا عبر</p>
+
+          <!-- Faselty Facebook Page -->
+          <a href="#" ><li class="fa fa-facebook-square"></li></a>
+
+          <!-- Faselty Twitter Account -->
+          <a href="#"><li class="fa fa-twitter-square"></li></a>
+
+          <!-- Faselty G+ Account -->
+          <a href="#"><li class="fa fa-google-plus-square"></li></a>
+        </div>
+      </div>
+    </div>
+    <!-- End of Footer -->
+
+
+    <!-- JS Main Page Script -->
+    <script type="text/javascript">
+        $(document).foundation();
+        
+
+
+        $('.cover-content a').click( function() {
+          $(".cover").animate({ height:"0"}, 2000, function() { $(".cover").hide();});
+        });
+
+        $('.cover a').click( function() {
+          var elem = $( this );
+
+          if (elem.attr("href") == "#signup-donator") {
+            $(".main_content .about-content").hide();
+            $(".main_content a.donator").parent().addClass("active");
+            $(".top-bar li.register").addClass("active").removeClass("register");
+            $(".main_content .register-content").show();
+          };
+          if (elem.attr("href") == "#signup-patient") {
+            $(".main_content .about-content").hide();
+            $(".main_content a.patient").parent().addClass("active");
+            $(".top-bar li.register").addClass("active").removeClass("register");
+            $(".main_content .register-content").show();
+            
+          };
+          if (elem.attr("href") == "#signin") {
+            $(".main_content .about-content").hide();
+            $(".top-bar li.register").addClass("active").removeClass("register");
+            $(".main_content .register-content").show();
+          };
+          if (elem.attr("href") == "#about") {
+            $(".main_content .register-content").hide();
+            $(".main_content .about-content").show();
+            $(".top-bar a[href='about.html']").parent().addClass("active");
+          };
+        });
+
+        $(".sign-up input").click( function() {
+          $(".sign-in").hide();
+          if ($(".sign-up").hasClass("large-6")) {
+            $(".sign-up").removeClass("large-6");
+            $(".sign-up").addClass("large-12");
+            $(".show").show();
+            $(".show a[href='#signin']").show();
+          };
+        });
+
+        $(".sign-in input").click( function() {
+          $(".sign-up").hide();
+          if ($(".sign-in").hasClass("large-6")) {
+            $(".sign-in").removeClass("large-6");
+            $(".sign-in").addClass("large-12");
+            $(".show").show();
+            $(".show a[href='#signup']").show();
+          };
+        });
+
+        $(".show a").click( function() {
+          if ($(".sign-in").hasClass("large-12")) {
+            $(".sign-in").removeClass("large-12");
+            $(".sign-in").addClass("large-6");
+            
+          }
+
+          $(".sign-up").show();
+            if ($(".sign-up").hasClass("large-12")) {
+            $(".sign-up").removeClass("large-12");
+            $(".sign-up").addClass("large-6");
+            
+          }
+          $(".sign-in").show();
+          $(".show").hide();
+          $(".show a").hide();
+        });
+    </script>
+    <!-- End of Script -->
 
 </body>
 </html>

@@ -1,49 +1,147 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <script src="http://code.jquery.com/ui/1.8.1/jquery-ui.min.js"></script>
+    <div class="column large-12 sign-up">
+  <%= form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+      <div data-alert class="alert-box" id="error_explanation" >
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <label>الاسم <small>*مطلوب</small>
+        <%= f.text_field :name %>
+      </label>
+    </div>
+
+    <div>
+      <label>البريد الإلكتروني <small>*مطلوبة</small>
+        <%= f.email_field :email, autofocus: true %>
+      </label>
+    </div>
+
+
+          <div><label> كلمة السر <small>*مطلوبة</small>
+            <%= f.password_field :password, autocomplete: "off" %>
+            </label>
+            </div>
+
+    <div>
+      <label> تأكيد كلمة السر <small>*مطلوبة</small>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </label>
+    </div>
+
+
+    <div class="field">
+      <label>رقم الهاتف المحمول <small>*مطلوب</small>
+      <%= f.text_field :phone %>
+      </label>
+    </div>
+    
+    <div class="field">
+      <label>السن <small>*مطلوب</small>
+      <%= f.text_field :age %>
+      </label>
+    </div>
+
+    <div class="field">
+      <label>الرقم القومي <small>*مطلوب</small>
+      <%= f.text_field :ID %>
+      </label>
+    </div>
+
+    <div class="field">
+      <label>فصيلة الدم <small>*مطلوبة</small>
+      <%= f.select :blood_type, options_for_select([["Select Blood type",""],["A+","A+"],["A-","A-"],["B+","B+"],["B-","B-"],["O+","O+"],["O-","O-"],["AB+","AB+"],["AB-","AB-"]],@user), :required=>true %>
+      </label>                                                  
+    </div>
+<div>
+         <label>العنوان: <input id="address"  type="text"/></label>
+
+<div id="map_canvas" style="width:100%; height:500px"></div><br/>
+
+<div class="row">
+    <div class="small-6 column">
+      <label>دائرة عرض
+      <%= f.text_field :latitude, input_html: {id: "latitude"} %>
+      </label>
+    </div>
+
+    <div class="small-6 column">
+      <label>خط طول
+      <%= f.text_field :longitude, input_html: {id: "longitude"} %>
+      </label>
+    </div>
+    </div>
+</div>
+    <div class="actions">
+      <button class="expand" type="submit">سجّل</button>
     </div>
   <% end %>
+</div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :blood_type %><br />
-    <%= f.text_field :blood_type %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :phone_number %><br />
-    <%= f.number_field :phone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<script type="text/javascript">
+  var geocoder;
+var map;
+var marker;
+   
+function initialize(){
+//MAP
+  var latlng = new google.maps.LatLng(41.659,-4.714);
+  var options = {
+    zoom: 16,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+  };
+       
+  map = new google.maps.Map(document.getElementById("map_canvas"), options);
+       
+  //GEOCODER
+  geocoder = new google.maps.Geocoder();
+       
+  marker = new google.maps.Marker({
+    map: map,
+    draggable: true
+  });
+               
+};
+
+$(document).ready(function() {
+         
+  initialize();
+                 
+  $(function() {
+    $("#address").autocomplete({
+      //This bit uses the geocoder to fetch address values
+      source: function(request, response) {
+        geocoder.geocode( {'address': request.term }, function(results, status) {
+          response($.map(results, function(item) {
+            return {
+              label:  item.formatted_address,
+              value: item.formatted_address,
+              latitude: item.geometry.location.lat(),
+              longitude: item.geometry.location.lng()
+            }
+          }));
+        })
+      },
+      //This bit is executed upon selection of an address
+      select: function(event, ui) {
+        $("#user_latitude").val(ui.item.latitude);
+        $("#user_longitude").val(ui.item.longitude);
+        var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
+        marker.setPosition(location);
+        map.setCenter(location);
+      }
+    });
+  });
+});
+</script>

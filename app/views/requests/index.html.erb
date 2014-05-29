@@ -1,41 +1,69 @@
-<h1>Listing requests</h1>
+<div class="request_list">
+<h1>عرض طلبات التبرع</h1>
 
-<table>
-  <tr>
-    <th>Patient name</th>
-    <th>Contact name</th>
-    <th>National</th>
-    <th>Blood type</th>
-    <th>Req type</th>
-    <th>Due date</th>
-    <th>Hospital adress</th>
-    <th>Hospital phone</th>
-    <th>Email</th>
-    <th>Blood bags</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<div class="row browse-patients">
+              
 <% @requests.each do |request| %>
-  <tr>
-    <td><%= request.patient_name %></td>
-    <td><%= request.contact_name %></td>
-    <td><%= request.national_id %></td>
-    <td><%= request.blood_type %></td>
-    <td><%= request.req_type %></td>
-    <td><%= request.due_date %></td>
-    <td><%= request.hospital_adress %></td>
-    <td><%= request.hospital_phone %></td>
-    <td><%= request.email %></td>
-    <td><%= request.blood_bags %></td>
+    <div class="row patient" data-equalizer>
+         <div class="column large-2 due-date" data-equalizer-watch>
+           <p><%= (request.due_date).strftime("%d/%m") %></p>
+         </div>
+         <div class="column large-10 details" data-equalizer-watch>
+           <div class="row">
+             <div class="column large-6 bloodtype">
+               <h2>فصيلة الدم:</h2>
+               <p><%= request.blood_type %></p>
+             </div>
+             <div class="column large-6 bloodbags">
+               <h2>عدد أكياس الدم:</h2>
+               <p><%= request.blood_bags %></p>
+             </div>
+           </div>
+           
+           <div class="row">
+               <div class="column large-6">
+                   <h2>عدد المتبرعين:</h2>
+                   <p><%= request.number_of_replies %></p>
+               </div>
+               <div class="column large-6">
+                   <h2>حالة الطلب:</h2>
+                   <p><%= request.state %></p>
+               </div>
+           </div>
+           <div class="row">
+             <div class="column large-12 patient-location">
+               <h2>المنطقة:</h2>
+               <p><%= request.hospital_address %></p>
+             </div>
+           </div>
+           <div class="row more">
+            <div class="more-content">
+             <div class="more-patient-details">
+                <%= link_to "تفاصيل الحالة", request %> | 
+             </div>
+             <div class="share-patient-social">
+                <h2>مشاركة</h2>
+               <a href=""><li class="fa fa-facebook"></li></a>
+               <a href=""><li class="fa fa-twitter"></li></a>
+               <a href=""><li class="fa fa-google-plus"></li></a>
+             </div>
+           </div>
+       </div>
+         </div>
+       </div>
+      
+     </div>
+
+<% if admin_signed_in? %>
     <td><%= link_to 'Show', request %></td>
     <td><%= link_to 'Edit', edit_request_path(request) %></td>
     <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <% end %>
 <% end %>
-</table>
+
 
 <br />
-
-<%= link_to 'New Request', new_request_path %>
+<div style="float:left;">
+<%= link_to 'تسجيل حالة تبرع جديدة', new_request_path %>
+</div>
+</div>

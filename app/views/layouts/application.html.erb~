@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!doctype html>
+<html class="no-js" lang="ar" dir="rtl">
+<head>
+  <title>فصيلتي | Faselty</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%= stylesheet_link_tag    "app", :media => "all" %>
+  <%= stylesheet_link_tag    "font-awesome", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+    <!-- Top Navigation Bar -->
+    <nav class="top-bar" data-topbar>
+
+      <!-- Top Navigation Bar Logo -->
+      <ul class="logo title-area">
+        <li><img src="img/logo.png" alt="Faselty Logo" /></li>
+        <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+      </ul>
+      
+      <!--Top Navigation Menu -->
+      <section class="top-bar-section">
+        <ul class="left">
+
+          <!-- Register Page -->
+          <li class="register">
+		<% if user_signed_in? %>
+    			<%= link_to "الصفحة الشخصية", @users %>
+		<% else %>
+    			<%= link_to "التسجيل", new_user_registration_path %>
+		<% end %>
+	  </li>
+
+          <!-- Donation Info. Menu -->
+          <li ><a href="about.html">عن فصيلتي</a></li>
+          <li class="has-dropdown">
+            <a href="#">التبرع</a>
+            <ul class="dropdown">
+
+              <!-- Donation Info. Page -->
+              <li><a href="donation-info.html">عن التبرع</a></li>
+
+              <!-- Donator Info. Page -->
+              <li><a href="donator-info.html">المتبرع</a></li>
+
+              <!-- Patient Info. Page -->
+              <li><a href="patient-info.html">معلومات المريض</a></li>
+
+              <!-- Blood Info. Page -->
+              <li><a href="blood-info.html">عن الدم</a></li>
+            </ul>
+          </li>
+
+          <!-- News And Activities Page -->
+          <li><a href="#">أخبار ودعاية</a></li>
+
+          <!-- Contact Us Page -->
+          <li><a href="contact-us.html">للتواصل</a></li>
+        </ul>        
+      </section>
+      <!-- End of Navigation Menu -->
+    </nav>
+    <!-- End of Navigation Bar -->
+
+
+    <!-- Main Content-->
+    <div class="row content main_content">
+
+	<%= yield %>
+    </div>
+
+    <!-- Footer -->
+    <div class="row footer">
+
+      <!-- Copyright Notice -->
+      <div class="column large-6">
+        <p>كل الحقوق محفوظة لموقع فصيلتي © 2014</p>
+      </div>
+
+      <!-- Social Sites Links -->
+      <div class="column large-6 contact">  
+        <div class="social">
+          <p>تواصل معنا عبر</p>
+
+          <!-- Faselty Facebook Page -->
+          <a href="#" ><li class="fa fa-facebook-square"></li></a>
+
+          <!-- Faselty Twitter Account -->
+          <a href="#"><li class="fa fa-twitter-square"></li></a>
+
+          <!-- Faselty G+ Account -->
+          <a href="#"><li class="fa fa-google-plus-square"></li></a>
+        </div>
+      </div>
+    </div>
+    <!-- End of Footer -->
+
+<script src="../../assets/javascripts/jquery.min.js"></script>
+    <script src="../../assets/javascripts/foundation.min.js"></script>
+    <script src="../../assets/javascripts/foundation.js"></script>
+    <script src="../../assets/javascripts/foundation.topbar.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../../assets/javascripts/jquery.autotab-1.1b.js"></script>
+    <script src="../../assets/javascripts/app.js"></script>
+
+    <!-- JS Main Page Script -->
+    <script type="text/javascript">
+        $('.cover-content a').click( function() {
+          $(".cover").animate({ height:"0"}, 2000, function() { $(".cover").hide();});
+        });
+
+        $('.cover a').click( function() {
+          var elem = $( this );
+
+          if (elem.attr("href") == "#signup-donator") {
+            $(".main_content .about-content").hide();
+            $(".main_content a.donator").parent().addClass("active");
+            $(".top-bar li.register").addClass("active").removeClass("register");
+            $(".main_content .register-content").show();
+          };
+          if (elem.attr("href") == "#signup-patient") {
+            $(".main_content .about-content").hide();
+            $(".main_content a.patient").parent().addClass("active");
+            $(".top-bar li.register").addClass("active").removeClass("register");
+            $(".main_content .register-content").show();
+            
+          };
+          if (elem.attr("href") == "#signin") {
+            $(".main_content .about-content").hide();
+            $(".top-bar li.register").addClass("active").removeClass("register");
+            $(".main_content .register-content").show();
+          };
+          if (elem.attr("href") == "#about") {
+            $(".main_content .register-content").hide();
+            $(".main_content .about-content").show();
+            $(".top-bar a[href='about.html']").parent().addClass("active");
+          };
+        });
+
+        $(".sign-up input").click( function() {
+          $(".sign-in").hide();
+          if ($(".sign-up").hasClass("large-6")) {
+            $(".sign-up").removeClass("large-6");
+            $(".sign-up").addClass("large-12");
+            $(".show").show();
+            $(".show a[href='#signin']").show();
+          };
+        });
+
+        $(".sign-in input").click( function() {
+          $(".sign-up").hide();
+          if ($(".sign-in").hasClass("large-6")) {
+            $(".sign-in").removeClass("large-6");
+            $(".sign-in").addClass("large-12");
+            $(".show").show();
+            $(".show a[href='#signup']").show();
+          };
+        });
+
+        $(".show a").click( function() {
+          if ($(".sign-in").hasClass("large-12")) {
+            $(".sign-in").removeClass("large-12");
+            $(".sign-in").addClass("large-6");
+            
+          }
+
+          $(".sign-up").show();
+            if ($(".sign-up").hasClass("large-12")) {
+            $(".sign-up").removeClass("large-12");
+            $(".sign-up").addClass("large-6");
+            
+          }
+          $(".sign-in").show();
+          $(".show").hide();
+          $(".show a").hide();
+        });
+        $('.birthdate-field input').autotab_magic().autotab_filter('numeric');
+        $('.birthdate-field input').datepicker();
+    </script>
+    <!-- End of Script -->
+
+</body>
+</html>

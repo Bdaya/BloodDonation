@@ -1,63 +1,61 @@
-<p id="notice"><%= notice %></p>
+<div class="donator_profile">
+<div class="row">
+  <div class="column medium-6">
+    
+      <div class="column medium-8">
+        
+    <h1>مرحباً، <%= (@user.name).split[0] %></h1>
+      </div>
+    <div class="column medium-4">
+    <% if @user.is_available? %> 
+      <a href="#" class="small round button split">فعال <span data-dropdown="drop"></span></a><br>
+      <ul id="drop" class="f-dropdown" data-dropdown-content style="position: absolute; left: -99.0167px; top: 57px; right: -99999px;">
+        <li><%= link_to 'تجميد الحساب', change_availability_user_path(@user) %></li>
+      </ul>
+      <% else %>
+       <a href="#" class="small round secondary button split">متوقف <span data-dropdown="drop"></span></a><br>
+      <ul id="drop" class="f-dropdown" data-dropdown-content style="position: absolute; left: -99.0167px; top: 57px; right: -99999px;">
+        <li><%= link_to 'تفعيل الحساب', change_availability_user_path(@user) %></li>
+      </ul>
+      <% end %>
+      </div>
+    </div>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
 
-<p>
-  <b>Age:</b>
-  <%= @user.age %>
-</p>
+<div class="row donator_status">
 
-<p>
-  <b>Blood type:</b>
-  <%= @user.blood_type %>
-</p>
+  <div class="column medium-6">
+      <h2>إمكانية التبرع:</h2>
+      <%= @user.can_donate %>    
+  </div>
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+  <div class="column medium-6">
 
-<p>
-  <b>Password:</b>
-  <%= @user.password %>
-</p>
+      <h2>آخر مرة تم فيها التبرع: </h2>
+      <%= @donation_date_txt %>    
+  </div>
+  <div class="column medium-6">
+      <h2>عدد الحالات التي تم إنقاذها:</h2>
+      <%= @user.no_of_donates %>
+        
+  </div>
 
-<p>
-  <b>Phone number:</b>
-  <%= @user.phone_number %>
-</p>
+  <div class="column medium-6">
 
-<p>
-  <b>Latitude:</b>
-  <%= @user.latitude %>
-</p>
+    <h2>الجوائز:</h2>
+    <%= @trophies_txt %>
+      
+  </div>
+</div>
 
-<p>
-  <b>Longitude:</b>
-  <%= @user.longitude %>
-</p>
+<div class="row donator_stats">
+<div class="column medium-6">  
+  <%= button_to 'طلبات التبرع' , my_requests_user_path(@user), :class=>"button column medium-12 medium-centered" %>
+</div>
+<div class="column medium-6">  
+  <%= button_to 'سجل النشاط' , my_replies_user_path(@user), :class=>"button column medium-12 medium-centered" %>
+</div>
+</div>
+</div>
 
-<p>
-  <b>Availablity:</b>
-  <%= @user.is_available %>
-</p>
-
-<p>
-  <b>Can Donate:</b>
-  <%= @user.can_donate %>
-</p>
-
-<p>
-  <b>Lives Saved:</b>
-  <%= @user.no_of_donates %>
-</p>
-
-<p>
-  <b>Trophies:</b>
-  <%= @trophies_txt %></p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

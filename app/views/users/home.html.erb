@@ -1,0 +1,27 @@
+
+
+
+<% if user_signed_in? %> <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+
+
+
+<% else %>
+
+   <!-- Entrance Screen -->
+
+    <div class="cover">
+      <div class="cover-content row">
+        <!-- Faselty's Logo -->
+        <img src="<%= image_path('cover-logo.png')%>" alt="Faselty's Logo" class="logo">
+
+        <!-- Entrance Buttons -->
+        <%= link_to "متبرع جديد", new_user_path, :class=> "button large-6 column" %>
+        <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button large-6 column" %>
+        <%= link_to "تسجيل الدخول", new_user_session_path, :class=> "button large-6 column" %>
+        <%= link_to "عن فصيلتي", new_user_path, :class=> "button large-6 column" %>
+      </div>
+    </div>
+
+    <!-- End of Entrance Screen -->
+
+<% end %>

@@ -1,8 +1,9 @@
-<%= form_for(@request) do |f| %>
+
+
+<%= form_for(@request, :html => {"data-abide" => ''}) do |f| %>
   <% if @request.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
-
       <ul>
       <% @request.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -11,47 +12,93 @@
     </div>
   <% end %>
 
+  <h2>بيانات التواصل</h2>
+
   <div class="field">
-    <%= f.label :patient_name %><br />
-    <%= f.text_field :patient_name %>
+    <label>الاسم <small>*مطلوب</small>
+    <%= f.text_field :contact_name, :required=>"" %>
+    </label>
+   <small class="error">يرجى كتابة الاسم.</small>
+
   </div>
+
   <div class="field">
-    <%= f.label :contact_name %><br />
-    <%= f.text_field :contact_name %>
+    <label>رقم الهاتف المحمول <small>*مطلوب</small>
+    <%= f.text_field :contact_phone, :required=>"" %>
+    <small class="error">تأكد من كتابة رقم الهاتف ولا يقل عن ١١ رقم.</small>
+    </label>
   </div>
+
   <div class="field">
-    <%= f.label :national_id %><br />
-    <%= f.text_field :national_id %>
+    <label>البريد الإلكتروني <small>*مطلوب</small>
+    <%= f.text_field :email, :required=>"", :pattern=>"email" %>
+    <small class="error">تأكد من كتابة البريد الإلكتروني بشكل صحيح.</small>
+    </label>
   </div>
+
+  <h2>بيانات المريض</h2>
+
   <div class="field">
-    <%= f.label :blood_type %><br />
-    <%= f.text_field :blood_type %>
+    <label>اسم المريض <small>*مطلوب</small>
+    <%= f.text_field :patient_name, :required=>"" %>
+    <small class="error">يرجى التأكد من كتابة اسم المرض.</small>
+    </label>
   </div>
+  
+  <div class="field">
+    <label>الرقم القومي <small>*مطلوب</small>
+    <%= f.text_field :national_id, :required=>"" %>
+    <small class="error">تأكد من كتابة الرقم القومي بشكل صحيح</small>
+    </label>
+  </div>
+
+ <div class="field">
+    <label>فصيلة الدم <small>*مطلوب</small>
+    <%= f.select :blood_type, options_for_select([["Select Blood type",""],["A+","A+"],["A-","A-"],
+                                                ["B+","B+"],["B-","B-"],
+                                                ["O+","O+"],["O-","O-"],
+                                                ["AB+","AB+"],["AB-","AB-"]],@request), :html => {"required" => ''} %>
+    </label>
+                                                
+  </div>
+
+  <div class="field">
+    <label>عدد أكياس الدم <small>*مطلوب</small>
+    <%= f.number_field :blood_bags, :required=>"" %>
+    <small class="error">تأكد من عدد أكياس الدم.</small>
+    </label>
+  </div>
+
   <div class="field">
     <%= f.label :req_type %><br />
     <%= f.text_field :req_type %>
   </div>
   <div class="field">
-    <%= f.label :due_date %><br />
-    <%= f.text_field :due_date %>
+    <label>تاريخ انتهاء الطلب <small>*مطلوب</small>
+    <%= f.text_field :due_date, :required=>"" %>
+    <small class="error">تأكد من كتابة التاريخ.</small>
+    </label>
+  </div>
+
+
+  <div class="field">
+    <label>اسم المستشفى <small>*مطلوب</small>
+    <%= f.text_field :hospital_name, :required=>"" %>
+    <small class="error">تأكد من كتابة اسم المستشفى.</small>
+    </label>
   </div>
   <div class="field">
-    <%= f.label :hospital_adress %><br />
-    <%= f.text_field :hospital_adress %>
+    <label>عنوان المستشفى <small>*مطلوب</small>
+    <%= f.text_field :hospital_address %>
+    </label>
   </div>
   <div class="field">
-    <%= f.label :hospital_phone %><br />
+    <label>رقم هاتف المستشفى <small>اختياري</small>
     <%= f.text_field :hospital_phone %>
+    </label>
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :blood_bags %><br />
-    <%= f.number_field :blood_bags %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <button type="submit" class="expand">سجّل</button>
   </div>
 <% end %>

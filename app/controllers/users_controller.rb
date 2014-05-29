@@ -15,6 +15,11 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
+    if @user.last_donated != nil
+      @donation_date_txt = @user.last_donated.strftime("%Y-%m-%d")
+    else
+      @donation_date_txt = "You Haven't Donated Yet"
+    end
 
     @user.no_of_trophies = @user.no_of_donates/2
     if @user.no_of_trophies == 0
@@ -22,15 +27,21 @@ class UsersController < ApplicationController
     else
       @trophies_txt = "Great, You Have #{@user.no_of_trophies} Trophies."
     end
-
-
-    
-    # respond_to do |format|
-    #   format.html # show.html.erb
-    #   format.json { render json: @user }
-    # end
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @user }
+    end
   end
 
+def confirm 
+ @user = User.find(params[:id])
+    @request=Request.find(params[:request_id])
+    @reply= Reply.find(params[:reply_id])
+    if(@request.blood_bags==@reply.number_of_confirmed_users)
+    @request.state="confirmed"
+    @reply.is_confirmed="true"
+  end
+end
   # GET /users/new
   # GET /users/new.json
   def new
@@ -90,4 +101,74 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def change_availability
+    @user = User.find(params[:id])
+
+    if @user.is_available == true
+      @user.is_available = false
+    else
+      @user.is_available = true
+    end
+
+    if @user.save
+      redirect_to @user
+    end
+  end
+
+  def my_requests
+    @user = User.find(params[:id])
+    @all_requests = Request.all
+
+    #  a user can donate once every 3 months (90 days)
+    if @user.last_donated != nil
+      time = ((Time.now - @user.last_donated)/(60*60*24)).to_i       
+      if (time > 90)
+        @user.can_donate = true
+      else
+        render(:text => "You cannot Donate now, You have #{90 - time} days left so you can donate OR You will Die :D")
+      end
+    end
+
+    @requests = []
+    @all_requests.each do |r|          
+      if (@user.is_available && @user.can_donate && (r.blood_type == @user.blood_type)) 
+        @requests.push(r)
+      end
+    end
+  end
+
+
+  def my_replies
+    @user = User.find(params[:id])
+    @replies = Reply.all.where(user: @user)
+  end
+
+def reply_on_request
+
+    @user = User.find(params[:id])
+    @request=Request.find(params[:request_id])
+    @reply = Reply.new
+    @reply.user = @user
+    @reply.request = @request
+    @reply.is_confirmed=true
+    @reply.save
+    
+    if (@reply.save)
+    @request.number_of_replies+=1
+    @request.state = "pending"
+    @request.reply_is_confirmed = true
+    @request.save
+    @user.can_donate = false
+    @user.last_donated = @reply.created_at
+    @user.no_of_donates += 1
+    @user.save
+     redirect_to @user, :notice => "Request is confirmed"
+    end
+  end  
+
+ def home 
+  
+ end
+ 
 end

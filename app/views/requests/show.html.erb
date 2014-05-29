@@ -1,55 +1,140 @@
+<div class="request_content">
+
 <p id="notice"><%= notice %></p>
+  <div class="row main_data" data-equalizer>
+    <div class="column medium-2" style="position:relative;" data-equalizer-watch>
+      <div class="due-date">
+        <p><%= @request.due_date.strftime("%d/%m") %></p>
+      </div>
+    </div>
+    <div class="column medium-10" data-equalizer-watch>
+      <h1>
+        <b>طلب رقم:</b>
+        <%= @request.id.to_s.split[1,6] %>
+      </h1>
+      <h1>
+        <b>حالة الطلب:</b>
+        <%= @request.state %>
+      </h1>
+    </div>
+  </div>
+
+<div class="row">
+ 
+
+  <div class="column large-6">
+<h2>فصيلة الدم:</h2>
+<p><%= @request.blood_type %></p>
+</div>
+<div class="column large-6">
+
+  <h2>عدد أكياس الدم:</h2>
+  <p><%= @request.blood_bags %></p>
+
+</div>
+</div>
+
+<div class="row">
+<div class="column medium-6">
+
+  <h2>الفصيلة المطلوبة:</h2>
+  <p><%= @request.req_type %></p>
+
+</div>
+
+<div class="column medium-6">
+
+  <h2>عنوان المستشفى:</h2>
+  <p><%= @request.hospital_address %></p>
+
+</div>
+</div>
+
+
+
+<div class="row more">
+            <div class="more-content column small-3 small-centered">
+             <div class="more-patient-details">
+                <a href="#" class="reveal-link" data-reveal-id="patientContact" >تفاصيل التواصل</a> | 
+             </div>
+             <div class="share-patient-social">
+                <h2>مشاركة</h2>
+               <a href=""><li class="fa fa-facebook"></li></a>
+               <a href=""><li class="fa fa-twitter"></li></a>
+               <a href=""><li class="fa fa-google-plus"></li></a>
+             </div>
+           </div>
+</div>
+
+  <div id="patientContact" class="reveal-modal" data-reveal>
+    <div class="row">
+      <div class="column medium-6">
+    <p>
+      <b>اسم صلة التواصل:</b>
+      <%= @request.contact_name %>
+    </p>
+    </div>
+    <div class="column medium-6">
+    <p>
+      <b>رقم التليفون:</b>
+      <%= @request.contact_phone %>
+    </p>
+  </div>
+    </div>
+    <div class="row">
+      <div class="column medium-6">
+    <p>
+      <b>اسم المريض:</b>
+      <%= @request.patient_name %>
+    </p>
+    </div>
+    <div class="column medium-6">
+    <p>
+      <b>رقم المستشفى:</b>
+      <%= @request.hospital_phone %>
+    </p>
+  </div>
+    </div>
+            <a class="close-reveal-modal">&#215;</a>
+
+  </div>
+
+
 
 <p>
-  <b>Patient name:</b>
-  <%= @request.patient_name %>
-</p>
+  <b>المتبرعين</b>
 
-<p>
-  <b>Contact name:</b>
-  <%= @request.contact_name %>
-</p>
+ 
+  <%  @replies = Reply.all.where(request: @request) %>
 
-<p>
-  <b>National:</b>
-  <%= @request.national_id %>
-</p>
+    <%   if !@replies.empty? %>
+    <div class="row " >
+      <ul class="small-block-grid-3  donator_confirmations"  >
+    <% @replies.each do |p| %>
+    
+      <li data-equalizer>
+            <div class="column small-6 donator_name panel " data-equalizer-watch>
+                <h2 ><%= p.user.name %></h2>            <%@user=p.user%>
 
-<p>
-  <b>Blood type:</b>
-  <%= @request.blood_type %>
-</p>
+            </div>
+            <div class="column small-6 confirmation" data-equalizer-watch>
+              <%= link_to 'التأكيد',confirm_request_path(@request,:user_id =>@user.id,:reply_id =>p.id, method: :post)%>
+            </div>
+          </li>
+     <%end%>
+      </ul>
+     </div>
 
-<p>
-  <b>Req type:</b>
-  <%= @request.req_type %>
-</p>
+     <%else %>
+     لا يوجد متبرعين بعد.
+<% end %>
 
-<p>
-  <b>Due date:</b>
-  <%= @request.due_date %>
-</p>
-
-<p>
-  <b>Hospital adress:</b>
-  <%= @request.hospital_adress %>
-</p>
-
-<p>
-  <b>Hospital phone:</b>
-  <%= @request.hospital_phone %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @request.email %>
-</p>
-
-<p>
-  <b>Blood bags:</b>
-  <%= @request.blood_bags %>
 </p>
 
 
-<%= link_to 'Edit', edit_request_path(@request) %> |
-<%= link_to 'Back', requests_path %>
+
+<div style="float:left">
+<%= link_to 'تعديل', edit_request_path(@request) %> |
+<%= link_to 'العودة إلى قائمة الطلبات', requests_path %>
+</div>
+</div>

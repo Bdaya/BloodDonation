@@ -8,6 +8,8 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'mongoid'
 gem 'bson_ext'
+gem 'devise'
+gem 'geocoder'
 
 
 # Gems used only for assets and not required
@@ -39,3 +41,6 @@ gem 'therubyracer', :platforms => :ruby
 
 # To use debugger
 # gem 'debugger'
+
+# for google maps location
+gem 'geocoder'

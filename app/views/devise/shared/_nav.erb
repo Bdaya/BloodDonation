@@ -1,0 +1,13 @@
+<% if user_signed_in? %> class="has-dropdown">
+        		
+            			<%= link_to current_user.name.split[0] , @user %>
+                  <ul class="dropdown">
+                  	<li><%= link_to 'الصفحة الشخصية', user_path(current_user) %></li>
+                    <li><%= link_to "تعديل البيانات", edit_user_path(current_user)  %></li>
+                    
+                    <li><%= link_to "تسجيل الخروج", destroy_user_session_path, :method => :delete %></li>
+                  </ul>
+        		<% else %> >
+            			<a href="#" class="reveal-link" data-reveal-id="myModal">التسجيل</a>
+                  
+        		<% end %>

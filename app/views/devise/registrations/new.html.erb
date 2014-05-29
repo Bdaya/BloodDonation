@@ -1,0 +1,149 @@
+<div class="row register-content">
+
+<h2>تسجيل متبرع جديد</h2>
+
+
+    <div class="column large-12 sign-up">
+        <div data-alert class="alert-box" id="error_explanation" >
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+          <a href="#" class="close">&times;</a>
+
+        </div>
+
+    <div class="field">
+      <label>الاسم <small>*مطلوب</small>
+        <%= f.text_field :name %>
+      </label>
+    </div>
+
+    <div>
+      <label>البريد الإلكتروني <small>*مطلوبة</small>
+        <%= f.email_field :email, autofocus: true %>
+      </label>
+    </div>
+
+
+          <div><label> كلمة السر <small>*مطلوبة</small>
+            <%= f.password_field :password, autocomplete: "off" %>
+            </label>
+            </div>
+
+    <div>
+      <label> تأكيد كلمة السر <small>*مطلوبة</small>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </label>
+    </div>
+
+
+    <div class="field">
+      <label>رقم الهاتف المحمول <small>*مطلوب</small>
+      <%= f.text_field :phone %>
+      </label>
+    </div>
+    
+    <div class="field">
+      <label>السن <small>*مطلوب</small>
+      <%= f.text_field :age %>
+      </label>
+    </div>
+
+    <div class="field">
+      <label>الرقم القومي <small>*مطلوب</small>
+      <%= f.text_field :ID %>
+      </label>
+    </div>
+
+    <div class="field">
+      <label>فصيلة الدم <small>*مطلوبة</small>
+      <%= f.select :blood_type, options_for_select(["Select Blood type",["A+","A+"],["A-","A-"],
+                                                  ["B+","B+"],["B-","B-"],
+                                                  ["O+","O+"],["O-","O-"],
+                                                  ["AB+","AB+"],["AB-","AB-"]],@user) %>
+      </label>                                                  
+    </div>
+<div>
+         <label>العنوان: <input id="address"  type="text"/></label>
+
+<div id="map_canvas" style="width:100%; height:500px"></div><br/>
+
+<div class="row">
+    <div class="small-6 column">
+      <label>دائرة عرض
+      <%= f.text_field :latitude, input_html: {id: "latitude"} %>
+      </label>
+    </div>
+
+    <div class="small-6 column">
+      <label>خط طول
+      <%= f.text_field :longitude, input_html: {id: "longitude"} %>
+      </label>
+    </div>
+    </div>
+</div>
+    <div class="actions">
+      <button class="expand">سجّل</button>
+    </div>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  var geocoder;
+var map;
+var marker;
+   
+function initialize(){
+//MAP
+  var latlng = new google.maps.LatLng(41.659,-4.714);
+  var options = {
+    zoom: 16,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+  };
+       
+  map = new google.maps.Map(document.getElementById("map_canvas"), options);
+       
+  //GEOCODER
+  geocoder = new google.maps.Geocoder();
+       
+  marker = new google.maps.Marker({
+    map: map,
+    draggable: true
+  });
+               
+};
+
+$(document).ready(function() {
+         
+  initialize();
+                 
+  $(function() {
+    $("#address").autocomplete({
+      //This bit uses the geocoder to fetch address values
+      source: function(request, response) {
+        geocoder.geocode( {'address': request.term }, function(results, status) {
+          response($.map(results, function(item) {
+            return {
+              label:  item.formatted_address,
+              value: item.formatted_address,
+              latitude: item.geometry.location.lat(),
+              longitude: item.geometry.location.lng()
+            }
+          }));
+        })
+      },
+      //This bit is executed upon selection of an address
+      select: function(event, ui) {
+        $("#user_latitude").val(ui.item.latitude);
+        $("#user_longitude").val(ui.item.longitude);
+        var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
+        marker.setPosition(location);
+        map.setCenter(location);
+      }
+    });
+  });
+});
+</script>
+
+        <%= render "devise/shared/links" %>
+</div>

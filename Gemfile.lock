@@ -29,6 +29,7 @@ GEM
       i18n (= 0.6.1)
       multi_json (~> 1.0)
     arel (3.0.3)
+    bcrypt (3.1.7)
     bson (1.9.2)
     bson_ext (1.9.2)
       bson (~> 1.9.2)
@@ -40,8 +41,15 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    devise (3.2.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    geocoder (1.2.0)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -62,6 +70,7 @@ GEM
     moped (1.5.1)
     multi_json (1.9.2)
     origin (1.1.0)
+    orm_adapter (0.5.0)
     polyglot (0.3.4)
     rack (1.4.5)
     rack-cache (1.2)
@@ -104,6 +113,7 @@ GEM
       libv8 (~> 3.16.14.0)
       ref
     thor (0.19.1)
+    thread_safe (0.3.3)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
@@ -112,6 +122,8 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -119,7 +131,9 @@ PLATFORMS
 DEPENDENCIES
   bson_ext
   coffee-rails (~> 3.2.1)
+  devise
   execjs
+  geocoder
   jquery-rails
   mongoid
   rails (= 3.2.13)

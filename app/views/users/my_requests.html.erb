@@ -1,0 +1,61 @@
+<div class="request_list">
+
+<h1>قائمة الطلبات المتوافقة</h1>
+
+<% if !@requests.empty? %>
+
+ <% @requests.each do |r| %>
+<div class="row browse-patients">
+ <div class="row patient" data-equalizer>
+         <div class="column large-2 due-date" data-equalizer-watch>
+           <p><%= (r.due_date).strftime("%d/%m") %></p>
+         </div>
+         <div class="column large-10 details" data-equalizer-watch>
+           <div class="row">
+             <div class="column large-6 bloodtype">
+               <h2>فصيلة الدم:</h2>
+               <p><%= r.req_type %></p>
+             </div>
+             <div class="column large-6 bloodbags">
+               <h2>عدد أكياس الدم:</h2>
+               <p><%= r.blood_bags %></p>
+             </div>
+           </div>
+           
+           <div class="row">
+             <div class="column large-12 patient-location">
+               <h2>المنطقة:</h2>
+               <p><%= r.hospital_address %></p>
+             </div>
+           </div>
+           <div class="row more">
+            <%= button_to 'التأكيد على التبرع',reply_on_request_user_path(@user,:request_id =>r.id, method: :post)%>
+            <div class="more-content">
+             <div class="more-patient-details">
+                <%= link_to "تفاصيل الحالة", r %> | 
+             </div>
+             <div class="share-patient-social">
+                <h2>مشاركة</h2>
+               <a href=""><li class="fa fa-facebook"></li></a>
+               <a href=""><li class="fa fa-twitter"></li></a>
+               <a href=""><li class="fa fa-google-plus"></li></a>
+             </div>
+           </div>
+       </div>
+         </div>
+       </div>
+      <% end %>
+     </div>
+</div>
+
+
+<% else %>
+<div class="empty">
+  لا توجد طلبات حالياً.
+</div>
+<%end%> 
+
+<div style="float:left;">
+<%= link_to 'العودة إلى الصفحة الشخصية', @user %>
+</div>
+</div>
