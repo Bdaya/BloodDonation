@@ -1,4 +1,6 @@
 <script src="http://code.jquery.com/ui/1.8.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css"></link>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
 
 <%= form_for(@request, :html => {"data-abide" => ''}) do |f| %>
@@ -55,10 +57,17 @@
 
  <div class="field">
     <label>فصيلة الدم <small>*مطلوب</small>
-    <%= f.select :blood_type, options_for_select([["Select Blood type",""],["A+","A+"],["A-","A-"],
-                                                ["B+","B+"],["B-","B-"],
-                                                ["O+","O+"],["O-","O-"],
-                                                ["AB+","AB+"],["AB-","AB-"]],@request), :html => {"required" => ''} %>
+    <select id="request_blood_type" name="request[blood_type]" required>
+    <option value="">Select Blood type</option>
+    <option value="A+">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option></select>
+    <small class="error">لا تنس اختيار فصيلة الدم.</small>
     </label>
                                                 
   </div>
@@ -169,8 +178,8 @@ $(document).ready(function() {
       },
       //This bit is executed upon selection of an address
       select: function(event, ui) {
-        $("#user_latitude").val(ui.item.latitude);
-        $("#user_longitude").val(ui.item.longitude);
+        $("#request_latitude").val(ui.item.latitude);
+        $("#request_longitude").val(ui.item.longitude);
         var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
         marker.setPosition(location);
         map.setCenter(location);

@@ -1,6 +1,16 @@
 <div class="request_list">
 
-<h1>سجل النشاط</h1>
+<div class="row" >
+  <div class="column medium-6">
+    <h1>سجل النشاط</h1>
+    
+  </div>
+  <div class="column medium-6">
+    <h2 style="float:left;">
+    <%= link_to 'العودة إلى الصفحة الشخصية', @user %></h2>
+    
+  </div>
+</div>
 
 <% if !@replies.empty? %>
 
@@ -45,7 +55,5 @@
 </div>
 <%end%> 
 
-<div style="float:left;">
-<%= link_to 'العودة إلى الصفحة الشخصية', @user %>
-</div>
+
 </div>

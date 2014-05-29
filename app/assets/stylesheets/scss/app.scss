@@ -14,10 +14,31 @@ body {
 .empty, .coming_soon {
 	color: #ddd;
 	font-size: rem-calc(30);
-	min-height: 500px;
+	height:100%;
 	width:100%;
 	text-align: center;
-	line-height: 500px;
+
+	p {
+			font-size: rem-calc(30) !important;
+			display:block;
+			position: absolute;
+    left: 50%;
+    top: 50%;
+
+    /*
+    *  Where the magic happens
+    *  Centering method from CSS Tricks
+    *  http://css-tricks.com/centering-percentage-widthheight-elements/
+    */
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	}
+
+	a:hover {
+		text-decoration: underline
+	}
 }
 
 .cover {

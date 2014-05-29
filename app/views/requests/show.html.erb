@@ -53,6 +53,8 @@
 
 
 <div class="row more">
+  
+
             <div class="more-content column small-3 small-centered">
              <div class="more-patient-details">
                 <a href="#" class="reveal-link" data-reveal-id="patientContact" >تفاصيل التواصل</a> | 
@@ -64,9 +66,11 @@
                <a href=""><li class="fa fa-google-plus"></li></a>
              </div>
            </div>
+           
 </div>
 
   <div id="patientContact" class="reveal-modal" data-reveal>
+    <% if user_signed_in? %>
     <div class="row">
       <div class="column medium-6">
     <p>
@@ -95,6 +99,54 @@
     </p>
   </div>
     </div>
+    <div class="row">
+      <div class="column small-12">
+        
+           <div id="map_canvas" style="width:100%; height:300px"></div><br/>
+      </div>
+      <script type="text/javascript">
+        var geocoder;
+        var map;
+        var marker;
+           
+        function initialize(){
+        //MAP
+          var latlng = new google.maps.LatLng(<%= @request.latitude %>,<% @request.longitude %>);
+          var options = {
+            zoom: 16,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+          };
+               
+          map = new google.maps.Map(document.getElementById("map_canvas"), options);
+               
+          //GEOCODER
+          geocoder = new google.maps.Geocoder();
+               
+          marker = new google.maps.Marker({
+            map: map,
+            draggable: true
+          });
+                       
+        }
+      </script>
+    </div>
+    <% else %>
+
+           <div class="row">
+             <div class="column small-8 small-centered" style="text-align:center;">
+               <p>عذراً، تفاصيل التواصل متاحة للمسجلين فقط.</p>
+             </div>
+           </div>
+           <div class="row">
+             <div class="column medium-6">
+               <%= link_to "تسجيل متبرع جديد", new_user_path, :class=>"button column small-11" %>
+             </div>
+             <div class="column medium-6">
+               <%= link_to "تسجيل دخول متبرع", new_user_session_path, :class=>"button column small-11" %>
+             </div>
+           </div>
+           <%end%>
             <a class="close-reveal-modal">&#215;</a>
 
   </div>

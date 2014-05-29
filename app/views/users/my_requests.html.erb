@@ -1,6 +1,16 @@
 <div class="request_list">
-
+<div class="row">
+  <div class="column medium-6">
 <h1>قائمة الطلبات المتوافقة</h1>
+   
+  </div>
+  <div class="column medium-6">
+    <h2 style="float:left;">
+    <%= link_to 'العودة إلى الصفحة الشخصية', @user %></h2>
+    
+  </div>
+</div>
+
 
 <% if !@requests.empty? %>
 
@@ -51,11 +61,11 @@
 
 <% else %>
 <div class="empty">
-  لا توجد طلبات حالياً.
+  <p>لا توجد طلبات متوافقة معك حالياً.
+  <br>
+  ما رأيك بـ
+  <%= link_to "الذهاب إلى قائمة الطلبات الكاملة", requests_path %> ؟</p>
 </div>
 <%end%> 
 
-<div style="float:left;">
-<%= link_to 'العودة إلى الصفحة الشخصية', @user %>
-</div>
 </div>

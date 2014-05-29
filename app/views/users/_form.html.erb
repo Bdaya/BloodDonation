@@ -1,7 +1,9 @@
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css"></link>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
     <script src="http://code.jquery.com/ui/1.8.1/jquery-ui.min.js"></script>
     <div class="column large-12 sign-up">
-  <%= form_for(@user) do |f| %>
+  <%= form_for(@user, :html => {"data-abide" => ''}) do |f| %>
     <% if @user.errors.any? %>
       <div data-alert class="alert-box" id="error_explanation" >
         <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -17,50 +19,68 @@
 
     <div class="field">
       <label>الاسم <small>*مطلوب</small>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, :required=>"" %>
+        <small class="error">يرجى إدخال الاسم.</small>
       </label>
     </div>
 
     <div>
       <label>البريد الإلكتروني <small>*مطلوبة</small>
-        <%= f.email_field :email, autofocus: true %>
+        <%= f.email_field :email, :required=>"", :pattern=>"email" %>
+        <small class="error">يرجى إدخال البريد الإلكتروني بشكل صحيح.</small>
       </label>
     </div>
 
 
           <div><label> كلمة السر <small>*مطلوبة</small>
-            <%= f.password_field :password, autocomplete: "off" %>
+            <%= f.password_field :password, autocomplete: "off", :required=>"" %>
+            <small class="error">يرجى إدخال كلمة السر بشكل صحيح.</small>
             </label>
             </div>
 
     <div>
       <label> تأكيد كلمة السر <small>*مطلوبة</small>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", :required=>"" %>
+      <small class="error">يرجى التأكد من تأكيد كلمة السر.</small>
     </label>
     </div>
 
 
     <div class="field">
       <label>رقم الهاتف المحمول <small>*مطلوب</small>
-      <%= f.text_field :phone %>
+      <%= f.text_field :phone, :required=>"" %>
+      <small class="error">يرجى كتابة رقم الهاتف المحمول ولا يقل عن ١١.</small>
       </label>
     </div>
     
     <div class="field">
       <label>السن <small>*مطلوب</small>
-      <%= f.text_field :age %>
+      <%= f.text_field :age, :required=>"" %>
+      <small class="error">يرجى كتابة السن لمعرفة إمكانية التبرع.</small>
       </label>
     </div>
 
     <div class="field">
       <label>الرقم القومي <small>*مطلوب</small>
-      <%= f.text_field :ID %>
+      <%= f.text_field :ID, :required=>"" %>
+      <small class="error">يرجى كتابة الرقم القومي بشكل صحيح.</small>
       </label>
     </div>
 
     <div class="field">
       <label>فصيلة الدم <small>*مطلوبة</small>
-      <%= f.select :blood_type, options_for_select([["Select Blood type",""],["A+","A+"],["A-","A-"],["B+","B+"],["B-","B-"],["O+","O+"],["O-","O-"],["AB+","AB+"],["AB-","AB-"]],@user), :required=>true %>
+
+        <select id="user_blood_type" name="user[blood_type]", required>
+          <option value="">Select Blood type</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option></select>
+      <small class="error">لا تنس اختيار فصيلة الدم.</small>
       </label>                                                  
     </div>
 <div>
