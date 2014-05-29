@@ -19,7 +19,8 @@ class Request
   validates_length_of :national_id, minimum: 14, maximum: 14, :message=> "ID must be of length 14.."
   validates_numericality_of :national_id, :message=> "Must enter ID in numerical form only!"
   validates_uniqueness_of :national_id, :message=> "This ID is already associated with another user!"
-
+  field :latitude, type: String
+  field :longitude, type: String
   field :blood_type, type: String
   
   field :req_type, type: String

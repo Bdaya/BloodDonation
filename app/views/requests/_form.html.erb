@@ -1,3 +1,4 @@
+<script src="http://code.jquery.com/ui/1.8.1/jquery-ui.min.js"></script>
 
 
 <%= form_for(@request, :html => {"data-abide" => ''}) do |f| %>
@@ -70,8 +71,9 @@
   </div>
 
   <div class="field">
-    <%= f.label :req_type %><br />
+    <label>فصيلة الدم المطلوبة <small>*اختياري</small>
     <%= f.text_field :req_type %>
+    </label>
   </div>
   <div class="field">
     <label>تاريخ انتهاء الطلب <small>*مطلوب</small>
@@ -88,17 +90,92 @@
     </label>
   </div>
   <div class="field">
-    <label>عنوان المستشفى <small>*مطلوب</small>
-    <%= f.text_field :hospital_address %>
-    </label>
-  </div>
-  <div class="field">
     <label>رقم هاتف المستشفى <small>اختياري</small>
     <%= f.text_field :hospital_phone %>
     </label>
+
+
+  <div>
+         <label>عنوان المستشفى:<%= f.text_field :hospital_address, :id =>"address" %></label>
+
+<div id="map_canvas" style="width:100%; height:500px"></div><br/>
+
+<div class="row">
+    <div class="small-6 column">
+      <label>دائرة عرض
+      <%= f.text_field :latitude, input_html: {id: "latitude"} %>
+      </label>
+    </div>
+
+    <div class="small-6 column">
+      <label>خط طول
+      <%= f.text_field :longitude, input_html: {id: "longitude"} %>
+      </label>
+    </div>
+    </div>
+</div>
+  
   </div>
 
   <div class="actions">
     <button type="submit" class="expand">سجّل</button>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  var geocoder;
+var map;
+var marker;
+   
+function initialize(){
+//MAP
+  var latlng = new google.maps.LatLng(41.659,-4.714);
+  var options = {
+    zoom: 16,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+  };
+       
+  map = new google.maps.Map(document.getElementById("map_canvas"), options);
+       
+  //GEOCODER
+  geocoder = new google.maps.Geocoder();
+       
+  marker = new google.maps.Marker({
+    map: map,
+    draggable: true
+  });
+               
+};
+
+$(document).ready(function() {
+         
+  initialize();
+                 
+  $(function() {
+    $("#address").autocomplete({
+      //This bit uses the geocoder to fetch address values
+      source: function(request, response) {
+        geocoder.geocode( {'address': request.term }, function(results, status) {
+          response($.map(results, function(item) {
+            return {
+              label:  item.formatted_address,
+              value: item.formatted_address,
+              latitude: item.geometry.location.lat(),
+              longitude: item.geometry.location.lng()
+            }
+          }));
+        })
+      },
+      //This bit is executed upon selection of an address
+      select: function(event, ui) {
+        $("#user_latitude").val(ui.item.latitude);
+        $("#user_longitude").val(ui.item.longitude);
+        var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
+        marker.setPosition(location);
+        map.setCenter(location);
+      }
+    });
+  });
+});
+</script>
