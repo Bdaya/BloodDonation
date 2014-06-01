@@ -63,9 +63,9 @@
              </div>
              <div class="share-patient-social">
                 <h2>مشاركة</h2>
-               <a href=""><li class="fa fa-facebook"></li></a>
-               <a href=""><li class="fa fa-twitter"></li></a>
-               <a href=""><li class="fa fa-google-plus"></li></a>
+               <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %>"><li class="fa fa-facebook"></li></a>
+               <a href="https://twitter.com/intent/tweet?url=<%= request.original_url %>"><li class="fa fa-twitter"></li></a>
+               <a href="https://plus.google.com/share?url=<%= request.original_url %>"><li class="fa fa-google-plus"></li></a>
              </div>
            </div>
            
@@ -177,7 +177,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <% end %>
 
 </p>
-
+<% title "عرض الحالة" %>
 
 
 <div style="float:left">
@@ -185,3 +185,47 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <%= link_to 'العودة إلى قائمة الطلبات', requests_path %>
 </div>
 </div>
+
+<script type="text/javascript">
+  // create social networking pop-ups
+(function() {
+    // link selector and pop-up window size
+    var Config = {
+        Link: ".share-patient-social a",
+        Width: 500,
+        Height: 500
+    };
+ 
+    // add handler links
+    var slink = document.querySelectorAll(Config.Link);
+    for (var a = 0; a < slink.length; a++) {
+        slink[a].onclick = PopupHandler;
+    }
+ 
+    // create popup
+    function PopupHandler(e) {
+ 
+        e = (e ? e : window.event);
+        var t = (e.target ? e.target : e.srcElement);
+ 
+        // popup position
+        var
+            px = Math.floor(((screen.availWidth || 1024) - Config.Width) / 2),
+            py = Math.floor(((screen.availHeight || 700) - Config.Height) / 2);
+ 
+        // open popup
+        var popup = window.open(t.href, "social",
+            "width="+Config.Width+",height="+Config.Height+
+            ",left="+px+",top="+py+
+            ",location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1");
+        if (popup) {
+            popup.focus();
+            if (e.preventDefault) e.preventDefault();
+            e.returnValue = false;
+        }
+ 
+        return !!popup;
+    }
+ 
+}());
+</script>

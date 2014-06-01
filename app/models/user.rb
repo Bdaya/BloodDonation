@@ -38,6 +38,7 @@ class User
   validates_uniqueness_of :phone, :message=> "This mobile number is already associated with another user!"
   
   field :blood_type, type: String
+  field :donator_address, type: String
   field :latitude, type: String
   field :longitude, type: String
   field :age , type: Integer

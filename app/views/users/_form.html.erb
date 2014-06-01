@@ -84,7 +84,7 @@
       </label>                                                  
     </div>
 <div>
-         <label>العنوان: <input id="address"  type="text"/></label>
+         <label>العنوان: <%= f.text_field :donator_address, input_html: {id: "latitude"} %> </label>
 
 <div id="map_canvas" style="width:100%; height:500px"></div><br/>
 
@@ -139,7 +139,7 @@ $(document).ready(function() {
   initialize();
                  
   $(function() {
-    $("#address").autocomplete({
+    $("#user_donator_address").autocomplete({
       //This bit uses the geocoder to fetch address values
       source: function(request, response) {
         geocoder.geocode( {'address': request.term }, function(results, status) {
