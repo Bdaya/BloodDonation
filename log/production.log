@@ -53218,4 +53218,5 @@ Processing by ContentController#index as HTML
   Rendered content/index.html.erb within layouts/application (1.2ms)
   Rendered devise/shared/_nav.erb (0.2ms)
 Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
 Connecting to database specified by database.yml

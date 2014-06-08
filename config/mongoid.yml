@@ -85,10 +85,7 @@ test:
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
-<<<<<<< HEAD
 
-=======
-        
 production:
   sessions:
     default:
@@ -101,4 +98,4 @@ production:
         # low amounts for fast failures.
         # max_retries: 1
         # retry_interval: 0
->>>>>>> f09bb5ab396686a845192df71dfedd4f10a310bc
+
