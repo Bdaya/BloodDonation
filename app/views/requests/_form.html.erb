@@ -1,30 +1,39 @@
+
+
+<!-- Scripts for Location Geocoding -->
 <script src="http://code.jquery.com/ui/1.8.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css"></link>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css"></link>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
-
+<!-- Beginning of Request Form -->
 <%= form_for(@request, :html => {"data-abide" => ''}) do |f| %>
+
+  <!-- Error Message -->
   <% if @request.errors.any? %>
-    <div id="error_explanation">
+    <div data-alert class="alert-box" id="error_explanation">
       <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
       <ul>
       <% @request.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
+      <a href="#" class="close">&times;</a>
+
     </div>
   <% end %>
 
+  <!-- Contact info. -->
   <h2>بيانات التواصل</h2>
 
+  <!-- Contact Name -->
   <div class="field">
     <label>الاسم <small>*مطلوب</small>
     <%= f.text_field :contact_name, :required=>"" %>
     </label>
-   <small class="error">يرجى كتابة الاسم.</small>
-
+    <small class="error">يرجى كتابة الاسم.</small>
   </div>
 
+  <!-- Contact Phone -->
   <div class="field">
     <label>رقم الهاتف المحمول <small>*مطلوب</small>
     <%= f.text_field :contact_phone, :required=>"" %>
@@ -32,6 +41,7 @@
     </label>
   </div>
 
+  <!-- Contact Email -->
   <div class="field">
     <label>البريد الإلكتروني <small>*مطلوب</small>
     <%= f.text_field :email, :required=>"", :pattern=>"email" %>
@@ -39,8 +49,10 @@
     </label>
   </div>
 
+  <!-- Patient info. -->
   <h2>بيانات المريض</h2>
 
+  <!-- Patient Name -->
   <div class="field">
     <label>اسم المريض <small>*مطلوب</small>
     <%= f.text_field :patient_name, :required=>"" %>
@@ -48,6 +60,7 @@
     </label>
   </div>
   
+  <!-- Patient ID -->
   <div class="field">
     <label>الرقم القومي <small>*مطلوب</small>
     <%= f.text_field :national_id, :required=>"" %>
@@ -55,7 +68,8 @@
     </label>
   </div>
 
- <div class="field">
+  <!-- Patient BloodType -->
+  <div class="field">
     <label>فصيلة الدم <small>*مطلوب</small>
     <select id="request_blood_type" name="request[blood_type]" required>
     <option value="">Select Blood type</option>
@@ -69,9 +83,9 @@
     <option value="AB-">AB-</option></select>
     <small class="error">لا تنس اختيار فصيلة الدم.</small>
     </label>
-                                                
   </div>
 
+  <!-- Required # of BloodBags -->
   <div class="field">
     <label>عدد أكياس الدم <small>*مطلوب</small>
     <%= f.number_field :blood_bags, :required=>"" %>
@@ -79,11 +93,14 @@
     </label>
   </div>
 
+  <!-- Required BloodType -->
   <div class="field">
     <label>فصيلة الدم المطلوبة <small>*اختياري</small>
     <%= f.text_field :req_type %>
     </label>
   </div>
+
+  <!-- Due Date -->
   <div class="field">
     <label>تاريخ انتهاء الطلب <small>*مطلوب</small>
     <%= f.text_field :due_date, :required=>"" %>
@@ -91,100 +108,120 @@
     </label>
   </div>
 
+  
+  <!-- Hospital info. -->
+  <h2>بيانات المستشفى</h2>
 
+  <!-- Hospital Name -->
   <div class="field">
     <label>اسم المستشفى <small>*مطلوب</small>
     <%= f.text_field :hospital_name, :required=>"" %>
     <small class="error">تأكد من كتابة اسم المستشفى.</small>
     </label>
   </div>
+
+  <!-- Hospital Phone -->
   <div class="field">
     <label>رقم هاتف المستشفى <small>اختياري</small>
     <%= f.text_field :hospital_phone %>
     </label>
+  </div>
 
+  <!-- Hospital Location -->
+  <div class="field">
 
-  <div>
-         <label>عنوان المستشفى:<%= f.text_field :hospital_address, :id =>"address" %></label>
+    <!-- Hospital Address -->
+    <label>عنوان المستشفى <small>*مطلوب</small>
+    <%= f.text_field :hospital_address, :id =>"address", :required=>"" %>
+    <small class="error">يرجى التأكد من كتابة العنوان.</small>
+    </label>
 
-<div id="map_canvas" style="width:100%; height:500px"></div><br/>
+    <!-- Google Map -->
+    <div id="map_canvas" style="width:100%; height:500px"></div><br/>
 
-<div class="row">
-    <div class="small-6 column">
-      <label>دائرة عرض
-      <%= f.text_field :latitude, input_html: {id: "latitude"} %>
-      </label>
+    <!-- Longitude & Latitude -->
+    <div class="row">
+
+      <!-- Latitude -->
+      <div class="small-6 column">
+        <label>دائرة عرض
+        <%= f.text_field :latitude, input_html: {id: "latitude"} %>
+        </label>
+      </div>
+
+      <!-- Longitude -->
+      <div class="small-6 column">
+        <label>خط طول
+        <%= f.text_field :longitude, input_html: {id: "longitude"} %>
+        </label>
+      </div>
     </div>
-
-    <div class="small-6 column">
-      <label>خط طول
-      <%= f.text_field :longitude, input_html: {id: "longitude"} %>
-      </label>
-    </div>
-    </div>
-</div>
+  </div>
   
   </div>
 
+  <!-- Submit Button -->
   <div class="actions">
     <button type="submit" class="expand">سجّل</button>
   </div>
 <% end %>
+<!-- End of Request Form -->
 
+<!-- GeoCoding Script -->
 <script type="text/javascript">
   var geocoder;
-var map;
-var marker;
-   
-function initialize(){
-//MAP
-  var latlng = new google.maps.LatLng(41.659,-4.714);
-  var options = {
-    zoom: 16,
-    center: latlng,
-    mapTypeId: google.maps.MapTypeId.SATELLITE
-  };
-       
-  map = new google.maps.Map(document.getElementById("map_canvas"), options);
-       
-  //GEOCODER
-  geocoder = new google.maps.Geocoder();
-       
-  marker = new google.maps.Marker({
-    map: map,
-    draggable: true
-  });
-               
-};
-
-$(document).ready(function() {
+  var map;
+  var marker;
+     
+  function initialize(){
+  //MAP
+    var latlng = new google.maps.LatLng(30.0444196,31.23571160000006);
+    var options = {
+      zoom: 16,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.SATELLITE
+    };
          
-  initialize();
+    map = new google.maps.Map(document.getElementById("map_canvas"), options);
+         
+    //GEOCODER
+    geocoder = new google.maps.Geocoder();
+         
+    marker = new google.maps.Marker({
+      map: map,
+      draggable: true
+    });
                  
-  $(function() {
-    $("#address").autocomplete({
-      //This bit uses the geocoder to fetch address values
-      source: function(request, response) {
-        geocoder.geocode( {'address': request.term }, function(results, status) {
-          response($.map(results, function(item) {
-            return {
-              label:  item.formatted_address,
-              value: item.formatted_address,
-              latitude: item.geometry.location.lat(),
-              longitude: item.geometry.location.lng()
-            }
-          }));
-        })
-      },
-      //This bit is executed upon selection of an address
-      select: function(event, ui) {
-        $("#request_latitude").val(ui.item.latitude);
-        $("#request_longitude").val(ui.item.longitude);
-        var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
-        marker.setPosition(location);
-        map.setCenter(location);
-      }
+  };
+
+  $(document).ready(function() {
+           
+    initialize();
+                   
+    $(function() {
+      $("#address").autocomplete({
+        //This bit uses the geocoder to fetch address values
+        source: function(request, response) {
+          geocoder.geocode( {'address': request.term }, function(results, status) {
+            response($.map(results, function(item) {
+              return {
+                label:  item.formatted_address,
+                value: item.formatted_address,
+                latitude: item.geometry.location.lat(),
+                longitude: item.geometry.location.lng()
+              }
+            }));
+          })
+        },
+        //This bit is executed upon selection of an address
+        select: function(event, ui) {
+          $("#request_latitude").val(ui.item.latitude);
+          $("#request_longitude").val(ui.item.longitude);
+          var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
+          marker.setPosition(location);
+          map.setCenter(location);
+        }
+      });
     });
   });
-});
 </script>

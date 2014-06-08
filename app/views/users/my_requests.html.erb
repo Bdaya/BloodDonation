@@ -1,117 +1,161 @@
+<!-- Page Title -->
 <% title "عرض طلبات التبرع المتوافقة" %>
 
 <div class="request_list">
-<div class="row">
-  <div class="column medium-6">
-<h1>قائمة الطلبات المتوافقة</h1>
-   
+
+  <div class="row">
+
+    <!-- Title -->
+    <div class="column medium-6">
+      <h1>قائمة الطلبات المتوافقة</h1>     
+    </div>
+
+    <!-- Link to User Profile -->
+    <div class="column medium-6">
+      <h2 style="float:left;">
+      <%= link_to 'العودة إلى الصفحة الشخصية', @user %></h2>
+    </div>
+
   </div>
-  <div class="column medium-6">
-    <h2 style="float:left;">
-    <%= link_to 'العودة إلى الصفحة الشخصية', @user %></h2>
+
+  <!-- If there are requests -->
+  <% if !@requests.empty? %>
+
+    <!-- Requests Loop -->
+    <% @requests.each do |r| %>
+
+      <div class="row browse-patients">
+
+        <div class="row patient" data-equalizer>
+
+          <!-- Request Due Date -->
+          <div class="column large-2 due-date" data-equalizer-watch>
+            <p><%= (r.due_date).strftime("%d/%m") %></p>
+          </div>
+
+          <div class="column large-10 details" data-equalizer-watch>
+            
+            <div class="row">
+              
+              <!-- Request BloodType -->
+              <div class="column large-6 bloodtype">
+                 <h2>فصيلة الدم:</h2>
+                 <p><%= r.req_type %></p>
+              </div>
+              
+              <!-- Request BloodBags -->
+              <div class="column large-6 bloodbags">
+                 <h2>عدد أكياس الدم:</h2>
+                 <p><%= r.blood_bags %></p>
+              </div>
+
+            </div>
+
+            <div class="row">
+              
+              <!-- Patient Location -->
+              <div class="column large-12 patient-location">
+                <h2>المنطقة:</h2>
+                <p><%= r.hospital_address %></p>
+              </div>
+            
+            </div>
+
+            <div class="row more">
+
+              <!-- Reply to Request -->
+              <%= button_to 'التأكيد على التبرع',reply_on_request_user_path(@user,:request_id =>r.id, method: :post)%>
+
+              <div class="more-content">
+
+                <!-- Link to more Request Details -->
+                <div class="more-patient-details">
+                    <%= link_to "تفاصيل الحالة", r %> | 
+                </div>
+
+                <!-- Social Media share buttons -->
+                <div class="share-patient-social">
+                    
+                  <h2>مشاركة</h2>
+                  
+                  <!-- Facebook share -->
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request_url(r) %>"><li class="fa fa-facebook"></li></a>
+                  
+                  <!-- Twitter share -->
+                  <a href="https://twitter.com/intent/tweet?url=<%= request_url(r) %>"><li class="fa fa-twitter"></li></a>
+                  
+                  <!-- G+ share -->
+                  <a href="https://plus.google.com/share?url=<%= request_url(r) %>"><li class="fa fa-google-plus"></li></a>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     
-  </div>
-</div>
+    <% end %>
 
+  <!-- If there are no requests -->
+  <% else %>
 
-<% if !@requests.empty? %>
+    <div class="empty">
 
- <% @requests.each do |r| %>
-<div class="row browse-patients">
- <div class="row patient" data-equalizer>
-         <div class="column large-2 due-date" data-equalizer-watch>
-           <p><%= (r.due_date).strftime("%d/%m") %></p>
-         </div>
-         <div class="column large-10 details" data-equalizer-watch>
-           <div class="row">
-             <div class="column large-6 bloodtype">
-               <h2>فصيلة الدم:</h2>
-               <p><%= r.req_type %></p>
-             </div>
-             <div class="column large-6 bloodbags">
-               <h2>عدد أكياس الدم:</h2>
-               <p><%= r.blood_bags %></p>
-             </div>
-           </div>
-           
-           <div class="row">
-             <div class="column large-12 patient-location">
-               <h2>المنطقة:</h2>
-               <p><%= r.hospital_address %></p>
-             </div>
-           </div>
-           <div class="row more">
-            <%= button_to 'التأكيد على التبرع',reply_on_request_user_path(@user,:request_id =>r.id, method: :post)%>
-            <div class="more-content">
-             <div class="more-patient-details">
-                <%= link_to "تفاصيل الحالة", r %> | 
-             </div>
-             <div class="share-patient-social">
-                <h2>مشاركة</h2>
-               <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request_url(r) %>"><li class="fa fa-facebook"></li></a>
-               <a href="https://twitter.com/intent/tweet?url=<%= request_url(r) %>"><li class="fa fa-twitter"></li></a>
-               <a href="https://plus.google.com/share?url=<%= request_url(r) %>"><li class="fa fa-google-plus"></li></a>
-             </div>
-           </div>
-       </div>
-         </div>
-       </div>
-      <% end %>
-     </div>
-</div>
+      <p>لا توجد طلبات متوافقة معك حالياً.
+      <br>
+      ما رأيك بـ
+      <%= link_to "الذهاب إلى قائمة الطلبات الكاملة", requests_path %> ؟</p>
 
+    </div>
 
-<% else %>
-<div class="empty">
-  <p>لا توجد طلبات متوافقة معك حالياً.
-  <br>
-  ما رأيك بـ
-  <%= link_to "الذهاب إلى قائمة الطلبات الكاملة", requests_path %> ؟</p>
-</div>
-<%end%> 
+  <%end%> 
 
 </div>
 
+<!-- script for social media share popups -->
 <script type="text/javascript">
   // create social networking pop-ups
-(function() {
-    // link selector and pop-up window size
-    var Config = {
-        Link: ".share-patient-social a",
-        Width: 500,
-        Height: 500
-    };
- 
-    // add handler links
-    var slink = document.querySelectorAll(Config.Link);
-    for (var a = 0; a < slink.length; a++) {
-        slink[a].onclick = PopupHandler;
-    }
- 
-    // create popup
-    function PopupHandler(e) {
- 
-        e = (e ? e : window.event);
-        var t = (e.target ? e.target : e.srcElement);
- 
-        // popup position
-        var
-            px = Math.floor(((screen.availWidth || 1024) - Config.Width) / 2),
-            py = Math.floor(((screen.availHeight || 700) - Config.Height) / 2);
- 
-        // open popup
-        var popup = window.open(t.href, "social",
-            "width="+Config.Width+",height="+Config.Height+
-            ",left="+px+",top="+py+
-            ",location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1");
-        if (popup) {
-            popup.focus();
-            if (e.preventDefault) e.preventDefault();
-            e.returnValue = false;
-        }
- 
-        return !!popup;
-    }
- 
-}());
+  (function() {
+      // link selector and pop-up window size
+      var Config = {
+          Link: ".share-patient-social a",
+          Width: 500,
+          Height: 500
+      };
+   
+      // add handler links
+      var slink = document.querySelectorAll(Config.Link);
+      for (var a = 0; a < slink.length; a++) {
+          slink[a].onclick = PopupHandler;
+      }
+   
+      // create popup
+      function PopupHandler(e) {
+   
+          e = (e ? e : window.event);
+          var t = (e.target ? e.target : e.srcElement);
+   
+          // popup position
+          var
+              px = Math.floor(((screen.availWidth || 1024) - Config.Width) / 2),
+              py = Math.floor(((screen.availHeight || 700) - Config.Height) / 2);
+   
+          // open popup
+          var popup = window.open(t.href, "social",
+              "width="+Config.Width+",height="+Config.Height+
+              ",left="+px+",top="+py+
+              ",location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1");
+          if (popup) {
+              popup.focus();
+              if (e.preventDefault) e.preventDefault();
+              e.returnValue = false;
+          }
+   
+          return !!popup;
+      }
+   
+  }());
 </script>

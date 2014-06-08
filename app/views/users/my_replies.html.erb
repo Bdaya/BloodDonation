@@ -1,60 +1,79 @@
+<!-- Page Title -->
 <% title "سجل النشاط" %>
+
+
 <div class="request_list">
 
-<div class="row" >
-  <div class="column medium-6">
-    <h1>سجل النشاط</h1>
-    
+  <div class="row" >
+
+    <!-- Title -->
+    <div class="column medium-6">
+      <h1>سجل النشاط</h1>
+    </div>
+
+    <!-- Back to User Profile -->
+    <div class="column medium-6">
+      <h2 style="float:left;"><%= link_to 'العودة إلى الصفحة الشخصية', @user %></h2>
+    </div>
+
   </div>
-  <div class="column medium-6">
-    <h2 style="float:left;">
-    <%= link_to 'العودة إلى الصفحة الشخصية', @user %></h2>
-    
-  </div>
-</div>
 
-<% if !@replies.empty? %>
+  <!-- if there are replies -->
+  <% if !@replies.empty? %>
 
+    <!-- Beginning of replies loop -->
+    <% @replies.each do |r| %>
 
+    <div class="row browse-patients">
 
- <% @replies.each do |r| %>
-<div class="row browse-patients">
- <div class="row patient" data-equalizer>
-  <div class="column large-2 blood_type_circle" data-equalizer-watch>
-           <p><%= r.request.req_type %></p>
-         </div>
-         
-         <div class="column large-10 details" data-equalizer-watch>
+      <div class="row patient" data-equalizer>
 
-           <div class="row">
-             <div class="column large-6 patientname">
+        <!-- Request BloodType -->
+        <div class="column large-2 blood_type_circle" data-equalizer-watch>
+          <p><%= r.request.req_type %></p>
+        </div>
+       
+        <div class="column large-10 details" data-equalizer-watch>
+
+          <div class="row">
+            
+            <!-- Patient Name -->
+            <div class="column large-6 patientname">
               <h2>اسم المريض:</h2>
               <p><%= r.request.patient_name%></p>
-             </div>
-             <div class="column large-6 bloodtype">
-               <h2>المنطقة:</h2>
-               <p><%= r.request.hospital_address %></p>
-             </div>
-           </div>
-           
-           <div class="row">
-             <div class="column large-12 patient-location">
-               <h2>حالة الطلب</h2>
-              <p><%= r.request.state%></p>
-             </div>
-           </div>
-           
-       </div>
+            </div>
+
+            <!-- Hospital Location -->
+            <div class="column large-6 patient-location">
+             <h2>المنطقة:</h2>
+             <p><%= r.request.hospital_address %></p>
+            </div>
+
          </div>
-       </div>
-      <% end %>
+         
+         <div class="row">
+          
+          <!-- Request State -->
+          <div class="column large-12">
+            <h2>حالة الطلب</h2>
+            <p><%= r.request.state%></p>
+          </div>
 
+         </div>
+                 
+        </div>
 
-<% else %>
-<div class="empty">
-  لم تتبرع بعد.
-</div>
-<%end%> 
+      </div>
+    </div>
+  <% end %>
 
+  <!-- if there are no replies -->
+  <% else %>
+
+    <div class="empty">
+      لم تتبرع بعد.
+    </div>
+
+  <%end%> 
 
 </div>
