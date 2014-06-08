@@ -7,14 +7,9 @@ class ContentController < ActionController::Base
   end
 
   def about
-    @users = User.all
-    respond_to do |format|
-      format.html # about.html.erb
-      format.json { render json: @user }
-    end
   end
 
-  def donator_info
+  def donor_info
   end
 
   def donation_info
