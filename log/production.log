@@ -53183,3 +53183,8 @@ Processing by ContentController#index as HTML
   Rendered content/index.html.erb within layouts/application (1.4ms)
   Rendered devise/shared/_nav.erb (0.1ms)
 Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+Started GET "/" for 37.220.109.111 at 2014-06-08 09:59:30 -0400
+Processing by ContentController#index as HTML
+  Rendered content/index.html.erb within layouts/application (1.3ms)
+  Rendered devise/shared/_nav.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
