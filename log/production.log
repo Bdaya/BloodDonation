@@ -53173,3 +53173,13 @@ Processing by ContentController#index as HTML
   Rendered content/index.html.erb within layouts/application (1.4ms)
   Rendered devise/shared/_nav.erb (0.1ms)
 Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+Started GET "/" for 37.220.109.111 at 2014-06-08 09:49:30 -0400
+Processing by ContentController#index as HTML
+  Rendered content/index.html.erb within layouts/application (1.9ms)
+  Rendered devise/shared/_nav.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+Started GET "/" for 37.220.109.111 at 2014-06-08 09:54:30 -0400
+Processing by ContentController#index as HTML
+  Rendered content/index.html.erb within layouts/application (1.4ms)
+  Rendered devise/shared/_nav.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
