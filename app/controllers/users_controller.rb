@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     end
   end
 
-def confirm 
+def confirm
  @user = User.find(params[:id])
     @request=Request.find(params[:request_id])
     @reply= Reply.find(params[:reply_id])
@@ -122,7 +122,7 @@ end
 
     #  a user can donate once every 3 months (90 days)
     if @user.last_donated != nil
-      time = ((Time.now - @user.last_donated)/(60*60*24)).to_i       
+      time = ((Time.now - @user.last_donated)/(60*60*24)).to_i
       if (time > 90)
         @user.can_donate = true
       else
@@ -131,8 +131,8 @@ end
     end
 
     @requests = []
-    @all_requests.each do |r|          
-      if (@user.is_available && @user.can_donate && (r.blood_type == @user.blood_type)) 
+    @all_requests.each do |r|
+      if (@user.is_available && @user.can_donate && (r.blood_type == @user.blood_type))
         @requests.push(r)
       end
     end
@@ -151,9 +151,9 @@ def reply_on_request
     @reply = Reply.new
     @reply.user = @user
     @reply.request = @request
-    @reply.is_confirmed=true
+    @reply.is_confirmed = true
     @reply.save
-    
+
     if (@reply.save)
     @request.number_of_replies+=1
     @request.state = "pending"
@@ -165,10 +165,10 @@ def reply_on_request
     @user.save
      redirect_to @user, :notice => "Request is confirmed"
     end
-  end  
+  end
 
- def home 
-  
+ def home
+
  end
- 
+
 end
