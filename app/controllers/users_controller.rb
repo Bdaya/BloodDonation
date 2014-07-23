@@ -132,8 +132,14 @@ end
 
     @requests = []
     @all_requests.each do |r|
-      if (@user.is_available && @user.can_donate && (r.blood_type == @user.blood_type))
-        @requests.push(r)
+   #@address1=@user.donator_address
+   #@address2=r.hospital_address
+   #@allLocations=Location.near(@address1,200,)   
+if (@user.is_available && @user.can_donate && (r.blood_type == @user.blood_type) &&
+ (r.blood_bags>r.number_of_replies) &&(r.state !="confirmed") &&
+  (r.due_date >= Date.today))
+#  @allLocations.include?(@address2)
+          @requests.push(r)
       end
     end
   end
