@@ -4,7 +4,7 @@
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
 @import "compass/layout.scss";
- 
+
 
 body {
 	height:100% ;
@@ -45,36 +45,37 @@ body {
 	position: absolute;
 	height:100%;
 	width:100%;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
+  top:0;
+  right:0;
 	background: $primary-color;
 	z-index: 9999;
-	overflow:hidden;
+
 	@include box-shadow(#ccc 0px 5px 5px 0);
 
 	.cover-content {
 		display: block;
 		padding:13% 0 !important;
 		margin: 0 auto;
-		width: 50%;
-		height: 70%;
+		height: 100%;
+
+    .sign{
+
+      position:relative;
+      border: 3px solid white;
+      display:block;
+      min-height:300px;
 
 
-		img {
-			width:400px;
-			height:auto;
-			display: block;
-			margin: 0 auto 30px;
+      img.logo {
+        position:absolute;
+        width:180px;
+        height:auto;
+        right:36%;
+        margin-top:-48px;
+      }
+    }
 
-		}
-		a {
-			background: $secondary-color;
-			color: $primary-color;
-			border-color: $primary-color !important;
-			margin:0;
-		}
+
 	}
 }
 
@@ -146,14 +147,14 @@ a.split {
 	background: $primary-color;
 	height:$footer-height;
 	overflow:hidden;
-	
-	
+
+
 	p {
 		display:inline-block;
 		color:$secondary-color;
 		line-height: $footer-height;
 	}
-	
+
 	.column {
 		height: $footer-height;
 	}
@@ -161,7 +162,7 @@ a.split {
 
 		float: $opposite-direction;
 		height: $footer-height;
-		
+
 		p {
 		display:inline-block;
 		color:$secondary-color;
@@ -193,7 +194,7 @@ a.split {
 			padding: $topbar-height/3.8 10px;
 
 
-			
+
 
 			a {
 				color: $primary-color;
@@ -207,15 +208,15 @@ a.split {
 			}
 
 			:hover > a {
-				color: $primary-color !important; 
+				color: $primary-color !important;
 			}
-			
-		
+
+
 		}
 
 
 		.logo {
-			
+
 
 			img {
 				height:image-height('logo.png');
@@ -244,10 +245,10 @@ a.split {
 		p {
 			text-align: justify;
 		}
-		
+
 	}
-	
-	
+
+
 
 	.tabs-content .vertical {
 		margin-right:5px;
@@ -337,7 +338,7 @@ a.split {
 			}
 		}
 		.due-date {
-			
+
 			p {
 				@include circle(150px, $primary-color);
 				display:block;
@@ -381,7 +382,7 @@ a.split {
 	}
 
 	.donator_confirmations {
-		
+
 
 		padding:0 !important;
 		.donator_name{
@@ -428,7 +429,7 @@ a.split {
 	}
 
 	.due-date {
-			
+
 			p {
 				@include circle(150px, $primary-color);
 				display:block;
@@ -456,7 +457,7 @@ a.split {
 }
 
 
-@media only screen and (max-width: 64.063em) { 
+@media only screen and (max-width: 64.063em) {
 	.footer {
 		height: $footer-height*2;
 		text-align: center;

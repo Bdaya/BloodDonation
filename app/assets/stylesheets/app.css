@@ -10346,40 +10346,37 @@ body {
   height: 100%;
   width: 100%;
   top: 0;
-  bottom: 0;
-  left: 0;
   right: 0;
   background: #ba2830;
   z-index: 9999;
-  overflow: hidden;
   -webkit-box-shadow: #cccccc 0px 5px 5px 0;
   -moz-box-shadow: #cccccc 0px 5px 5px 0;
   box-shadow: #cccccc 0px 5px 5px 0;
 }
-/* line 57, scss/app.scss */
+/* line 55, scss/app.scss */
 .cover .cover-content {
   display: block;
   padding: 13% 0 !important;
   margin: 0 auto;
-  width: 50%;
-  height: 70%;
+  height: 100%;
 }
-/* line 65, scss/app.scss */
-.cover .cover-content img {
-  width: 400px;
-  height: auto;
+/* line 61, scss/app.scss */
+.cover .cover-content .sign {
+  position: relative;
+  border: 3px solid white;
   display: block;
-  margin: 0 auto 30px;
+  min-height: 300px;
 }
-/* line 72, scss/app.scss */
-.cover .cover-content a {
-  background: white;
-  color: #ba2830;
-  border-color: #ba2830 !important;
-  margin: 0;
+/* line 69, scss/app.scss */
+.cover .cover-content .sign img.logo {
+  position: absolute;
+  width: 180px;
+  height: auto;
+  right: 36%;
+  margin-top: -48px;
 }
 
-/* line 82, scss/app.scss */
+/* line 83, scss/app.scss */
 .show {
   position: absolute;
   height: 30px;
@@ -10404,7 +10401,7 @@ body {
   -webkit-border-top-right-radius: 10px;
   border-top-right-radius: 10px;
 }
-/* line 107, scss/app.scss */
+/* line 108, scss/app.scss */
 .show a {
   color: white;
   display: block;
@@ -10413,64 +10410,64 @@ body {
   line-height: 30px;
 }
 
-/* line 119, scss/app.scss */
+/* line 120, scss/app.scss */
 a.split {
   font-weight: bolder;
 }
 
-/* line 123, scss/app.scss */
+/* line 124, scss/app.scss */
 .donator_profile {
   vertical-align: center;
 }
-/* line 125, scss/app.scss */
+/* line 126, scss/app.scss */
 .donator_profile h2 {
   font-size: 16px;
   display: inline-block;
 }
-/* line 129, scss/app.scss */
+/* line 130, scss/app.scss */
 .donator_profile p {
   display: inline-block;
   text-align: center;
   font-size: 18px;
 }
-/* line 136, scss/app.scss */
+/* line 137, scss/app.scss */
 .donator_profile .donator_stats {
   margin: 10px 0;
 }
-/* line 139, scss/app.scss */
+/* line 140, scss/app.scss */
 .donator_profile .donator_stats button {
   border: none;
 }
 
-/* line 145, scss/app.scss */
+/* line 146, scss/app.scss */
 .footer {
   background: #ba2830;
   height: 45px;
   overflow: hidden;
 }
-/* line 151, scss/app.scss */
+/* line 152, scss/app.scss */
 .footer p {
   display: inline-block;
   color: white;
   line-height: 45px;
 }
-/* line 157, scss/app.scss */
+/* line 158, scss/app.scss */
 .footer .column {
   height: 45px;
 }
-/* line 160, scss/app.scss */
+/* line 161, scss/app.scss */
 .footer .social {
   float: left;
   height: 45px;
 }
-/* line 165, scss/app.scss */
+/* line 166, scss/app.scss */
 .footer .social p {
   display: inline-block;
   color: white;
   line-height: 45px;
   vertical-align: top;
 }
-/* line 172, scss/app.scss */
+/* line 173, scss/app.scss */
 .footer .social li {
   color: white;
   font-size: 2.1875rem;
@@ -10478,7 +10475,7 @@ a.split {
   text-align: center;
   width: 100%;
 }
-/* line 181, scss/app.scss */
+/* line 182, scss/app.scss */
 .footer .social a {
   width: 50px;
   height: 45px;
@@ -10486,13 +10483,13 @@ a.split {
   display: inline-block;
 }
 
-/* line 190, scss/app.scss */
+/* line 191, scss/app.scss */
 .top-bar li.register {
   height: 80px;
   width: auto;
   padding: 21.05263px 10px;
 }
-/* line 198, scss/app.scss */
+/* line 199, scss/app.scss */
 .top-bar li.register a {
   color: #ba2830;
   background: white !important;
@@ -10505,90 +10502,90 @@ a.split {
   -moz-border-radius: 4px / 4px;
   border-radius: 4px / 4px;
 }
-/* line 209, scss/app.scss */
+/* line 210, scss/app.scss */
 .top-bar li.register :hover > a {
   color: #ba2830 !important;
 }
-/* line 220, scss/app.scss */
+/* line 221, scss/app.scss */
 .top-bar .logo img {
   height: 65px;
   width: 171px;
   margin: 5px 15px;
 }
 
-/* line 229, scss/app.scss */
+/* line 230, scss/app.scss */
 .top-bar-section ul li.register:hover:not(.has-form) > a {
   color: #ba2830 !important;
 }
 
-/* line 232, scss/app.scss */
+/* line 233, scss/app.scss */
 form button {
   margin: 5px 0;
 }
 
-/* line 237, scss/app.scss */
+/* line 238, scss/app.scss */
 .main_content {
   padding: 105px 50px 70px;
   width: 100%;
   min-height: 100%;
   margin: -80px 0 -45px;
 }
-/* line 244, scss/app.scss */
+/* line 245, scss/app.scss */
 .main_content .tabs-content p {
   text-align: justify;
 }
-/* line 252, scss/app.scss */
+/* line 253, scss/app.scss */
 .main_content .tabs-content .vertical {
   margin-right: 5px;
 }
-/* line 256, scss/app.scss */
+/* line 257, scss/app.scss */
 .main_content dl.tabs {
   margin: 0;
 }
-/* line 259, scss/app.scss */
+/* line 260, scss/app.scss */
 .main_content dl.tabs .column {
   text-align: center;
   padding: 0 !important;
 }
-/* line 263, scss/app.scss */
+/* line 264, scss/app.scss */
 .main_content dl.tabs dd.active a, .main_content dl.tabs dd:hover a {
   color: #fff !important;
 }
 
-/* line 271, scss/app.scss */
+/* line 272, scss/app.scss */
 .request_list h1 {
   font-size: 20px;
 }
-/* line 274, scss/app.scss */
+/* line 275, scss/app.scss */
 .request_list h2 {
   font-size: 16px;
   display: inline-block;
 }
-/* line 278, scss/app.scss */
+/* line 279, scss/app.scss */
 .request_list p {
   display: inline-block;
   text-align: center;
   font-size: 18px;
 }
-/* line 285, scss/app.scss */
+/* line 286, scss/app.scss */
 .request_list .more .more-content {
   float: left;
   padding: 0 10px;
 }
-/* line 290, scss/app.scss */
+/* line 291, scss/app.scss */
 .request_list .more .more-content .more-patient-details, .request_list .more .more-content .share-patient-social {
   display: inline-block;
 }
-/* line 295, scss/app.scss */
+/* line 296, scss/app.scss */
 .request_list .more .more-content .share-patient-social a {
   padding: 0 5px;
   font-size: 1.25rem;
 }
-/* line 299, scss/app.scss */
+/* line 300, scss/app.scss */
 .request_list .more .more-content .share-patient-social a :hover {
   color: #000;
 }
-/* line 306, scss/app.scss */
+/* line 307, scss/app.scss */
 .request_list .patient {
   background: #f2f2f2;
   border: 1px solid #d8d8d8;
@@ -10600,7 +10597,7 @@ form button {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 315, scss/app.scss */
+/* line 316, scss/app.scss */
 .request_list .patient .blood_type_circle p {
   width: 100px;
   height: 100px;
@@ -10627,7 +10624,7 @@ form button {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-/* line 341, scss/app.scss */
+/* line 342, scss/app.scss */
 .request_list .patient .due-date p {
   width: 150px;
   height: 150px;
@@ -10655,67 +10652,67 @@ form button {
   -ms-transform: translate(-50%, -50%);
 }
 
-/* line 369, scss/app.scss */
+/* line 370, scss/app.scss */
 .request_content h2 {
   font-size: 16px;
   display: inline-block;
 }
-/* line 373, scss/app.scss */
+/* line 374, scss/app.scss */
 .request_content p {
   display: inline-block;
   text-align: center;
   font-size: 18px;
 }
-/* line 379, scss/app.scss */
+/* line 380, scss/app.scss */
 .request_content .main_data {
   margin: 0 0 35px;
 }
-/* line 383, scss/app.scss */
+/* line 384, scss/app.scss */
 .request_content .donator_confirmations {
   padding: 0 !important;
 }
-/* line 387, scss/app.scss */
+/* line 388, scss/app.scss */
 .request_content .donator_confirmations .donator_name {
   padding: 0;
 }
-/* line 389, scss/app.scss */
+/* line 390, scss/app.scss */
 .request_content .donator_confirmations .donator_name h2 {
   padding: 23px 0;
   width: 100%;
   text-align: center;
   margin: 0 !important;
 }
-/* line 397, scss/app.scss */
+/* line 398, scss/app.scss */
 .request_content .donator_confirmations .confirmation {
   padding: 0;
   text-align: center;
   background: #ba2830;
 }
-/* line 401, scss/app.scss */
+/* line 402, scss/app.scss */
 .request_content .donator_confirmations .confirmation a {
   padding: 20px 0;
   display: block;
   background: #ba2830;
   color: white;
 }
-/* line 410, scss/app.scss */
+/* line 411, scss/app.scss */
 .request_content .more .more-content {
   padding: 0 10px;
 }
-/* line 414, scss/app.scss */
+/* line 415, scss/app.scss */
 .request_content .more .more-content .more-patient-details, .request_content .more .more-content .share-patient-social {
   display: inline-block;
 }
-/* line 419, scss/app.scss */
+/* line 420, scss/app.scss */
 .request_content .more .more-content .share-patient-social a {
   padding: 0 5px;
   font-size: 1.25rem;
 }
-/* line 423, scss/app.scss */
+/* line 424, scss/app.scss */
 .request_content .more .more-content .share-patient-social a :hover {
   color: #000;
 }
-/* line 432, scss/app.scss */
+/* line 433, scss/app.scss */
 .request_content .due-date p {
   width: 150px;
   height: 150px;
@@ -10744,12 +10741,12 @@ form button {
 }
 
 @media only screen and (max-width: 64.063em) {
-  /* line 460, scss/app.scss */
+  /* line 461, scss/app.scss */
   .footer {
     height: 90px;
     text-align: center;
   }
-  /* line 463, scss/app.scss */
+  /* line 464, scss/app.scss */
   .footer .social {
     float: none;
   }

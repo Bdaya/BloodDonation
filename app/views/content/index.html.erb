@@ -42,14 +42,24 @@
 
     <div class="cover">
       <div class="cover-content row">
-        <!-- Faselty's Logo -->
-        <img src="<%= image_path('cover-logo.png')%>" alt="Faselty's Logo" class="logo">
 
-        <!-- Entrance Buttons -->
+        <div class="column large-6 video">
+            <div class="flex-video">
+              <iframe src="//www.youtube.com/embed/_lST9cm5jts" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="column large-6 sign">
+          <!-- Faselty's Logo -->
+          <img src="<%= image_path('cover-logo.png')%>" alt="Faselty's Logo" class="logo">
+        </div>
+
+
+        <!-- Entrance Buttons
         <%= link_to "متبرع جديد", new_user_path, :class=> "button large-6 column" %>
         <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button large-6 column" %>
         <%= link_to "تسجيل الدخول", new_user_session_path, :class=> "button large-6 column" %>
         <%= link_to "عن فصيلتي", about_content_path, :class=> "button large-6 column" %>
+      -->
       </div>
     </div>
 
