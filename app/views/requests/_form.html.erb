@@ -1,10 +1,9 @@
 
 
 <!-- Scripts for Location Geocoding -->
-<script src="http://code.jquery.com/ui/1.8.1/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css"></link>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+ <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 
 <div class="column medium-5 sign-up medium-centered">
 
@@ -140,9 +139,14 @@
           <!-- Due Date -->
           <div class="field">
 
-            <%= f.text_field :due_date, :required=>"", :placeholder=>"مهلة انتهاء الطلب" %>
-            <small class="error">تأكد من كتابة التاريخ.</small>
 
+            <%= f.text_field :due_date, :required=>"", :placeholder=>"مهلة انتهاء الطلب" , :id=>"datepicker"%>
+            <small class="error">تأكد من كتابة التاريخ.</small>
+            <script type="text/javascript">
+              $(function() {
+              $( "#datepicker" ).datepicker();
+              });
+            </script>
           </div>
 
         </div>
