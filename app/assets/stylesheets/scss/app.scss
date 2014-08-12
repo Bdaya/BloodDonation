@@ -54,24 +54,80 @@ body {
 
 	.cover-content {
 		display: block;
-		padding:13% 0 !important;
+		padding:8% 0 !important;
 		margin: 0 auto;
 		height: 100%;
+		max-width:85%;
+
+		h1 {
+			font-size:27px;
+			color:#fff;
+			margin: -35px 0;
+			text-align:center;
+			position:absolute;
+			font-weight:bold;
+			right:45%;
+			@include circle(55px, $primary-color);
+		}
+
+		.sign-form {
+
+			h2{
+				margin:15px 0;
+			}
+
+		}
+
+		a.button, input[type="submit"] {
+			background:$secondary-color;
+			text-decoration:none;
+			color:$primary-color !important;
+			font-family: $body-font-family;
+			font-size:25px;
+			padding: 5px 15px;
+			border: none;
+			text-decoration:none !important;
+		}
+
+		input[type="submit"] {
+			text-align:center;
+			margin: 0 35%;
+		}
 
     .sign{
 
       position:relative;
       border: 3px solid white;
       display:block;
+			padding: 10px 15px ;
       min-height:300px;
+			@include border-radius(10px);
 
+			p {
+				color:#fff;
+				text-align:justify;
+				margin:20px 0 0;
+			}
+			a, h2 {
+				color:#fff;
+			}
+
+			a {
+				text-decoration:underline;
+			}
+
+			h2 {
+				text-align:center;
+				font-size:25px;
+				font-weight:bold;
+			}
 
       img.logo {
         position:absolute;
-        width:180px;
+        width:197px;
         height:auto;
         right:36%;
-        margin-top:-48px;
+        margin-top:-61px;
       }
     }
 
@@ -114,6 +170,55 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
     text-align:center;
 	line-height: 30px;
 
+	}
+}
+form.new_user, form.new_request {
+dl.sign {
+	dd.disabled a, dd.disabled a:hover {
+		background: url('blooddrop-disabled.png') no-repeat top 10px right 10px;
+		background-size: 50px auto;
+		padding: 0px 70px 0px 0px;
+		min-height: 50px;
+		font-size: 28px;
+		text-align: right;
+		color: #ccc !important;
+		cursor:default;
+	}
+
+	dd.active a, dd.active a:hover {
+		color:$primary-color !important;
+		background-color:#fff;
+		background: url('blooddrop-disabled.png') no-repeat top 10px right 10px;
+		background-size: 50px auto;
+		padding: 0px 70px 0px 0px;
+		min-height: 50px;
+		font-size: 28px;
+		text-align: right;
+	}
+
+	dd.complete a {
+		background: url('blooddrop-enabled.png') no-repeat top 10px right 10px;
+		background-size: 50px auto;
+		background-color: #fff;
+		color:$primary-color !important;
+		padding: 0px 70px 0px 0px;
+		min-height: 50px;
+		font-size: 28px;
+		text-align: right;
+	}
+
+
+}
+
+.fields_section {
+	min-height:400px;
+}
+
+	a.button, dd button {
+		margin:0;
+		padding:5px !important;
+		border:none;
+		height:55px;
 	}
 }
 
@@ -187,6 +292,26 @@ a.split {
 		}
 	}
 }
+
+.total-nav {
+
+	width:100%;
+	background:$primary-color;
+
+	.up-bar {
+		height: $topbar-height + 10 ;
+		color:#fff;
+		display:block;
+		width:100% !important;
+		border-bottom: 2px solid #fff;
+		p,a {
+			display:inline-block;
+			color:#fff;
+			font-size:30px;
+			line-height:50px;
+		}
+		}
+}
 	.top-bar {
 		li.register {
 			height: $topbar-height;
@@ -219,9 +344,10 @@ a.split {
 
 
 			img {
-				height:image-height('logo.png');
-				width:image-width('logo.png');
-				margin:5px 15px;
+				height:image-height('logo.png') - 5;
+				width:image-width('logo.png') - 5;
+				margin:-50px 15px 0;
+				background: $primary-color;
 			}
 
 		}
@@ -237,9 +363,9 @@ a.split {
 
 .main_content {
 	padding:(25px + $topbar-height) 50px ($footer-height + 25px);
-	width:100%;
+
 	min-height:100%;
-	margin: ($topbar-height * -1) 0 ($footer-height * -1);
+
 
 	.tabs-content {
 		p {
@@ -262,7 +388,7 @@ a.split {
 		padding:0 !important;
 	}
 	dd.active  a, dd:hover a {
-		color: #fff !important;
+		color: #fff;
 	}
 }
 }

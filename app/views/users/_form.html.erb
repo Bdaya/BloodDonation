@@ -3,7 +3,7 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script src="http://code.jquery.com/ui/1.8.1/jquery-ui.min.js"></script>
 
-<div class="column large-12 sign-up">
+<div class="column medium-5 sign-up medium-centered">
 
   <!-- User Form -->
   <%= form_for(@user, :html => {"data-abide" => ''}) do |f| %>
@@ -25,173 +25,236 @@
       </div>
     <% end %>
 
-    <!-- User Name -->
-    <div class="field">
-      <label>الاسم <small>*مطلوب</small>
-        <%= f.text_field :name, :required=>"" %>
-        <small class="error">يرجى إدخال الاسم.</small>
-      </label>
-    </div>
+    <dl class="tabs row hor sign" data-tab>
+      <dd class="active column medium-4 ">
+        <a href="#user-information">المعلومات الشخصية</a>
+      </dd>
+      <dd class="disabled column medium-4">
+        <a href="#user-bloodtype">فصيلة الدم</a>
+      </dd>
+      <dd class="disabled column medium-4">
+        <a href="#user-location">معلومات المكان</a>
+      </dd>
 
-    <!-- User Email -->
-    <div>
-      <label>البريد الإلكتروني <small>*مطلوبة</small>
-        <%= f.email_field :email, :required=>"", :pattern=>"email" %>
-        <small class="error">يرجى إدخال البريد الإلكتروني بشكل صحيح.</small>
-      </label>
-    </div>
+    </dl>
+    <div class="tabs-content">
+        <div class="content active" id="user-information">
+          <div class="fields_section">
+          <!-- User Name -->
+          <div class="field">
+              <%= f.text_field :name, :required=>"", :placeholder=>"الاسم" %>
+              <small class="error">يرجى إدخال الاسم.</small>
 
-    <!-- User Password -->
-    <div><label> كلمة السر <small>*مطلوبة</small>
-      <%= f.password_field :password, autocomplete: "off", :required=>"" %>
-      <small class="error">يرجى إدخال كلمة السر بشكل صحيح.</small>
-      </label>
-    </div>
+          </div>
 
-    <!-- Password Confirmation -->
-    <div>
-      <label> تأكيد كلمة السر <small>*مطلوبة</small>
-      <%= f.password_field :password_confirmation, autocomplete: "off", :required=>"", "data-equalto"=>"password" %>
-      <small class="error">يرجى التأكد من تأكيد كلمة السر.</small>
-    </label>
-    </div>
+          <!-- User Email -->
+          <div>
 
-    <!-- User Phone -->
-    <div class="field">
-      <label>رقم الهاتف المحمول <small>*مطلوب</small>
-      <%= f.text_field :phone, :required=>"" %>
-      <small class="error">يرجى كتابة رقم الهاتف المحمول ولا يقل عن ١١.</small>
-      </label>
-    </div>
-    
-    <!-- User Age -->
-    <div class="field">
-      <label>السن <small>*مطلوب</small>
-      <%= f.text_field :age, :required=>"" %>
-      <small class="error">يرجى كتابة السن لمعرفة إمكانية التبرع.</small>
-      </label>
-    </div>
+            <!-- User Phone -->
+            <div class="field">
 
-    <!-- User ID -->
-    <div class="field">
-      <label>الرقم القومي <small>*مطلوب</small>
-      <%= f.text_field :ID, :required=>"" %>
-      <small class="error">يرجى كتابة الرقم القومي بشكل صحيح.</small>
-      </label>
-    </div>
+              <%= f.text_field :phone, :required=>"", :placeholder=>"رقم الهاتف المحمول" %>
+              <small class="error">يرجى كتابة رقم الهاتف المحمول ولا يقل عن ١١.</small>
 
-    <!-- User BloodType -->
-    <div class="field">
-      <label>فصيلة الدم <small>*مطلوبة</small>
-        <select id="user_blood_type" name="user[blood_type]", required>
-          <option value="">Select Blood type</option>
-          <option value="A+">A+</option>
-          <option value="A-">A-</option>
-          <option value="B+">B+</option>
-          <option value="B-">B-</option>
-          <option value="O+">O+</option>
-          <option value="O-">O-</option>
-          <option value="AB+">AB+</option>
-          <option value="AB-">AB-</option>
-        </select>
-        <small class="error">لا تنس اختيار فصيلة الدم.</small>
-      </label>                                                  
-    </div>
+            </div>
 
-    <!-- User Location -->
-    <div>
 
-      <!-- User Address -->
-      <label>العنوان: <%= f.text_field :donator_address, input_html: {id: "latitude"}, :required=>"" %> </label>
-      
-      <!-- Google map -->
-      <div id="map_canvas" style="width:100%; height:500px"></div><br/>
+              <%= f.email_field :email, :required=>"", :pattern=>"email", :placeholder=>"البريد الإلكتروني" %>
+              <small class="error">يرجى إدخال البريد الإلكتروني بشكل صحيح.</small>
 
-      <div class="row">
-        
-        <!-- Latitude -->
-        <div class="small-6 column">
-          <label>دائرة عرض
-          <%= f.text_field :latitude, input_html: {id: "latitude"} %>
-          </label>
+          </div>
+
+          <!-- User ID -->
+          <div class="field">
+
+            <%= f.text_field :ID, :required=>"", :placeholder=> "الرقم القومي" %>
+            <small class="error">يرجى كتابة الرقم القومي بشكل صحيح.</small>
+
+          </div>
+
+
+          <div class="row">
+            <!-- User Password -->
+            <div class="column small-5">
+              <%= f.password_field :password, autocomplete: "off", :required=>"", :placeholder=>"كلمة السر" %>
+              <small class="error">يرجى إدخال كلمة السر بشكل صحيح.</small>
+
+            </div>
+
+            <!-- Password Confirmation -->
+            <div class="column small-5">
+
+              <%= f.password_field :password_confirmation, autocomplete: "off", :required=>"", "data-equalto"=>"password", :placeholder=>"تأكيد كلمة السر" %>
+              <small class="error">يرجى التأكد من تأكيد كلمة السر.</small>
+
+            </div>
+          </div>
+        </div>
+          <div class="row">
+
+
+
+            <dl data-tab>
+              <dd class="column medium-6 left">
+                <a class="button expand" href="#user-bloodtype">أكمل</a>
+              </dd>
+            </dl>
+
+          </div>
+
+
+        </div>
+        <div class="content" id="user-bloodtype">
+          <div class="fields_section">
+          <!-- User Age -->
+          <div class="field">
+
+            <%= f.number_field :age, :required=>"", :placeholder=>"السن" %>
+            <small class="error">يرجى كتابة السن لمعرفة إمكانية التبرع.</small>
+
+          </div>
+
+
+
+          <!-- User BloodType -->
+          <div class="field">
+
+              <select id="user_blood_type" name="user[blood_type]", required>
+                <option value="" style="direction:rtl;">اختر فصيلة الدم</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+              </select>
+              <small class="error">لا تنس اختيار فصيلة الدم.</small>
+            </label>
+          </div>
         </div>
 
-        <!-- Longitude -->
-        <div class="small-6 column">
-          <label>خط طول
-          <%= f.text_field :longitude, input_html: {id: "longitude"} %>
-          </label>
+          <div class="row">
+
+            <dl data-tab>
+              <dd class="column medium-6">
+                <a class="button expand" href="#user-information">العودة</a>
+              </dd>
+              <dd class="column medium-6">
+                <a class="button expand" href="#user-location">أكمل</a>
+              </dd>
+            </dl>
+
+          </div>
+
         </div>
+        <div class="content" id="user-location">
+          <!-- User Location -->
+          <div class="fields_section">
 
-      </div>
+            <!-- GeoCoding script -->
+            <script type="text/javascript">
+              var geocoder;
+              var map;
+              var marker;
 
-    </div>
+              function initialize(){
+              //MAP
+                var latlng = new google.maps.LatLng(30.0444196,31.23571160000006);
+                var options = {
+                  zoom: 16,
+                  center: latlng,
+                  mapTypeId: google.maps.MapTypeId.SATELLITE
+                };
 
-    <!-- Submit Button -->
-    <div class="actions">
-      <button class="expand" type="submit">سجّل</button>
+                map = new google.maps.Map(document.getElementById("map_canvas"), options);
+
+                //GEOCODER
+                geocoder = new google.maps.Geocoder();
+
+                marker = new google.maps.Marker({
+                  map: map,
+                  draggable: true
+                });
+
+              };
+
+              $(document).ready(function() {
+
+                initialize();
+
+                $(function() {
+                  $("#user_donator_address").autocomplete({
+                    //This bit uses the geocoder to fetch address values
+                    source: function(request, response) {
+                      geocoder.geocode( {'address': request.term }, function(results, status) {
+                        response($.map(results, function(item) {
+                          return {
+                            label:  item.formatted_address,
+                            value: item.formatted_address,
+                            latitude: item.geometry.location.lat(),
+                            longitude: item.geometry.location.lng()
+                          }
+                        }));
+                      })
+                    },
+                    //This bit is executed upon selection of an address
+                    select: function(event, ui) {
+                      $("#user_latitude").val(ui.item.latitude);
+                      $("#user_longitude").val(ui.item.longitude);
+                      var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
+                      marker.setPosition(location);
+                      map.setCenter(location);
+                    }
+                  });
+                });
+              });
+            </script>
+
+            <!-- Google map -->
+            <div id="map_canvas" style="width:100%; height:300px"></div><br/>
+
+            <!-- User Address -->
+            <%= f.text_field :donator_address, input_html: {id: "latitude"}, :required=>"", :placeholder=>"العنوان" %>
+
+
+
+            <div class="row" style="height:0; overflow:hidden">
+
+              <!-- Latitude -->
+              <div class="small-6 column">
+                <label>دائرة عرض
+                <%= f.text_field :latitude, input_html: {id: "latitude"}, :value=>"0" %>
+                </label>
+              </div>
+
+              <!-- Longitude -->
+              <div class="small-6 column">
+                <label>خط طول
+                <%= f.text_field :longitude, input_html: {id: "longitude"}, :value=>"0" %>
+                </label>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Submit Button -->
+          <div class="actions row">
+            <dl data-tab>
+              <dd class="column medium-6">
+                <a class="button expand" href="#user-bloodtype">العودة</a>
+              </dd>
+              <dd class="column medium-6">
+                <button class="expand" type="submit">سجّل</button>
+              </dd>
+            </dl>
+          </div>
+        </div>
     </div>
 
   <% end %>
   <!-- End of User Form -->
 
 </div>
-
-<!-- GeoCoding script -->
-<script type="text/javascript">
-  var geocoder;
-  var map;
-  var marker;
-     
-  function initialize(){
-  //MAP
-    var latlng = new google.maps.LatLng(30.0444196,31.23571160000006);
-    var options = {
-      zoom: 16,
-      center: latlng,
-      mapTypeId: google.maps.MapTypeId.SATELLITE
-    };
-         
-    map = new google.maps.Map(document.getElementById("map_canvas"), options);
-         
-    //GEOCODER
-    geocoder = new google.maps.Geocoder();
-         
-    marker = new google.maps.Marker({
-      map: map,
-      draggable: true
-    });
-                 
-  };
-
-  $(document).ready(function() {
-           
-    initialize();
-                   
-    $(function() {
-      $("#user_donator_address").autocomplete({
-        //This bit uses the geocoder to fetch address values
-        source: function(request, response) {
-          geocoder.geocode( {'address': request.term }, function(results, status) {
-            response($.map(results, function(item) {
-              return {
-                label:  item.formatted_address,
-                value: item.formatted_address,
-                latitude: item.geometry.location.lat(),
-                longitude: item.geometry.location.lng()
-              }
-            }));
-          })
-        },
-        //This bit is executed upon selection of an address
-        select: function(event, ui) {
-          $("#user_latitude").val(ui.item.latitude);
-          $("#user_longitude").val(ui.item.longitude);
-          var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
-          marker.setPosition(location);
-          map.setCenter(location);
-        }
-      });
-    });
-  });
-</script>

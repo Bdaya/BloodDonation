@@ -51,6 +51,30 @@
         <div class="column large-6 sign">
           <!-- Faselty's Logo -->
           <img src="<%= image_path('cover-logo.png')%>" alt="Faselty's Logo" class="logo">
+
+          <p class="about">فصيلتي هي شبكة وحل لعملية التبرع بالدم. تقدم فصيلتي خدماتها للمتبرعين بالدم ولطالبي الدم كما تتعاون مع
+            مراكز الدم والمستشفيات لتطوير وتحسين عملية التبرع بالدم. تجمع فصيلتي كل المساهمين في عملية التبرع بالدم عن طريق
+            موقعها وتطبيقها للهواتف الخلوية ونظام الجرد والمتابعة واستخدام وسائل الاتصالات
+            وتكنولوجيا المعلومات المتعددة،
+            <%= link_to "إعرف المزيد..", about_content_path %>
+          </p>
+
+          <h2> سجل حساب جديد </h2>
+          <%= link_to "متبرع جديد", new_user_path, :class=> "button large-4 column" %>
+          <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button large-4 column" %>
+
+          </div>
+
+          <div class="column large-6 sign sign-form">
+            <h1>أو</h1>
+            <h2> سجل الدخول</h2>
+            <form>
+              <input type="text" placeholder="رقم التليفون" name="phone"></input>
+              <input type="password" name="password" placeholder="كلمة السر"></input>
+              <input type="submit" name="some_name" class="column small-4 small-centered" value="تسجيل الدخول">
+            </form>
+          </div>
+
         </div>
 
 
