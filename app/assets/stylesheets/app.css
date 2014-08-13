@@ -10286,13 +10286,7 @@ th.hide-for-touch {
   content: "\f1e2";
 }
 
-/* line 9, scss/app.scss */
-body {
-  height: 100%;
-  width: 100%;
-}
-
-/* line 14, scss/app.scss */
+/* line 11, scss/app.scss */
 .empty, .coming_soon {
   color: #ddd;
   font-size: 1.875rem;
@@ -10300,7 +10294,7 @@ body {
   width: 100%;
   text-align: center;
 }
-/* line 21, scss/app.scss */
+/* line 18, scss/app.scss */
 .empty p, .coming_soon p {
   font-size: 1.875rem !important;
   display: block;
@@ -10317,17 +10311,18 @@ body {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-/* line 39, scss/app.scss */
+/* line 36, scss/app.scss */
 .empty a:hover, .coming_soon a:hover {
   text-decoration: underline;
 }
 
-/* line 44, scss/app.scss */
+/* line 41, scss/app.scss */
 .cover {
   position: absolute;
-  height: 100%;
+  overflow: scroll;
   width: 100%;
   top: 0;
+  bottom: 0;
   right: 0;
   background: #ba2830;
   z-index: 9999;
@@ -10335,15 +10330,48 @@ body {
   -moz-box-shadow: #cccccc 0px 5px 5px 0;
   box-shadow: #cccccc 0px 5px 5px 0;
 }
-/* line 55, scss/app.scss */
+/* line 54, scss/app.scss */
 .cover .cover-content {
   display: block;
-  padding: 8% 0 !important;
-  margin: 0 auto;
-  height: 100%;
-  max-width: 85%;
+  position: absolute;
+  margin: 30px auto 0;
+  height: 750px;
+  min-width: 80%;
+  top: 50%;
+  left: 50%;
+  /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
-/* line 62, scss/app.scss */
+/* line 72, scss/app.scss */
+.cover .cover-content .flex-video {
+  width: 100%;
+  height: 100%;
+}
+/* line 75, scss/app.scss */
+.cover .cover-content .flex-video iframe {
+  height: 500px !important;
+  width: 600px !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* line 95, scss/app.scss */
 .cover .cover-content h1 {
   font-size: 27px;
   color: #fff;
@@ -10359,12 +10387,12 @@ body {
   -moz-border-radius: 27.5px;
   border-radius: 27.5px;
 }
-/* line 75, scss/app.scss */
+/* line 108, scss/app.scss */
 .cover .cover-content .sign-form h2 {
   margin: 15px 0;
 }
-/* line 81, scss/app.scss */
-.cover .cover-content a.button, .cover .cover-content input[type="submit"] {
+/* line 114, scss/app.scss */
+.cover .cover-content a.button, .cover .cover-content input[type="submit"], .cover .cover-content button {
   background: white;
   text-decoration: none;
   color: #ba2830 !important;
@@ -10374,12 +10402,12 @@ body {
   border: none;
   text-decoration: none !important;
 }
-/* line 92, scss/app.scss */
-.cover .cover-content input[type="submit"] {
+/* line 125, scss/app.scss */
+.cover .cover-content input[type="submit"], .cover .cover-content button {
   text-align: center;
   margin: 0 35%;
 }
-/* line 97, scss/app.scss */
+/* line 130, scss/app.scss */
 .cover .cover-content .sign {
   position: relative;
   border: 3px solid white;
@@ -10392,27 +10420,27 @@ body {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 106, scss/app.scss */
+/* line 139, scss/app.scss */
 .cover .cover-content .sign p {
   color: #fff;
   text-align: justify;
   margin: 20px 0 0;
 }
-/* line 111, scss/app.scss */
+/* line 144, scss/app.scss */
 .cover .cover-content .sign a, .cover .cover-content .sign h2 {
   color: #fff;
 }
-/* line 115, scss/app.scss */
+/* line 148, scss/app.scss */
 .cover .cover-content .sign a {
   text-decoration: underline;
 }
-/* line 119, scss/app.scss */
+/* line 152, scss/app.scss */
 .cover .cover-content .sign h2 {
   text-align: center;
   font-size: 25px;
   font-weight: bold;
 }
-/* line 125, scss/app.scss */
+/* line 158, scss/app.scss */
 .cover .cover-content .sign img.logo {
   position: absolute;
   width: 197px;
@@ -10421,7 +10449,7 @@ body {
   margin-top: -61px;
 }
 
-/* line 139, scss/app.scss */
+/* line 172, scss/app.scss */
 .show {
   position: absolute;
   height: 30px;
@@ -10446,7 +10474,7 @@ body {
   -webkit-border-top-right-radius: 10px;
   border-top-right-radius: 10px;
 }
-/* line 164, scss/app.scss */
+/* line 197, scss/app.scss */
 .show a {
   color: white;
   display: block;
@@ -10455,7 +10483,7 @@ body {
   line-height: 30px;
 }
 
-/* line 177, scss/app.scss */
+/* line 210, scss/app.scss */
 form.new_user dl.sign dd.disabled a, form.new_user dl.sign dd.disabled a:hover, form.new_request dl.sign dd.disabled a, form.new_request dl.sign dd.disabled a:hover {
   background: url("blooddrop-disabled.png") no-repeat top 10px right 10px;
   background-size: 50px auto;
@@ -10466,7 +10494,7 @@ form.new_user dl.sign dd.disabled a, form.new_user dl.sign dd.disabled a:hover, 
   color: #ccc !important;
   cursor: default;
 }
-/* line 188, scss/app.scss */
+/* line 221, scss/app.scss */
 form.new_user dl.sign dd.active a, form.new_user dl.sign dd.active a:hover, form.new_request dl.sign dd.active a, form.new_request dl.sign dd.active a:hover {
   color: #ba2830 !important;
   background-color: #fff;
@@ -10477,7 +10505,7 @@ form.new_user dl.sign dd.active a, form.new_user dl.sign dd.active a:hover, form
   font-size: 28px;
   text-align: right;
 }
-/* line 199, scss/app.scss */
+/* line 232, scss/app.scss */
 form.new_user dl.sign dd.complete a, form.new_request dl.sign dd.complete a {
   background: url("blooddrop-enabled.png") no-repeat top 10px right 10px;
   background-size: 50px auto;
@@ -10488,11 +10516,11 @@ form.new_user dl.sign dd.complete a, form.new_request dl.sign dd.complete a {
   font-size: 28px;
   text-align: right;
 }
-/* line 213, scss/app.scss */
+/* line 246, scss/app.scss */
 form.new_user .fields_section, form.new_request .fields_section {
   min-height: 400px;
 }
-/* line 217, scss/app.scss */
+/* line 250, scss/app.scss */
 form.new_user a.button, form.new_user dd button, form.new_request a.button, form.new_request dd button {
   margin: 0;
   padding: 5px !important;
@@ -10500,64 +10528,64 @@ form.new_user a.button, form.new_user dd button, form.new_request a.button, form
   height: 55px;
 }
 
-/* line 225, scss/app.scss */
+/* line 258, scss/app.scss */
 a.split {
   font-weight: bolder;
 }
 
-/* line 229, scss/app.scss */
+/* line 262, scss/app.scss */
 .donator_profile {
   vertical-align: center;
 }
-/* line 231, scss/app.scss */
+/* line 264, scss/app.scss */
 .donator_profile h2 {
   font-size: 16px;
   display: inline-block;
 }
-/* line 235, scss/app.scss */
+/* line 268, scss/app.scss */
 .donator_profile p {
   display: inline-block;
   text-align: center;
   font-size: 18px;
 }
-/* line 242, scss/app.scss */
+/* line 275, scss/app.scss */
 .donator_profile .donator_stats {
   margin: 10px 0;
 }
-/* line 245, scss/app.scss */
+/* line 278, scss/app.scss */
 .donator_profile .donator_stats button {
   border: none;
 }
 
-/* line 251, scss/app.scss */
+/* line 284, scss/app.scss */
 .footer {
   background: #ba2830;
   height: 45px;
   overflow: hidden;
 }
-/* line 257, scss/app.scss */
+/* line 290, scss/app.scss */
 .footer p {
   display: inline-block;
   color: white;
   line-height: 45px;
 }
-/* line 263, scss/app.scss */
+/* line 296, scss/app.scss */
 .footer .column {
   height: 45px;
 }
-/* line 266, scss/app.scss */
+/* line 299, scss/app.scss */
 .footer .social {
   float: left;
   height: 45px;
 }
-/* line 271, scss/app.scss */
+/* line 304, scss/app.scss */
 .footer .social p {
   display: inline-block;
   color: white;
   line-height: 45px;
   vertical-align: top;
 }
-/* line 278, scss/app.scss */
+/* line 311, scss/app.scss */
 .footer .social li {
   color: white;
   font-size: 2.1875rem;
@@ -10565,7 +10593,7 @@ a.split {
   text-align: center;
   width: 100%;
 }
-/* line 287, scss/app.scss */
+/* line 320, scss/app.scss */
 .footer .social a {
   width: 50px;
   height: 45px;
@@ -10573,12 +10601,12 @@ a.split {
   display: inline-block;
 }
 
-/* line 296, scss/app.scss */
+/* line 329, scss/app.scss */
 .total-nav {
   width: 100%;
   background: #ba2830;
 }
-/* line 301, scss/app.scss */
+/* line 334, scss/app.scss */
 .total-nav .up-bar {
   height: 50px;
   color: #fff;
@@ -10586,7 +10614,7 @@ a.split {
   width: 100% !important;
   border-bottom: 2px solid #fff;
 }
-/* line 307, scss/app.scss */
+/* line 340, scss/app.scss */
 .total-nav .up-bar p, .total-nav .up-bar a {
   display: inline-block;
   color: #fff;
@@ -10594,13 +10622,13 @@ a.split {
   line-height: 50px;
 }
 
-/* line 316, scss/app.scss */
+/* line 349, scss/app.scss */
 .top-bar li.register {
   height: 40px;
   width: auto;
   padding: 10.52632px 10px;
 }
-/* line 324, scss/app.scss */
+/* line 357, scss/app.scss */
 .top-bar li.register a {
   color: #ba2830;
   background: white !important;
@@ -10613,11 +10641,11 @@ a.split {
   -moz-border-radius: 4px / 4px;
   border-radius: 4px / 4px;
 }
-/* line 335, scss/app.scss */
+/* line 368, scss/app.scss */
 .top-bar li.register :hover > a {
   color: #ba2830 !important;
 }
-/* line 346, scss/app.scss */
+/* line 379, scss/app.scss */
 .top-bar .logo img {
   height: 60px;
   width: 166px;
@@ -10625,77 +10653,77 @@ a.split {
   background: #ba2830;
 }
 
-/* line 356, scss/app.scss */
+/* line 389, scss/app.scss */
 .top-bar-section ul li.register:hover:not(.has-form) > a {
   color: #ba2830 !important;
 }
 
-/* line 359, scss/app.scss */
+/* line 392, scss/app.scss */
 form button {
   margin: 5px 0;
 }
 
-/* line 364, scss/app.scss */
+/* line 397, scss/app.scss */
 .main_content {
   padding: 65px 50px 70px;
-  min-height: 100%;
+  min-height: 500px;
 }
-/* line 371, scss/app.scss */
+/* line 404, scss/app.scss */
 .main_content .tabs-content p {
   text-align: justify;
 }
-/* line 379, scss/app.scss */
+/* line 412, scss/app.scss */
 .main_content .tabs-content .vertical {
   margin-right: 5px;
 }
-/* line 383, scss/app.scss */
+/* line 416, scss/app.scss */
 .main_content dl.tabs {
   margin: 0;
 }
-/* line 386, scss/app.scss */
+/* line 419, scss/app.scss */
 .main_content dl.tabs .column {
   text-align: center;
   padding: 0 !important;
 }
-/* line 390, scss/app.scss */
+/* line 423, scss/app.scss */
 .main_content dl.tabs dd.active a, .main_content dl.tabs dd:hover a {
   color: #fff;
 }
 
-/* line 398, scss/app.scss */
+/* line 431, scss/app.scss */
 .request_list h1 {
   font-size: 20px;
 }
-/* line 401, scss/app.scss */
+/* line 434, scss/app.scss */
 .request_list h2 {
   font-size: 16px;
   display: inline-block;
 }
-/* line 405, scss/app.scss */
+/* line 438, scss/app.scss */
 .request_list p {
   display: inline-block;
   text-align: center;
   font-size: 18px;
 }
-/* line 412, scss/app.scss */
+/* line 445, scss/app.scss */
 .request_list .more .more-content {
   float: left;
   padding: 0 10px;
 }
-/* line 417, scss/app.scss */
+/* line 450, scss/app.scss */
 .request_list .more .more-content .more-patient-details, .request_list .more .more-content .share-patient-social {
   display: inline-block;
 }
-/* line 422, scss/app.scss */
+/* line 455, scss/app.scss */
 .request_list .more .more-content .share-patient-social a {
   padding: 0 5px;
   font-size: 1.25rem;
 }
-/* line 426, scss/app.scss */
+/* line 459, scss/app.scss */
 .request_list .more .more-content .share-patient-social a :hover {
   color: #000;
 }
-/* line 433, scss/app.scss */
+/* line 466, scss/app.scss */
 .request_list .patient {
   background: #f2f2f2;
   border: 1px solid #d8d8d8;
@@ -10707,7 +10735,7 @@ form button {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 442, scss/app.scss */
+/* line 475, scss/app.scss */
 .request_list .patient .blood_type_circle p {
   width: 100px;
   height: 100px;
@@ -10734,7 +10762,7 @@ form button {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-/* line 468, scss/app.scss */
+/* line 501, scss/app.scss */
 .request_list .patient .due-date p {
   width: 150px;
   height: 150px;
@@ -10762,67 +10790,67 @@ form button {
   -ms-transform: translate(-50%, -50%);
 }
 
-/* line 496, scss/app.scss */
+/* line 529, scss/app.scss */
 .request_content h2 {
   font-size: 16px;
   display: inline-block;
 }
-/* line 500, scss/app.scss */
+/* line 533, scss/app.scss */
 .request_content p {
   display: inline-block;
   text-align: center;
   font-size: 18px;
 }
-/* line 506, scss/app.scss */
+/* line 539, scss/app.scss */
 .request_content .main_data {
   margin: 0 0 35px;
 }
-/* line 510, scss/app.scss */
+/* line 543, scss/app.scss */
 .request_content .donator_confirmations {
   padding: 0 !important;
 }
-/* line 514, scss/app.scss */
+/* line 547, scss/app.scss */
 .request_content .donator_confirmations .donator_name {
   padding: 0;
 }
-/* line 516, scss/app.scss */
+/* line 549, scss/app.scss */
 .request_content .donator_confirmations .donator_name h2 {
   padding: 23px 0;
   width: 100%;
   text-align: center;
   margin: 0 !important;
 }
-/* line 524, scss/app.scss */
+/* line 557, scss/app.scss */
 .request_content .donator_confirmations .confirmation {
   padding: 0;
   text-align: center;
   background: #ba2830;
 }
-/* line 528, scss/app.scss */
+/* line 561, scss/app.scss */
 .request_content .donator_confirmations .confirmation a {
   padding: 20px 0;
   display: block;
   background: #ba2830;
   color: white;
 }
-/* line 537, scss/app.scss */
+/* line 570, scss/app.scss */
 .request_content .more .more-content {
   padding: 0 10px;
 }
-/* line 541, scss/app.scss */
+/* line 574, scss/app.scss */
 .request_content .more .more-content .more-patient-details, .request_content .more .more-content .share-patient-social {
   display: inline-block;
 }
-/* line 546, scss/app.scss */
+/* line 579, scss/app.scss */
 .request_content .more .more-content .share-patient-social a {
   padding: 0 5px;
   font-size: 1.25rem;
 }
-/* line 550, scss/app.scss */
+/* line 583, scss/app.scss */
 .request_content .more .more-content .share-patient-social a :hover {
   color: #000;
 }
-/* line 559, scss/app.scss */
+/* line 592, scss/app.scss */
 .request_content .due-date p {
   width: 150px;
   height: 150px;
@@ -10851,12 +10879,12 @@ form button {
 }
 
 @media only screen and (max-width: 64.063em) {
-  /* line 587, scss/app.scss */
+  /* line 620, scss/app.scss */
   .footer {
     height: 90px;
     text-align: center;
   }
-  /* line 590, scss/app.scss */
+  /* line 623, scss/app.scss */
   .footer .social {
     float: none;
   }

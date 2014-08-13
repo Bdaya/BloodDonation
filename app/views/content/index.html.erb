@@ -43,7 +43,7 @@
     <div class="cover">
       <div class="cover-content row">
 
-        <div class="column large-6 video">
+        <div class="column large-6 video show-for-large-only">
             <div class="flex-video">
               <iframe src="//www.youtube.com/embed/_lST9cm5jts" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -60,19 +60,35 @@
           </p>
 
           <h2> سجل حساب جديد </h2>
-          <%= link_to "متبرع جديد", new_user_path, :class=> "button large-4 column" %>
-          <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button large-4 column" %>
+          <%= link_to "متبرع جديد", new_user_path, :class=> "button medium-4 column" %>
+          <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button medium-4 column" %>
 
           </div>
 
           <div class="column large-6 sign sign-form">
             <h1>أو</h1>
             <h2> سجل الدخول</h2>
-            <form>
-              <input type="text" placeholder="رقم التليفون" name="phone"></input>
-              <input type="password" name="password" placeholder="كلمة السر"></input>
-              <input type="submit" name="some_name" class="column small-4 small-centered" value="تسجيل الدخول">
-            </form>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {"data-abide" => ''}) do |f| %>
+                <div>
+
+                  <%= f.email_field :email, autofocus: true, :required=>"", :pattern=>"email", :placeholder=>"البريد الإلكتروني" %>
+
+                <small class="error">يرجى كتابة البريد الإلكتروني بشكل صحيح.</small>
+              </div>
+
+            <div>
+
+                <%= f.password_field :password, autocomplete: "off", :placeholder=>"كلمة السر" %>
+
+            </div>
+
+
+                <% if devise_mapping.rememberable? -%>
+                <div style="color:#fff; font-size:14px;"><%= f.check_box :remember_me %> <span>تذكرني</span> - <%= link_to "نسيت كلمة السر؟", new_password_path(resource_name) %></div>
+              <% end -%>
+
+              <button type="submit" class=" column small-4 small-centered">ادخل</button>
+            <% end %>
           </div>
 
         </div>
