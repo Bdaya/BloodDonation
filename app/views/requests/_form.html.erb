@@ -26,13 +26,13 @@
 
 
     <dl class="tabs row hor sign" data-tab>
-      <dd class="active column medium-4 ">
+      <dd class="active column medium-4 first-level">
         <a href="#contact-information">بيانات التواصل</a>
       </dd>
-      <dd class="disabled column medium-4">
+      <dd class="disabled column medium-4 second-level">
         <a href="#patient-information">بيانات المريض</a>
       </dd>
-      <dd class="disabled column medium-4">
+      <dd class="disabled column medium-4 third-level">
         <a href="#hospital-information">بيانات المستشفى</a>
       </dd>
 
@@ -81,7 +81,7 @@
 
             <dl data-tab>
               <dd class="column medium-6 left">
-                <a class="button expand" href="#patient-information">أكمل</a>
+                <a class="button expand disabled" id="complete1" href="#patient-information">أكمل</a>
               </dd>
             </dl>
 
@@ -158,7 +158,7 @@
                 <a class="button expand" href="#contact-information">العودة</a>
               </dd>
               <dd class="column medium-6">
-                <a class="button expand" href="#hospital-information">أكمل</a>
+                <a class="button expand disabled" id="complete2" href="#hospital-information">أكمل</a>
               </dd>
             </dl>
 
@@ -225,7 +225,7 @@
                 <a class="button expand" href="#patient-information">العودة</a>
               </dd>
               <dd class="column medium-6">
-                <button class="expand" type="submit">سجّل</button>
+                <button class="expand disabled" type="submit">سجّل</button>
               </dd>
             </dl>
           </div>
@@ -242,6 +242,76 @@
 
 <% end %>
 <!-- End of Request Form -->
+
+
+<script type="text/javascript">
+  $("#contact-information").find("input").change( function() {
+    var complete = false;
+    $("#contact-information").find("input").each( function() {
+      if ($(this).val().length === 0) {
+        complete = false;
+        return false;
+      }
+    else {
+      complete = true;
+    }
+  });
+
+  if (complete) {
+    $("#contact-information").find("a.disabled").removeClass("disabled").addClass("enabled");
+    $("dd.first-level").addClass("complete");
+  };
+
+  $("#patient-information").find("input").change( function() {
+    var complete = false;
+    $("#patient-information").find("input").each( function() {
+      if ($(this).val().length === 0) {
+        complete = false;
+        return false;
+      }
+    else {
+      complete = true;
+    }
+  });
+
+  if (complete) {
+    $("#patient-information").find("a.disabled").removeClass("disabled").addClass("enabled");
+    $("dd.second-level").addClass("complete");
+  };
+
+  });
+  });
+
+  $("#hospital-information").find("input").change( function() {
+    var complete = false;
+    $("#hospital-information").find("input").each( function() {
+      if ($(this).val().length === 0) {
+        complete = false;
+        return false;
+      }
+    else {
+      complete = true;
+    }
+  });
+
+  if (complete) {
+    $("#hospital-information").find("button").removeClass("disabled").addClass("enabled");
+    $("dd.third-level").addClass("complete");
+  };
+
+  });
+
+  $("#complete1").click( function () {
+    $("dd.first-level").removeClass("active");
+    $("dd.second-level").removeClass("disabled").addClass("active");
+  });
+
+  $("#complete2").click( function () {
+    $("dd.second-level").removeClass("active");
+    $("dd.third-level").removeClass("disabled").addClass("active");
+  });
+
+</script>
 
 </div>
 

@@ -26,14 +26,14 @@
     <% end %>
 
     <dl class="tabs row hor sign" data-tab>
-      <dd class="active column medium-4 ">
-        <a href="#user-information">المعلومات الشخصية</a>
+      <dd class="active column large-4 first-level">
+        <a href="#user-information">المعلومات</br>الشخصية</a>
       </dd>
-      <dd class="disabled column medium-4">
-        <a href="#user-bloodtype">فصيلة الدم</a>
+      <dd class="disabled column large-4 second-level">
+        <a href="#user-bloodtype">فصيلة</br>الدم</a>
       </dd>
-      <dd class="disabled column medium-4">
-        <a href="#user-location">معلومات المكان</a>
+      <dd class="disabled column large-4 third-level">
+        <a href="#user-location">معلومات</br>المكان</a>
       </dd>
 
     </dl>
@@ -96,11 +96,13 @@
 
             <dl data-tab>
               <dd class="column medium-6 left">
-                <a class="button expand" href="#user-bloodtype">أكمل</a>
+                <a class="button expand disabled" href="#user-bloodtype" id="complete1">أكمل</a>
               </dd>
             </dl>
 
           </div>
+
+
 
 
         </div>
@@ -142,7 +144,7 @@
                 <a class="button expand" href="#user-information">العودة</a>
               </dd>
               <dd class="column medium-6">
-                <a class="button expand" href="#user-location">أكمل</a>
+                <a class="button expand disabled" href="#user-location" id="#complete2">أكمل</a>
               </dd>
             </dl>
 
@@ -247,7 +249,7 @@
                 <a class="button expand" href="#user-bloodtype">العودة</a>
               </dd>
               <dd class="column medium-6">
-                <button class="expand" type="submit">سجّل</button>
+                <button class="expand disabled" type="submit">سجّل</button>
               </dd>
             </dl>
           </div>
@@ -256,5 +258,74 @@
 
   <% end %>
   <!-- End of User Form -->
+
+<script type="text/javascript">
+  $("#user-information").find("input").change( function() {
+    var complete = false;
+    $("#user-information").find("input").each( function() {
+      if ($(this).val().length === 0) {
+        complete = false;
+        return false;
+      }
+    else {
+      complete = true;
+    }
+  });
+
+  if (complete) {
+    $("#user-information").find("a.disabled").removeClass("disabled").addClass("enabled");
+    $("dd.first-level").addClass("complete");
+  };
+
+  $("#user-bloodtype").find("input").change( function() {
+    var complete = false;
+    $("#user-bloodtype").find("input").each( function() {
+      if ($(this).val().length === 0) {
+        complete = false;
+        return false;
+      }
+    else {
+      complete = true;
+    }
+  });
+
+  if (complete) {
+    $("#user-bloodtype").find("a.disabled").removeClass("disabled").addClass("enabled");
+    $("dd.second-level").addClass("complete");
+  };
+
+  });
+  });
+
+  $("#user-location").find("input").change( function() {
+    var complete = false;
+    $("#user-location").find("input").each( function() {
+      if ($(this).val().length === 0) {
+        complete = false;
+        return false;
+      }
+    else {
+      complete = true;
+    }
+  });
+
+  if (complete) {
+    $("#user-location").find("button").removeClass("disabled").addClass("enabled");
+    $("dd.third-level").addClass("complete");
+  };
+
+  });
+
+  $("#complete1").click( function () {
+    $("dd.first-level").removeClass("active");
+    $("dd.second-level").removeClass("disabled").addClass("active");
+  });
+
+  $("#complete2").click( function () {
+    $("dd.second-level").removeClass("active");
+    $("dd.third-level").removeClass("disabled").addClass("active");
+  });
+
+</script>
 
 </div>

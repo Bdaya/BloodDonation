@@ -207,11 +207,14 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 form.new_user, form.new_request {
 dl.sign {
+	dd {
+		min-height:85px !important;
+	}
 	dd.disabled a, dd.disabled a:hover {
 		background: url('blooddrop-disabled.png') no-repeat top 10px right 10px;
 		background-size: 50px auto;
 		padding: 0px 70px 0px 0px;
-		min-height: 50px;
+		min-height: 80px;
 		font-size: 28px;
 		text-align: right;
 		color: #ccc !important;
