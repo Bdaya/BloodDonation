@@ -2,8 +2,8 @@ class RepliesController < ApplicationController
   before_action :authenticate_logging_in, only: [:report]
   before_action :authenicate_user!, only: [:cancel]
   before_action { |c| c.prepare_reply(params[:id]) }
-  before_action (:only => [:cancel]) { |c| c.require_owner_authority(params[:id]) }
-  before_action (:only => [:report]) { |c| c.require_reporter_authority(params[:id]) }
+  before_action(:only => [:cancel]) { |c| c.require_owner_authority(params[:id]) }
+  before_action(:only => [:report]) { |c| c.require_reporter_authority(params[:id]) }
 
   def report
     the_report = Report.create(message: params[:message], reply: @reply)

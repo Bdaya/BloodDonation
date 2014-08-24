@@ -3,183 +3,154 @@
 
 <div class="row register-content">
 
-<h2>تسجيل متبرع جديد</h2>
+  <h2>تسجيل متبرع جديد</h2>
 
 
-    <div class="column large-12 sign-up">
-        <div data-alert class="alert-box" id="error_explanation" >
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= devise_error_messages! %>
-          <a href="#" class="close">&times;</a>
+  <div class="column large-12 sign-up">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      
+      <div data-alert class="alert-box" id="error_explanation" >
+        <%= devise_error_messages! %>
+        <a href="#" class="close">&times;</a>
+      </div>
 
-        </div>
-
-    <div class="field">
-      <label>الاسم <small>*مطلوب</small>
+      <div class="field">
+        <label>الاسم <small>*مطلوب</small></label>
         <%= f.text_field :name %>
-      </label>
-    </div>
+      </div>
 
-    <div>
-      <label>البريد الإلكتروني <small>*مطلوبة</small>
+      <div class="field">
+        <label>البريد الإلكتروني <small>*مطلوبة</small> </label>
         <%= f.email_field :email, autofocus: true %>
-      </label>
-    </div>
+      </div>
 
 
-          <div><label> كلمة السر <small>*مطلوبة</small>
-            <%= f.password_field :password, autocomplete: "off" %>
-            </label>
-            </div>
+      <div class="field">
+        <label> كلمة السر <small>*مطلوبة</small> </label>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
 
-    <div>
-      <label> تأكيد كلمة السر <small>*مطلوبة</small>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </label>
-    </div>
+      <div class="field">
+        <label> تأكيد كلمة السر <small>*مطلوبة</small></label>
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
 
+      <div class="field">
+        <label>رقم الهاتف المحمول <small>*مطلوب</small></label>
+        <%= f.text_field :phone %>
+      </div>
 
-    <div class="field">
-      <label>رقم الهاتف المحمول <small>*مطلوب</small>
-      <%= f.text_field :phone %>
-      </label>
-    </div>
-    
-    <div class="field">
-      <label>السن <small>*مطلوب</small>
-      <%= f.text_field :age %>
-      </label>
-    </div>
+      <div class="field">
+        <label>السن <small>*مطلوب</small></label>
+          <%= f.text_field :age %>
+      </div>
 
-    <div class="field">
-      <label>الرقم القومي <small>*مطلوب</small>
-      <%= f.text_field :national_id %>
-      </label>
-    </div>
+      <div class="field">
+        <label>الرقم القومي <small>*مطلوب</small></label>
+          <%= f.text_field :national_id %>
+      </div>
 
-    <div class="field">
-      <label>فصيلة الدم <small>*مطلوبة</small>
-      <%= @blood_types = BloodType.all.map{ |b| [b.type, b.id]} %>
-      <%= select_tag :blood_type, options_for_select(@blood_types, :id) %>
-      </label>                                                  
-    </div>
-<div>
+      <div class="field">
+        <label>فصيلة الدم <small>*مطلوبة</small></label> 
+        <%= select_tag(:blood_type, options_for_select(blood_types)) %>                                   
+      </div>
 
-<!-- <div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
- -->
-<div id="map_canvas" style="width:100%; height:500px"></div><br/>
+      <div class="field">
+        <label>البلد</label>
+          <%= text_field_tag :country, nil %>
+      </div>
 
-<div class="row">
-    <div class="small-6 column">
-      <label>country
-        <%= text_field_tag :country, nil, placeholder: 'Enter country...' %>
-      </label>
-    </div>
+      <div class="field">
+        <label>المحافظه</label>
+          <%= text_field_tag :city, nil %>
+        
+      </div>
 
-    <div class="small-6 column">
-      <label>city
-        <%= text_field_tag :city, nil, placeholder: 'Enter city...' %>
-      </label>
-    </div>
+      <div class="field">
+        <label>المنطقه</label>
+          <%= text_field_tag :province, nil %>
+      </div>
 
-    <div class="small-6 column">
-      <label>province
-        <%= text_field_tag :province, nil, placeholder: 'Enter province...' %>
-      </label>
-    </div>
+      <div class="field">
+        <label>باقي العنوان</label>
+          <%= text_field_tag :address, nil %>
+      </div>
 
-    <div class="small-6 column">
-      <label>address
-        <%= text_field_tag :address, nil, placeholder: 'Enter rest of address...' %>
-      </label>
-    </div>
-</div>
-    <div class="actions">
-      <button class="expand">سجّل</button>
-    </div>
-  <% end %>
+      <div class="field">
+        <label>المكان علي الخريطه</label>
+        <%= text_field_tag :latitude, nil, placeholder: "الخط العرضي" %> <%= text_field_tag :longitude, nil, placeholder: "الخط الطولي" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "سجّل", :class => "expand"%>
+      </div>
+    <% end %>
+
+<!--     <div class="field">
+      <p id="coordinates">Click the button to get your coordinates:</p>
+      <button onclick="getLocation()">Try It</button>
+    </div> -->
+
+    <div id="map_canvas" style="width:100%; height:500px"></div><br/>
+
+  <div>
+  <%= render "devise/shared/links" %>
 </div>
 
 <script type="text/javascript">
-
-  // handler = Gmaps.build('Google');
-  // handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  //   markers = handler.addMarkers([
-  //     {
-  //       "lat": 0,
-  //       "lng": 0,
-  //       "picture": {
-  //         "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-  //         "width":  36,
-  //         "height": 36
-  //       },
-  //       "infowindow": "hello!"
-  //     }
-  //   ]);
-  //   handler.bounds.extendWith(markers);
-  //   handler.fitMapToBounds();
-  // });
-
-
   var geocoder;
-var map;
-var marker;
-   
-function initialize(){
-//MAP
+  var map;
+  var marker;
+
+  function initialize(){
+  //MAP
   var latlng = new google.maps.LatLng(41.659,-4.714);
   var options = {
     zoom: 16,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.SATELLITE
   };
-       
+
   map = new google.maps.Map(document.getElementById("map_canvas"), options);
-       
+
   //GEOCODER
   geocoder = new google.maps.Geocoder();
-       
+
   marker = new google.maps.Marker({
     map: map,
     draggable: true
   });
-               
-};
 
-$(document).ready(function() {
-         
-  initialize();
-                 
-  $(function() {
-    $("#address").autocomplete({
-      //This bit uses the geocoder to fetch address values
-      source: function(request, response) {
-        geocoder.geocode( {'address': request.term }, function(results, status) {
-          response($.map(results, function(item) {
-            return {
-              label:  item.formatted_address,
-              value: item.formatted_address,
-              latitude: item.geometry.location.lat(),
-              longitude: item.geometry.location.lng()
-            }
-          }));
-        })
-      },
-      //This bit is executed upon selection of an address
-      select: function(event, ui) {
-        $("#user_latitude").val(ui.item.latitude);
-        $("#user_longitude").val(ui.item.longitude);
-        var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
-        marker.setPosition(location);
-        map.setCenter(location);
-      }
+  };
+
+  $(document).ready(function() {
+
+    initialize();
+
+    $(function() {
+      $("#address").autocomplete({
+  //This bit uses the geocoder to fetch address values
+  source: function(request, response) {
+    geocoder.geocode( {'address': request.term }, function(results, status) {
+      response($.map(results, function(item) {
+        return {
+          label:  item.formatted_address,
+          value: item.formatted_address,
+          latitude: item.geometry.location.lat(),
+          longitude: item.geometry.location.lng()
+        }
+      }));
+    })
+  },
+  //This bit is executed upon selection of an address
+  select: function(event, ui) {
+    $("#user_latitude").val(ui.item.latitude);
+    $("#user_longitude").val(ui.item.longitude);
+    var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
+    marker.setPosition(location);
+    map.setCenter(location);
+  }
+  });
     });
   });
-});
-
 </script>
-
-        <%= render "devise/shared/links" %>
-</div>

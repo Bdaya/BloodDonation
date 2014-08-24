@@ -2,7 +2,7 @@ class RequestsController < ApplicationController
   before_action :authenticate_logging_in, only: [:edit, :update, :reopen, :update_location, :stop]
   before_action(:except => [:index, :new, :create]) { |c| c.prepare_request(params[:id]) }
   before_action :authenicate_user!, only: [:reply]
-  before_action (:only => [:update, :pause, :update_last_donated, :update_location, :stop]) { |c| c.require_authority(params[:id]) }
+  before_action(:only => [:update, :pause, :update_last_donated, :update_location, :stop]) { |c| c.require_authority(params[:id]) }
   
   def index
     if current_user

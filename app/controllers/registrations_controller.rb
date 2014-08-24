@@ -3,13 +3,14 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     @user = User.new(user_params)
     blood_type = BloodType.find(params[:blood_type])
-    location = Location.create(coordinates: params[:coordinates], country: params[:country], city: params[:city], province: params[:province], address: params[:address])
+    this_coordinates = [params[:latitude], params[:longitude]]
+    location = Location.create(coordinates: this_coordinates, country: params[:country], city: params[:city], province: params[:province], address: params[:address])
     @user.blood_type = blood_type
     @user.location = location
     if @user.save
         redirect_to root_url, notice: "Congrats! You successfully registered!"
     else
-        redirect_to new_user_registration, alert: "Please complete all data correctly!"
+        redirect_to new_user_registration_path, alert: "Please complete all data correctly!"
     end
     # build_resource(sign_up_params)
 

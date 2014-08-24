@@ -5,10 +5,9 @@ gem 'rails', '4.0.4'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
-
+gem 'thin'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 1.2'
 gem 'mongoid', '~> 4.0.0.rc1', github: 'mongoid/mongoid'
@@ -19,6 +18,8 @@ gem 'devise'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem 'foundation-rails'
+gem "font-awesome-rails"
 
 group :development do
   gem 'letter_opener'
@@ -27,10 +28,8 @@ end
 group :assets do
   gem 'sass-rails', '~> 4.0.2'
   gem 'coffee-rails', '~> 4.0.0'
-  
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.3.0'
 end
 

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:settings, :update, :pause, :update_last_donated, :update_location]
   before_action { |c| c.prepare_user(params[:id]) }
-  before_action (:only => [:settings, :pause, :update_last_donated, :update_location]) { |c| c.require_user_authority(params[:id]) }
+  before_action(:only => [:settings, :pause, :update_last_donated, :update_location]) { |c| c.require_user_authority(params[:id]) }
 
   def show
   end

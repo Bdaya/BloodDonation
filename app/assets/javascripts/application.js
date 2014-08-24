@@ -11,7 +11,24 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require_tree .
 //= require jquery_ujs
+//= require foundation
 //= require underscore
 //= require gmaps/google
+//= require_tree .
+
+$(function(){ $(document).foundation(); });
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        var x = document.getElementById("coordinates");
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    var x = document.getElementById("coordinates");
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+}
