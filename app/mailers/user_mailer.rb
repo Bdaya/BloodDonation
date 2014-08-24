@@ -7,4 +7,11 @@ class UserMailer < ActionMailer::Base
     mail(to: @user.email, subject: 'Donation Chance!')
   end
 
+  def new_reply_email(user, request)
+    @request = request
+    @user = user
+    @user_url = user_url(@user)
+    mail(to: @request.email, subject: 'Donor Comming!')
+  end
+
 end

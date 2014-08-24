@@ -2,6 +2,8 @@ class Reply
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  after_create :notify_owner
+
   field :confirmed, type: Boolean, default: false
   field :cancelled, type: Boolean, default: false
 
@@ -24,4 +26,7 @@ class Reply
     self.save
   end
 
+  def notify_owner
+    UserMailer.new_reply_email(user, request).deliver
+  end
 end

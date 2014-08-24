@@ -2,7 +2,7 @@ class Request
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  after_create :notify_possible_doners
+  after_create :notify_possible_donors
 
   field :patient_name, type: String
     validates_presence_of :patient_name, :message=> "Must enter the patient name!"
@@ -102,8 +102,8 @@ class Request
     blood_type.users.select{|u| u.can_donate? == true}
   end
 
-  def notify_possible_doners
-    matching_doners.each do |d|
+  def notify_possible_donors
+    matching_donors.each do |d|
       UserMailer.new_request_email(d, self).deliver
     end
   end
