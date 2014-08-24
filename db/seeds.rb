@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+BloodType.create(type: "O-")
+BloodType.create(type: "O+")
+BloodType.create(type: "A-")
+BloodType.create(type: "A+")
+BloodType.create(type: "B-")
+BloodType.create(type: "B+")
+BloodType.create(type: "AB-")
+BloodType.create(type: "AB+")

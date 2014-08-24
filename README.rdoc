@@ -1,21 +1,28 @@
-Bdaya is a youth based human development and charity organization founded in Egypt in November 2010 with a dream to rebrand charity all over Egypt by 2022.
+== README
 
-Academics
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Academics as a project represents the value of Education and Scientific Research to our country youth. It was initially developed to help our colleagues in their difficult courses by providing them with different academic sessions but now evolved to do much more. The goal of this project is to improve studentsق studying skills by elevating the quality of education through creating an enthusiastic atmosphere for learning. This is achieved through holding different scientific and non-scientific events to all students over the academic year.
+Things you may want to cover:
 
-Y.E.S.
+* Ruby version
 
-From our consciousness about the importance of reducing the gap between the academic life and practical life for the future career, YES (Youth Establishing Skills) comes to elaborate the youth for the labor market. YES works on this by providing quality workshops and sessions in different fields to develop studentsق skills, provide them with knowledge that helps in developing their career life, and give space for the students to express themselves through contributing in discussions and debates.
+* System dependencies
 
-Team
+* Configuration
 
-From our awareness about the fact that sports are the best way to develop team work, communication and social skills, Team as a project is created to introduce sports in new style. This project stresses on the message that it is all about how to achieve an accomplishment as a Team, even if you are not a sports man. Teamقs team delivers this message by organizing different sports tournaments and events, as well as national tournaments with other universities to develop the sense of team work and cooperation.
+* Database creation
 
-Care
+* Database initialization
 
-With Care, Bdaya tries to develop and take care of the seeds that will form the new generation; which are the kids and the future youth of this country. Care targets the orphans that need much more that health and nutrition; they need Care, and from this we named it after this name. Every Friday of the academic year, this project works on developing orphansق in their intellectual aspects by teaching them courses in English, Science, Social Life, Computer Technical Skills, Drawing, Coloring, and playing sports as the end of the day.
+* How to run the test suite
 
-Geneh
+* Services (job queues, cache servers, search engines, etc.)
 
-Have you evert thought that you could change someoneقs life with just a Geneh? As our Egyptian community is facing many short term critical problems, Genehقs main idea is to locate this short term urgent community problems and gather all the efforts and money to solve it in a new and creative way. Any Genehقs event start with targeting people and places that are in need, then collecting money in order to raise the necessary funds, and finally supplying the target with its needs.
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.

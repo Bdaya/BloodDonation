@@ -5,25 +5,25 @@
 <h2>تسجيل الدخول</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {"data-abide" => ''}) do |f| %>
-  	<div>
-  		<label>البريد الإلكتروني 
-  		<%= f.email_field :email, autofocus: true, :required=>"", :pattern=>"email" %>
-  	</label>
-  	<small class="error">يرجى كتابة البريد الإلكتروني بشكل صحيح.</small>
-	</div>
+    <div>
+      <label>البريد الإلكتروني 
+      <%= f.email_field :email, autofocus: true, :required=>"", :pattern=>"email" %>
+    </label>
+    <small class="error">يرجى كتابة البريد الإلكتروني بشكل صحيح.</small>
+  </div>
 
 <div>
-  	<label>كلمة السر
+    <label>كلمة السر
     <%= f.password_field :password, autocomplete: "off" %>
     </label>
 </div>
 
 
-		<% if devise_mapping.rememberable? -%>
+    <% if devise_mapping.rememberable? -%>
     <div style="display:inline-block; color:#333;"><%= f.check_box :remember_me %> <span>تذكرني</span></div> - <%= link_to "نسيت كلمة السر؟", new_password_path(resource_name), :style=>"display:inline-block; font-size:14px;" %>
   <% end -%>
   <div>
-	<button type="submit" class=" column small-6 small-centered">ادخل</button>
+  <button type="submit" class=" column small-6 small-centered">ادخل</button>
 </div>
 <% end %>
 

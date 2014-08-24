@@ -1,14 +1,14 @@
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
+  
+  GENDERS = ['male', 'female']
+  BETWEEN_DONATIONS = 90
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :phone,:ID, :email, :password, :password_confirmation, :remember_me , :blood_type ,:age
 
   ## Database authenticatable
   field :email, type: String, default: ""
@@ -28,52 +28,79 @@ class User
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip, type: String
 
+  ######### Special Attributes #########
+  field :gender, type: String
+    validates_inclusion_of :gender, :in => GENDERS
+
   field :name, type: String
-  validates_presence_of :name, :message=> "Must enter your name!"
+    validates_presence_of :name, :message=> "Must enter your name!"
 
   field :phone, type: String
-  validates_presence_of :phone, :message=> "Must enter your Mobile number!"
-  validates_length_of :phone, minimum: 11, maximum: 11, :message=> "Mobile number must be of length 11.."
-  validates_numericality_of :phone, :message=> "Must enter mobile number in numerical form only!"
-  validates_uniqueness_of :phone, :message=> "This mobile number is already associated with another user!"
+    validates_presence_of :phone, :message=> "Must enter your Mobile number!"
+    validates_length_of :phone, minimum: 11, maximum: 11, :message=> "Mobile number must be of length 11.."
+    validates_numericality_of :phone, :message=> "Must enter mobile number in numerical form only!"
+    validates_uniqueness_of :phone, :message=> "This mobile number is already associated with another user!"
   
-  field :blood_type, type: String
-  field :donator_address, type: String
-  field :latitude, type: String
-  field :longitude, type: String
   field :age , type: Integer
-  validates_presence_of :age, :message=> "Must enter your Age!"
-  field :ID , type: String
-  validates_presence_of :ID, :message=> "Must enter your ID!"
-  field :state , type: Boolean , default: true
+    validates_presence_of :age, :message=> "Must enter your Age!"
 
-  
+  field :national_id , type: String
+    validates_presence_of :national_id, :message=> "Must enter your ID!"
 
-  #  how many times this user REALLY donated through the system
-  field :no_of_donates, type: Integer, default: 0
+  field :paused, type: Boolean, default: false # indicator for user pausing or not
+  field :can_donated, type: Boolean, default: true
 
-  #  this is to denote trophies level (say 2 trophies = level 1)
-  field :no_of_trophies, type: Integer, default: 0  
-  #  and this one is to denote the type of the tropy (say level 2 = silver star)
-  field :trophies_level, type: Integer, default: 0  
-  
-  #  is_available is for the user to choose whether to toggle his availibilty button or NOT
-  field :is_available, type: Boolean, default: true
-  #  here,, a user can only donate once in every 3 months (taqreeban)
-  field :can_donate, type: Boolean, default: true
-  field :last_donated, type: Time
-  ## Confirmable
-  # field :confirmation_token, type: String
-  # field :confirmed_at, type: Time
-  # field :confirmation_sent_at, type: Time
-  # field :unconfirmed_email, type: String # Only if using reconfirmable
+  field :last_donated, type: DateTime
 
-  ## Lockable
-  # field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
+  belongs_to :blood_type
+  has_one :location, as: :locatable
+    validates_presence_of :location, :message=> "Must choose hospital's location!"
 
-  # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
-  # field :locked_at,       type: Time
-  has_many :replies, class_name: 'Reply' , inverse_of: :replies
+  has_many :requests
+  has_many :replies
 
-  has_many :locations, inverse_of: :user_location
+  ##### Methods #####
+  def can_donate?
+    if (DateTime.now - last_donated).to_i > BETWEEN_DONATIONS
+      true
+    else
+      false
+    end
+  end
+
+  def confirmed_donations
+    replies.where(confirmed: true)
+  end
+
+  def no_of_confirmed_donations
+    confirmed_donations.count
+  end
+
+  def reports
+    replies.select{ |reply| reply.report != nil }.map(&:reports)
+  end
+
+  def uncompleted_donations
+    replies.where(confirmed: false)
+  end
+
+  def no_of_uncompleted_donations
+    uncompleted_donations.count
+  end
+
+  def cancelled_donations
+    replies.where(cancelled: true)
+  end
+
+  def no_of_cancelled_donations
+    cancelled_donations.count
+  end
+
+  def find_matching_requests_arround(distance_in_km = 15)
+    distance_in_miles = distance_in_km * 1.60934
+    current_place = self.location
+    near_requests = Request.active.select{ |r| r.blood_type == blood_type}.select{ |r| Geocoder::Calculations.distance_between(current_place.coordinates, r.coordinates) <= distance_in_miles }
+    near_requests
+  end
+
 end

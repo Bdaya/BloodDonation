@@ -3,13 +3,18 @@ class Location
   include Mongoid::Timestamps
   include Geocoder::Model::Mongoid
 
-   Location
-  field :location, type: Array  # [latitude:float, longitude:float]
+  field :coordinates, type: Array  # [latitude:float, longitude:float]
+  field :country, type: String, default: "Egypt"
+  field :city, type: String
+  field :province, type: String
   field :address, type: String
-  
-  reverse_geocoded_by :location
-  after_validation :reverse_geocode  # auto-fetch ad
+    
+  reverse_geocoded_by :full_address
+  # after_validation :reverse_geocode  # auto-fetch ad
 
-  belongs_to :user_location, class_name: 'User' , inverse_of: :locations
+  belongs_to :locatable, polymorphic: true
 
+  def full_address
+    "#{address}, #{province}, #{city}, #{country}"
+  end
 end

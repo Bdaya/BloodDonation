@@ -2,14 +2,26 @@ class Reply
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :is_confirmed, type: Boolean, default: false
-  field :requester_report , type: String
-  field :donor_report , type: String
-  field :reply_is_confirmed, type: Boolean, default: false
+  field :confirmed, type: Boolean, default: false
+  field :cancelled, type: Boolean, default: false
 
+  has_one :report
+  belongs_to :user
+  belongs_to :request
 
-  
-  belongs_to :user, class_name: 'User' , inverse_of: :replies
-  belongs_to :request, class_name: 'Request' , inverse_of: :replies
-  
+  def confirm
+    confirmed = true
+    user.update_attribute(:last_donated, DateTime.now)
+    self.save
+  end
+
+  def reported?
+    report.present? ? true : false
+  end
+
+  def cancel
+    cancelled = true
+    self.save
+  end
+
 end

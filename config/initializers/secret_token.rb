@@ -1,7 +1,12 @@
 # Be sure to restart your server when you modify this file.
 
-# Your secret key for verifying the integrity of signed cookies.
+# Your secret key is used for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
+
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-BloodDonation::Application.config.secret_token = 'a89ad9503e39c65250d5eae4d94cdf71b174f4b167a1e3d719d8dddd92d1c82218ffd1f3554028e53792902a8d0a65618a256df4099f2f2449ae94a7052a9c34'
+# You can use `rake secret` to generate a secure secret key.
+
+# Make sure your secret_key_base is kept private
+# if you're sharing your code publicly.
+Faselty::Application.config.secret_key_base = 'ccf353e6423ba1cabcec8136b8c3ca3746452badb42c9286700e27477ec753ded4cbfe061f2b5b1f271496c455a47d76129790cb53934bb8c854208f0077312b'

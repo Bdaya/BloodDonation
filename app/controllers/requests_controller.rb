@@ -1,101 +1,127 @@
 class RequestsController < ApplicationController
-  # GET /requests
-  # GET /requests.json
+  before_action :authenticate_logging_in, only: [:edit, :update, :reopen, :update_location, :stop]
+  before_action(:except => [:index, :new, :create]) { |c| c.prepare_request(params[:id]) }
+  before_action :authenicate_user!, only: [:reply]
+  before_action (:only => [:update, :pause, :update_last_donated, :update_location, :stop]) { |c| c.require_authority(params[:id]) }
+  
   def index
-    @requests = Request.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @requests }
-    end
+    if current_user
+      @requests = current_user.find_matching_requests_arround
+    else
+      @requests = Request.all
+    end 
   end
 
-  # GET /requests/1
-  # GET /requests/1.json
   def show
-    @request = Request.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @request }
-    end
   end
 
-  # GET /requests/new
-  # GET /requests/new.json
+  def edit
+  end
+
+  def update
+    @request.update_attributes(request_params)
+    redirect_to @request, notice: "Successfully updated your request"
+  end
+
   def new
     @request = Request.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @request }
-    end
   end
 
-  # GET /requests/1/edit
-  def edit
-    @request = Request.find(params[:id])
-  end
-
-  # POST /requests
-  # POST /requests.json
   def create
-    @request = Request.new(params[:request])
+    @request = Request.new(request_params)
+    location = Location.create(location_params)
+    @request.location = location
+    @request.blood_type = BloodType.find(params[:blood_type]) if params[:blood_type]
+    if current_user
+      @request.user = current_user
+      @request.national_id = current_user.national_id
+    end
+    if @request.save
+      redirect_to @request
+    else
+      redirect_to root_url, alert: "Something went wrong"
+    end
+  end
 
-    respond_to do |format|
-      if @request.save
-        format.html { redirect_to @request, notice: 'Request was successfully created.' }
-        format.json { render json: @request, status: :created, location: @request }
+  def reopen
+    if @request.reopen
+      redirect_to @request, notice: "Successfully republished the request."
+    else
+      redirect_to root_url, alert: "Something went wrong"
+    end
+  end
+
+  def log_in
+    if user_signed_in?
+      redirect_to @request, alert: "Your are already signed in!"
+    end
+  end
+
+  def authenticate
+    if user_signed_in?
+      redirect_to @request, alert: "Your are already signed in!"
+    else
+      national_id = params[:national_id]
+      if national_id
+        if @request.authenticate(national_id)
+          session[:current_request_id] = @request.id
+          session[:national_id] = national_id
+          redirect_to @request, notice: "Successfully logged-in."
+        else
+          redirect_to log_in_requests_path(@request), alert: "Wrong national ID! Please try again"
+        end
       else
-        format.html { render action: "new" }
-        format.json { render json: @request.errors, status: :unprocessable_entity }
+        redirect_to log_in_requests_path(@request), alert: "You must enter a valid national ID!"
       end
     end
   end
 
-  # PUT /requests/1
-  # PUT /requests/1.json
-  def update
-    @request = Request.find(params[:id])
+  def update_location
+    if @request.location.update_attributes(location_params)
+      redirect_to @request, notice: "Successfully updated your current location."
+    else
+      redirect_to @request, alert: "Something went wrong!"
+    end
+  end
 
-    respond_to do |format|
-      if @request.update_attributes(params[:request])
-        format.html { redirect_to @request, notice: 'Request was successfully updated.' }
-        format.json { head :no_content }
+  def stop
+    if @request.stop
+      redirect_to root_url, notice: "Successfully cancelled the request."
+    else
+      redirect_to root_url, alert: "Something went wrong"
+    end
+  end
+
+  def reply
+    if (@request.blood_type == current_user.blood_type)
+      @reply = Reply.new(request: @request, user: current_user)
+      if @reply.save
+        redirect_to @request, notice: "Congrats! you successfully responded to the request..\n He should be waiting for you there."
       else
-        format.html { render action: "edit" }
-        format.json { render json: @request.errors, status: :unprocessable_entity }
+        redirect_to @request, alert: "Something went wrong"
+      end
+    else
+      redirect_to root_url, alert: "The request's blood type doesn't match yours!"
+    end
+  end
+
+  private
+    def authenticate_logging_in
+      unless user_signed_in? || current_request
+        redirect_to root_path, alert: "You must log-in first!"
       end
     end
-  end
 
-def confirm 
- @request = Request.find(params[:id])
-    @user=User.find(params[:user_id])
-    @reply= Reply.find(params[:reply_id])
-    @request.number_of_confirmed_users+=1
-        @reply.is_confirmed="true"
-         
-           @reply.save
-
-    if(@request.blood_bags==@request.number_of_confirmed_users)
-
-    @request.state="confirmed"
-      @request.save
-      redirect_to @request, :notice => "Request is confirmed"
-else redirect_to @request, :notice => "You confirmed a donor"
-
-end
-end
-  # DELETE /requests/1
-  # DELETE /requests/1.json
-  def destroy
-    @request = Request.find(params[:id])
-    @request.destroy
-
-    respond_to do |format|
-      format.html { redirect_to requests_url }
-      format.json { head :no_content }
+    def require_authority(args)
+      unless (current_user && (@request.user == current_user) ) || (current_request && (current_request == @request))
+        redirect_to root_path, alert: "You can only edit this for your account."
+      end
     end
-  end
+
+    def prepare_request(args)
+      @request = Request.find(args)
+      unless @request
+        redirect_to root_path, alert: "Something went wrong!"
+      end
+    end
 end
