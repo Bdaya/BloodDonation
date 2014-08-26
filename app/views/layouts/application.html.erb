@@ -5,24 +5,58 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= javascript_include_tag "application", "vendor/modernizr" %>
-    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "app", :media => "all" %>
+    <%= stylesheet_link_tag "font-awesome", :media => "all" %>
     <%= csrf_meta_tags %>
 </head>
 <body>
+
+
     <!-- Top Navigation Bar -->
     <div class="total-nav">
     <div class=" up-bar">
           <div class="row">
             <div class="left">
+            <ul>
+            <% if user_signed_in? %>
+
+                    <li><%= link_to 'الصفحة الشخصية', user_path(current_user) %></li>
+                    <li<a href="#" data-dropdown="drop1" class="dropdown">إعدادات الحساب</a><br>
+                    <ul id="drop1" data-dropdown-content class="f-dropdown">
+                      <li><a href="#">This is a link</a></li>
+                      <li><!-- Available State -->
+          <% if @user.is_available? %>
+              <%= link_to 'تجميد الحساب', change_availability_user_path(@user) %>
+            <!-- Not Available -->
+            <% else %>
+              <%= link_to 'تفعيل الحساب', change_availability_user_path(@user) %>
+            <% end %>
+            <!-- End of User State --></li>
+                      <li><%= link_to "تعديل البيانات", edit_user_path(current_user)  %></li>
+
+                    </ul>
+                  </li>
+                    <li><%= link_to "تسجيل الخروج", destroy_user_session_path, :method => :delete %></li>
+
+            <% else %>
+                  <li>
+                  <a href="#" class="reveal-link" data-reveal-id="login">تسجيل الدخول</a>
+                </li>
+                <li>
+                  <a href="#" class="reveal-link" data-reveal-id="signup">تسجيل حساب جديد</a>
+                </li>
+            <% end %>
 
              <!-- Faselty Facebook Page -->
-            <a href="https://www.facebook.com/FaseltyMe" ><li class="fa fa-facebook-square"></li></a>
+            <a href="https://www.facebook.com/FaseltyMe" ><i class="fa fa-facebook-square"></i></a>
 
             <!-- Faselty Twitter Account -->
-            <a href="https://twitter.com/Faselty"><li class="fa fa-twitter-square"></li></a>
+            <a href="https://twitter.com/Faselty"><i class="fa fa-twitter-square"></i></a>
 
             <!-- Faselty G+ Account -->
-            <a href="https://plus.google.com/u/3/108096126248367301464?cfem=1"><li class="fa fa-google-plus-square"></li></a>
+            <a href="https://plus.google.com/u/3/108096126248367301464?cfem=1"><i class="fa fa-google-plus-square"></i></a>
+
+          </ul>
           </div>
           </div>
     </div>
@@ -39,8 +73,7 @@
         <ul class="left">
 
           <!-- Register Page -->
-          <li <%= render "devise/shared/nav" %>
-          </li>
+
 
           <!-- Donation Info. Menu -->
           <li <% if current_page?(about_contents_path) -%> class="active" <% end %>> <%= link_to "عن فصيلتي", about_contents_path %></li>
@@ -82,19 +115,46 @@
 
         <!-- Signup/in Popup -->
 
-        <div id="myModal" class="reveal-modal" data-reveal>
+        <div id="signup" class="reveal-modal" data-reveal>
           <div class="row" style="text-align:center;">
             <div class="column small-6 small-centered">
               <h2>تسجيل حساب جديد</h2>
               <%= link_to "متبرع جديد", new_user_registration_path, :class=>"button expand" %>
               <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button expand" %>
-              <h2>تسجيل دخول</h2>
-              <%= link_to "تسجيل دخول متبرع", new_user_session_path, :class=> "button expand" %>
             </div>
           </div>
           <a class="close-reveal-modal">&#215;</a>
         </div>
 
+        <div id="login" class="reveal-modal" data-reveal>
+          <div class="row" style="text-align:center;">
+            <div class="column small-6 centered">
+            <h2> سجل الدخول</h2>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {"data-abide" => ''}) do |f| %>
+                <div>
+
+                  <%= f.email_field :email, autofocus: true, :required=>"", :pattern=>"email", :placeholder=>"البريد الإلكتروني" %>
+
+                <small class="error">يرجى كتابة البريد الإلكتروني بشكل صحيح.</small>
+              </div>
+
+            <div>
+
+                <%= f.password_field :password, autocomplete: "off", :placeholder=>"كلمة السر" %>
+
+            </div>
+
+
+                <% if devise_mapping.rememberable? -%>
+                <div style="font-size:14px;"><%= f.check_box :remember_me %> <span style="color:#BA2830;">تذكرني</span> - <%= link_to "نسيت كلمة السر؟", new_password_path(resource_name) %></div>
+              <% end -%>
+
+              <button type="submit" class=" column small-4 small-centered">ادخل</button>
+            <% end %>
+          </div>
+          </div>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
         <!-- End of Popup-->
 
       <%end%>
@@ -107,12 +167,11 @@
     </div>
 
     <!-- Footer -->
-    <div class="row footer">
+    <div class="footer" style="width:100% !important;">
 
       <!-- Copyright Notice -->
-      <div class="column large-6">
         <p>كل الحقوق محفوظة لموقع فصيلتي © 2014</p>
-      </div>
+
 
       <!-- Social Sites Links -->
 
@@ -195,6 +254,19 @@
           $(".show").hide();
           $(".show a").hide();
         });
+
+         $(window).bind("load", function () {
+    var footer = $(".footer");
+    var pos = footer.position();
+    var height = $(window).height();
+    height = height - pos.top;
+    height = height - footer.height();
+    if (height > 0) {
+        footer.css({
+            'margin-top': height + 'px'
+        });
+    }
+});
     </script>
     <!-- End of Script -->
 

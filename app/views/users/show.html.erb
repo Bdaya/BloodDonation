@@ -1,0 +1,72 @@
+<!-- Page Title -->
+<% title "الصفحة الشخصية" %>
+
+<div class="donator_profile">
+
+  <div class="row donor-name">
+    <!-- Available State -->
+    <% if @user.is_available? %>
+
+        <div class="column small-6 donor-name-active">
+      <!-- Not Available -->
+      <% else %>
+
+        <div class="column small-6 donor-name-inactive">
+      <% end %>
+      <h1><%= @user.name %></h1>
+      <p>فصيلة الدم: <%= @user.blood_type %></p>
+
+    </div>
+  </div>
+
+  <div class="row donor-blocks">
+    <div class="column small-4">
+      <div class="row">
+        <h1 class=<% if @donation_date_txt == "not yet" %>
+          "donor_last_date_disabled">
+           لم تتبرع بعد
+           <%else %>"donor_last_date_enabled"> <%= @donation_date_txt %>
+           <%end%></h1>
+      </div>
+
+      <p>آخر مرة تبرعت فيها</p>
+    </div>
+    <div class="column small-4">
+      <div class="row">
+      <h1 class="souls_saved<% if @user.no_of_donates == 0 %>_disabled<%else%>_enabled<%end%>"><%= @user.no_of_donates %></h1>
+    </div>
+      <p>
+        المرضى الذين أنقذتهم
+      </p>
+    </div>
+    <div class="column small-4">
+      <div class="row">
+          <h1 class="requests_awaiting<% if @user.replies.count == 0 %>_disabled<%else%>_enabled<%end%>"><a href="<%= my_replies_user_path(@user) %>"><%= @user.replies.count %></a></h1>
+      </div>
+
+      <p>
+        الطلبات قيد الإنتظار
+      </p>
+    </div>
+  </div>
+
+<div class="row trophies-block">
+    <div class="column small-4">
+      <h1>الجوائز:</h1>
+    </div>
+    <div class="column small-8">
+      <h1><% if @trophies_txt == "not yet" %>
+        لم تحز على جوائز بعد، هيا أرنا همتك :)
+        <% else %>
+        <%= @trophies_txt %>
+        <% end %> </h1>
+
+    </div>
+</div>
+
+<div class="row requests-available">
+
+</div>
+
+
+</div>

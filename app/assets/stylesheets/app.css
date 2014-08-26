@@ -158,7 +158,7 @@ select {
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 100%;
+  max-width: 85%;
   *zoom: 1;
 }
 /* line 116, scss/foundation/components/_global.scss */
@@ -3581,25 +3581,7 @@ textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
-}
-/* line 129, scss/foundation/components/_global.scss */
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-textarea:focus {
-  box-shadow: 0 0 5px #999999;
-  border-color: #999999;
+  transition: all 0.15s linear;
 }
 /* line 124, scss/foundation/components/_forms.scss */
 input[type="text"]:focus,
@@ -3617,7 +3599,7 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 textarea:focus {
   background: #fafafa;
-  border-color: #999999;
+  border-color: #70181d;
   outline: none;
 }
 /* line 131, scss/foundation/components/_forms.scss */
@@ -3700,7 +3682,7 @@ select.radius {
 /* line 317, scss/foundation/components/_forms.scss */
 select:hover {
   background-color: #f3f3f3;
-  border-color: #999999;
+  border-color: #70181d;
 }
 
 /* Adjust margin for form elements below */
@@ -5791,14 +5773,14 @@ meta.foundation-mq-topbar {
 /* line 136, scss/foundation/components/_top-bar.scss */
 .fixed.expanded:not(.top-bar) .top-bar-section {
   z-index: 98;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 /* line 143, scss/foundation/components/_top-bar.scss */
 .top-bar {
   overflow: hidden;
-  height: 80px;
-  line-height: 80px;
+  height: 40px;
+  line-height: 40px;
   position: relative;
   background: #ba2830;
   margin-bottom: 0;
@@ -5838,13 +5820,13 @@ meta.foundation-mq-topbar {
 }
 /* line 180, scss/foundation/components/_top-bar.scss */
 .top-bar .name {
-  height: 80px;
+  height: 40px;
   margin: 0;
   font-size: 16px;
 }
 /* line 185, scss/foundation/components/_top-bar.scss */
 .top-bar .name h1 {
-  line-height: 80px;
+  line-height: 40px;
   font-size: 1.0625rem;
   margin: 0;
 }
@@ -5854,7 +5836,7 @@ meta.foundation-mq-topbar {
   color: white;
   width: 75%;
   display: block;
-  padding: 0 26.66667px;
+  padding: 0 13.33333px;
 }
 /* line 200, scss/foundation/components/_top-bar.scss */
 .top-bar .toggle-topbar {
@@ -5870,13 +5852,13 @@ meta.foundation-mq-topbar {
   font-weight: bold;
   position: relative;
   display: block;
-  padding: 0 26.66667px;
-  height: 80px;
-  line-height: 80px;
+  padding: 0 13.33333px;
+  height: 40px;
+  line-height: 40px;
 }
 /* line 218, scss/foundation/components/_top-bar.scss */
 .top-bar .toggle-topbar.menu-icon {
-  left: 26.66667px;
+  left: 13.33333px;
   top: 50%;
   margin-top: -16px;
   padding-right: 40px;
@@ -5950,18 +5932,18 @@ meta.foundation-mq-topbar {
   width: 100%;
   color: white;
   padding: 12px 0 12px 0;
-  padding-right: 26.66667px;
+  padding-right: 13.33333px;
   font-family: "Droid Arabic Kufi", sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
   text-transform: none;
   background: #ba2830;
 }
 /* line 313, scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button {
-  font-size: 1rem;
-  padding-left: 26.66667px;
-  padding-right: 26.66667px;
+  font-size: 0.875rem;
+  padding-left: 13.33333px;
+  padding-right: 13.33333px;
   background-color: #ba2830;
   border-color: #952026;
   color: white;
@@ -6018,9 +6000,9 @@ meta.foundation-mq-topbar {
 }
 /* line 324, scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > button {
-  font-size: 1rem;
-  padding-left: 26.66667px;
-  padding-right: 26.66667px;
+  font-size: 0.875rem;
+  padding-left: 13.33333px;
+  padding-right: 13.33333px;
   background-color: #ba2830;
   border-color: #952026;
   color: white;
@@ -6092,7 +6074,7 @@ meta.foundation-mq-topbar {
 }
 /* line 354, scss/foundation/components/_top-bar.scss */
 .top-bar-section .has-form {
-  padding: 26.66667px;
+  padding: 13.33333px;
 }
 /* line 357, scss/foundation/components/_top-bar.scss */
 .top-bar-section .has-dropdown {
@@ -6107,7 +6089,7 @@ meta.foundation-mq-topbar {
   border: inset 5px;
   border-color: transparent rgba(255, 255, 255, 0.4) transparent transparent;
   border-right-style: solid;
-  margin-left: 26.66667px;
+  margin-left: 13.33333px;
   margin-top: -4.5px;
   position: absolute;
   top: 50%;
@@ -6153,7 +6135,7 @@ meta.foundation-mq-topbar {
 /* line 396, scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown li a {
   font-weight: normal;
-  padding: 8px 26.66667px;
+  padding: 8px 13.33333px;
 }
 /* line 399, scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown li a.parent-link {
@@ -6166,12 +6148,12 @@ meta.foundation-mq-topbar {
 /* line 405, scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown li.title h5 a {
   color: white;
-  line-height: 40px;
+  line-height: 20px;
   display: block;
 }
 /* line 411, scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown li.has-form {
-  padding: 8px 26.66667px;
+  padding: 8px 13.33333px;
 }
 /* line 412, scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown li .button, .top-bar-section .dropdown li button {
@@ -6179,7 +6161,7 @@ meta.foundation-mq-topbar {
 }
 /* line 415, scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown label {
-  padding: 8px 26.66667px 2px;
+  padding: 8px 13.33333px 2px;
   margin-bottom: 0;
   text-transform: uppercase;
   color: #777777;
@@ -6235,7 +6217,7 @@ meta.foundation-mq-topbar {
 
   /* line 452, scss/foundation/components/_top-bar.scss */
   .contain-to-grid .top-bar {
-    max-width: 100%;
+    max-width: 85%;
     margin: 0 auto;
     margin-bottom: 0;
   }
@@ -6266,8 +6248,8 @@ meta.foundation-mq-topbar {
   }
   /* line 481, scss/foundation/components/_top-bar.scss */
   .top-bar-section li:not(.has-form) a:not(.button) {
-    padding: 0 26.66667px;
-    line-height: 80px;
+    padding: 0 13.33333px;
+    line-height: 40px;
     background: #ba2830;
   }
   /* line 485, scss/foundation/components/_top-bar.scss */
@@ -6276,8 +6258,8 @@ meta.foundation-mq-topbar {
   }
   /* line 489, scss/foundation/components/_top-bar.scss */
   .top-bar-section li.active:not(.has-form) a:not(.button) {
-    padding: 0 26.66667px;
-    line-height: 80px;
+    padding: 0 13.33333px;
+    line-height: 40px;
     color: white;
     background: #a02229;
   }
@@ -6287,7 +6269,7 @@ meta.foundation-mq-topbar {
   }
   /* line 503, scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-dropdown > a {
-    padding-left: 46.66667px !important;
+    padding-left: 33.33333px !important;
   }
   /* line 505, scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-dropdown > a:after {
@@ -6299,7 +6281,7 @@ meta.foundation-mq-topbar {
     border-color: rgba(255, 255, 255, 0.4) transparent transparent transparent;
     border-top-style: solid;
     margin-top: -2.5px;
-    top: 40px;
+    top: 20px;
   }
   /* line 514, scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-dropdown.moved {
@@ -6345,7 +6327,7 @@ meta.foundation-mq-topbar {
     color: white;
     line-height: 1;
     white-space: nowrap;
-    padding: 12px 26.66667px;
+    padding: 12px 13.33333px;
     background: #333333;
   }
   /* line 556, scss/foundation/components/_top-bar.scss */
@@ -6374,14 +6356,14 @@ meta.foundation-mq-topbar {
     border-top: none;
     border-left: solid 1px #d3343c;
     clear: none;
-    height: 80px;
+    height: 40px;
     width: 0;
   }
   /* line 588, scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-form {
     background: #ba2830;
-    padding: 0 26.66667px;
-    height: 80px;
+    padding: 0 13.33333px;
+    height: 40px;
   }
   /* line 596, scss/foundation/components/_top-bar.scss */
   .top-bar-section .right li .dropdown {
@@ -10304,13 +10286,7 @@ th.hide-for-touch {
   content: "\f1e2";
 }
 
-/* line 9, scss/app.scss */
-body {
-  height: 100%;
-  width: 100%;
-}
-
-/* line 14, scss/app.scss */
+/* line 11, scss/app.scss */
 .empty, .coming_soon {
   color: #ddd;
   font-size: 1.875rem;
@@ -10318,7 +10294,7 @@ body {
   width: 100%;
   text-align: center;
 }
-/* line 21, scss/app.scss */
+/* line 18, scss/app.scss */
 .empty p, .coming_soon p {
   font-size: 1.875rem !important;
   display: block;
@@ -10335,51 +10311,134 @@ body {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-/* line 39, scss/app.scss */
+/* line 36, scss/app.scss */
 .empty a:hover, .coming_soon a:hover {
   text-decoration: underline;
 }
 
-/* line 44, scss/app.scss */
+/* line 41, scss/app.scss */
 .cover {
   position: absolute;
-  height: 100%;
+  overflow: scroll;
   width: 100%;
   top: 0;
   bottom: 0;
-  left: 0;
   right: 0;
   background: #ba2830;
   z-index: 9999;
-  overflow: hidden;
   -webkit-box-shadow: #cccccc 0px 5px 5px 0;
   -moz-box-shadow: #cccccc 0px 5px 5px 0;
   box-shadow: #cccccc 0px 5px 5px 0;
 }
-/* line 57, scss/app.scss */
+/* line 54, scss/app.scss */
 .cover .cover-content {
   display: block;
-  padding: 13% 0 !important;
-  margin: 0 auto;
-  width: 50%;
-  height: 70%;
-}
-/* line 65, scss/app.scss */
-.cover .cover-content img {
-  width: 400px;
-  height: auto;
-  display: block;
-  margin: 0 auto 30px;
+  position: absolute;
+  margin: 30px auto 0;
+  height: 750px;
+  min-width: 80%;
+  top: 50%;
+  left: 50%;
+  /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 /* line 72, scss/app.scss */
-.cover .cover-content a {
+.cover .cover-content .flex-video {
+  width: 100%;
+  height: 100%;
+}
+/* line 75, scss/app.scss */
+.cover .cover-content .flex-video iframe {
+  height: 500px !important;
+  width: 700px !important;
+  padding: 150px 0 0;
+}
+/* line 82, scss/app.scss */
+.cover .cover-content h1 {
+  font-size: 27px;
+  color: #fff;
+  margin: -35px 0;
+  text-align: center;
+  position: absolute;
+  font-weight: bold;
+  right: 45%;
+  width: 55px;
+  height: 55px;
+  background: #ba2830;
+  -webkit-border-radius: 27.5px;
+  -moz-border-radius: 27.5px;
+  border-radius: 27.5px;
+}
+/* line 95, scss/app.scss */
+.cover .cover-content .sign-form h2 {
+  margin: 15px 0;
+}
+/* line 101, scss/app.scss */
+.cover .cover-content a.button, .cover .cover-content input[type="submit"], .cover .cover-content button {
   background: white;
-  color: #ba2830;
-  border-color: #ba2830 !important;
-  margin: 0;
+  text-decoration: none;
+  color: #ba2830 !important;
+  font-family: "Droid Arabic Kufi", sans-serif;
+  font-size: 25px;
+  padding: 5px 15px;
+  border: none;
+  text-decoration: none !important;
+}
+/* line 112, scss/app.scss */
+.cover .cover-content input[type="submit"], .cover .cover-content button {
+  text-align: center;
+  margin: 0 35%;
+}
+/* line 117, scss/app.scss */
+.cover .cover-content .sign {
+  position: relative;
+  border: 3px solid white;
+  display: block;
+  padding: 10px 15px;
+  min-height: 300px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 126, scss/app.scss */
+.cover .cover-content .sign p {
+  color: #fff;
+  text-align: justify;
+  margin: 20px 0 0;
+}
+/* line 131, scss/app.scss */
+.cover .cover-content .sign a, .cover .cover-content .sign h2 {
+  color: #fff;
+}
+/* line 135, scss/app.scss */
+.cover .cover-content .sign a {
+  text-decoration: underline;
+}
+/* line 139, scss/app.scss */
+.cover .cover-content .sign h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+/* line 145, scss/app.scss */
+.cover .cover-content .sign img.logo {
+  position: absolute;
+  width: 197px;
+  height: auto;
+  right: 36%;
+  margin-top: -61px;
 }
 
-/* line 82, scss/app.scss */
+/* line 159, scss/app.scss */
 .show {
   position: absolute;
   height: 30px;
@@ -10404,7 +10463,7 @@ body {
   -webkit-border-top-right-radius: 10px;
   border-top-right-radius: 10px;
 }
-/* line 107, scss/app.scss */
+/* line 184, scss/app.scss */
 .show a {
   color: white;
   display: block;
@@ -10413,64 +10472,254 @@ body {
   line-height: 30px;
 }
 
-/* line 119, scss/app.scss */
+/* line 197, scss/app.scss */
+form.new_user dl.sign dd, form.new_request dl.sign dd {
+  min-height: 85px !important;
+}
+/* line 200, scss/app.scss */
+form.new_user dl.sign dd.disabled a, form.new_user dl.sign dd.disabled a:hover, form.new_request dl.sign dd.disabled a, form.new_request dl.sign dd.disabled a:hover {
+  background: url("blooddrop-disabled.png") no-repeat top 10px right 10px;
+  background-size: 50px auto;
+  padding: 0px 70px 0px 0px;
+  min-height: 80px;
+  font-size: 28px;
+  text-align: right;
+  color: #ccc !important;
+  cursor: default;
+}
+/* line 211, scss/app.scss */
+form.new_user dl.sign dd.active a, form.new_user dl.sign dd.active a:hover, form.new_request dl.sign dd.active a, form.new_request dl.sign dd.active a:hover {
+  color: #ba2830 !important;
+  background-color: #fff;
+  background: url("blooddrop-disabled.png") no-repeat top 10px right 10px;
+  background-size: 50px auto;
+  padding: 0px 70px 0px 0px;
+  min-height: 50px;
+  font-size: 28px;
+  text-align: right;
+}
+/* line 222, scss/app.scss */
+form.new_user dl.sign dd.complete a, form.new_request dl.sign dd.complete a {
+  background: url("blooddrop-enabled.png") no-repeat top 10px right 10px;
+  background-size: 50px auto;
+  background-color: #fff;
+  color: #ba2830 !important;
+  padding: 0px 70px 0px 0px;
+  min-height: 50px;
+  font-size: 28px;
+  text-align: right;
+}
+/* line 236, scss/app.scss */
+form.new_user .fields_section, form.new_request .fields_section {
+  min-height: 400px;
+}
+/* line 240, scss/app.scss */
+form.new_user a.button, form.new_user dd button, form.new_request a.button, form.new_request dd button {
+  margin: 0;
+  padding: 5px !important;
+  border: none;
+  height: 55px;
+}
+
+/* line 248, scss/app.scss */
 a.split {
   font-weight: bolder;
 }
 
-/* line 123, scss/app.scss */
+/* line 252, scss/app.scss */
 .donator_profile {
   vertical-align: center;
 }
-/* line 125, scss/app.scss */
-.donator_profile h2 {
-  font-size: 16px;
-  display: inline-block;
-}
-/* line 129, scss/app.scss */
-.donator_profile p {
-  display: inline-block;
+/* line 254, scss/app.scss */
+.donator_profile h1 {
+  font-size: 1.5rem;
   text-align: center;
-  font-size: 18px;
+  color: #333;
 }
-/* line 136, scss/app.scss */
-.donator_profile .donator_stats {
-  margin: 10px 0;
+/* line 259, scss/app.scss */
+.donator_profile p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
 }
-/* line 139, scss/app.scss */
-.donator_profile .donator_stats button {
-  border: none;
+/* line 267, scss/app.scss */
+.donator_profile .donor-name h1, .donator_profile .donor-name p {
+  text-align: right !important;
+}
+/* line 271, scss/app.scss */
+.donator_profile .donor-name .donor-name-active {
+  background: url("blooddrop-enabled.png") top 5px right 10px no-repeat;
+  background-size: auto 100px;
+  padding-right: 120px;
+}
+/* line 277, scss/app.scss */
+.donator_profile .donor-name .donor-name-inactive {
+  background: url("blooddrop-disabled.png") top 5px right 10px no-repeat;
+  background-size: auto 100px;
+  padding-right: 120px;
+}
+/* line 284, scss/app.scss */
+.donator_profile h1.donor_last_date_enabled {
+  background: url("last_date_enabled.png") no-repeat;
+  background-size: auto 150px;
+  color: #ba2830;
+  color: white;
+  background-size: auto 60px;
+  color: white;
+  height: 65px;
+  width: 70px;
+  line-height: 65px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* line 309, scss/app.scss */
+.donator_profile h1.souls_saved_enabled {
+  background: url("lives_saved_enabled.png") no-repeat;
+  background-size: auto 60px;
+  color: white;
+  background-size: auto 60px;
+  color: white;
+  height: 65px;
+  width: 70px;
+  line-height: 65px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* line 333, scss/app.scss */
+.donator_profile h1.requests_awaiting_enabled {
+  background: url("requests_awaiting_enabled.png") no-repeat;
+  background-size: auto 60px;
+  color: white;
+  margin-top: 5px;
+  height: 60px;
+  width: 70px;
+  line-height: 55px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* line 355, scss/app.scss */
+.donator_profile h1.requests_awaiting_enabled a {
+  color: #fff;
+}
+/* line 360, scss/app.scss */
+.donator_profile h1.donor_last_date_disabled {
+  color: #ccc;
+  height: 65px;
+  line-height: 65px;
+}
+/* line 367, scss/app.scss */
+.donator_profile h1.souls_saved_disabled {
+  background: url("lives_saved_disabled.png") no-repeat;
+  background-size: auto 60px;
+  color: white;
+  height: 65px;
+  width: 70px;
+  line-height: 65px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* line 389, scss/app.scss */
+.donator_profile h1.requests_awaiting_disabled {
+  background: url("requests_awaiting_disabled.png") no-repeat;
+  background-size: auto 60px;
+  margin-top: 5px;
+  height: 60px;
+  width: 70px;
+  line-height: 55px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* line 410, scss/app.scss */
+.donator_profile h1.requests_awaiting_disabled a {
+  color: #fff;
+}
+/* line 416, scss/app.scss */
+.donator_profile .donor-blocks .row {
+  position: relative;
+  height: 65px;
+  margin-bottom: 10px;
 }
 
-/* line 145, scss/app.scss */
+/* line 424, scss/app.scss */
 .footer {
-  background: #ba2830;
+  background: #ccc;
   height: 45px;
   overflow: hidden;
+  text-align: center;
 }
-/* line 151, scss/app.scss */
+/* line 432, scss/app.scss */
 .footer p {
   display: inline-block;
   color: white;
   line-height: 45px;
 }
-/* line 157, scss/app.scss */
+/* line 438, scss/app.scss */
 .footer .column {
   height: 45px;
 }
-/* line 160, scss/app.scss */
+/* line 441, scss/app.scss */
 .footer .social {
   float: left;
   height: 45px;
 }
-/* line 165, scss/app.scss */
+/* line 446, scss/app.scss */
 .footer .social p {
   display: inline-block;
   color: white;
   line-height: 45px;
   vertical-align: top;
 }
-/* line 172, scss/app.scss */
+/* line 453, scss/app.scss */
 .footer .social li {
   color: white;
   font-size: 2.1875rem;
@@ -10478,7 +10727,7 @@ a.split {
   text-align: center;
   width: 100%;
 }
-/* line 181, scss/app.scss */
+/* line 462, scss/app.scss */
 .footer .social a {
   width: 50px;
   height: 45px;
@@ -10486,109 +10735,125 @@ a.split {
   display: inline-block;
 }
 
-/* line 190, scss/app.scss */
-.top-bar li.register {
-  height: 80px;
-  width: auto;
-  padding: 21.05263px 10px;
+/* line 471, scss/app.scss */
+.total-nav {
+  width: 100%;
+  background: #ba2830;
 }
-/* line 198, scss/app.scss */
-.top-bar li.register a {
-  color: #ba2830;
-  background: white !important;
-  height: 40px;
-  margin: 0;
-  padding: 0 26.66667px !important;
+/* line 476, scss/app.scss */
+.total-nav .up-bar {
+  height: 50px;
+  color: #fff;
   display: block;
-  line-height: 40px !important;
-  -webkit-border-radius: 4px 4px;
-  -moz-border-radius: 4px / 4px;
-  border-radius: 4px / 4px;
+  width: 100% !important;
+  border-bottom: 2px solid #fff;
 }
-/* line 209, scss/app.scss */
-.top-bar li.register :hover > a {
-  color: #ba2830 !important;
+/* line 483, scss/app.scss */
+.total-nav .up-bar a {
+  display: inline-block;
+  color: #fff;
+  font-size: 30px;
+  line-height: 50px;
 }
-/* line 220, scss/app.scss */
-.top-bar .logo img {
-  height: 65px;
-  width: 171px;
-  margin: 5px 15px;
+/* line 490, scss/app.scss */
+.total-nav .up-bar .left {
+  max-height: 50px;
+}
+/* line 494, scss/app.scss */
+.total-nav .up-bar ul {
+  text-decoration: none;
+}
+/* line 498, scss/app.scss */
+.total-nav .up-bar ul li {
+  display: inline-block;
+  margin: 0 10px;
+  max-height: 50px;
+  top: 0;
+}
+/* line 503, scss/app.scss */
+.total-nav .up-bar ul li a {
+  font-size: 14px;
+  line-height: 50px;
+}
+/* line 519, scss/app.scss */
+.total-nav .logo img {
+  height: 60px;
+  width: 166px;
+  margin: -50px 15px 0;
+  background: #ba2830;
 }
 
-/* line 229, scss/app.scss */
+/* line 529, scss/app.scss */
 .top-bar-section ul li.register:hover:not(.has-form) > a {
   color: #ba2830 !important;
 }
 
-/* line 232, scss/app.scss */
+/* line 532, scss/app.scss */
 form button {
   margin: 5px 0;
 }
 
-/* line 237, scss/app.scss */
+/* line 537, scss/app.scss */
 .main_content {
-  padding: 105px 50px 70px;
-  width: 100%;
-  min-height: 100%;
-  margin: -80px 0 -45px;
+  padding: 65px 50px 70px;
+  min-height: 500px;
 }
-/* line 244, scss/app.scss */
+/* line 544, scss/app.scss */
 .main_content .tabs-content p {
   text-align: justify;
 }
-/* line 252, scss/app.scss */
+/* line 552, scss/app.scss */
 .main_content .tabs-content .vertical {
   margin-right: 5px;
 }
-/* line 256, scss/app.scss */
+/* line 556, scss/app.scss */
 .main_content dl.tabs {
   margin: 0;
 }
-/* line 259, scss/app.scss */
+/* line 559, scss/app.scss */
 .main_content dl.tabs .column {
   text-align: center;
   padding: 0 !important;
 }
-/* line 263, scss/app.scss */
+/* line 563, scss/app.scss */
 .main_content dl.tabs dd.active a, .main_content dl.tabs dd:hover a {
-  color: #fff !important;
+  color: #fff;
 }
 
-/* line 271, scss/app.scss */
+/* line 571, scss/app.scss */
 .request_list h1 {
   font-size: 20px;
 }
-/* line 274, scss/app.scss */
+/* line 574, scss/app.scss */
 .request_list h2 {
   font-size: 16px;
   display: inline-block;
 }
-/* line 278, scss/app.scss */
+/* line 578, scss/app.scss */
 .request_list p {
   display: inline-block;
   text-align: center;
   font-size: 18px;
 }
-/* line 285, scss/app.scss */
+/* line 585, scss/app.scss */
 .request_list .more .more-content {
   float: left;
   padding: 0 10px;
 }
-/* line 290, scss/app.scss */
+/* line 590, scss/app.scss */
 .request_list .more .more-content .more-patient-details, .request_list .more .more-content .share-patient-social {
   display: inline-block;
 }
-/* line 295, scss/app.scss */
+/* line 595, scss/app.scss */
 .request_list .more .more-content .share-patient-social a {
   padding: 0 5px;
   font-size: 1.25rem;
 }
-/* line 299, scss/app.scss */
+/* line 599, scss/app.scss */
 .request_list .more .more-content .share-patient-social a :hover {
   color: #000;
 }
-/* line 306, scss/app.scss */
+/* line 606, scss/app.scss */
 .request_list .patient {
   background: #f2f2f2;
   border: 1px solid #d8d8d8;
@@ -10600,7 +10865,7 @@ form button {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 315, scss/app.scss */
+/* line 615, scss/app.scss */
 .request_list .patient .blood_type_circle p {
   width: 100px;
   height: 100px;
@@ -10627,7 +10892,7 @@ form button {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-/* line 341, scss/app.scss */
+/* line 641, scss/app.scss */
 .request_list .patient .due-date p {
   width: 150px;
   height: 150px;
@@ -10655,67 +10920,67 @@ form button {
   -ms-transform: translate(-50%, -50%);
 }
 
-/* line 369, scss/app.scss */
+/* line 669, scss/app.scss */
 .request_content h2 {
   font-size: 16px;
   display: inline-block;
 }
-/* line 373, scss/app.scss */
+/* line 673, scss/app.scss */
 .request_content p {
   display: inline-block;
   text-align: center;
   font-size: 18px;
 }
-/* line 379, scss/app.scss */
+/* line 679, scss/app.scss */
 .request_content .main_data {
   margin: 0 0 35px;
 }
-/* line 383, scss/app.scss */
+/* line 683, scss/app.scss */
 .request_content .donator_confirmations {
   padding: 0 !important;
 }
-/* line 387, scss/app.scss */
+/* line 687, scss/app.scss */
 .request_content .donator_confirmations .donator_name {
   padding: 0;
 }
-/* line 389, scss/app.scss */
+/* line 689, scss/app.scss */
 .request_content .donator_confirmations .donator_name h2 {
   padding: 23px 0;
   width: 100%;
   text-align: center;
   margin: 0 !important;
 }
-/* line 397, scss/app.scss */
+/* line 697, scss/app.scss */
 .request_content .donator_confirmations .confirmation {
   padding: 0;
   text-align: center;
   background: #ba2830;
 }
-/* line 401, scss/app.scss */
+/* line 701, scss/app.scss */
 .request_content .donator_confirmations .confirmation a {
   padding: 20px 0;
   display: block;
   background: #ba2830;
   color: white;
 }
-/* line 410, scss/app.scss */
+/* line 710, scss/app.scss */
 .request_content .more .more-content {
   padding: 0 10px;
 }
-/* line 414, scss/app.scss */
+/* line 714, scss/app.scss */
 .request_content .more .more-content .more-patient-details, .request_content .more .more-content .share-patient-social {
   display: inline-block;
 }
-/* line 419, scss/app.scss */
+/* line 719, scss/app.scss */
 .request_content .more .more-content .share-patient-social a {
   padding: 0 5px;
   font-size: 1.25rem;
 }
-/* line 423, scss/app.scss */
+/* line 723, scss/app.scss */
 .request_content .more .more-content .share-patient-social a :hover {
   color: #000;
 }
-/* line 432, scss/app.scss */
+/* line 732, scss/app.scss */
 .request_content .due-date p {
   width: 150px;
   height: 150px;
@@ -10744,12 +11009,12 @@ form button {
 }
 
 @media only screen and (max-width: 64.063em) {
-  /* line 460, scss/app.scss */
+  /* line 760, scss/app.scss */
   .footer {
     height: 90px;
     text-align: center;
   }
-  /* line 463, scss/app.scss */
+  /* line 763, scss/app.scss */
   .footer .social {
     float: none;
   }
