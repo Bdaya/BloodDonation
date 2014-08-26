@@ -52,7 +52,7 @@
 
           <!-- User Name -->
           <div class="field">
-              <%= f.text_field :gender, :required=>"", :placeholder=>"النوع" %>
+              <%= f.select(:gender, [["male", "male"], ["female","female"]])  %>
               <small class="error">يرجى إدخال النوع</small>
 
           </div>
@@ -130,18 +130,7 @@
 
           <!-- User BloodType -->
           <div class="field">
-
-              <select id="user_blood_type" name="user[blood_type]", required>
-                <option value="" style="direction:rtl;">اختر فصيلة الدم</option>
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="B+">B+</option>
-                <option value="B-">B-</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-                <option value="AB+">AB+</option>
-                <option value="AB-">AB-</option>
-              </select>
+              <%= select_tag(:blood_type, options_for_select(blood_types)) %>
               <small class="error">لا تنس اختيار فصيلة الدم.</small>
             </label>
           </div>

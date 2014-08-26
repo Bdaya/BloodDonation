@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user.update_attributes(user_params)
+    @user.update_attributes(params[:user].permit!)
     redirect_to @user, notice: "Successfully updated your information"
   end
 
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   def update_location
-    if @user.location.update_attributes(location_params)
+    if @user.location.update_attributes(params[:location].permit!)
       redirect_to @user, notice: "Successfully updated your current location."
     else
       redirect_to @user, alert: "Something went wrong!"

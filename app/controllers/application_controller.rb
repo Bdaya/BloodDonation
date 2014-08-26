@@ -26,22 +26,22 @@ class ApplicationController < ActionController::Base
   protected
 
     def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email) }
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit! }
     end
 
-    def user_params
-      params.permit!
-      # require(:user).permit(:name, :gender, :age, :phone)
-    end
+    # def user_params
+    #   params.permit!
+    #   # require(:user).permit(:name, :gender, :age, :phone)
+    # end
 
-    def location_params
-      params.permit!
-      # require(:location).permit(:coordinates, :country, :city, :province, :address)
-    end
+    # def location_params
+    #   params.permit!
+    #   # require(:location).permit(:coordinates, :country, :city, :province, :address)
+    # end
 
-    def request_params
-      params.permit!
-      # require(:request).permit(:patient_name, :contact_name, :contact_phone, :national_id, :due_date, :blood_bags, :email, :hospital_name, :hospital_phone)
-    end
+    # def request_params
+    #   params.permit!
+    #   # require(:request).permit(:patient_name, :contact_name, :contact_phone, :national_id, :due_date, :blood_bags, :email, :hospital_name, :hospital_phone)
+    # end
 
 end

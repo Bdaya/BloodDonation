@@ -19,7 +19,7 @@ class RequestsController < ApplicationController
   end
 
   def update
-    @request.update_attributes(request_params)
+    @request.update_attributes(params[:request].permit!)
     redirect_to @request, notice: "Successfully updated your request"
   end
 
@@ -77,7 +77,7 @@ class RequestsController < ApplicationController
   end
 
   def update_location
-    if @request.location.update_attributes(location_params)
+    if @request.location.update_attributes(params[:location].permit!)
       redirect_to @request, notice: "Successfully updated your current location."
     else
       redirect_to @request, alert: "Something went wrong!"

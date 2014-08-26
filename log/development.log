@@ -21349,3 +21349,705 @@ Resolution:
   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-27 00:59:12 +0200
+Processing by ContentsController#index as HTML
+  Rendered contents/index.html.erb within layouts/application (142.6ms)
+Completed 200 OK in 1128ms (Views: 999.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:14 +0200
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/cover-logo.png" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/assets/fonts/fontawesome-webfont.woff?v=4.1.0" for 127.0.0.1 at 2014-08-27 00:59:15 +0200
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-08-27 00:59:22 +0200
+Processing by RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 61ms (Views: 57.0ms)
+
+
+Started GET "/assets/blooddrop-disabled.png" for 127.0.0.1 at 2014-08-27 00:59:23 +0200
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+Processing by RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 73ms (Views: 72.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/blooddrop-disabled.png" for 127.0.0.1 at 2014-08-27 01:02:53 +0200
+
+
+Started GET "/assets/blooddrop-enabled.png" for 127.0.0.1 at 2014-08-27 01:03:34 +0200
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+Processing by RegistrationsController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.9580ms
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4960ms
+  Rendered devise/registrations/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 44ms (Views: 43.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-27 01:05:19 +0200
+
+
+Started GET "/assets/blooddrop-disabled.png" for 127.0.0.1 at 2014-08-27 01:05:20 +0200
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-27 01:06:15 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kA/lMAQAHgniDdUcEN8ziHj+r7uDTFgizqLYgVSBC+8=", "user"=>{"name"=>"Hazem Tawfik", "gender"=>"male", "phone"=>"01147044492", "email"=>"hazem.kilisly@gmail.com", "national_id"=>"01147044492", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"21", "blood_type"=>"", "location"=>"4 osman street"}, "blood_type"=>"53fa5b0648617a0f1d020000"}
+Completed 500 Internal Server Error in 146ms
+
+Mongoid::Errors::UnknownAttribute (
+Problem:
+  Attempted to set a value for 'utf8' which is not allowed on the model User.
+Summary:
+  Without including Mongoid::Attributes::Dynamic in your model and the attribute does not already exist in the attributes hash, attempting to call User#utf8= for it is not allowed. This is also triggered by passing the attribute to any method that accepts an attributes hash, and is raised instead of getting a NoMethodError.
+Resolution:
+  You can include Mongoid::Attributes::Dynamic if you expect to be writing values for undefined fields often.):
+  app/controllers/registrations_controller.rb:4:in `new'
+  app/controllers/registrations_controller.rb:4:in `create'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-27 01:08:13 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kA/lMAQAHgniDdUcEN8ziHj+r7uDTFgizqLYgVSBC+8=", "user"=>{"name"=>"Hazem Tawfik", "gender"=>"male", "phone"=>"01147044492", "email"=>"hazem.kilisly@gmail.com", "national_id"=>"01147044492", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"21", "blood_type"=>"", "location"=>"4 osman street"}, "blood_type"=>"53fa5b0648617a0f1d020000"}
+Completed 500 Internal Server Error in 8ms
+
+NameError (undefined local variable or method `user_params' for #<RegistrationsController:0x007f8bdad83ea8>):
+  app/controllers/registrations_controller.rb:4:in `create'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-27 01:08:21 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kA/lMAQAHgniDdUcEN8ziHj+r7uDTFgizqLYgVSBC+8=", "user"=>{"name"=>"Hazem Tawfik", "gender"=>"male", "phone"=>"01147044492", "email"=>"hazem.kilisly@gmail.com", "national_id"=>"01147044492", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"21", "blood_type"=>"", "location"=>"4 osman street"}, "blood_type"=>"53fa5b0648617a0f1d020000"}
+Completed 500 Internal Server Error in 2ms
+
+Mongoid::Errors::UnknownAttribute (
+Problem:
+  Attempted to set a value for 'utf8' which is not allowed on the model User.
+Summary:
+  Without including Mongoid::Attributes::Dynamic in your model and the attribute does not already exist in the attributes hash, attempting to call User#utf8= for it is not allowed. This is also triggered by passing the attribute to any method that accepts an attributes hash, and is raised instead of getting a NoMethodError.
+Resolution:
+  You can include Mongoid::Attributes::Dynamic if you expect to be writing values for undefined fields often.):
+  app/controllers/registrations_controller.rb:4:in `new'
+  app/controllers/registrations_controller.rb:4:in `create'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-27 01:08:33 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kA/lMAQAHgniDdUcEN8ziHj+r7uDTFgizqLYgVSBC+8=", "user"=>{"name"=>"Hazem Tawfik", "gender"=>"male", "phone"=>"01147044492", "email"=>"hazem.kilisly@gmail.com", "national_id"=>"01147044492", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"21", "blood_type"=>"", "location"=>"4 osman street"}, "blood_type"=>"53fa5b0648617a0f1d020000"}
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/registrations_controller.rb:4:in `new'
+  app/controllers/registrations_controller.rb:4:in `create'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-27 01:08:47 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kA/lMAQAHgniDdUcEN8ziHj+r7uDTFgizqLYgVSBC+8=", "user"=>{"name"=>"Hazem Tawfik", "gender"=>"male", "phone"=>"01147044492", "email"=>"hazem.kilisly@gmail.com", "national_id"=>"01147044492", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"21", "blood_type"=>"", "location"=>"4 osman street"}, "blood_type"=>"53fa5b0648617a0f1d020000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>""}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 16.4830ms
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"_id"=>BSON::ObjectId('53fa5b0648617a0f1d020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5110ms
+Creating scope :near. Overwriting existing method Location.near.
+  MOPED: 127.0.0.1:27017 INSERT       database=faselty_development collection=locations documents=[{"_id"=>BSON::ObjectId('53fd138048617a3782000000'), "country"=>nil, "coordinates"=>[nil, nil], "city"=>nil, "province"=>nil, "address"=>nil, "updated_at"=>2014-08-26 23:08:48 UTC, "created_at"=>2014-08-26 23:08:48 UTC}] flags=[]
+                         COMMAND      database=faselty_development command={:getlasterror=>1, :w=>1} runtime: 0.8420ms
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=users selector={"email"=>"hazem.kilisly@gmail.com"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 0.5450ms
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=users selector={"phone"=>"01147044492"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 0.3880ms
+  MOPED: 127.0.0.1:27017 INSERT       database=faselty_development collection=users documents=[{"_id"=>BSON::ObjectId('53fd138048617a3782010000'), "email"=>"hazem.kilisly@gmail.com", "encrypted_password"=>"$2a$10$HSDQJXNHV36oS3D162eAseW5QfspdHOhBVZ4BUzfPnrlfx.zVppJC", "sign_in_count"=>0, "can_donated"=>true, "name"=>"Hazem Tawfik", "gender"=>"male", "phone"=>"01147044492", "national_id"=>"01147044492", "age"=>21, "paused"=>false, "blood_type_id"=>BSON::ObjectId('53fa5b0648617a0f1d020000'), "updated_at"=>2014-08-26 23:08:48 UTC, "created_at"=>2014-08-26 23:08:48 UTC}] flags=[]
+                         COMMAND      database=faselty_development command={:getlasterror=>1, :w=>1} runtime: 2.2910ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=faselty_development collection=locations selector={"_id"=>BSON::ObjectId('53fd138048617a3782000000')} update={"$set"=>{"locatable_id"=>BSON::ObjectId('53fd138048617a3782010000'), "locatable_type"=>"User", "updated_at"=>2014-08-26 23:08:48 UTC}} flags=[]
+                         COMMAND      database=faselty_development command={:getlasterror=>1, :w=>1} runtime: 1.0090ms
+Redirected to http://localhost:3000/
+Completed 302 Found in 282ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+Processing by ContentsController#index as HTML
+  Rendered contents/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 20.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started GET "/assets/cover-logo.png" for 127.0.0.1 at 2014-08-27 01:08:48 +0200
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-08-27 01:08:52 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kA/lMAQAHgniDdUcEN8ziHj+r7uDTFgizqLYgVSBC+8=", "user"=>{"email"=>"hazem.kilisly@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=users selector={"$query"=>{"email"=>"hazem.kilisly@gmail.com"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8130ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=faselty_development collection=users selector={"_id"=>BSON::ObjectId('53fd138048617a3782010000')} update={"$set"=>{"last_sign_in_at"=>2014-08-26 23:08:52 UTC, "current_sign_in_at"=>2014-08-26 23:08:52 UTC, "last_sign_in_ip"=>"127.0.0.1", "current_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>1, "updated_at"=>2014-08-26 23:08:52 UTC}} flags=[]
+                         COMMAND      database=faselty_development command={:getlasterror=>1, :w=>1} runtime: 0.7600ms
+Redirected to http://localhost:3000/users/53fd138048617a3782010000
+Completed 302 Found in 142ms
+
+
+Started GET "/users/53fd138048617a3782010000" for 127.0.0.1 at 2014-08-27 01:08:52 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"53fd138048617a3782010000"}
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (private method `prepare_user' called for #<UsersController:0x007f8bdadf3c58>):
+  app/controllers/users_controller.rb:3:in `block in <class:UsersController>'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
+
+
+Started GET "/users/53fd138048617a3782010000" for 127.0.0.1 at 2014-08-27 01:09:33 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"53fd138048617a3782010000"}
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (private method `prepare_user' called for #<UsersController:0x007f8bdcdf2888>):
+  app/controllers/users_controller.rb:3:in `block in <class:UsersController>'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started GET "/users/53fd138048617a3782010000" for 127.0.0.1 at 2014-08-27 01:09:34 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"53fd138048617a3782010000"}
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (private method `prepare_user' called for #<UsersController:0x007f8bdc5307e0>):
+  app/controllers/users_controller.rb:3:in `block in <class:UsersController>'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.1ms)
+
+
+Started GET "/users/53fd138048617a3782010000" for 127.0.0.1 at 2014-08-27 01:09:38 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"53fd138048617a3782010000"}
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (private method `prepare_user' called for #<UsersController:0x007f8be0819cc8>):
+  app/controllers/users_controller.rb:3:in `block in <class:UsersController>'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (66.7ms)
+
+
+Started GET "/users/53fd138048617a3782010000" for 127.0.0.1 at 2014-08-27 01:09:51 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"53fd138048617a3782010000"}
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (private method `prepare_user' called for #<UsersController:0x007f8be08ccc38>):
+  app/controllers/users_controller.rb:3:in `block in <class:UsersController>'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (63.9ms)
+
+
+Started GET "/users/53fd138048617a3782010000" for 127.0.0.1 at 2014-08-27 01:09:53 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"53fd138048617a3782010000"}
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (private method `prepare_user' called for #<UsersController:0x007f8bdcc97b78>):
+  app/controllers/users_controller.rb:3:in `block in <class:UsersController>'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
