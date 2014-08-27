@@ -33,6 +33,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def unpause
+    if @user.update_attribute(:pause, false)
+      redirect_to @user, notice: "Successfully unpaused your donation ability."
+    else
+      redirect_to @user, alert: "Something went wrong!"
+    end
+  end
+
   def update_last_donated
     if @user.update_attribute(:last_donated, DateTime.now)
       redirect_to @user, notice: "Congrats on your donation! You won't receive notifications before 3 months pass..\n But you can still Browse the requests."

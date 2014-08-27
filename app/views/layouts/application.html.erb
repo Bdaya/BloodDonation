@@ -10,9 +10,7 @@
     <%= csrf_meta_tags %>
 </head>
 <body>
-
-
-    <!-- Top Navigation Bar -->
+  <!-- Top Navigation Bar -->
     <div class="total-nav">
     <div class=" up-bar">
           <div class="row">
@@ -25,14 +23,14 @@
                     <ul id="drop1" data-dropdown-content class="f-dropdown">
                       <li><a href="#">This is a link</a></li>
                       <li><!-- Available State -->
-          <% if @user.is_available? %>
-              <%= link_to 'تجميد الحساب', change_availability_user_path(@user) %>
+          <% unless @user.paused %>
+              <%= link_to 'تجميد الحساب', pause_user_path(@user) %>
             <!-- Not Available -->
             <% else %>
-              <%= link_to 'تفعيل الحساب', change_availability_user_path(@user) %>
+              <%= link_to 'تفعيل الحساب', unpause_user_path(@user) %>
             <% end %>
             <!-- End of User State --></li>
-                      <li><%= link_to "تعديل البيانات", edit_user_path(current_user)  %></li>
+                      <li><%= link_to "تعديل البيانات", settings_user_path(current_user)  %></li>
 
                     </ul>
                   </li>

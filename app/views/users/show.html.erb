@@ -5,16 +5,16 @@
 
   <div class="row donor-name">
     <!-- Available State -->
-    <% if @user.is_available? %>
+    <% unless @user.paused %>
 
         <div class="column small-6 donor-name-active">
       <!-- Not Available -->
-      <% else %>
+    <% else %>
 
         <div class="column small-6 donor-name-inactive">
-      <% end %>
+    <% end %>
       <h1><%= @user.name %></h1>
-      <p>فصيلة الدم: <%= @user.blood_type %></p>
+      <p>فصيلة الدم: <%= @user.blood_type.type %></p>
 
     </div>
   </div>
@@ -33,7 +33,7 @@
     </div>
     <div class="column small-4">
       <div class="row">
-      <h1 class="souls_saved<% if @user.no_of_donates == 0 %>_disabled<%else%>_enabled<%end%>"><%= @user.no_of_donates %></h1>
+      <h1 class="souls_saved<% if @user.no_of_confirmed_donations == 0 %>_disabled<%else%>_enabled<%end%>"><%= @user.no_of_confirmed_donations %></h1>
     </div>
       <p>
         المرضى الذين أنقذتهم
@@ -41,7 +41,7 @@
     </div>
     <div class="column small-4">
       <div class="row">
-          <h1 class="requests_awaiting<% if @user.replies.count == 0 %>_disabled<%else%>_enabled<%end%>"><a href="<%= my_replies_user_path(@user) %>"><%= @user.replies.count %></a></h1>
+          <h1 class="requests_awaiting<% if @user.replies.count == 0 %>_disabled<%else%>_enabled<%end%>"><a href="<%= donations_user_path(@user) %>"><%= @user.replies.count %></a></h1>
       </div>
 
       <p>

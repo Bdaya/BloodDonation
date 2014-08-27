@@ -36,6 +36,7 @@ Faselty::Application.routes.draw do
       get :reports
       get :donations
       post :pause
+      post :unpause
       post :update_last_donated
       post :update_location
     end
@@ -49,6 +50,7 @@ Faselty::Application.routes.draw do
       post :update_location
       post :stop
       post :reply
+      get :replies
     end
   end
 
