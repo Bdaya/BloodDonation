@@ -49,7 +49,7 @@ class UsersController < ApplicationController
     end
   end
 
-  private
+  # private
     def require_user_authority(args)
       unless (current_user && (current_user == @user) )
         redirect_to root_path, alert: "You can only edit this for your account."

@@ -28,8 +28,8 @@ class RequestsController < ApplicationController
   end
 
   def create
-    @request = Request.new(request_params)
-    location = Location.create(location_params)
+    @request = Request.new(params[:request].permit!)
+    location = Location.create(params[:location].permit!)
     @request.location = location
     @request.blood_type = BloodType.find(params[:blood_type]) if params[:blood_type]
     if current_user
@@ -41,6 +41,10 @@ class RequestsController < ApplicationController
     else
       redirect_to root_url, alert: "Something went wrong"
     end
+  end
+
+  def replies
+    @replies = @request.replies
   end
 
   def reopen
@@ -105,7 +109,7 @@ class RequestsController < ApplicationController
     end
   end
 
-  private
+  # private
     def authenticate_logging_in
       unless user_signed_in? || current_request
         redirect_to root_path, alert: "You must log-in first!"

@@ -22,7 +22,7 @@ class RepliesController < ApplicationController
     end
   end
 
-  private
+  # private
     def authenticate_logging_in
       unless user_signed_in? || current_request
         redirect_to root_url, alert: "Your must login first!"

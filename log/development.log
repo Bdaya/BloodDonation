@@ -22051,3 +22051,130 @@ NoMethodError (private method `prepare_user' called for #<UsersController:0x007f
   Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
   Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
   Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-27 01:22:07 +0200
+Processing by ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4980ms
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53fd138048617a3782010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5500ms
+Redirected to http://localhost:3000/users/53fd138048617a3782010000
+Completed 302 Found in 59ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-27 01:22:09 +0200
+Processing by ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53fd138048617a3782010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4950ms
+Redirected to http://localhost:3000/users/53fd138048617a3782010000
+Completed 302 Found in 2ms
+
+
+Started GET "/users/53fd138048617a3782010000" for 127.0.0.1 at 2014-08-27 01:22:09 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"53fd138048617a3782010000"}
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (private method `prepare_user' called for #<UsersController:0x007f8bdcd60ed8>):
+  app/controllers/users_controller.rb:3:in `block in <class:UsersController>'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.6ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.0100ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=faselty_development command={:count=>"users", :query=>{}} runtime: 1.0400ms
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8130ms
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.1770ms
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('53fa5b0648617a0f1d020000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5800ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-27 10:26:39 +0200
+Processing by ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 2.3030ms
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53fd138048617a3782010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 3.6440ms
+Redirected to http://localhost:3000/users/53fd138048617a3782010000
+Completed 302 Found in 153ms
+
+
+Started GET "/users/53fd138048617a3782010000" for 127.0.0.1 at 2014-08-27 10:26:44 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"53fd138048617a3782010000"}
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (private method `prepare_user' called for #<UsersController:0x007f8bdf808500>):
+  app/controllers/users_controller.rb:3:in `block in <class:UsersController>'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-27 12:18:03 +0200
+Processing by ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 208.5430ms
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53fd138048617a3782010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 205.5750ms
+Redirected to http://localhost:3000/users/53fd138048617a3782010000
+Completed 302 Found in 468ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-27 12:18:08 +0200
+Processing by ContentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53fd138048617a3782010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5070ms
+Redirected to http://localhost:3000/users/53fd138048617a3782010000
+Completed 302 Found in 2ms
+
+
+Started GET "/users/53fd138048617a3782010000" for 127.0.0.1 at 2014-08-27 12:18:08 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"53fd138048617a3782010000"}
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (private method `prepare_user' called for #<UsersController:0x007f8bdafd5738>):
+  app/controllers/users_controller.rb:3:in `block in <class:UsersController>'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.2ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (68.3ms)
+
+
+Started GET "/users/53fd138048617a3782010000" for 127.0.0.1 at 2014-08-27 12:18:09 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"53fd138048617a3782010000"}
+Completed 500 Internal Server Error in 157ms
+
+NoMethodError (private method `prepare_user' called for #<UsersController:0x007f8bdf90ca50>):
+  app/controllers/users_controller.rb:3:in `block in <class:UsersController>'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (25.3ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (140.4ms)
+
+
+Started GET "/users/53fd138048617a3782010000" for 127.0.0.1 at 2014-08-27 12:25:20 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"53fd138048617a3782010000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 17.4790ms
+  MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=users selector={"_id"=>BSON::ObjectId('53fd138048617a3782010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5910ms
+  Rendered users/show.html.erb within layouts/application (83.2ms)
+Completed 500 Internal Server Error in 220ms
+
+ActionView::Template::Error (undefined method `is_available?' for #<User:0x007f8bdf974330>):
+     5: 
+     6:   <div class="row donor-name">
+     7:     <!-- Available State -->
+     8:     <% if @user.is_available? %>
+     9: 
+    10:         <div class="column small-6 donor-name-active">
+    11:       <!-- Not Available -->
+  app/views/users/show.html.erb:8:in `_app_views_users_show_html_erb__4535516913590703615_70119372713960'
+
+
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/Hazem/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.3ms)
