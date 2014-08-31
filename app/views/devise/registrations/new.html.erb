@@ -7,306 +7,212 @@
 <div class="row register-content">
 
   <h2>تسجيل متبرع جديد</h2>
-<div class="column medium-5 sign-up medium-centered">
 
+  <div class="column medium-5 sign-up medium-centered">
 
+    <!-- New User Form -->
     <%= form_for(resource, :html => {"data-abide" => ''}, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
-      <% if @user.errors.any? %>
-      <div data-alert class="alert-box" id="error_explanation" >
+      <!-- Developer Review: Error message -->
+      <% flash.each do |name, msg| -%>
+        <div data-alert class="alert-box" id="error_explanation" >
 
-        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <!-- Developer Review: Render message -->
+          <%= content_tag :div, msg, class: name %>
+          <a href="#" class="close">&times;</a>
+        </div>
+      <% end -%>
 
-        <ul>
 
-        <% @user.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
+      <!-- New User Levels (Don't Change) -->
+      <dl class="tabs row hor sign" data-tab>
+        <dd class="active column large-4 first-level">
+          <a href="#user-information">المعلومات</br>الشخصية</a>
+        </dd>
+        <dd class="disabled column large-4 second-level">
+          <a href="#user-bloodtype">فصيلة</br>الدم</a>
+        </dd>
+        <dd class="disabled column large-4 third-level">
+          <a href="#user-location">معلومات</br>المكان</a>
+        </dd>
+      </dl>
+      <!-- End of New User Levels -->
 
-        <a href="#" class="close">&times;</a>
+      <!-- New User levels content-->
+      <div class="tabs-content">
+
+        <!-- First level, user information-->
+          <div class="content active" id="user-information">
+
+            <!-- Fields section -->
+            <div class="fields_section">
+
+              <!-- User Name -->
+              <div class="field">
+
+                  <%= f.text_field :name, :required=>"", :placeholder=>"الاسم" %>
+                  <small class="error">يرجى إدخال الاسم.</small>
+
+              </div>
+
+              <!-- User gender -->
+              <div class="field">
+
+                  <%= f.select(:gender, [["male", "male"], ["female","female"]])  %>
+                  <small class="error">يرجى إدخال النوع</small>
+
+              </div>
+
+              <!-- User Phone -->
+              <div class="field">
+
+                <%= f.text_field :phone, :required=>"", :placeholder=>"رقم الهاتف المحمول" %>
+                <small class="error">يرجى كتابة رقم الهاتف المحمول ولا يقل عن ١١.</small>
+
+              </div>
+
+
+              <!-- User Email -->
+              <div>
+
+                  <%= f.email_field :email, :required=>"", :pattern=>"email", :placeholder=>"البريد الإلكتروني" %>
+                  <small class="error">يرجى إدخال البريد الإلكتروني بشكل صحيح.</small>
+
+              </div>
+
+              <!-- User ID -->
+              <div class="field">
+
+                <%= f.text_field :national_id, :required=>"", :placeholder=> "الرقم القومي" %>
+                <small class="error">يرجى كتابة الرقم القومي بشكل صحيح.</small>
+
+              </div>
+
+
+              <div class="row">
+
+                <!-- User Password -->
+                <div class="column small-5">
+
+                  <%= f.password_field :password, autocomplete: "off", :required=>"", :placeholder=>"كلمة السر" %>
+                  <small class="error">يرجى إدخال كلمة السر بشكل صحيح.</small>
+
+                </div>
+
+                <!-- Password Confirmation -->
+                <div class="column small-5">
+
+                  <%= f.password_field :password_confirmation, autocomplete: "off", :required=>"", "data-equalto"=>"password", :placeholder=>"تأكيد كلمة السر" %>
+                  <small class="error">يرجى التأكد من تأكيد كلمة السر.</small>
+
+                </div>
+              </div>
+            </div>
+            <!-- End of Fields section -->
+
+            <!-- Next/previous levels buttons-->
+            <div class="row">
+              <dl data-tab>
+                <dd class="column medium-6 left">
+                  <a class="button expand disabled" href="#user-bloodtype" id="complete1">أكمل</a>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <!-- End of First Level-->
+
+          <!-- Second level: User Blood Type-->
+          <div class="content" id="user-bloodtype">
+
+            <!-- Fields section -->
+            <div class="fields_section">
+
+              <!-- User Age -->
+              <div class="field">
+
+                <%= f.number_field :age, :required=>"", :placeholder=>"السن" %>
+                <small class="error">يرجى كتابة السن لمعرفة إمكانية التبرع.</small>
+
+              </div>
+
+              <!-- User BloodType -->
+              <div class="field">
+                  <%= f.select(:blood_type, [["Select Blood type"],["A+","A+"],["A-","A-"],
+                                                    ["B+","B+"],["B-","B-"],
+                                                    ["O+","O+"],["O-","O-"],
+                                                    ["AB+","AB+"],["AB-","AB-"]]) %>
+                  <small class="error">لا تنس اختيار فصيلة الدم.</small>
+              </div>
+            </div>
+            <!-- End of Fields section-->
+
+            <!-- Next/previous levels buttons-->
+            <div class="row">
+              <dl data-tab>
+                <dd class="column medium-6">
+                  <a class="button expand" href="#user-information">العودة</a>
+                </dd>
+                <dd class="column medium-6">
+                  <a class="button expand disabled" href="#user-location" id="#complete2">أكمل</a>
+                </dd>
+              </dl>
+            </div>
+            <!-- End -->
+
+          </div>
+          <!-- End of Second Level-->
+
+          <!-- Third level: User Location -->
+          <div class="content" id="user-location">
+
+            <!-- Developer Review: review all the location section :D ! -->
+            <!-- Fields section -->
+            <div class="fields_section">
+
+              <!-- Google map -->
+              <div id="map_canvas" style="width:100%; height:300px"></div><br/>
+
+              <!-- User Address -->
+              <%= f.text_field :location, :required=>"", :placeholder=>"العنوان" %>
+
+              <!-- Hidden fields: No need for user but important for geocoding! -->
+              <div class="row" style="height:0; overflow:hidden">
+
+                <!-- Latitude -->
+                <div class="small-6 column">
+                  <label>دائرة عرض
+                  <%= f.text_field :latitude, input_html: {id: "latitude"}, :value=>"0" %>
+                  </label>
+                </div>
+
+                <!-- Longitude -->
+                <div class="small-6 column">
+                  <label>خط طول
+                  <%= f.text_field :longitude, input_html: {id: "longitude"}, :value=>"0" %>
+                  </label>
+                </div>
+
+              </div>
+            </div>
+            <!-- End of fields section-->
+
+            <!-- Next/previous levels buttons-->
+            <div class="actions row">
+              <dl data-tab>
+                <dd class="column medium-6">
+                  <a class="button expand" href="#user-bloodtype">العودة</a>
+                </dd>
+                <dd class="column medium-6">
+                  <button class="expand disabled" type="submit">سجّل</button>
+                </dd>
+              </dl>
+            </div>
+
+          </div>
+          <!-- End of Third level -->
       </div>
+
     <% end %>
-
-    <dl class="tabs row hor sign" data-tab>
-      <dd class="active column large-4 first-level">
-        <a href="#user-information">المعلومات</br>الشخصية</a>
-      </dd>
-      <dd class="disabled column large-4 second-level">
-        <a href="#user-bloodtype">فصيلة</br>الدم</a>
-      </dd>
-      <dd class="disabled column large-4 third-level">
-        <a href="#user-location">معلومات</br>المكان</a>
-      </dd>
-
-    </dl>
-    <div class="tabs-content">
-        <div class="content active" id="user-information">
-          <div class="fields_section">
-          <!-- User Name -->
-          <div class="field">
-              <%= f.text_field :name, :required=>"", :placeholder=>"الاسم" %>
-              <small class="error">يرجى إدخال الاسم.</small>
-
-          </div>
-
-          <!-- User Name -->
-          <div class="field">
-              <%= f.select(:gender, [["male", "male"], ["female","female"]])  %>
-              <small class="error">يرجى إدخال النوع</small>
-
-          </div>
-
-          <!-- User Email -->
-          <div>
-
-            <!-- User Phone -->
-            <div class="field">
-
-              <%= f.text_field :phone, :required=>"", :placeholder=>"رقم الهاتف المحمول" %>
-              <small class="error">يرجى كتابة رقم الهاتف المحمول ولا يقل عن ١١.</small>
-
-            </div>
-
-
-              <%= f.email_field :email, :required=>"", :pattern=>"email", :placeholder=>"البريد الإلكتروني" %>
-              <small class="error">يرجى إدخال البريد الإلكتروني بشكل صحيح.</small>
-
-          </div>
-
-          <!-- User ID -->
-          <div class="field">
-
-            <%= f.text_field :national_id, :required=>"", :placeholder=> "الرقم القومي" %>
-            <small class="error">يرجى كتابة الرقم القومي بشكل صحيح.</small>
-
-          </div>
-
-
-          <div class="row">
-            <!-- User Password -->
-            <div class="column small-5">
-              <%= f.password_field :password, autocomplete: "off", :required=>"", :placeholder=>"كلمة السر" %>
-              <small class="error">يرجى إدخال كلمة السر بشكل صحيح.</small>
-
-            </div>
-
-            <!-- Password Confirmation -->
-            <div class="column small-5">
-
-              <%= f.password_field :password_confirmation, autocomplete: "off", :required=>"", "data-equalto"=>"password", :placeholder=>"تأكيد كلمة السر" %>
-              <small class="error">يرجى التأكد من تأكيد كلمة السر.</small>
-
-            </div>
-          </div>
-        </div>
-          <div class="row">
-
-
-
-            <dl data-tab>
-              <dd class="column medium-6 left">
-                <a class="button expand disabled" href="#user-bloodtype" id="complete1">أكمل</a>
-              </dd>
-            </dl>
-
-          </div>
-
-
-
-
-        </div>
-        <div class="content" id="user-bloodtype">
-          <div class="fields_section">
-          <!-- User Age -->
-          <div class="field">
-
-            <%= f.number_field :age, :required=>"", :placeholder=>"السن" %>
-            <small class="error">يرجى كتابة السن لمعرفة إمكانية التبرع.</small>
-
-          </div>
-
-
-
-          <!-- User BloodType -->
-          <div class="field">
-              <%= select_tag(:blood_type, options_for_select(blood_types)) %>
-              <small class="error">لا تنس اختيار فصيلة الدم.</small>
-            </label>
-          </div>
-        </div>
-
-          <div class="row">
-
-            <dl data-tab>
-              <dd class="column medium-6">
-                <a class="button expand" href="#user-information">العودة</a>
-              </dd>
-              <dd class="column medium-6">
-                <a class="button expand disabled" href="#user-location" id="#complete2">أكمل</a>
-              </dd>
-            </dl>
-
-          </div>
-
-        </div>
-        <div class="content" id="user-location">
-
-            <!-- User Location -->
-          <div class="fields_section">
-
-            <!-- GeoCoding script -->
-            <script type="text/javascript">
-              var geocoder;
-              var map;
-              var marker;
-
-              function initialize(){
-              //MAP
-                var latlng = new google.maps.LatLng(30.0444196,31.23571160000006);
-                var options = {
-                  zoom: 16,
-                  center: latlng,
-                  mapTypeId: google.maps.MapTypeId.SATELLITE
-                };
-
-                map = new google.maps.Map(document.getElementById("map_canvas"), options);
-
-                //GEOCODER
-                geocoder = new google.maps.Geocoder();
-
-                marker = new google.maps.Marker({
-                  map: map,
-                  draggable: true
-                });
-
-              };
-
-              $(document).ready(function() {
-
-                initialize();
-
-                $(function() {
-                  $("#user_donator_address").autocomplete({
-                    //This bit uses the geocoder to fetch address values
-                    source: function(request, response) {
-                      geocoder.geocode( {'address': request.term }, function(results, status) {
-                        response($.map(results, function(item) {
-                          return {
-                            label:  item.formatted_address,
-                            value: item.formatted_address,
-                            latitude: item.geometry.location.lat(),
-                            longitude: item.geometry.location.lng()
-                          }
-                        }));
-                      })
-                    },
-                    //This bit is executed upon selection of an address
-                    select: function(event, ui) {
-                      $("#user_latitude").val(ui.item.latitude);
-                      $("#user_longitude").val(ui.item.longitude);
-                      var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
-                      marker.setPosition(location);
-                      map.setCenter(location);
-                    }
-                  });
-                });
-              });
-            </script>
-
-            <!-- Google map -->
-            <div id="map_canvas" style="width:100%; height:300px"></div><br/>
-
-            <!-- User Address -->
-            <%= f.text_field :location, input_html: {id: "latitude"}, :required=>"", :placeholder=>"العنوان" %>
-
-
-
-
-          </div>
-          <!-- Submit Button -->
-          <div class="actions row">
-            <dl data-tab>
-              <dd class="column medium-6">
-                <a class="button expand" href="#user-bloodtype">العودة</a>
-              </dd>
-              <dd class="column medium-6">
-                <button class="expand disabled" type="submit">سجّل</button>
-              </dd>
-            </dl>
-          </div>
-        </div>
-    </div>
-
-  <% end %>
-  <!-- End of User Form -->
-
-<script type="text/javascript">
-  $("#user-information").find("input").change( function() {
-    var complete = false;
-    $("#user-information").find("input").each( function() {
-      if ($(this).val().length === 0) {
-        complete = false;
-        return false;
-      }
-    else {
-      complete = true;
-    }
-  });
-
-  if (complete) {
-    $("#user-information").find("a.disabled").removeClass("disabled").addClass("enabled");
-    $("dd.first-level").addClass("complete");
-  };
-
-  $("#user-bloodtype").find("input").change( function() {
-    var complete = false;
-    $("#user-bloodtype").find("input").each( function() {
-      if ($(this).val().length === 0) {
-        complete = false;
-        return false;
-      }
-    else {
-      complete = true;
-    }
-  });
-
-  if (complete) {
-    $("#user-bloodtype").find("a.disabled").removeClass("disabled").addClass("enabled");
-    $("dd.second-level").addClass("complete");
-  };
-
-  });
-  });
-
-  $("#user-location").find("input").change( function() {
-    var complete = false;
-    $("#user-location").find("input").each( function() {
-      if ($(this).val().length === 0) {
-        complete = false;
-        return false;
-      }
-    else {
-      complete = true;
-    }
-  });
-
-  if (complete) {
-    $("#user-location").find("button").removeClass("disabled").addClass("enabled");
-    $("dd.third-level").addClass("complete");
-  };
-
-  });
-
-  $("#complete1").click( function () {
-    $("dd.first-level").removeClass("active");
-    $("dd.second-level").removeClass("disabled").addClass("active");
-  });
-
-  $("#complete2").click( function () {
-    $("dd.second-level").removeClass("active");
-    $("dd.third-level").removeClass("disabled").addClass("active");
-  });
-
-</script>
-</div> </div>
+    <!-- End of User Form -->
+  </div>
+</div>

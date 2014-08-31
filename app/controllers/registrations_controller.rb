@@ -43,8 +43,8 @@ class RegistrationsController < Devise::RegistrationsController
   end
   # private
     def check_important_params(params)
-      unless params[:latitude] && params[:longitude] && params[:blood_type] && params[:address]
-        redirect_to new_user_registration_path, alert: "Please complete all data correctly!"
+      unless params[:latitude] && params[:longitude] && params[:blood_type]
+        redirect_to new_user_registration_path, alert: "Please complete all the data correctly!"
       end
     end
 end
