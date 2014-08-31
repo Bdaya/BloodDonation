@@ -48501,3 +48501,243 @@ Started GET "/assets/logo.png" for 127.0.0.1 at 2014-09-01 00:30:15 +0300
 
 
 Started GET "/assets/blooddrop-enabled.png" for 127.0.0.1 at 2014-09-01 00:30:15 +0300
+
+
+Started GET "/contents/about" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+Processing by ContentsController#about as HTML
+  Rendered contents/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 14.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-09-01 01:55:14 +0300
+
+
+Started GET "/contents/about" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+Processing by ContentsController#about as HTML
+  Rendered contents/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 11.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-09-01 01:56:07 +0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-09-01 01:56:18 +0300

@@ -1,29 +1,59 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<!-- Page Title -->
+<% title "تعديل البيانات" %>
 
+  <div class="row" >
+
+    <!-- Title -->
+    <div class="column medium-6">
+      <h1>تعديل البيانات</h1>
+    </div>
+
+    <!-- Back to User Profile -->
+    <div class="column medium-6">
+
+      <%= button_to "إلغاء الحساب", registration_path(resource_name), data: { confirm: "هل أنت متأكد أنك تريد إلغاء الحساب?" }, method: :delete %> | <%= link_to 'العودة إلى الصفحة الشخصية', @user, %>
+    </div>
+
+  </div>
+
+<div class="column small-9">
+<!-- Edit data form -->
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+  <!-- Error Message -->
+  <% flash.each do |name, msg| -%>
+    <div data-alert class="alert-box" id="error_explanation" >
 
+      <!-- Developer Review: Render message -->
+      <%= content_tag :div, msg, class: name %>
+      <a href="#" class="close">&times;</a>
+    </div>
+  <% end -%>
+
+  <!-- New User Email -->
+  <div>
+  <%= f.email_field :email, autofocus: true, :placeholder=>"البريد الإلكتروني" %></div>
+
+  <!-- if email is unconfirmed -->
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <div>بإنتظار تفعيل البريد الإلكتروني التالي: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+  <!-- New Password -->
+  <div>
+    <%= f.password_field :password, autocomplete: "off", :placeholder=>"كلمة السر (يمكنك ترك الحقل فارغاً إن لم ترغب بتغييرها)" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+  <!-- New Password confirmation -->
+  <div>
+    <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder=>"تأكيد كلمة السر" %></div>
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %></div>
+  <!-- Current Password -->
+  <div>
+    <%= f.password_field :current_password, autocomplete: "off", :placeholder=>"كلمة السر الحالية" %></div>
 
-  <div><%= f.submit "Update" %></div>
+  <!-- submit form -->
+  <div><%= f.submit "تعديل" %></div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>

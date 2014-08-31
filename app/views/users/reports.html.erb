@@ -1,0 +1,38 @@
+<!-- Page Title -->
+<% title "التقارير" %>
+
+<div class="row" >
+
+  <!-- Title -->
+  <div class="column medium-6">
+    <h1>التقارير</h1>
+  </div>
+
+  <!-- Back to User Profile -->
+  <div class="column medium-6">
+    <div class="left">
+
+      <!-- Developer Review: link to user profile -->
+      <%= link_to 'العودة إلى الصفحة الشخصية', @user %>
+
+    </div>
+  </div>
+
+</div>
+
+<ol class="report-list">
+<!-- Developer Review: start reports loop -->
+
+
+  <!-- single report item -->
+  <li class="single-report">
+
+    <p>
+    لقد أرسلت الحالة رقم
+    <!-- Developer Review: sender request no. -->
+    <span>34513</span> تقريراً بخصوص مخالفتك للقواعد في تاريخ
+    <!-- Developer Review: report date -->
+    <span>4/8</span>
+    </p>
+  </li>
+</ol>
