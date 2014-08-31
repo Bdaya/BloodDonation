@@ -263,6 +263,27 @@ a.split {
 		color:#333;
 	}
 
+	.donor-request-list {
+		border:1px solid $primary-color;
+		position:relative;
+		min-height:300px;
+		padding:0;
+
+		.header {
+			margin:0;
+			min-height:40px;
+			background: $primary-color;
+			display:block;
+			width:100%;
+
+			h3 {
+				color:#fff;
+				margin:0 20px;
+				line-height:40px;
+				font-size:24px;
+			}
+		}
+	}
 	.donor-name {
 		h1, p {
 			text-align: right !important;
@@ -566,100 +587,121 @@ transform: translate(-50%, -50%);
 }
 }
 
+.single-reply {
+	background: #f9f9f9;
+	margin: 15px;
+	padding:10px;
+	float:right;
+	@include border-radius(5px);
 
-.request_list {
-	h1 {
-		font-size:20px;
+
+	.close a {
+		font-size: 16px;
+		color:#999;
+		text-align:left;
+		margin: 2px 20px;
 	}
-	h2 {
-		font-size:16px;
-		display: inline-block;
+
+	.donor-reply {
+
+		background: url('blooddrop-enabled.png') top 0.2rem right 25px no-repeat;
+		background-size: auto 110px;
+		padding-right: 120px;
+		p {
+			font-size:30px;
+			color:$primary-color;
+			max-height: 30px;
+		}
 	}
+		a.button {
+			padding: 0 50px !important;
+			min-width:80%;
+			min-height:40px;
+			line-height: 40px;
+			font-size: 24px;
+			margin:1rem 9% 0.5rem !important;
+		}
+
+}
+
+
+.single-request {
+	background: #f9f9f9;
+	margin: 15px 0px;
+	padding:10px;
+	@include border-radius(5px);
+
+	.close a {
+		font-size: 16px;
+		color:#999;
+		text-align:left;
+		margin: 2px 0;
+	}
+
+	.request-status {
+
+
+		padding-right: 120px;
+		p {
+			font-size:30px;
+			color:$primary-color;
+			max-height: 30px;
+		}
+	}
+
+	.active {
+		background: url('request-status-active.png') top 0.2rem right 25px no-repeat;
+		background-size: auto 110px;
+	}
+
+	.done {
+		background: url('request-status-done.png') top 0.2rem right 25px no-repeat;
+		background-size: auto 110px;
+	}
+
+	.canceled {
+		background: url('request-status-canceled.png') top 0.2rem right 25px no-repeat;
+		background-size: auto 110px;
+	}
+
+
 	p {
-		display:inline-block;
+		text-align: right;
+		font-size: 24px;
+		color: #333;
+		max-height: 30px;
+		line-height: 30px;
+		margin: 1rem 0 !important;
+
+		span {
+			color: $primary-color;
+		}
+	}
+	a.button {
+		padding: 0 50px !important;
+		min-width:80%;
+		min-height:40px;
+		line-height: 40px;
+		font-size: 24px;
+		margin:1rem 0 0.5rem !important;
+	}
+
+	.request-options {
 		text-align: center;
-		font-size: 18px;
-
 	}
 
-	.more .more-content {
-		float:left;
-		padding: 0 10px;
+	.social-share {
+		display: inline-block;
 
 
-		.more-patient-details, .share-patient-social {
+		a,p {
+			padding: 0 5px;
+			font-size: rem-calc(20);
 			display: inline-block;
-		}
-
-		.share-patient-social {
-			a {
-				padding: 0 5px;
-				font-size: rem-calc(20);
-
-				:hover {
-					color: #000;
-				}
-			}
-		}
-	}
-
-	.patient {
-		background:$panel-bg;
-		border: 1px solid $panel-border-color;
-		margin: 10px;
-		padding: 10px 0;
-		@include border-radius(3px);
-
-
-		.blood_type_circle {
-			p {
-				@include circle(100px, $primary-color);
-				display:block;
-				color:$secondary-color;
-				text-align:center;
-				font-size:rem-calc(30);
-				line-height:100px;
-				margin: auto;
-				    position: absolute;
-    left: 50%;
-    top: 50%;
-
-    /*
-    *  Where the magic happens
-    *  Centering method from CSS Tricks
-    *  http://css-tricks.com/centering-percentage-widthheight-elements/
-    */
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-
-			}
-		}
-		.due-date {
-
-			p {
-				@include circle(150px, $primary-color);
-				display:block;
-				color:$secondary-color;
-				text-align:center;
-				font-size:rem-calc(30);
-				line-height:150px;
-				margin: auto;
-				    position: absolute;
-    left: 50%;
-    top: 50%;
-
-    /*
-    *  Where the magic happens
-    *  Centering method from CSS Tricks
-    *  http://css-tricks.com/centering-percentage-widthheight-elements/
-    */
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-
+			line-height: 30px;
+			max-height:30px;
+			:hover {
+				color: #000;
 			}
 		}
 	}

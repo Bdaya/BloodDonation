@@ -17,7 +17,8 @@
 //= require gmaps/google
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+
+
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -32,9 +33,6 @@ function showPosition(position) {
     x.innerHTML = "Latitude: " + position.coords.latitude +
     "<br>Longitude: " + position.coords.longitude;
 }
-
-$(document).foundation();
-
 
 
 $('.cover-content a').click( function() {

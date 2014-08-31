@@ -1,19 +1,72 @@
-      <% title "عن فصيلتي" %>
-      <!-- Fasety's Introduction Article -->
-      <div class="row about-content">
-        <div class="row">
-          <div class="column medium-6 intro">
-            <h1>ما هي فصيلتي؟</h1>
-            <p>
-              فصيلتي هي شبكة وحل لعملية التبرع بالدم. تقدم فصيلتي خدماتها للمتبرعين بالدم ولطالبي الدم كما تتعاون مع مراكز الدم والمستشفيات لتطوير وتحسين عملية التبرع بالدم. تجمع فصيلتي كل المساهمين في عملية التبرع بالدم عن طريق موقعها وتطبيقها للهواتف الخلوية ونظام الجرد والمتابعة واستخدام وسائل الاتصالات وتكنولوجيا المعلومات المتعددة.
-            </p>
-          </div>
-          <div class="column medium-6">
-            <div class="flex-video">
-              <iframe width="420" height="315" src="//www.youtube.com/embed/_lST9cm5jts" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
+<!-- Page Title -->
+<% title "ردود المتبرعين" %>
+
+<div class="row" >
+
+  <!-- Title -->
+  <div class="column medium-6">
+    <h1>ردود المتبرعين</h1>
+  </div>
+  <!-- Back to request Profile -->
+  <div class="column medium-6 left">
+    <div class="left">
+
+      <!-- Developer Review: link to request profile -->
+      <a href="#">العودة إلى صفحة الحالة</a>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="replies-list">
+
+  <!-- Developer Review: start replies loop -->
+  <!-- single reply item -->
+  <div class="single-reply column medium-4 large-3">
+
+    <!-- cancel reply -->
+    <div class="row">
+      <div class="left close">
+
+        <!-- cancel reply -->
+        <a href="#" data-reveal-id="cancel-reply">
+          إلغاء ×
+        </a>
+
+        <!-- Cancel reply confirmation popup -->
+        <div id="cancel-reply" class="reveal-modal" data-reveal style="text-align:center;">
+
+          <p>هل تريد إلغاء الرد؟ </br>(يمكنك إرسال تقرير عن مخالفة المتبرع للقواعد).</p>
+
+          <!-- Developer Review: Cancel reply  -->
+          <a href="#" class="button">إلغاء الرد</a>
+
+          <!-- Developer Review: send report -->
+          <a href="#" class="button">إرسال تقرير</a>
+
+          <a class="close-reveal-modal">&#215;</a>
         </div>
-      
+
       </div>
-      <!-- End of Faselty's Introduction Article -->
+    </div>
+
+    <!-- donor name, phone -->
+    <div class="row donor-reply">
+
+    <!-- Developer Review: donor name -->
+    <p>Test</p>
+
+    <!-- Developer Review: donor phone no. -->
+    <p>0123519835</p>
+    </div>
+
+    <!-- Developer Review: confirm donor -->
+    <a href="#" class="button">تأكيد التبرع</a>
+  </div>
+
+
+
+  <!-- Developer Review: End loop -->
+</div>

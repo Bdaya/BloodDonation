@@ -3,70 +3,202 @@
 
 <div class="donator_profile">
 
+
+  <!-- Donor Status, Name, Bloodtype -->
   <div class="row donor-name">
-    <!-- Available State -->
+
+    <!-- Developer Review: user status -->
+    <!-- if user is Available -->
     <% unless @user.paused %>
 
-        <div class="column small-6 donor-name-active">
-      <!-- Not Available -->
+      <div class="column small-6 donor-name-active">
+
+    <!-- if user is Not Available -->
     <% else %>
 
-        <div class="column small-6 donor-name-inactive">
+      <div class="column small-6 donor-name-inactive">
     <% end %>
+    <!-- End of user state condition -->
+
+      <!-- Developer Review: User Name -->
       <h1><%= @user.name %></h1>
+
+      <!-- Developer Review: User Bloodtype -->
       <p>فصيلة الدم: <%= @user.blood_type.type %></p>
 
     </div>
   </div>
 
+  <!-- Donor last donation date, saved lives, replies awaiting -->
   <div class="row donor-blocks">
+
+    <!-- Last Donation Date -->
     <div class="column small-4">
       <div class="row">
+
+        <!-- Last Donation Date -->
+        <!-- Developer Review: (if condition here for css classes, disabled for zero, enabled for more than zero) -->
         <h1 class=<% if @donation_date_txt == "not yet" %>
           "donor_last_date_disabled">
            لم تتبرع بعد
+           <!-- Developer Review: if donor donated, show donation time -->
            <%else %>"donor_last_date_enabled"> <%= @donation_date_txt %>
            <%end%></h1>
       </div>
 
       <p>آخر مرة تبرعت فيها</p>
     </div>
+
+    <!-- no. of lives saved -->
     <div class="column small-4">
       <div class="row">
-      <h1 class="souls_saved<% if @user.no_of_confirmed_donations == 0 %>_disabled<%else%>_enabled<%end%>"><%= @user.no_of_confirmed_donations %></h1>
-    </div>
+
+        <!-- Developer Review: show no. of lifes saved (if condition here for css classes, disabled for zero, enabled for more than zero) -->
+        <h1 class="souls_saved<% if @user.no_of_confirmed_donations == 0 %>_disabled<%else%>_enabled<%end%>"><%= @user.no_of_confirmed_donations %></h1>
+      </div>
+
       <p>
         المرضى الذين أنقذتهم
       </p>
     </div>
+
+    <!-- replies awaiting -->
     <div class="column small-4">
       <div class="row">
-          <h1 class="requests_awaiting<% if @user.replies.count == 0 %>_disabled<%else%>_enabled<%end%>"><a href="<%= donations_user_path(@user) %>"><%= @user.replies.count %></a></h1>
+
+        <!-- Developer Review: no. of replies awaiting (if condition here for css classes, disabled for zero, enabled for more than zero) -->
+        <h1 class="requests_awaiting<% if @user.replies.count == 0 %>_disabled<%else%>_enabled<%end%>"><a href="<%= donations_user_path(@user) %>"><%= @user.replies.count %></a></h1>
       </div>
 
       <p>
         الطلبات قيد الإنتظار
       </p>
     </div>
+
   </div>
 
-<div class="row trophies-block">
+  <!-- Trophies donor earned -->
+  <div class="row trophies-block">
     <div class="column small-4">
       <h1>الجوائز:</h1>
     </div>
+
     <div class="column small-8">
+
+      <!-- Developer Review: if no trophies, write "لم تحز على جوائز بعد، هيا أرنا همتك :)" -->
       <h1><% if @trophies_txt == "not yet" %>
         لم تحز على جوائز بعد، هيا أرنا همتك :)
+
+        <!-- Developer Review: else, show trophies earned -->
         <% else %>
         <%= @trophies_txt %>
         <% end %> </h1>
 
     </div>
-</div>
+  </div>
 
-<div class="row requests-available">
+  <div class="row donor-request-list">
 
-</div>
+    <div class="header">
+      <h3>عرض الحالات</h3>
 
+    </div>
+
+    <!-- list requests -->
+    <div class="request-list">
+
+      <!-- Developer Review: if there are equal requests, start equal request loop -->
+      <!-- request list item-->
+      <div class="single-request">
+
+        <div class="row">
+          <div class="column small-1 left close">
+
+            <!-- Developer Request: cancel Request -->
+            <a href="#">
+              إلغاء ×
+            </a>
+
+          </div>
+        </div>
+        <div class="row">
+          <!-- Request status, Bloodtype, Due date-->
+          <div class="column small-2 request-status active">
+
+            <p>
+              <!-- Developer Review: Request required bloodtype-->
+              AB+
+            </p>
+            <p>
+              <!-- Developer Review: Request Due Date-->
+              16/9
+            </p>
+          </div>
+
+          <!-- Request bloodbags no. , hopital address -->
+          <div class="column small-4">
+
+            <p>
+              عدد أكياس الدم:
+              <!-- Developer Review: Request Bloodtype no. -->
+              <span>6</span>
+            </p>
+
+            <p>
+              عنوان المستشفى:
+              <!-- Developer Review: Hospital address -->
+              <span>الجلاء</span>
+            </p>
+
+          </div>
+
+          <!-- Reply to request, see more details, share request on social media -->
+          <div class="column small-4">
+            <div class="row request-options">
+
+              <!-- Developer Review: send reply to request (replace # with link to reply to request) -->
+              <a class="button" href="#">تبرع</a>
+              </br>
+
+              <!-- Developer Review: link to Request Page for more details -->
+              <a href="<!-- Developer Review: Replace with link to page link -->">مزيد من التفاصيل</a>
+              |
+              <!-- Social Media share -->
+              <div class="social-share">
+
+                <!-- Developer Review: Replace  request_url(r)  with link to request link -->
+                <!-- Facebook share -->
+                <a href="https://www.facebook.com/sharer/sharer.php?u=request_url(r) "><li class="fa fa-facebook"></li></a>
+
+                <!-- Twitter share -->
+                <a href="https://twitter.com/intent/tweet?url=request_url(r)"><li class="fa fa-twitter"></li></a>
+
+                <!-- G+ share -->
+                <a href="https://plus.google.com/share?url=request_url(r)"><li class="fa fa-google-plus"></li></a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Developer Review: else if there aren't equal requests -->
+
+    <div class="empty">
+
+      <p>ليست هناك حالات متوافقة مع فصيلة دمك، ما رأيك يـ<a href="<!-- Developer Review: link to requests/show -->">الذهاب إلى قائمة الحالات الكاملة.</a></p>
+
+    </div>
+
+
+    <!-- Developer Review: End if condition -->
+
+
+
+
+  </div>
 
 </div>
