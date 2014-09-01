@@ -1,0 +1,247 @@
+<!-- Page Title -->
+<% title "سجل النشاط" %>
+
+<div class="row" >
+
+  <!-- Title -->
+  <div class="column medium-6">
+    <h1>سجل النشاط</h1>
+  </div>
+
+  <!-- Back to User Profile -->
+  <div class="column medium-6">
+    <div class="left">
+
+      <!-- Developer Review: link to user profile -->
+      <%= link_to 'العودة إلى الصفحة الشخصية', @user %>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="request-list">
+
+  <!-- Developer Review: start requests loop -->
+
+  <!-- Developer Review: if request is active -->
+  <!-- request list active item-->
+  <div class="single-request">
+
+    <div class="row">
+      <div class="column small-1 left close">
+
+        <!-- Developer Request: cancel Request -->
+        <a href="#">
+          إلغاء ×
+        </a>
+
+      </div>
+    </div>
+    <div class="row">
+      <!-- Request status, Bloodtype, Due date-->
+      <div class="column small-2 request-status active">
+
+        <p>
+          <!-- Developer Review: Request required bloodtype-->
+          AB+
+        </p>
+        <p>
+          <!-- Developer Review: Request Due Date-->
+          16/9
+        </p>
+      </div>
+
+      <!-- Request bloodbags no. , hopital address -->
+      <div class="column small-4">
+
+        <p>
+          عدد أكياس الدم:
+          <!-- Developer Review: Request Bloodtype no. -->
+          <span>6</span>
+        </p>
+
+        <p>
+          عنوان المستشفى:
+          <!-- Developer Review: Hospital address -->
+          <span>الجلاء</span>
+        </p>
+
+      </div>
+
+      <!-- Reply to request, see more details, share request on social media -->
+      <div class="column small-4">
+        <div class="row request-options">
+
+          <!-- Developer Review: send reply to request (replace # with link to reply to request) -->
+          <a class="button" href="#">تبرع</a>
+          </br>
+
+          <!-- Developer Review: link to Request Page for more details -->
+          <a href="<!-- Developer Review: Replace with link to page link -->">مزيد من التفاصيل</a>
+          |
+          <!-- Social Media share -->
+          <div class="social-share">
+
+            <!-- Developer Review: Replace  request_url(r)  with link to request link -->
+            <!-- Facebook share -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=request_url(r) "><li class="fa fa-facebook"></li></a>
+
+            <!-- Twitter share -->
+            <a href="https://twitter.com/intent/tweet?url=request_url(r)"><li class="fa fa-twitter"></li></a>
+
+            <!-- G+ share -->
+            <a href="https://plus.google.com/share?url=request_url(r)"><li class="fa fa-google-plus"></li></a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Developer Review: if request is done -->
+  <!-- request list done item-->
+  <div class="single-request">
+
+    <div class="row">
+      <div class="column small-1 left close">
+
+        <!-- Developer Request: cancel Request -->
+        <a href="#">
+          إلغاء ×
+        </a>
+
+      </div>
+    </div>
+    <div class="row">
+      <!-- Request status, Bloodtype, Due date-->
+      <div class="column small-2 request-status done">
+
+        <p>
+          <!-- Developer Review: Request required bloodtype-->
+          AB+
+        </p>
+        <p>
+          <!-- Developer Review: Request Due Date-->
+          16/9
+        </p>
+      </div>
+
+      <!-- Request bloodbags no. , hopital address -->
+      <div class="column small-4">
+
+        <p>
+          عدد أكياس الدم:
+          <!-- Developer Review: Request Bloodtype no. -->
+          <span>6</span>
+        </p>
+
+        <p>
+          عنوان المستشفى:
+          <!-- Developer Review: Hospital address -->
+          <span>الجلاء</span>
+        </p>
+
+      </div>
+
+      <!-- Reply to request, see more details, share request on social media -->
+      <div class="column small-4">
+        <div class="row request-options">
+
+          <!-- Developer Review: send reply to request (replace # with link to reply to request) -->
+          <a class="button" href="#">تبرع</a>
+          </br>
+
+          <!-- Developer Review: link to Request Page for more details -->
+          <a href="<!-- Developer Review: Replace with link to page link -->">مزيد من التفاصيل</a>
+          |
+          <!-- Social Media share -->
+          <div class="social-share">
+
+            <!-- Developer Review: Replace  request_url(r)  with link to request link -->
+            <!-- Facebook share -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=request_url(r) "><li class="fa fa-facebook"></li></a>
+
+            <!-- Twitter share -->
+            <a href="https://twitter.com/intent/tweet?url=request_url(r)"><li class="fa fa-twitter"></li></a>
+
+            <!-- G+ share -->
+            <a href="https://plus.google.com/share?url=request_url(r)"><li class="fa fa-google-plus"></li></a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Developer Review: if request is canceled -->
+  <!-- request list canceled item-->
+  <div class="single-request">
+
+    <div class="row">
+      <!-- Request status, Bloodtype, Due date-->
+      <div class="column small-2 request-status canceled">
+
+        <p>
+          <!-- Developer Review: Request required bloodtype-->
+          AB+
+        </p>
+        <p>
+          <!-- Developer Review: Request Due Date-->
+          16/9
+        </p>
+      </div>
+
+      <!-- Request bloodbags no. , hopital address -->
+      <div class="column small-4">
+
+        <p>
+          عدد أكياس الدم:
+          <!-- Developer Review: Request Bloodtype no. -->
+          <span>6</span>
+        </p>
+
+        <p>
+          عنوان المستشفى:
+          <!-- Developer Review: Hospital address -->
+          <span>الجلاء</span>
+        </p>
+
+      </div>
+
+      <!-- Reply to request, see more details, share request on social media -->
+      <div class="column small-4">
+        <div class="row request-options">
+
+          <!-- Developer Review: send reply to request (replace # with link to reply to request) -->
+          <a class="button" href="#">تبرع</a>
+          </br>
+
+          <!-- Developer Review: link to Request Page for more details -->
+          <a href="<!-- Developer Review: Replace with link to page link -->">مزيد من التفاصيل</a>
+          |
+          <!-- Social Media share -->
+          <div class="social-share">
+
+            <!-- Developer Review: Replace  request_url(r)  with link to request link -->
+            <!-- Facebook share -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=request_url(r) "><li class="fa fa-facebook"></li></a>
+
+            <!-- Twitter share -->
+            <a href="https://twitter.com/intent/tweet?url=request_url(r)"><li class="fa fa-twitter"></li></a>
+
+            <!-- G+ share -->
+            <a href="https://plus.google.com/share?url=request_url(r)"><li class="fa fa-google-plus"></li></a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Developer Review: End if -->
+  <!-- Developer Review: End loop -->
+</div>

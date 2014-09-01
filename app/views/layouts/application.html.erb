@@ -11,42 +11,51 @@
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <div class="total-nav">
 
-    <!-- Top Navigation Bar -->
-    <div class="total-nav">
+    <!--  top part of Navigation bar (sign-in/up, profile, options, social media links) -->
     <div class=" up-bar">
           <div class="row">
             <div class="left">
             <ul>
-            <% if user_signed_in? %>
 
-                    <li><%= link_to 'الصفحة الشخصية', user_path(current_user) %></li>
-                    <li<a href="#" data-dropdown="drop1" class="dropdown">إعدادات الحساب</a><br>
-                    <ul id="drop1" data-dropdown-content class="f-dropdown">
-                      <li><a href="#">This is a link</a></li>
-                      <li><!-- Available State -->
-          <% if @user.is_available? %>
-              <%= link_to 'تجميد الحساب', change_availability_user_path(@user) %>
-            <!-- Not Available -->
-            <% else %>
-              <%= link_to 'تفعيل الحساب', change_availability_user_path(@user) %>
-            <% end %>
-            <!-- End of User State --></li>
-                      <li><%= link_to "تعديل البيانات", edit_user_path(current_user)  %></li>
+              <!-- if user signed in: show (link to user Profile, settings dropdown(edit user, change availability), log out) -->
+              <% if user_signed_in? %>
 
-                    </ul>
-                  </li>
-                    <li><%= link_to "تسجيل الخروج", destroy_user_session_path, :method => :delete %></li>
+                <!-- User Profile -->
+                <li><%= link_to 'الصفحة الشخصية', user_path(current_user) %></li>
 
-            <% else %>
-                  <li>
-                  <a href="#" class="reveal-link" data-reveal-id="login">تسجيل الدخول</a>
+                <!-- Settings Dropdown -->
+                <li<a href="#" data-dropdown="drop1" class="dropdown">إعدادات الحساب</a><br>
+                  <ul id="drop1" data-dropdown-content class="f-dropdown">
+
+                    <!-- User Availability -->
+                    <li>
+
+                      <!-- Developer review: if user is available -->
+                      <% unless @user.paused %>
+
+                        <!-- Developer review: pause user's account -->
+                        <%= link_to 'تجميد الحساب', pause_user_path(@user) %>
+
+                      <!-- Developer review: if user Not Available -->
+                      <% else %>
+
+                        <!-- Developer review: resume user's account -->
+                        <%= link_to 'تفعيل الحساب', unpause_user_path(@user) %>
+                      <% end %>
+                    </li>
+                    <!-- End of user availability -->
+
+                    <!-- Edit user information -->
+                    <li><%= link_to "تعديل البيانات", settings_user_path(current_user)  %></li>
+
+                  </ul>
                 </li>
-                <li>
-                  <a href="#" class="reveal-link" data-reveal-id="signup">تسجيل حساب جديد</a>
-                </li>
-            <% end %>
+                <!-- End of settings dropdown -->
 
+<<<<<<< HEAD
              <!-- Faselty Facebook Page -->
             <a href="https://www.facebook.com/FaseltyMe" target="_blank" ><i class="fa fa-facebook-square"></i></a>
 
@@ -55,11 +64,42 @@
 
             <!-- Faselty G+ Account -->
             <a href="https://plus.google.com/u/3/108096126248367301464?cfem=1" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+=======
+                <!-- User log out -->
+                <li><%= link_to "تسجيل الخروج", destroy_user_session_path, :method => :delete %></li>
 
-          </ul>
+              <!-- if user not signed in: show sign in, sign up -->
+              <% else %>
+
+                <!-- sign in popup link -->
+                <li><a href="#" class="reveal-link" data-reveal-id="login">تسجيل الدخول</a></li>
+>>>>>>> 84699577e2feb95003702996f5aa633dba5cad54
+
+                <!-- sign up popup link -->
+                <li><a href="#" class="reveal-link" data-reveal-id="signup">تسجيل حساب جديد</a></li>
+
+              <% end %>
+              <!-- End of condition -->
+
+              <!-- social media links -->
+
+              <!-- Faselty Facebook Page -->
+              <a href="https://www.facebook.com/FaseltyMe" ><i class="fa fa-facebook-square"></i></a>
+
+              <!-- Faselty Twitter Account -->
+              <a href="https://twitter.com/Faselty"><i class="fa fa-twitter-square"></i></a>
+
+              <!-- Faselty G+ Account -->
+              <a href="https://plus.google.com/u/3/108096126248367301464?cfem=1"><i class="fa fa-google-plus-square"></i></a>
+              <!-- End of social media links -->
+
+            </ul>
           </div>
-          </div>
+        </div>
     </div>
+    <!-- End of top part of Nav. bar -->
+
+    <!-- Down part of nav. bar (logo, links to contents pages) -->
     <nav class="top-bar row" data-topbar data-options="is_hover: false">
 
       <!-- Top Navigation Bar Logo -->
@@ -104,171 +144,89 @@
       </section>
       <!-- End of Navigation Menu -->
     </nav>
-    <!-- End of Navigation Bar -->
+    <!-- End of Down part of Nav. Bar -->
+
   </div>
-
-    <!-- Main Content-->
-    <div class="row content main_content">
+  <!-- End of Nav. Bar -->
 
 
-      <% if !user_signed_in? %>
+  <!-- Sign-up popup -->
+  <div id="signup" class="reveal-modal" data-reveal>
+    <div class="row" style="text-align:center;">
+      <div class="column small-6 small-centered">
+        <h2>تسجيل حساب جديد</h2>
 
-        <!-- Signup/in Popup -->
+        <!-- new donor -->
+        <%= link_to "متبرع جديد", new_user_registration_path, :class=>"button expand" %>
 
-        <div id="signup" class="reveal-modal" data-reveal>
-          <div class="row" style="text-align:center;">
-            <div class="column small-6 small-centered">
-              <h2>تسجيل حساب جديد</h2>
-              <%= link_to "متبرع جديد", new_user_registration_path, :class=>"button expand" %>
-              <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button expand" %>
-            </div>
-          </div>
-          <a class="close-reveal-modal">&#215;</a>
-        </div>
-
-        <div id="login" class="reveal-modal" data-reveal>
-          <div class="row" style="text-align:center;">
-            <div class="column small-6 centered">
-            <h2> سجل الدخول</h2>
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {"data-abide" => ''}) do |f| %>
-                <div>
-
-                  <%= f.email_field :email, autofocus: true, :required=>"", :pattern=>"email", :placeholder=>"البريد الإلكتروني" %>
-
-                <small class="error">يرجى كتابة البريد الإلكتروني بشكل صحيح.</small>
-              </div>
-
-            <div>
-
-                <%= f.password_field :password, autocomplete: "off", :placeholder=>"كلمة السر" %>
-
-            </div>
-
-
-                <% if devise_mapping.rememberable? -%>
-                <div style="font-size:14px;"><%= f.check_box :remember_me %> <span style="color:#BA2830;">تذكرني</span> - <%= link_to "نسيت كلمة السر؟", new_password_path(resource_name) %></div>
-              <% end -%>
-
-              <button type="submit" class=" column small-4 small-centered">ادخل</button>
-            <% end %>
-          </div>
-          </div>
-          <a class="close-reveal-modal">&#215;</a>
-        </div>
-        <!-- End of Popup-->
-
-      <%end%>
-
-      <!-- Page content -->
-
-      <%= yield %>
-
-      <!--End of page content-->
+        <!-- new request -->
+        <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button expand" %>
+      </div>
     </div>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+  <!-- End of sign-up popup -->
 
-    <!-- Footer -->
-    <div class="footer" style="width:100% !important;">
+  <!-- sign-in popup -->
+  <div id="login" class="reveal-modal" data-reveal>
+    <div class="row" style="text-align:center;">
+      <div class="column small-6 centered">
+        <h2> سجل الدخول</h2>
 
-      <!-- Copyright Notice -->
-        <p>كل الحقوق محفوظة لموقع فصيلتي © 2014</p>
+        <!-- login form -->
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {"data-abide" => ''}) do |f| %>
 
+          <div>
+            <!-- user email -->
+            <%= f.email_field :email, autofocus: true, :required=>"", :pattern=>"email", :placeholder=>"البريد الإلكتروني" %>
 
-      <!-- Social Sites Links -->
+            <!-- Error message -->
+            <small class="error">يرجى كتابة البريد الإلكتروني بشكل صحيح.</small>
+          </div>
 
+          <div>
+              <!-- user password -->
+              <%= f.password_field :password, autocomplete: "off", :placeholder=>"كلمة السر" %>
+          </div>
+
+          <!-- remeber me, forgotten password -->
+          <% if devise_mapping.rememberable? -%>
+            <div style="font-size:14px;"><%= f.check_box :remember_me %> <span style="color:#BA2830;">تذكرني</span> - <%= link_to "نسيت كلمة السر؟", new_password_path(resource_name) %></div>
+          <% end -%>
+
+          <!-- submit form -->
+          <button type="submit" class=" column small-4 small-centered">ادخل</button>
+        <% end %>
+        <!-- End of login form -->
+      </div>
     </div>
-    <!-- End of Footer -->
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+  <!-- End of sign-in Popup-->
 
 
-    <!-- JS Main Page Script -->
-    <script type="text/javascript">
-        $(document).foundation();
+  <!-- Main Content-->
+  <div class="row content main_content">
+
+    <!-- Page content -->
+
+    <%= yield %>
+
+    <!--End of page content-->
+  </div>
+  <!-- End of Main content -->
 
 
+  <!-- Footer -->
+  <div class="footer" style="width:100% !important;">
 
-        $('.cover-content a').click( function() {
-          $(".cover").animate({ height:"0"}, 2000, function() { $(".cover").hide();});
-        });
+    <!-- Copyright Notice -->
+      <p>كل الحقوق محفوظة لموقع فصيلتي © 2014</p>
+  </div>
+  <!-- End of Footer -->
 
-        $('.cover a').click( function() {
-          var elem = $( this );
-
-          if (elem.attr("href") == "#signup-donator") {
-            $(".main_content .about-content").hide();
-            $(".main_content a.donator").parent().addClass("active");
-            $(".top-bar li.register").addClass("active").removeClass("register");
-            $(".main_content .register-content").show();
-          };
-          if (elem.attr("href") == "#signup-patient") {
-            $(".main_content .about-content").hide();
-            $(".main_content a.patient").parent().addClass("active");
-            $(".top-bar li.register").addClass("active").removeClass("register");
-            $(".main_content .register-content").show();
-
-          };
-          if (elem.attr("href") == "#signin") {
-            $(".main_content .about-content").hide();
-            $(".top-bar li.register").addClass("active").removeClass("register");
-            $(".main_content .register-content").show();
-          };
-          if (elem.attr("href") == "#about") {
-            $(".main_content .register-content").hide();
-            $(".main_content .about-content").show();
-            $(".top-bar a[href='about.html']").parent().addClass("active");
-          };
-        });
-
-        $(".sign-up input").click( function() {
-          $(".sign-in").hide();
-          if ($(".sign-up").hasClass("large-6")) {
-            $(".sign-up").removeClass("large-6");
-            $(".sign-up").addClass("large-12");
-            $(".show").show();
-            $(".show a[href='#signin']").show();
-          };
-        });
-
-        $(".sign-in input").click( function() {
-          $(".sign-up").hide();
-          if ($(".sign-in").hasClass("large-6")) {
-            $(".sign-in").removeClass("large-6");
-            $(".sign-in").addClass("large-12");
-            $(".show").show();
-            $(".show a[href='#signup']").show();
-          };
-        });
-
-        $(".show a").click( function() {
-          if ($(".sign-in").hasClass("large-12")) {
-            $(".sign-in").removeClass("large-12");
-            $(".sign-in").addClass("large-6");
-
-          }
-
-          $(".sign-up").show();
-            if ($(".sign-up").hasClass("large-12")) {
-            $(".sign-up").removeClass("large-12");
-            $(".sign-up").addClass("large-6");
-
-          }
-          $(".sign-in").show();
-          $(".show").hide();
-          $(".show a").hide();
-        });
-
-         $(window).bind("load", function () {
-    var footer = $(".footer");
-    var pos = footer.position();
-    var height = $(window).height();
-    height = height - pos.top;
-    height = height - footer.height();
-    if (height > 0) {
-        footer.css({
-            'margin-top': height + 'px'
-        });
-    }
-});
-    </script>
-    <!-- End of Script -->
-
+<script type="text/javascript">
+  $(document).foundation();
+</script>
 </body>
 </html>

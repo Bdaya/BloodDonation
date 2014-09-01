@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user.update_attributes(user_params)
+    @user.update_attributes(params[:user].permit!)
     redirect_to @user, notice: "Successfully updated your information"
   end
 
@@ -33,6 +33,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def unpause
+    if @user.update_attribute(:pause, false)
+      redirect_to @user, notice: "Successfully unpaused your donation ability."
+    else
+      redirect_to @user, alert: "Something went wrong!"
+    end
+  end
+
   def update_last_donated
     if @user.update_attribute(:last_donated, DateTime.now)
       redirect_to @user, notice: "Congrats on your donation! You won't receive notifications before 3 months pass..\n But you can still Browse the requests."
@@ -42,14 +50,14 @@ class UsersController < ApplicationController
   end
 
   def update_location
-    if @user.location.update_attributes(location_params)
+    if @user.location.update_attributes(params[:location].permit!)
       redirect_to @user, notice: "Successfully updated your current location."
     else
       redirect_to @user, alert: "Something went wrong!"
     end
   end
 
-  private
+  # private
     def require_user_authority(args)
       unless (current_user && (current_user == @user) )
         redirect_to root_path, alert: "You can only edit this for your account."
