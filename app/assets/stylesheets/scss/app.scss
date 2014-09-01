@@ -442,6 +442,172 @@ transform: translate(-50%, -50%);
 	}
 }
 
+
+.request_profile {
+	vertical-align: center;
+	h1 {
+		font-size:1.5rem;
+		text-align:center;
+		color:#333;
+	}
+	p {
+
+		text-align: center;
+		font-size: 1.2rem;
+		color:#333;
+	}
+
+	.request-name {
+
+		p {
+			font-size:1rem;
+			margin: 0 0 5px;
+			text-align: right;
+			max-height: 35px;
+		}
+
+		h1 {
+			text-align: right;
+			margin:10px 0;
+			max-height:35px;
+		}
+
+		h1, span {
+			color:$primary-color;
+		}
+
+		.request-active {
+			background: url('request-status-active.png') top 0 right 10px no-repeat;
+			background-size: auto 135px;
+			padding-right: 125px;
+			padding-bottom:20px;
+		}
+
+		.request-done {
+			background: url('request-status-done.png') top 5px right 10px no-repeat;
+			background-size: auto 135px;
+			padding-right: 125px;
+			padding-bottom:20px;
+		}
+		.request-cancelled {
+			background: url('request-status-cancelled.png') top 5px right 10px no-repeat;
+			background-size: auto 135px;
+			padding-right: 125px;
+			padding-bottom:20px;
+		}
+
+	}
+
+	h1.donor_last_date_enabled {
+		color: $primary-color;
+height: 65px;
+width:70px;
+line-height:65px;
+position: absolute;
+left: 50%;
+top: 50%;
+
+/*
+*  Where the magic happens
+*  Centering method from CSS Tricks
+*  http://css-tricks.com/centering-percentage-widthheight-elements/
+*/
+transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+	}
+
+	h1.bloodbags {
+		background: url('blooddrop-enabled.png') no-repeat;
+		background-size: auto 65px;
+		color: $secondary-color;
+height: 65px;
+width:46px;
+line-height:75px;
+position: absolute;
+left: 50%;
+top: 50%;
+
+/*
+*  Where the magic happens
+*  Centering method from CSS Tricks
+*  http://css-tricks.com/centering-percentage-widthheight-elements/
+*/
+transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+	}
+
+	h1.requests_awaiting_enabled {
+		background: url('requests_awaiting_enabled.png') no-repeat;
+		background-size: auto 60px;
+		color: $secondary-color;
+		margin-top:5px;
+		height:60px;
+		width:70px;
+		line-height:55px;
+		position: absolute;
+left: 50%;
+top: 50%;
+
+/*
+*  Where the magic happens
+*  Centering method from CSS Tricks
+*  http://css-tricks.com/centering-percentage-widthheight-elements/
+*/
+transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+
+	a {
+		color:#fff;
+	}
+	}
+
+
+	.request-blocks {
+		.row {
+			position:relative;
+			height:65px;
+			margin-bottom:10px;
+		}
+	}
+
+	.request-options {
+		text-align:center;
+
+		a.button {
+		max-height: 50px;
+		line-height:40px;
+		font-size: 22px;
+		min-width: 350px;
+		padding:0;
+		margin: 1rem 0 0.5rem;
+		}
+
+		.social-share {
+			display: inline-block;
+
+
+			a,p {
+				padding: 0 5px;
+				font-size: rem-calc(20);
+				display: inline-block;
+				line-height: 30px;
+				max-height:30px;
+				:hover {
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+
+
 .footer {
 	background: #ccc;
 	height:$footer-height;

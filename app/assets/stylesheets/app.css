@@ -10712,36 +10712,192 @@ a.split {
   margin-bottom: 10px;
 }
 
-/* line 445, scss/app.scss */
+/* line 446, scss/app.scss */
+.request_profile {
+  vertical-align: center;
+}
+/* line 448, scss/app.scss */
+.request_profile h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+/* line 453, scss/app.scss */
+.request_profile p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+}
+/* line 462, scss/app.scss */
+.request_profile .request-name p {
+  font-size: 1rem;
+  margin: 0 0 5px;
+  text-align: right;
+  max-height: 35px;
+}
+/* line 469, scss/app.scss */
+.request_profile .request-name h1 {
+  text-align: right;
+  margin: 10px 0;
+  max-height: 35px;
+}
+/* line 475, scss/app.scss */
+.request_profile .request-name h1, .request_profile .request-name span {
+  color: #ba2830;
+}
+/* line 479, scss/app.scss */
+.request_profile .request-name .request-active {
+  background: url("request-status-active.png") top 0 right 10px no-repeat;
+  background-size: auto 135px;
+  padding-right: 125px;
+  padding-bottom: 20px;
+}
+/* line 486, scss/app.scss */
+.request_profile .request-name .request-done {
+  background: url("request-status-done.png") top 5px right 10px no-repeat;
+  background-size: auto 135px;
+  padding-right: 125px;
+  padding-bottom: 20px;
+}
+/* line 492, scss/app.scss */
+.request_profile .request-name .request-cancelled {
+  background: url("request-status-cancelled.png") top 5px right 10px no-repeat;
+  background-size: auto 135px;
+  padding-right: 125px;
+  padding-bottom: 20px;
+}
+/* line 501, scss/app.scss */
+.request_profile h1.donor_last_date_enabled {
+  color: #ba2830;
+  height: 65px;
+  width: 70px;
+  line-height: 65px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* line 521, scss/app.scss */
+.request_profile h1.bloodbags {
+  background: url("blooddrop-enabled.png") no-repeat;
+  background-size: auto 65px;
+  color: white;
+  height: 65px;
+  width: 46px;
+  line-height: 75px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* line 543, scss/app.scss */
+.request_profile h1.requests_awaiting_enabled {
+  background: url("requests_awaiting_enabled.png") no-repeat;
+  background-size: auto 60px;
+  color: white;
+  margin-top: 5px;
+  height: 60px;
+  width: 70px;
+  line-height: 55px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* line 565, scss/app.scss */
+.request_profile h1.requests_awaiting_enabled a {
+  color: #fff;
+}
+/* line 572, scss/app.scss */
+.request_profile .request-blocks .row {
+  position: relative;
+  height: 65px;
+  margin-bottom: 10px;
+}
+/* line 579, scss/app.scss */
+.request_profile .request-options {
+  text-align: center;
+}
+/* line 582, scss/app.scss */
+.request_profile .request-options a.button {
+  max-height: 50px;
+  line-height: 40px;
+  font-size: 22px;
+  min-width: 350px;
+  padding: 0;
+  margin: 1rem 0 0.5rem;
+}
+/* line 591, scss/app.scss */
+.request_profile .request-options .social-share {
+  display: inline-block;
+}
+/* line 595, scss/app.scss */
+.request_profile .request-options .social-share a, .request_profile .request-options .social-share p {
+  padding: 0 5px;
+  font-size: 1.25rem;
+  display: inline-block;
+  line-height: 30px;
+  max-height: 30px;
+}
+/* line 601, scss/app.scss */
+.request_profile .request-options .social-share a :hover, .request_profile .request-options .social-share p :hover {
+  color: #000;
+}
+
+/* line 611, scss/app.scss */
 .footer {
   background: #ccc;
   height: 45px;
   overflow: hidden;
   text-align: center;
 }
-/* line 453, scss/app.scss */
+/* line 619, scss/app.scss */
 .footer p {
   display: inline-block;
   color: white;
   line-height: 45px;
 }
-/* line 459, scss/app.scss */
+/* line 625, scss/app.scss */
 .footer .column {
   height: 45px;
 }
-/* line 462, scss/app.scss */
+/* line 628, scss/app.scss */
 .footer .social {
   float: left;
   height: 45px;
 }
-/* line 467, scss/app.scss */
+/* line 633, scss/app.scss */
 .footer .social p {
   display: inline-block;
   color: white;
   line-height: 45px;
   vertical-align: top;
 }
-/* line 474, scss/app.scss */
+/* line 640, scss/app.scss */
 .footer .social li {
   color: white;
   font-size: 2.1875rem;
@@ -10749,7 +10905,7 @@ a.split {
   text-align: center;
   width: 100%;
 }
-/* line 483, scss/app.scss */
+/* line 649, scss/app.scss */
 .footer .social a {
   width: 50px;
   height: 45px;
@@ -10757,12 +10913,12 @@ a.split {
   display: inline-block;
 }
 
-/* line 492, scss/app.scss */
+/* line 658, scss/app.scss */
 .total-nav {
   width: 100%;
   background: #ba2830;
 }
-/* line 497, scss/app.scss */
+/* line 663, scss/app.scss */
 .total-nav .up-bar {
   height: 50px;
   color: #fff;
@@ -10770,34 +10926,34 @@ a.split {
   width: 100% !important;
   border-bottom: 2px solid #fff;
 }
-/* line 504, scss/app.scss */
+/* line 670, scss/app.scss */
 .total-nav .up-bar a {
   display: inline-block;
   color: #fff;
   font-size: 30px;
   line-height: 50px;
 }
-/* line 511, scss/app.scss */
+/* line 677, scss/app.scss */
 .total-nav .up-bar .left {
   max-height: 50px;
 }
-/* line 515, scss/app.scss */
+/* line 681, scss/app.scss */
 .total-nav .up-bar ul {
   text-decoration: none;
 }
-/* line 519, scss/app.scss */
+/* line 685, scss/app.scss */
 .total-nav .up-bar ul li {
   display: inline-block;
   margin: 0 10px;
   max-height: 50px;
   top: 0;
 }
-/* line 524, scss/app.scss */
+/* line 690, scss/app.scss */
 .total-nav .up-bar ul li a {
   font-size: 14px;
   line-height: 50px;
 }
-/* line 540, scss/app.scss */
+/* line 706, scss/app.scss */
 .total-nav .logo img {
   height: 60px;
   width: 166px;
@@ -10805,44 +10961,44 @@ a.split {
   background: #ba2830;
 }
 
-/* line 550, scss/app.scss */
+/* line 716, scss/app.scss */
 .top-bar-section ul li.register:hover:not(.has-form) > a {
   color: #ba2830 !important;
 }
 
-/* line 553, scss/app.scss */
+/* line 719, scss/app.scss */
 form button {
   margin: 5px 0;
 }
 
-/* line 558, scss/app.scss */
+/* line 724, scss/app.scss */
 .main_content {
   padding: 65px 50px 70px;
   min-height: 500px;
 }
-/* line 565, scss/app.scss */
+/* line 731, scss/app.scss */
 .main_content .tabs-content p {
   text-align: justify;
 }
-/* line 573, scss/app.scss */
+/* line 739, scss/app.scss */
 .main_content .tabs-content .vertical {
   margin-right: 5px;
 }
-/* line 577, scss/app.scss */
+/* line 743, scss/app.scss */
 .main_content dl.tabs {
   margin: 0;
 }
-/* line 580, scss/app.scss */
+/* line 746, scss/app.scss */
 .main_content dl.tabs .column {
   text-align: center;
   padding: 0 !important;
 }
-/* line 584, scss/app.scss */
+/* line 750, scss/app.scss */
 .main_content dl.tabs dd.active a, .main_content dl.tabs dd:hover a {
   color: #fff;
 }
 
-/* line 590, scss/app.scss */
+/* line 756, scss/app.scss */
 .single-reply {
   background: #f9f9f9;
   margin: 15px;
@@ -10854,26 +11010,26 @@ form button {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 598, scss/app.scss */
+/* line 764, scss/app.scss */
 .single-reply .close a {
   font-size: 16px;
   color: #999;
   text-align: left;
   margin: 2px 20px;
 }
-/* line 605, scss/app.scss */
+/* line 771, scss/app.scss */
 .single-reply .donor-reply {
   background: url("blooddrop-enabled.png") top 0.2rem right 25px no-repeat;
   background-size: auto 110px;
   padding-right: 120px;
 }
-/* line 610, scss/app.scss */
+/* line 776, scss/app.scss */
 .single-reply .donor-reply p {
   font-size: 30px;
   color: #ba2830;
   max-height: 30px;
 }
-/* line 616, scss/app.scss */
+/* line 782, scss/app.scss */
 .single-reply a.button {
   padding: 0 50px !important;
   min-width: 80%;
@@ -10883,7 +11039,7 @@ form button {
   margin: 1rem 9% 0.5rem !important;
 }
 
-/* line 628, scss/app.scss */
+/* line 794, scss/app.scss */
 .single-request {
   background: #f9f9f9;
   margin: 15px 0px;
@@ -10894,39 +11050,39 @@ form button {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 634, scss/app.scss */
+/* line 800, scss/app.scss */
 .single-request .close a {
   font-size: 16px;
   color: #999;
   text-align: left;
   margin: 2px 0;
 }
-/* line 641, scss/app.scss */
+/* line 807, scss/app.scss */
 .single-request .request-status {
   padding-right: 120px;
 }
-/* line 645, scss/app.scss */
+/* line 811, scss/app.scss */
 .single-request .request-status p {
   font-size: 30px;
   color: #ba2830;
   max-height: 30px;
 }
-/* line 652, scss/app.scss */
+/* line 818, scss/app.scss */
 .single-request .active {
   background: url("request-status-active.png") top 0.2rem right 25px no-repeat;
   background-size: auto 110px;
 }
-/* line 657, scss/app.scss */
+/* line 823, scss/app.scss */
 .single-request .done {
   background: url("request-status-done.png") top 0.2rem right 25px no-repeat;
   background-size: auto 110px;
 }
-/* line 662, scss/app.scss */
+/* line 828, scss/app.scss */
 .single-request .canceled {
   background: url("request-status-canceled.png") top 0.2rem right 25px no-repeat;
   background-size: auto 110px;
 }
-/* line 668, scss/app.scss */
+/* line 834, scss/app.scss */
 .single-request p {
   text-align: right;
   font-size: 24px;
@@ -10935,11 +11091,11 @@ form button {
   line-height: 30px;
   margin: 1rem 0 !important;
 }
-/* line 676, scss/app.scss */
+/* line 842, scss/app.scss */
 .single-request p span {
   color: #ba2830;
 }
-/* line 680, scss/app.scss */
+/* line 846, scss/app.scss */
 .single-request a.button {
   padding: 0 50px !important;
   min-width: 80%;
@@ -10948,15 +11104,15 @@ form button {
   font-size: 24px;
   margin: 1rem 0 0.5rem !important;
 }
-/* line 689, scss/app.scss */
+/* line 855, scss/app.scss */
 .single-request .request-options {
   text-align: center;
 }
-/* line 693, scss/app.scss */
+/* line 859, scss/app.scss */
 .single-request .social-share {
   display: inline-block;
 }
-/* line 697, scss/app.scss */
+/* line 863, scss/app.scss */
 .single-request .social-share a, .single-request .social-share p {
   padding: 0 5px;
   font-size: 1.25rem;
@@ -10964,72 +11120,72 @@ form button {
   line-height: 30px;
   max-height: 30px;
 }
-/* line 703, scss/app.scss */
+/* line 869, scss/app.scss */
 .single-request .social-share a :hover, .single-request .social-share p :hover {
   color: #000;
 }
 
-/* line 711, scss/app.scss */
+/* line 877, scss/app.scss */
 .request_content h2 {
   font-size: 16px;
   display: inline-block;
 }
-/* line 715, scss/app.scss */
+/* line 881, scss/app.scss */
 .request_content p {
   display: inline-block;
   text-align: center;
   font-size: 18px;
 }
-/* line 721, scss/app.scss */
+/* line 887, scss/app.scss */
 .request_content .main_data {
   margin: 0 0 35px;
 }
-/* line 725, scss/app.scss */
+/* line 891, scss/app.scss */
 .request_content .donator_confirmations {
   padding: 0 !important;
 }
-/* line 729, scss/app.scss */
+/* line 895, scss/app.scss */
 .request_content .donator_confirmations .donator_name {
   padding: 0;
 }
-/* line 731, scss/app.scss */
+/* line 897, scss/app.scss */
 .request_content .donator_confirmations .donator_name h2 {
   padding: 23px 0;
   width: 100%;
   text-align: center;
   margin: 0 !important;
 }
-/* line 739, scss/app.scss */
+/* line 905, scss/app.scss */
 .request_content .donator_confirmations .confirmation {
   padding: 0;
   text-align: center;
   background: #ba2830;
 }
-/* line 743, scss/app.scss */
+/* line 909, scss/app.scss */
 .request_content .donator_confirmations .confirmation a {
   padding: 20px 0;
   display: block;
   background: #ba2830;
   color: white;
 }
-/* line 752, scss/app.scss */
+/* line 918, scss/app.scss */
 .request_content .more .more-content {
   padding: 0 10px;
 }
-/* line 756, scss/app.scss */
+/* line 922, scss/app.scss */
 .request_content .more .more-content .more-patient-details, .request_content .more .more-content .share-patient-social {
   display: inline-block;
 }
-/* line 761, scss/app.scss */
+/* line 927, scss/app.scss */
 .request_content .more .more-content .share-patient-social a {
   padding: 0 5px;
   font-size: 1.25rem;
 }
-/* line 765, scss/app.scss */
+/* line 931, scss/app.scss */
 .request_content .more .more-content .share-patient-social a :hover {
   color: #000;
 }
-/* line 774, scss/app.scss */
+/* line 940, scss/app.scss */
 .request_content .due-date p {
   width: 150px;
   height: 150px;
@@ -11058,12 +11214,12 @@ form button {
 }
 
 @media only screen and (max-width: 64.063em) {
-  /* line 802, scss/app.scss */
+  /* line 968, scss/app.scss */
   .footer {
     height: 90px;
     text-align: center;
   }
-  /* line 805, scss/app.scss */
+  /* line 971, scss/app.scss */
   .footer .social {
     float: none;
   }
