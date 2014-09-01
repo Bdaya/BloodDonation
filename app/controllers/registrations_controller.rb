@@ -1,14 +1,10 @@
 class RegistrationsController < Devise::RegistrationsController
   before_action(:only => [:create]) { |c| c.check_important_params(params) }
   def create
-<<<<<<< HEAD
-    @user = User.new(user_params)
-    if params[:blood_type]
-        blood_type = BloodType.find(params[:blood_type])
-=======
+
     @user = User.new(params[:user].permit!)
     blood_type = BloodType.find(params[:blood_type])
->>>>>>> 84699577e2feb95003702996f5aa633dba5cad54
+
     this_coordinates = [params[:latitude], params[:longitude]]
     location = Location.new
     location.coordinates = this_coordinates
