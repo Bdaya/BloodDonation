@@ -1,6 +1,7 @@
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Attributes::Dynamic
   
   GENDERS = ['male', 'female']
   BETWEEN_DONATIONS = 90

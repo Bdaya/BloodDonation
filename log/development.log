@@ -21349,3 +21349,1107 @@ Resolution:
   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-27 00:07:38 +0300
+Processing by ContentsController#index as HTML
+  Rendered contents/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 691ms (Views: 676.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-08-27 00:07:39 +0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-27 00:07:40 +0300
+
+
+Started GET "/assets/cover-logo.png" for 127.0.0.1 at 2014-08-27 00:07:40 +0300
+
+
+Started GET "/assets/fonts/fontawesome-webfont.woff?v=4.1.0" for 127.0.0.1 at 2014-08-27 00:07:40 +0300
+
+
+Started GET "/contents/about" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+Processing by ContentsController#about as HTML
+  Rendered contents/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 16.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/assets/fonts/fontawesome-webfont.woff?v=4.1.0" for 127.0.0.1 at 2014-08-27 00:13:42 +0300
+
+
+Started GET "/contents/news" for 127.0.0.1 at 2014-08-27 00:13:51 +0300
+Processing by ContentsController#news as HTML
+  Rendered contents/news.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 18.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/assets/fonts/fontawesome-webfont.woff?v=4.1.0" for 127.0.0.1 at 2014-08-27 00:13:52 +0300
+
+
+Started GET "/contents/contact" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+Processing by ContentsController#contact as HTML
+  Rendered contents/contact.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 23.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:54 +0300
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:13:55 +0300
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-08-27 00:13:55 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-08-27 00:13:55 +0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-27 00:13:55 +0300
+
+
+Started GET "/assets/fonts/fontawesome-webfont.woff?v=4.1.0" for 127.0.0.1 at 2014-08-27 00:13:55 +0300
+
+
+Started GET "/contents/news" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+Processing by ContentsController#news as HTML
+  Rendered contents/news.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 27.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/assets/fonts/fontawesome-webfont.woff?v=4.1.0" for 127.0.0.1 at 2014-08-27 00:15:27 +0300
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+Processing by RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 36ms (Views: 32.2ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/fastclick.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/foundation.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-27 00:15:43 +0300
+
+
+Started GET "/assets/fonts/fontawesome-webfont.woff?v=4.1.0" for 127.0.0.1 at 2014-08-27 00:15:44 +0300
+
+
+Started GET "/assets/blooddrop-disabled.png" for 127.0.0.1 at 2014-08-27 00:15:46 +0300
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-27 00:17:01 +0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BFv5Yi/4LoLMZXYFhgyrvXBQ6+EodOla1tnhrJmmykc=", "user"=>{"name"=>"", "gender"=>"", "phone"=>"", "email"=>"", "national_id"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "blood_type"=>"", "location"=>""}}
+Completed 500 Internal Server Error in 11ms
+
+Mongoid::Errors::UnknownAttribute (
+Problem:
+  Attempted to set a value for 'utf8' which is not allowed on the model User.
+Summary:
+  Without including Mongoid::Attributes::Dynamic in your model and the attribute does not already exist in the attributes hash, attempting to call User#utf8= for it is not allowed. This is also triggered by passing the attribute to any method that accepts an attributes hash, and is raised instead of getting a NoMethodError.
+Resolution:
+  You can include Mongoid::Attributes::Dynamic if you expect to be writing values for undefined fields often.):
+  app/controllers/registrations_controller.rb:4:in `new'
+  app/controllers/registrations_controller.rb:4:in `create'
+
+
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-27 00:18:28 +0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BFv5Yi/4LoLMZXYFhgyrvXBQ6+EodOla1tnhrJmmykc=", "user"=>{"name"=>"", "gender"=>"", "phone"=>"", "email"=>"", "national_id"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "blood_type"=>"", "location"=>""}}
+Completed 500 Internal Server Error in 3ms
+
+Mongoid::Errors::UnknownAttribute (
+Problem:
+  Attempted to set a value for 'utf8' which is not allowed on the model User.
+Summary:
+  Without including Mongoid::Attributes::Dynamic in your model and the attribute does not already exist in the attributes hash, attempting to call User#utf8= for it is not allowed. This is also triggered by passing the attribute to any method that accepts an attributes hash, and is raised instead of getting a NoMethodError.
+Resolution:
+  You can include Mongoid::Attributes::Dynamic if you expect to be writing values for undefined fields often.):
+  app/controllers/registrations_controller.rb:4:in `new'
+  app/controllers/registrations_controller.rb:4:in `create'
+
+
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/contents/about" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+Processing by ContentsController#about as HTML
+  Rendered contents/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 35.2ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:38 +0300
+
+
+Started GET "/contents/" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+Processing by ContentsController#index as HTML
+  Rendered contents/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 33ms (Views: 30.4ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:49:59 +0300
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+Processing by RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 99ms (Views: 94.4ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/base/base.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/objects/base_builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/objects/builder.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/objects/handler.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/objects/common.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/builders/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/builders/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/builders/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/builders/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/builders/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/builders/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/objects/bound.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/objects/circle.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/objects/kml.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/objects/marker.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/objects/map.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polyline.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/primitives.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google/objects/polygon.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/gmaps/google.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-08-27 00:51:05 +0300
+
+
+Started GET "/assets/blooddrop-disabled.png" for 127.0.0.1 at 2014-08-27 00:51:06 +0300
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-27 00:51:10 +0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BFv5Yi/4LoLMZXYFhgyrvXBQ6+EodOla1tnhrJmmykc=", "user"=>{"name"=>"", "gender"=>"", "phone"=>"", "email"=>"", "national_id"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "blood_type"=>"", "location"=>""}}
+Completed 500 Internal Server Error in 1ms
+
+Mongoid::Errors::UnknownAttribute (
+Problem:
+  Attempted to set a value for 'utf8' which is not allowed on the model User.
+Summary:
+  Without including Mongoid::Attributes::Dynamic in your model and the attribute does not already exist in the attributes hash, attempting to call User#utf8= for it is not allowed. This is also triggered by passing the attribute to any method that accepts an attributes hash, and is raised instead of getting a NoMethodError.
+Resolution:
+  You can include Mongoid::Attributes::Dynamic if you expect to be writing values for undefined fields often.):
+  app/controllers/registrations_controller.rb:4:in `new'
+  app/controllers/registrations_controller.rb:4:in `create'
+
+
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-27 00:51:41 +0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BFv5Yi/4LoLMZXYFhgyrvXBQ6+EodOla1tnhrJmmykc=", "user"=>{"name"=>"", "gender"=>"", "phone"=>"", "email"=>"", "national_id"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "blood_type"=>"", "location"=>""}}
+Completed 500 Internal Server Error in 9ms
+
+Mongoid::Errors::InvalidFind (
+Problem:
+  Calling Document.find with nil is invalid.
+Summary:
+  Document.find expects the parameters to be 1 or more ids, and will return a single document if 1 id is provided, otherwise an array of documents if multiple ids are provided.
+Resolution:
+  Most likely this is caused by passing parameters directly through to the find, and the parameter either is not present or the key from which it is accessed is incorrect.):
+  app/controllers/registrations_controller.rb:5:in `create'
+
+
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Menisy/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)

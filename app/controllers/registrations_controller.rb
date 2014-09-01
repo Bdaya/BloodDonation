@@ -2,7 +2,8 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     @user = User.new(user_params)
-    blood_type = BloodType.find(params[:blood_type])
+    if params[:blood_type]
+        blood_type = BloodType.find(params[:blood_type])
     this_coordinates = [params[:latitude], params[:longitude]]
     location = Location.create(coordinates: this_coordinates, country: params[:country], city: params[:city], province: params[:province], address: params[:address])
     @user.blood_type = blood_type
