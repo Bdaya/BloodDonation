@@ -4,13 +4,14 @@
 <div class="donator_profile">
 
 
+
   <!-- Donor Status, Name, Bloodtype -->
   <div class="row donor-name">
 
     <!-- Developer Review: user status -->
     <!-- if user is Available -->
     <% unless @user.paused %>
-      
+
       <div class="column small-6 donor-name-active">
 
     <!-- if user is Not Available -->
@@ -24,7 +25,7 @@
       <h1><%= @user.name %></h1>
 
       <!-- Developer Review: User Bloodtype -->
-      <p>فصيلة الدم: <%= @user.blood_type.type %></p>
+      <p>فصيلة الدم: <%= @blood_type %></p>
 
     </div>
   </div>
@@ -38,11 +39,11 @@
 
         <!-- Last Donation Date -->
         <!-- Developer Review: (if condition here for css classes, disabled for zero, enabled for more than zero) -->
-        <h1 class=<% if @donation_date_txt == "not yet" %>
+        <h1 class=<% if @user.last_donated == nil %>
           "donor_last_date_disabled">
            لم تتبرع بعد
            <!-- Developer Review: if donor donated, show donation time -->
-           <%else %>"donor_last_date_enabled"> <%= @donation_date_txt %>
+           <%else %>"donor_last_date_enabled"> <%= @user.last_donated %>
            <%end%></h1>
       </div>
 
@@ -189,7 +190,7 @@
         <!-- Developer Review: else if there aren't equal requests -->
         <div class="empty">
 
-          <p>ليست هناك حالات متوافقة مع فصيلة دمك، ما رأيك يـ
+          <p>ليست هناك حالات متوافقة مع فصيلة دمك، ما رأيك بـ
             <%= link_to 'الذهاب إلى قائمة الحالات الكاملة.', requests_path %>
           </p>
 

@@ -11,7 +11,8 @@
     <!-- Back to User Profile -->
     <div class="column medium-6">
 
-      <%= button_to "إلغاء الحساب", registration_path(resource_name), data: { confirm: "هل أنت متأكد أنك تريد إلغاء الحساب?" }, method: :delete %> | <%= link_to 'العودة إلى الصفحة الشخصية', @user, %>
+      <%= button_to "إلغاء الحساب", registration_path(resource_name), data: { confirm: "هل أنت متأكد أنك تريد إلغاء الحساب?" }, method: :delete %>
+      | <%= link_to 'العودة إلى الصفحة الشخصية', @user %>
     </div>
 
   </div>

@@ -308,11 +308,8 @@ a.split {
 
 	h1.donor_last_date_enabled {
 		background: url('last_date_enabled.png') no-repeat;
-		background-size: auto 150px;
-		color: $primary-color;
-		color: $secondary-color;
 		background-size: auto 60px;
-color: $secondary-color;
+		color: $primary-color;
 height: 65px;
 width:70px;
 line-height:65px;
@@ -691,9 +688,19 @@ transform: translate(-50%, -50%);
 			margin:0 10px;
 			max-height:50px;
 			top:0;
+
 			a {
 				font-size:14px;
 				line-height:50px;
+			}
+
+			.f-dropdown li a {
+				display: block !important;
+				padding: 0.5rem !important;
+				color: #555 !important;
+				margin: 0;
+				background:none;
+				border: none;
 			}
 		}
 	}}

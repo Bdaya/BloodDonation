@@ -3,10 +3,11 @@ class UsersController < ApplicationController
   before_action { |c| c.prepare_user(params[:id]) }
   before_action(:only => [:settings, :pause, :update_last_donated, :update_location]) { |c| c.require_user_authority(params[:id]) }
 
+
   def show
     @requests = current_user.find_matching_requests_arround
   end
-  
+
   def settings
   end
 
@@ -26,16 +27,15 @@ class UsersController < ApplicationController
     @cancelled_donations = @user.cancelled_donations
   end
 
-  def pause
-    if @user.update_attribute(:pause, true)
+   def pause
+    if @user.update_attribute(:paused , true)
       redirect_to @user, notice: "Successfully paused your donation ability."
     else
       redirect_to @user, alert: "Something went wrong!"
     end
   end
-
   def unpause
-    if @user.update_attribute(:pause, false)
+    if @user.update_attribute(:paused , false)
       redirect_to @user, notice: "Successfully unpaused your donation ability."
     else
       redirect_to @user, alert: "Something went wrong!"

@@ -2,7 +2,7 @@ class User
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Attributes::Dynamic
-  
+
   GENDERS = ['male', 'female']
   BETWEEN_DONATIONS = 90
 
@@ -41,7 +41,7 @@ class User
     validates_length_of :phone, minimum: 11, maximum: 11, :message=> "Mobile number must be of length 11.."
     validates_numericality_of :phone, :message=> "Must enter mobile number in numerical form only!"
     validates_uniqueness_of :phone, :message=> "This mobile number is already associated with another user!"
-  
+
   field :age , type: Integer
     validates_presence_of :age, :message=> "Must enter your Age!"
 
@@ -59,6 +59,8 @@ class User
 
   has_many :requests
   has_many :replies
+
+  
 
   ##### Methods #####
   def can_donate?

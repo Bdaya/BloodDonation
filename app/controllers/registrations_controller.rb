@@ -1,3 +1,4 @@
+# encoding: utf-8
 class RegistrationsController < Devise::RegistrationsController
   before_action(:only => [:create]) { |c| c.check_important_params(params) }
   def create
@@ -15,11 +16,12 @@ class RegistrationsController < Devise::RegistrationsController
     @user.blood_type = blood_type
     @user.location = location
     if @user.save
-        redirect_to root_url, notice: "Congrats! You successfully registered!"
+        redirect_to user_url, notice: "Congrats! You successfully registered!"
     else
         flash[:alert] = "الرجاء إدخال البيانات كاملة"
         render 'new'# alert: "Please complete all data correctly!"
     end
+  end
     # build_resource(sign_up_params)
 
     # resource_saved = resource.save
@@ -42,7 +44,7 @@ class RegistrationsController < Devise::RegistrationsController
     #   end
     #   respond_with resource
     # end
-  end
+
   # private
     def check_important_params(params)
       unless params[:user][:latitude] && params[:user][:longitude] && params[:user][:blood_type]

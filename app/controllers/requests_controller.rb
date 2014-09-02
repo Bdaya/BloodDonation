@@ -3,13 +3,13 @@ class RequestsController < ApplicationController
   before_action(:except => [:index, :new, :create]) { |c| c.prepare_request(params[:id]) }
   before_action :authenicate_user!, only: [:reply]
   before_action(:only => [:update, :pause, :update_last_donated, :update_location, :stop]) { |c| c.require_authority(params[:id]) }
-  
+
   def index
     if current_user
       @requests = current_user.find_matching_requests_arround
     else
       @requests = Request.all
-    end 
+    end
   end
 
   def show
@@ -29,8 +29,14 @@ class RequestsController < ApplicationController
 
   def create
     @request = Request.new(params[:request].permit!)
-    location = Location.create(params[:location].permit!)
-    @request.location = location
+    this_coordinates = [params[:request][:latitude], params[:request][:longitude]]
+    location = Location.new
+    location.coordinates = this_coordinates
+    location.country = params[:country] if params[:country]
+    location.city = params[:city] if params[:city]
+    location.province = params[:province] if params[:province]
+    location.address = params[:address]
+    location.save    @request.location = location
     @request.blood_type = BloodType.find(params[:blood_type]) if params[:blood_type]
     if current_user
       @request.user = current_user
@@ -39,7 +45,7 @@ class RequestsController < ApplicationController
     if @request.save
       redirect_to @request
     else
-      redirect_to root_url, alert: "Something went wrong"
+      redirect_to new_request_path, alert: "Something went wrong"
     end
   end
 
