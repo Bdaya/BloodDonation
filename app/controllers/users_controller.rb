@@ -27,8 +27,7 @@ class UsersController < ApplicationController
   end
 
   def pause
-    @user.pause = true
-    if @user.save
+    if @user.update_attribute(:paused , true)
       redirect_to @user, notice: "Successfully paused your donation ability."
     else
       redirect_to @user, alert: "Something went wrong!"
@@ -36,8 +35,7 @@ class UsersController < ApplicationController
   end
 
   def unpause
-    @user.pause = false
-    if @user.save
+    if @user.update_attribute(:paused , false)
       redirect_to @user, notice: "Successfully unpaused your donation ability."
     else
       redirect_to @user, alert: "Something went wrong!"
