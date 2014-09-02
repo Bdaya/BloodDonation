@@ -38,6 +38,7 @@ public/system/**/*
 public/assets
 public/*.png
 routes.txt
+tmp/pids/*
 tmp/
 typescript
 vendor/bundle
