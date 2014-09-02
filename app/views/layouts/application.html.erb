@@ -34,16 +34,16 @@
                     <li>
 
                       <!-- Developer review: if user is available -->
-                      <% unless @user.paused %>
+                      <% unless current_user.paused %>
 
                         <!-- Developer review: pause user's account -->
-                        <%= link_to 'تجميد الحساب', pause_user_path(@user) %>
+                        <%= link_to 'تجميد الحساب', pause_user_path(current_user) %>
 
                       <!-- Developer review: if user Not Available -->
                       <% else %>
 
                         <!-- Developer review: resume user's account -->
-                        <%= link_to 'تفعيل الحساب', unpause_user_path(@user) %>
+                        <%= link_to 'تفعيل الحساب', unpause_user_path(current_user) %>
                       <% end %>
                     </li>
                     <!-- End of user availability -->

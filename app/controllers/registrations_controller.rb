@@ -1,11 +1,10 @@
 class RegistrationsController < Devise::RegistrationsController
   before_action(:only => [:create]) { |c| c.check_important_params(params) }
   def create
-
     @user = User.new(params[:user].permit!)
-    blood_type = BloodType.find(params[:blood_type])
+    blood_type = BloodType.find_by(type: params[:user][:blood_type]) unless params[:user][:blood_type].blank?
 
-    this_coordinates = [params[:latitude], params[:longitude]]
+    this_coordinates = [params[:user][:latitude], params[:user][:longitude]]
     location = Location.new
     location.coordinates = this_coordinates
     location.country = params[:country] if params[:country]
@@ -18,7 +17,8 @@ class RegistrationsController < Devise::RegistrationsController
     if @user.save
         redirect_to root_url, notice: "Congrats! You successfully registered!"
     else
-        redirect_to new_user_registration_path, alert: "Please complete all data correctly!"
+        flash[:alert] = "الرجاء إدخال البيانات كاملة"
+        render 'new'# alert: "Please complete all data correctly!"
     end
     # build_resource(sign_up_params)
 
@@ -45,7 +45,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
   # private
     def check_important_params(params)
-      unless params[:latitude] && params[:longitude] && params[:blood_type]
+      unless params[:user][:latitude] && params[:user][:longitude] && params[:user][:blood_type]
         redirect_to new_user_registration_path, alert: "Please complete all the data correctly!"
       end
     end

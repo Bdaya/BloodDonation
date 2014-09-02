@@ -44,6 +44,10 @@ html, body {
   height: 100%;
 }
 
+.content{
+  line-height: 30px;
+}
+
 /* line 301, scss/foundation/components/_global.scss */
 *,
 *:before,

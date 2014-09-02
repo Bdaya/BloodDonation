@@ -137,10 +137,10 @@
 
               <!-- User BloodType -->
               <div class="field">
-                  <%= f.select(:blood_type, [["Select Blood type"],["A+","A+"],["A-","A-"],
+                  <%= f.select(:blood_type, [["A+","A+"],["A-","A-"],
                                                     ["B+","B+"],["B-","B-"],
                                                     ["O+","O+"],["O-","O-"],
-                                                    ["AB+","AB+"],["AB-","AB-"]]) %>
+                                                    ["AB+","AB+"],["AB-","AB-"]], include_blank: 'اختر فصيلة الدم') %>
                   <small class="error">لا تنس اختيار فصيلة الدم.</small>
               </div>
             </div>

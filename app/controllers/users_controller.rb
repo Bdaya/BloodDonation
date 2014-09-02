@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action(:only => [:settings, :pause, :update_last_donated, :update_location]) { |c| c.require_user_authority(params[:id]) }
 
   def show
+    @requests = current_user.find_matching_requests_arround
   end
   
   def settings
