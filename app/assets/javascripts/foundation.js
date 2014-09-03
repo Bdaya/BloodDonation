@@ -149,7 +149,7 @@
       bindLoad.call(image);
     }
   };
-  
+
   /*
     https://github.com/paulirish/matchMedia.js
   */
@@ -213,14 +213,14 @@
   for (; lastTime < vendors.length && !requestAnimationFrame; lastTime++) {
     requestAnimationFrame = window[ vendors[lastTime] + "RequestAnimationFrame" ];
     cancelAnimationFrame = cancelAnimationFrame ||
-      window[ vendors[lastTime] + "CancelAnimationFrame" ] || 
+      window[ vendors[lastTime] + "CancelAnimationFrame" ] ||
       window[ vendors[lastTime] + "CancelRequestAnimationFrame" ];
   }
 
   function raf() {
     if (animating) {
       requestAnimationFrame(raf);
-      
+
       if (jqueryFxAvailable) {
         jQuery.fx.tick();
       }
@@ -231,7 +231,7 @@
     // use rAF
     window.requestAnimationFrame = requestAnimationFrame;
     window.cancelAnimationFrame = cancelAnimationFrame;
-    
+
     if (jqueryFxAvailable) {
       jQuery.fx.timer = function (timer) {
         if (timer() && jQuery.timers.push(timer) && !animating) {
@@ -366,18 +366,18 @@
       //    Don't bother reading the namespace out of the meta tag
       //    if the namespace has been set globally in javascript
       //
-      // Example: 
+      // Example:
       //    Foundation.global.namespace = 'my-namespace';
       // or make it an empty string:
       //    Foundation.global.namespace = '';
       //
       //
 
-      // If the namespace has not been set (is undefined), try to read it out of the meta element. 
+      // If the namespace has not been set (is undefined), try to read it out of the meta element.
       // Otherwise use the globally defined namespace, even if it's empty ('')
       var namespace = ( this.global.namespace === undefined ) ? $('.foundation-data-attribute-namespace').css('font-family') : this.global.namespace;
-      
-      // Finally, if the namsepace is either undefined or false, set it to an empty string. 
+
+      // Finally, if the namsepace is either undefined or false, set it to an empty string.
       // Otherwise use the namespace value.
       this.global.namespace = ( namespace === undefined || /false/i.test(namespace) ) ? '' : namespace;
     },
@@ -388,23 +388,23 @@
     utils : {
 
       // Description:
-      //    Fast Selector wrapper returns jQuery object. Only use where getElementById 
+      //    Fast Selector wrapper returns jQuery object. Only use where getElementById
       //    is not available.
       //
       // Arguments:
-      //    Selector (String): CSS selector describing the element(s) to be 
+      //    Selector (String): CSS selector describing the element(s) to be
       //    returned as a jQuery object.
       //
-      //    Scope (String): CSS selector describing the area to be searched. Default 
+      //    Scope (String): CSS selector describing the area to be searched. Default
       //    is document.
       //
       // Returns:
-      //    Element (jQuery Object): jQuery object containing elements matching the 
+      //    Element (jQuery Object): jQuery object containing elements matching the
       //    selector within the scope.
       S : S,
 
       // Description:
-      //    Executes a function a max of once every n milliseconds 
+      //    Executes a function a max of once every n milliseconds
       //
       // Arguments:
       //    Func (Function): Function to be throttled.
@@ -436,8 +436,8 @@
       //    Func (Function): Function to be debounced.
       //
       //    Delay (Integer): Function execution threshold in milliseconds.
-      // 
-      //    Immediate (Bool): Whether the function should be called at the beginning 
+      //
+      //    Immediate (Bool): Whether the function should be called at the beginning
       //    of the delay instead of the end. Default is false.
       //
       // Returns:
@@ -465,7 +465,7 @@
       //    El (jQuery Object): Element to be parsed.
       //
       // Returns:
-      //    Options (Javascript Object): Contents of the element's data-options 
+      //    Options (Javascript Object): Contents of the element's data-options
       //    attribute.
       data_options : function (el) {
         var opts = {}, ii, p, opts_arr,
@@ -522,7 +522,7 @@
       //    Adds JS-recognizable media queries
       //
       // Arguments:
-      //    Media (String): Key string for the media query to be stored as in 
+      //    Media (String): Key string for the media query to be stored as in
       //    Foundation.media_queries
       //
       //    Class (String): Class name for the generated <meta> tag
@@ -539,7 +539,7 @@
       // Arguments:
       //    Rule (String): CSS rule to be appended to the document.
       //
-      //    Media (String): Optional media query string for the CSS rule to be 
+      //    Media (String): Optional media query string for the CSS rule to be
       //    nested under.
       add_custom_rule : function (rule, media) {
         if (media === undefined) {
@@ -548,7 +548,7 @@
           var query = Foundation.media_queries[media];
 
           if (query !== undefined) {
-            Foundation.stylesheet.insertRule('@media ' + 
+            Foundation.stylesheet.insertRule('@media ' +
               Foundation.media_queries[media] + '{ ' + rule + ' }');
           }
         }
@@ -583,7 +583,7 @@
       //    Returns a random, alphanumeric string
       //
       // Arguments:
-      //    Length (Integer): Length of string to be generated. Defaults to random 
+      //    Length (Integer): Length of string to be generated. Defaults to random
       //    integer.
       //
       // Returns:
@@ -1158,7 +1158,7 @@
       if ($el.parent().hasClass('carousel')) {
         return;
       }
-      
+
       $el.after('<div id="foundationClearingHolder"></div>');
       var grid = $el.detach();
       var grid_outerHTML = '';
@@ -1167,7 +1167,7 @@
       } else {
         grid_outerHTML = grid[0].outerHTML;
       }
-      
+
       var holder = this.S('#foundationClearingHolder'),
           settings = $el.data(this.attr_name(true) + '-init'),
           grid = $el.detach(),
@@ -1587,11 +1587,11 @@
           }
 
           var settings = target.data(self.attr_name(true) + '-init') || self.settings;
-          
+
           if(S(e.target).data(self.data_attr()) && settings.is_hover) {
             self.closeall.call(self);
           }
-          
+
           if (settings.is_hover) self.open.apply(self, [dropdown, target]);
         })
         .on('mouseleave.fndtn.dropdown', '[' + this.attr_name() + '], [' + this.attr_name() + '-content]', function (e) {
@@ -1613,8 +1613,8 @@
           if (S(e.target).data(self.data_attr()) || S(e.target).parent().data(self.data_attr())) {
             return;
           }
-          if (!(S(e.target).data('revealId')) && 
-            (parent.length > 0 && (S(e.target).is('[' + self.attr_name() + '-content]') || 
+          if (!(S(e.target).data('revealId')) &&
+            (parent.length > 0 && (S(e.target).is('[' + self.attr_name() + '-content]') ||
               $.contains(parent.first()[0], e.target)))) {
             e.stopPropagation();
             return;
@@ -1726,7 +1726,7 @@
     },
 
     style : function (dropdown, target, settings) {
-      var css = $.extend({position: 'absolute'}, 
+      var css = $.extend({position: 'absolute', right: 'auto'},
         this.dirs[settings.align].call(dropdown, target, settings));
 
       dropdown.attr('style', '').css(css);
@@ -1758,7 +1758,7 @@
         }
 
         if (Foundation.rtl) {
-          return {left: p.left - this.outerWidth() + t.outerWidth(), 
+          return {left: p.left - this.outerWidth() + t.outerWidth(),
             top: p.top - this.outerHeight()};
         }
 
@@ -2038,9 +2038,9 @@
           if (passed) {
             this.settings.directives[passed
               .scenario[1]].call(this, passed.el, passed.scenario[0], function () {
-                if (arguments[0] instanceof Array) { 
+                if (arguments[0] instanceof Array) {
                   var args = arguments[0];
-                } else { 
+                } else {
                   var args = Array.prototype.slice.call(arguments, 0);
                 }
 
@@ -2167,7 +2167,7 @@
 
     object : function(el) {
       var raw_arr = this.parse_data_attr(el),
-          scenarios = [], 
+          scenarios = [],
           i = raw_arr.length;
 
       if (i > 0) {
@@ -2225,7 +2225,7 @@
 
     parse_data_attr : function (el) {
       var raw = el.attr(this.attr_name()).split(/\[(.*?)\]/),
-          i = raw.length, 
+          i = raw.length,
           output = [];
 
       while (i--) {
@@ -2454,7 +2454,7 @@
     },
 
     create : function (opts) {
-      var buttonText = opts.$li.attr(this.add_namespace('data-button')) 
+      var buttonText = opts.$li.attr(this.add_namespace('data-button'))
         || opts.$li.attr(this.add_namespace('data-text')),
         tipClass = opts.$li.attr('class'),
         $tip_content = $(this.tip_template({
@@ -3109,7 +3109,7 @@
       threshold: 0, // pixels from the top of the expedition for it to become fixes
       destination_threshold: 20, // pixels from the top of destination for it to be considered active
       throttle_delay: 30 // calculation throttling to increase framerate
-    }, 
+    },
 
     init : function (scope, method, options) {
       Foundation.inherit(this, 'throttle');
@@ -3373,7 +3373,7 @@
       container = slides_container.parent();
       slides_container.addClass(settings.slides_container_class);
       slides_container.addClass(settings.animation);
-      
+
       if (settings.stack_on_small) {
         container.addClass(settings.stack_on_small_class);
       }
@@ -3414,15 +3414,15 @@
     self._prepare_direction = function(next_idx, current_direction) {
       var dir = 'next';
       if (next_idx <= idx) { dir = 'prev'; }
-      
-      if (settings.animation === 'slide') {    
+
+      if (settings.animation === 'slide') {
         setTimeout(function(){
           slides_container.removeClass("swipe-prev swipe-next");
           if (dir === 'next') {slides_container.addClass("swipe-next");}
           else if (dir === 'prev') {slides_container.addClass("swipe-prev");}
         },0);
       }
-      
+
       var slides = self.slides();
       if (next_idx >= slides.length) {
         if (!settings.circular) return false;
@@ -3433,7 +3433,7 @@
       }
       var current = $(slides.get(idx))
         , next = $(slides.get(next_idx));
-      
+
       return [dir, current, next, next_idx];
     };
 
@@ -3442,7 +3442,7 @@
       if (self.cache.animating) {return false;}
       if (next_idx === idx) {return false;}
       if (typeof self.cache.timer === 'object') {self.cache.timer.restart();}
-      
+
       var slides = self.slides();
       self.cache.animating = true;
       var res = self._prepare_direction(next_idx)
@@ -3460,7 +3460,7 @@
 
       current.css("transitionDuration", settings.animation_speed+"ms");
       next.css("transitionDuration", settings.animation_speed+"ms");
-      
+
       var callback = function() {
         var unlock = function() {
           if (start_timer === true) {self.cache.timer.restart();}
@@ -3472,7 +3472,7 @@
           setTimeout(function(){
             self.cache.animating = false;
           }, 100);
-          
+
         };
         if (slides_container.height() != next.height() && settings.variable_height) {
           slides_container.animate({'height': next.height()}, 250, 'linear', unlock);
@@ -3485,7 +3485,7 @@
 
       var start_animation = function() {
         if (dir === 'next') {animate.next(current, next, callback);}
-        if (dir === 'prev') {animate.prev(current, next, callback);}        
+        if (dir === 'prev') {animate.prev(current, next, callback);}
       };
 
       if (next.height() > slides_container.height() && settings.variable_height) {
@@ -3494,7 +3494,7 @@
         start_animation();
       }
     };
-    
+
     self.next = function(e) {
       e.stopImmediatePropagation();
       e.preventDefault();
@@ -3503,7 +3503,7 @@
         self._goto(idx + 1);
     }, 100);
     };
-    
+
     self.prev = function(e) {
       e.stopImmediatePropagation();
       e.preventDefault();
@@ -3526,7 +3526,7 @@
       }
     };
 
-    self.link_bullet = function(e) {    
+    self.link_bullet = function(e) {
       var index = $(this).attr('data-orbit-slide');
       if ((typeof index === 'string') && (index = $.trim(index)) != "") {
         if(isNaN(parseInt(index)))
@@ -3551,7 +3551,7 @@
     self.timer_callback = function() {
       self._goto(idx + 1, true);
     }
-    
+
     self.compute_dimensions = function() {
       var current = $(self.slides().get(idx));
       var h = current.height();
@@ -3565,8 +3565,8 @@
 
     self.create_timer = function() {
       var t = new Timer(
-        container.find('.'+settings.timer_container_class), 
-        settings, 
+        container.find('.'+settings.timer_container_class),
+        settings,
         self.timer_callback
       );
       return t;
@@ -3580,7 +3580,7 @@
       var t = container.find('.'+settings.timer_container_class);
       if (t.hasClass(settings.timer_paused_class)) {
         if (typeof self.cache.timer === 'undefined') {self.cache.timer = self.create_timer();}
-        self.cache.timer.start();     
+        self.cache.timer.start();
       }
       else {
         if (typeof self.cache.timer === 'object') {self.cache.timer.stop();}
@@ -3590,10 +3590,10 @@
     self.init = function() {
       self.build_markup();
       if (settings.timer) {
-        self.cache.timer = self.create_timer(); 
+        self.cache.timer = self.create_timer();
         Foundation.utils.image_loaded(this.slides().children('img'), self.cache.timer.start);
       }
-      
+
       animate = new CSSAnimation(settings, slides_container);
 
       if (has_init_active) {
@@ -3611,7 +3611,7 @@
       if (settings.next_on_click) {
         container.on('click', '[data-orbit-slide]', self.link_bullet);
       }
-      
+
       container.on('click', self.toggle_timer);
       if (settings.swipe) {
         slides_container.on('touchstart.fndtn.orbit',function(e) {
@@ -3626,8 +3626,8 @@
           self.cache.delta_x = 0;
           self.cache.is_scrolling = null;
           self.cache.direction = null;
-          
-          self.stop_timer(); // does not appear to prevent callback from occurring          
+
+          self.stop_timer(); // does not appear to prevent callback from occurring
         })
         .on('touchmove.fndtn.orbit',function(e) {
           if (Math.abs(self.cache.delta_x) > 5) {
@@ -3635,7 +3635,7 @@
             e.stopPropagation();
           }
 
-          if (self.cache.animating) {return;}          
+          if (self.cache.animating) {return;}
           requestAnimationFrame(function(){
             if (!e.touches) { e = e.originalEvent; }
 
@@ -3651,7 +3651,7 @@
             if (self.cache.is_scrolling) {
               return;
             }
-            
+
             var direction = (self.cache.delta_x < 0) ? (idx+1) : (idx-1);
             if (self.cache.direction !== direction) {
               var res = self._prepare_direction(direction);
@@ -3663,7 +3663,7 @@
 
             if (settings.animation === 'slide') {
               var offset, next_offset;
-              
+
               offset = (self.cache.delta_x / container.width()) * 100;
               if (offset >= 0) {next_offset = -(100 - offset);}
               else {next_offset = 100 + offset;}
@@ -3692,7 +3692,7 @@
           self.cache.timer.start();
         }
       });
-      
+
       $(document).on('click', '[data-orbit-link]', self.link_custom);
       $(window).on('load resize', self.compute_dimensions);
       var children = this.slides().find('img');
@@ -3713,7 +3713,7 @@
         duration = settings.timer_speed,
         progress = el.find('.'+settings.timer_progress_class),
         do_progress = progress && progress.css('display') != 'none',
-        start, 
+        start,
         timeout,
         left = -1;
 
@@ -3925,7 +3925,7 @@
     }
   };
 
-    
+
 }(jQuery, this, this.document));
 
 ;(function ($, window, document, undefined) {
@@ -5221,7 +5221,7 @@
             topbar.css('height', $this.siblings('ul').outerHeight(true) + topbar.data('height'));
           }
         });
-      
+
       S(window).off('.topbar').on('resize.fndtn.topbar', self.throttle(function () {
         self.resize.call(self);
       }, 50)).trigger('resize');
@@ -5348,7 +5348,7 @@
           } else {
             var $titleLi = $('<li class="title back js-generated"><h5><a href="javascript:void(0)"></a></h5></li>');
           }
-  
+
           // Copy link to subnav
           if (settings.custom_back_text == true) {
             $('h5>a', $titleLi).html(settings.back_text);
@@ -5392,7 +5392,7 @@
 
     update_sticky_positioning: function() {
       var klass = '.' + this.settings.sticky_class,
-          $window = this.S(window), 
+          $window = this.S(window),
           self = this;
 
       if (self.settings.sticky_topbar && self.is_sticky(this.settings.sticky_topbar,this.settings.sticky_topbar.parent(), this.settings)) {

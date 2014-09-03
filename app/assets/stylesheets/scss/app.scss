@@ -688,19 +688,27 @@ transform: translate(-50%, -50%);
 			margin:0 10px;
 			max-height:50px;
 			top:0;
+			postion:relative;
 
 			a {
 				font-size:14px;
 				line-height:50px;
 			}
+		}
 
-			.f-dropdown li a {
+			li.drpdwn {
+
+			.f-dropdown {
+				right:-99999px;
+
+				li a {
 				display: block !important;
 				padding: 0.5rem !important;
 				color: #555 !important;
 				margin: 0;
 				background:none;
 				border: none;
+			}
 			}
 		}
 	}}
