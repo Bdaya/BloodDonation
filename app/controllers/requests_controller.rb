@@ -123,7 +123,7 @@ class RequestsController < ApplicationController
     end
 
     def prepare_request(args)
-      @request = Request.find(args)
+      @request = Request.find_by(id: args)
       unless @request
         redirect_to root_path, alert: "Something went wrong!"
       end
