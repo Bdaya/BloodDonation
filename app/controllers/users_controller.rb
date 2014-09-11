@@ -66,7 +66,7 @@ class UsersController < ApplicationController
     end
 
     def prepare_user(args)
-      @user = User.find(args)
+      @user = User.find_by(id: args)
       unless @user
         redirect_to root_path, alert: "Something went wrong!"
       end
