@@ -42,7 +42,7 @@ class RepliesController < ApplicationController
     end
 
     def prepare_request(args)
-      @reply = Reply.find(args)
+      @reply = Reply.find_by(id: args)
       unless (@reply && @reply.request.present?)
         redirect_to root_path, alert: "Something went wrong!"
       end
