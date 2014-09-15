@@ -54916,6 +54916,7 @@ Processing by RequestsController#create as HTML
   Rendered user_mailer/new_request_email.text.erb (2.1ms)
 
 Sent mail to mo@mo.com (19.5ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:13:24 +0300
 From: faselty.test@gmail.com
 To: mo@mo.com
@@ -54933,11 +54934,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/541659546d6f680e113c0000.
  
+=======
+Date: Mon, 15 Sep 2014 06:13:24 +0300
+From: faselty.test@gmail.com
+To: mo@mo.com
+Message-ID: <54165954f1a68_10e1180865be878727@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi mohamed,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/541659546d6f680e113c0000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5840ms
   Rendered user_mailer/new_request_email.text.erb (2.7ms)
 
 Sent mail to jo@jo.com (580.9ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:13:25 +0300
 From: faselty.test@gmail.com
 To: jo@jo.com
@@ -54955,11 +54976,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/541659546d6f680e113c0000.
  
+=======
+Date: Mon, 15 Sep 2014 06:13:25 +0300
+From: faselty.test@gmail.com
+To: jo@jo.com
+Message-ID: <541659556b86_10e1180865be87881e@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/541659546d6f680e113c0000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5720ms
   Rendered user_mailer/new_request_email.text.erb (2.0ms)
 
 Sent mail to ko@jo.com (19.8ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:13:25 +0300
 From: faselty.test@gmail.com
 To: ko@jo.com
@@ -54977,11 +55018,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/541659546d6f680e113c0000.
  
+=======
+Date: Mon, 15 Sep 2014 06:13:25 +0300
+From: faselty.test@gmail.com
+To: ko@jo.com
+Message-ID: <54165955979b9_10e1180865be878986@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/541659546d6f680e113c0000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.9640ms
   Rendered user_mailer/new_request_email.text.erb (4.0ms)
 
 Sent mail to koh@jo.com (25.0ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:13:25 +0300
 From: faselty.test@gmail.com
 To: koh@jo.com
@@ -54999,6 +55060,25 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/541659546d6f680e113c0000.
  
+=======
+Date: Mon, 15 Sep 2014 06:13:25 +0300
+From: faselty.test@gmail.com
+To: koh@jo.com
+Message-ID: <54165955a81d2_10e1180865be87901b@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/541659546d6f680e113c0000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
 Redirected to http://localhost:3000/requests/541659546d6f680e113c0000
 Completed 302 Found in 801ms
@@ -55640,6 +55720,7 @@ Processing by RequestsController#create as HTML
   Rendered user_mailer/new_request_email.text.erb (1.7ms)
 
 Sent mail to mo@mo.com (17.5ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:17:17 +0300
 From: faselty.test@gmail.com
 To: mo@mo.com
@@ -55657,11 +55738,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/54165a3d6d6f680e113e0000.
  
+=======
+Date: Mon, 15 Sep 2014 06:17:17 +0300
+From: faselty.test@gmail.com
+To: mo@mo.com
+Message-ID: <54165a3d37521_10e1180865be879149@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi mohamed,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/54165a3d6d6f680e113e0000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4170ms
   Rendered user_mailer/new_request_email.text.erb (1.7ms)
 
 Sent mail to jo@jo.com (44.1ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:17:17 +0300
 From: faselty.test@gmail.com
 To: jo@jo.com
@@ -55679,11 +55780,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/54165a3d6d6f680e113e0000.
  
+=======
+Date: Mon, 15 Sep 2014 06:17:17 +0300
+From: faselty.test@gmail.com
+To: jo@jo.com
+Message-ID: <54165a3d40a4b_10e1180865be8792d9@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/54165a3d6d6f680e113e0000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.9070ms
   Rendered user_mailer/new_request_email.text.erb (3.9ms)
 
 Sent mail to ko@jo.com (13.1ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:17:17 +0300
 From: faselty.test@gmail.com
 To: ko@jo.com
@@ -55701,11 +55822,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/54165a3d6d6f680e113e0000.
  
+=======
+Date: Mon, 15 Sep 2014 06:17:17 +0300
+From: faselty.test@gmail.com
+To: ko@jo.com
+Message-ID: <54165a3d57b86_10e1180865be87931f@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/54165a3d6d6f680e113e0000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7580ms
   Rendered user_mailer/new_request_email.text.erb (4.5ms)
 
 Sent mail to koh@jo.com (31.3ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:17:17 +0300
 From: faselty.test@gmail.com
 To: koh@jo.com
@@ -55723,6 +55864,25 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/54165a3d6d6f680e113e0000.
  
+=======
+Date: Mon, 15 Sep 2014 06:17:17 +0300
+From: faselty.test@gmail.com
+To: koh@jo.com
+Message-ID: <54165a3d6cdd9_10e1180865be8794f6@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/54165a3d6d6f680e113e0000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
 Redirected to http://localhost:3000/requests/54165a3d6d6f680e113e0000
 Completed 302 Found in 378ms
@@ -59958,6 +60118,7 @@ Processing by RequestsController#create as HTML
   Rendered user_mailer/new_request_email.text.erb (2.3ms)
 
 Sent mail to mo@mo.com (10.1ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:43:02 +0300
 From: faselty.test@gmail.com
 To: mo@mo.com
@@ -59975,11 +60136,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/541660466d6f680e11400000.
  
+=======
+Date: Mon, 15 Sep 2014 06:43:02 +0300
+From: faselty.test@gmail.com
+To: mo@mo.com
+Message-ID: <54166046131ed_10e1180865be879525@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi mohamed,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/541660466d6f680e11400000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6170ms
   Rendered user_mailer/new_request_email.text.erb (2.6ms)
 
 Sent mail to jo@jo.com (74.6ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:43:02 +0300
 From: faselty.test@gmail.com
 To: jo@jo.com
@@ -59997,11 +60178,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/541660466d6f680e11400000.
  
+=======
+Date: Mon, 15 Sep 2014 06:43:02 +0300
+From: faselty.test@gmail.com
+To: jo@jo.com
+Message-ID: <541660462363e_10e1180865be879624@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/541660466d6f680e11400000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.8320ms
   Rendered user_mailer/new_request_email.text.erb (6.4ms)
 
 Sent mail to ko@jo.com (36.9ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:43:02 +0300
 From: faselty.test@gmail.com
 To: ko@jo.com
@@ -60019,11 +60220,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/541660466d6f680e11400000.
  
+=======
+Date: Mon, 15 Sep 2014 06:43:02 +0300
+From: faselty.test@gmail.com
+To: ko@jo.com
+Message-ID: <541660463b6df_10e1180865be87974b@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/541660466d6f680e11400000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 5.1350ms
   Rendered user_mailer/new_request_email.text.erb (41.2ms)
 
 Sent mail to koh@jo.com (149.8ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:43:02 +0300
 From: faselty.test@gmail.com
 To: koh@jo.com
@@ -60041,6 +60262,25 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/541660466d6f680e11400000.
  
+=======
+Date: Mon, 15 Sep 2014 06:43:02 +0300
+From: faselty.test@gmail.com
+To: koh@jo.com
+Message-ID: <5416604666824_10e1180865be879865@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/541660466d6f680e11400000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 COMMAND      database=faselty_development command={:count=>"requests", :query=>{}} runtime: 5.8670ms
   MOPED: 127.0.0.1:27017 UPDATE       database=faselty_development collection=requests selector={"_id"=>BSON::ObjectId('541660466d6f680e11400000')} update={"$set"=>{"request_no"=>6, "updated_at"=>2014-09-15 03:43:02 UTC}} flags=[]
@@ -60558,6 +60798,7 @@ Processing by RequestsController#create as HTML
   Rendered user_mailer/new_request_email.text.erb (1.4ms)
 
 Sent mail to mo@mo.com (16.5ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:46:20 +0300
 From: faselty.test@gmail.com
 To: mo@mo.com
@@ -60575,11 +60816,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/5416610c6d6f680e11420000.
  
+=======
+Date: Mon, 15 Sep 2014 06:46:20 +0300
+From: faselty.test@gmail.com
+To: mo@mo.com
+Message-ID: <5416610ce12b4_10e1180865be8799b4@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi mohamed,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/5416610c6d6f680e11420000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6160ms
   Rendered user_mailer/new_request_email.text.erb (2.6ms)
 
 Sent mail to jo@jo.com (37.5ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:46:20 +0300
 From: faselty.test@gmail.com
 To: jo@jo.com
@@ -60597,11 +60858,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/5416610c6d6f680e11420000.
  
+=======
+Date: Mon, 15 Sep 2014 06:46:20 +0300
+From: faselty.test@gmail.com
+To: jo@jo.com
+Message-ID: <5416610ceb654_10e1180865be880031@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/5416610c6d6f680e11420000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8270ms
   Rendered user_mailer/new_request_email.text.erb (2.9ms)
 
 Sent mail to ko@jo.com (19.4ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:46:21 +0300
 From: faselty.test@gmail.com
 To: ko@jo.com
@@ -60619,11 +60900,31 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/5416610c6d6f680e11420000.
  
+=======
+Date: Mon, 15 Sep 2014 06:46:21 +0300
+From: faselty.test@gmail.com
+To: ko@jo.com
+Message-ID: <5416610dab3f_10e1180865be8801ca@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/5416610c6d6f680e11420000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 QUERY        database=faselty_development collection=blood_types selector={"$query"=>{"_id"=>BSON::ObjectId('54050c246d6f6810d1010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.4680ms
   Rendered user_mailer/new_request_email.text.erb (8.7ms)
 
 Sent mail to koh@jo.com (308.8ms)
+<<<<<<< HEAD
 Date: Mon, 15 Sep 2014 06:46:21 +0300
 From: faselty.test@gmail.com
 To: koh@jo.com
@@ -60641,6 +60942,25 @@ There has just been published a new Request that matches your blood type O+,
  
 To check it out, just follow this link: http://localhost:3000/requests/5416610c6d6f680e11420000.
  
+=======
+Date: Mon, 15 Sep 2014 06:46:21 +0300
+From: faselty.test@gmail.com
+To: koh@jo.com
+Message-ID: <5416610d34e72_10e1180865be8802e8@mohameds-mbp.mail>
+Subject: Donation Chance!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hassan,
+===============================================
+ 
+There has just been published a new Request that matches your blood type O+,
+ 
+To check it out, just follow this link: http://localhost:3000/requests/5416610c6d6f680e11420000.
+ 
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954
 Thanks for doing charity :) !
   MOPED: 127.0.0.1:27017 COMMAND      database=faselty_development command={:count=>"requests", :query=>{}} runtime: 1.7290ms
   MOPED: 127.0.0.1:27017 UPDATE       database=faselty_development collection=requests selector={"_id"=>BSON::ObjectId('5416610c6d6f680e11420000')} update={"$set"=>{"request_no"=>7, "updated_at"=>2014-09-15 03:46:21 UTC}} flags=[]
@@ -65004,4 +65324,7 @@ Started GET "/assets/logo.png" for 127.0.0.1 at 2014-09-15 06:58:45 +0300
 
 
 Started GET "/assets/request-status-active.png" for 127.0.0.1 at 2014-09-15 06:58:45 +0300
+<<<<<<< HEAD
 
+=======
+>>>>>>> e086670f1ae3220415d7aa59b0291505d01a1954

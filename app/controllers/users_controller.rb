@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @requests = current_user.find_matching_requests_arround
+    @blood_type = current_user.blood_type.type
   end
 
   def settings
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
 
   def update
     @user.update_attributes(params[:user].permit!)
-    redirect_to @user, notice: "Successfully updated your information"
+    redirect_to @user, notice: "تم تحديث البيانات بنجاح "
   end
 
   def reports
@@ -29,14 +30,14 @@ class UsersController < ApplicationController
 
    def pause
     if @user.update_attribute(:paused , true)
-      redirect_to @user, notice: "Successfully paused your donation ability."
+      redirect_to @user, notice: "تم تجميد الحساب"
     else
       redirect_to @user, alert: "Something went wrong!"
     end
   end
   def unpause
     if @user.update_attribute(:paused , false)
-      redirect_to @user, notice: "Successfully unpaused your donation ability."
+      redirect_to @user, notice: "تم تفعيل الحساب"
     else
       redirect_to @user, alert: "Something went wrong!"
     end

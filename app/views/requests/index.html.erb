@@ -35,11 +35,11 @@
 
         <p>
           <!-- Developer Review: Request required bloodtype-->
-          <%= @request.blood_type %>
+          <%= request.blood_type.type %>
         </p>
-        <p>
+        <p class="small">
           <!-- Developer Review: Request Due Date-->
-          16/9
+          <%= request.due_date.to_date %>
         </p>
       </div>
 
@@ -49,13 +49,13 @@
         <p>
           عدد أكياس الدم:
           <!-- Developer Review: Request Bloodtype no. -->
-          <span>6</span>
+          <span><%= request.blood_bags %></span>
         </p>
 
         <p>
-          عنوان المستشفى:
+          اسم المستشفى:
           <!-- Developer Review: Hospital address -->
-          <span>الجلاء</span>
+          <span><%= request.hospital_name %></span>
         </p>
 
       </div>
@@ -65,34 +65,40 @@
         <div class="row request-options">
 
           <!-- Developer Review: send reply to request (replace # with link to reply to request) -->
-          <a class="button" href="#">تبرع</a>
+          <%= link_to 'تبرع', reply_request_path(request), class: 'button', method: :post %>
           </br>
 
           <!-- Developer Review: link to Request Page for more details -->
-          <a href="<!-- Developer Review: Replace with link to page link -->">مزيد من التفاصيل</a>
+          <%= link_to 'مزيد من التفاصيل', request_path(request) %>
           |
           <!-- Social Media share -->
           <div class="social-share">
 
             <!-- Developer Review: Replace  request_url(r)  with link to request link -->
             <!-- Facebook share -->
-            <a href="https://www.facebook.com/sharer/sharer.php?u=request_url(r) "><li class="fa fa-facebook"></li></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=request_url(r) " target='_blank'><li class="fa fa-facebook"></li></a>
 
             <!-- Twitter share -->
-            <a href="https://twitter.com/intent/tweet?url=request_url(r)"><li class="fa fa-twitter"></li></a>
+            <a href="https://twitter.com/intent/tweet?url=request_url(r)" target="_blank"><li class="fa fa-twitter"></li></a>
 
             <!-- G+ share -->
-            <a href="https://plus.google.com/share?url=request_url(r)"><li class="fa fa-google-plus"></li></a>
+            <a href="https://plus.google.com/share?url=request_url(r)" target="_blank"><li class="fa fa-google-plus"></li></a>
 
           </div>
         </div>
+        <!-- request options -->
       </div>
-
+      <!-- small4 -->
     </div>
+    <!-- row -->
   </div>
+  <!-- single -->
 
 
   <!-- Developer Review: End if -->
   <% end %>
+  <% unless @requests.any? %>
+    <h2>لا توجد حالات حالياً</h2>
+  <% end -%>
   <!-- Developer Review: End loop -->
 </div>

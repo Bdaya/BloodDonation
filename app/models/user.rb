@@ -64,6 +64,10 @@ class User
 
   ##### Methods #####
   def can_donate?
+    return true unless last_donated
+
+    ## TO FIX
+    ## gives out "expected numeric" error
     if (DateTime.now - last_donated).to_i > BETWEEN_DONATIONS
       true
     else

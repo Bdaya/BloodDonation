@@ -7,26 +7,28 @@
   <!-- request Status, No., Bloodtype -->
   <div class="row request-name">
 
+
+    <% status = 'done' if @request.fulfilled? %>
+    <% status = 'cancelled' if @request.banned || @request.stopped %>
+    <% status = 'active' %>
     <!-- Developer Review: request status -->
     <!-- Developer Review: if request is Active -->
-    <div class="column small-6 request-active">
-
-    <!-- Developer Review: if request is done -->
-    <div class="column small-6 request-done">
 
      <!-- Developer Review: if request is cancelled-->
-    <div class="column small-6 request-cancelled">
+    <div class="column small-6 request-<%= status %>">
 
     <!-- Developer Review: End of condition -->
 
       <!-- Developer Review: Request No. -->
-      <h1>235123</h1>
+      <h1><%= @request.request_no %></h1>
 
       <!-- Developer Review: request Bloodtype -->
-      <p>فصيلة الدم: <span>AB+</span></p>
+      <p>فصيلة الدم: <span><%= @request.blood_type.type %></span></p>
 
       <!-- Developer Review: hospital address -->
-      <p>عنوان المستشفى: <span>مستشفى الجلاء</span></p>
+
+      <p>اسم المستشفى: <span><%= @request.hospital_name %></span></p>
+      <p>عنوان المستشفى: <span><%= @request.location.full_address %></span></p>
 
     </div>
   </div>
@@ -41,7 +43,7 @@
         <!-- Last Donation Date -->
         <!-- Developer Review: Request Due date -->
         <h1 class="donor_last_date_enabled">
-          13/9
+          <%= @request.due_date.to_date %>
         </h1>
       </div>
 
@@ -54,7 +56,7 @@
 
         <!-- Developer Review: # of bloodbags -->
         <h1 class="bloodbags">
-          6
+          <%= @request.blood_bags %>
         </h1>
       </div>
 
@@ -70,7 +72,7 @@
         <!-- Developer Review: no. of request replies, -->
         <h1 class="requests_awaiting_enabled">
           <a href="#">
-            3
+            <%= @request.no_of_replies %>
           </a>
         </h1>
       </div>
@@ -87,26 +89,41 @@
   <div class="request-options">
 
     <!-- Developer Review: send reply to request (replace # with link to reply to request) -->
-    <a class="button" href="#">تبرع</a>
+    <%= link_to "تبرع", reply_request_path(@request), class: 'button', method: :post %>
   </br>
 
     <!-- Developer Review: if request signed in -->
     <!-- request settings -->
+    <% if user_signed_in? %>
     <a data-dropdown="request-settings" aria-controls="drop1" aria-expanded="false">إعدادات الحساب</a>
     <ul id="request-settings" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
 
 
       <!-- Developer Review: edit info. -->
-      <li><a href="#">تعديل البيانات</a></li>
+      <li>
+        <%= link_to 'تعديل البيانات', edit_user_registration_path(current_user) %>
+      </li>
 
       <!-- Developer Review: if request active -->
-      <li><a href="#">تجميد الحساب</a></li>
+      <li>
 
-      <!-- Developer Review: else -->
-      <li><a href="#">تفعيل الحساب</a></li>
+        <!-- Developer review: if user is available -->
+        <% if !current_user.paused %>
+
+          <!-- Developer review: pause user's account -->
+          <%= link_to 'تجميد الحساب', pause_user_path(current_user), :method=>:post %>
+
+        <!-- Developer review: if user Not Available -->
+        <% else %>
+
+          <!-- Developer review: resume user's account -->
+          <%= link_to 'تفعيل الحساب', unpause_user_path(current_user), :method=>:post  %>
+        <% end %>
+      </li>
       <!-- Developer Review: End of if condition -->
 
     </ul>
+    <% end %>
     <!-- Developer Review: End of if condition -->
 
     |
@@ -117,26 +134,31 @@
 
       <!-- Developer Review: if user signed in -->
         <!-- Developer Review: Contact Name -->
-        <p>الاسم: <span>تجربة</span></p>
+        
+        <% if user_signed_in? %>
 
-        <!-- Developer Review: Contact No. -->
-        <p>رقم الهاتف: <span>2t2451145</span></p>
+          <p>الاسم: <span><%= @request.contact_name %></span></p>
 
-        <!-- Developer Review: Patient Name -->
-        <p>اسم المريض: <span>مريض</span></p>
+          <!-- Developer Review: Contact No. -->
+          <p>رقم الهاتف: <span><%= @request.contact_phone %></span></p>
 
-        <!-- Developer Review: Hospital Name -->
-        <p>اسم المستشفى: <span>الجلاء</span></p>
+          <!-- Developer Review: Patient Name -->
+          <p>اسم المريض: <span><%= @request.patient_name %></span></p>
+
+          <!-- Developer Review: Hospital Name -->
+          <p>اسم المستشفى: <span><%= @request.hospital_name %></span></p>
+        <% else %>
 
 
       <!-- Developer Review: if user not signed in -->
         <p>عذراً يجب أن تكون مسجلاً في الموقع لاستعراض هذه البيانات.</p>
 
-        <!-- Developer Review: link to sign in -->
-        <a href="#" class="button">تسجيل الدخول</a>
+        <%= link_to 'تسجيل الدخول', new_user_session_path, class: 'button' %>
+        <%= link_to 'تسجيل حساب جديد', new_user_registration_path, class: 'button' %>
 
-        <!-- Developer Review: link to sign up -->
-        <a href="#" class="button">تسجيل حساب جديد</a>
+        <% end %>
+
+
       <!-- Developer Review: End -->
 
       <a class="close-reveal-modal">&#215;</a>

@@ -20,8 +20,8 @@
 		<%= form_for(@request, :html => {"data-abide" => ''}) do |f| %>
 
 		  <!-- Developer Review: Error message -->
+		  <% if @request.errors.any? %>
 				<div data-alert class="alert-box" id="error_explanation" >
-<h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
       <ul>
       <% @request.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -29,6 +29,7 @@
       </ul>
 					<a href="#" class="close">&times;</a>
 				</div>
+				<% end %>
 
 			<!-- New Request Levels status-->
 	    <dl class="tabs row hor sign" data-tab>
@@ -146,7 +147,7 @@
 			        <small class="error">تأكد من كتابة التاريخ.</small>
 			        <script type="text/javascript">
 			          $(function() {
-			          $( "#datepicker" ).datepicker();
+			          $( "#datepicker" ).datepicker({dateFormat: 'dd-mm-yy'});
 			          });
 			        </script>
 			      </div>
@@ -198,7 +199,7 @@
 						<div id="map_canvas" style="width:100%; height:300px"></div><br/>
 
 						<!-- User Address -->
-						<%= f.text_field :location, :required=>"", :placeholder=>"العنوان" %>
+						<%= f.text_field :location, :required=>"", :placeholder=>"العنوان", value: '' %>
 
 
 					</div>
@@ -226,3 +227,4 @@
 		<!-- End of Request Form -->
 	</div>
 </div>
+
