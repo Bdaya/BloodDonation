@@ -16,6 +16,12 @@ class Request
     validates_numericality_of :contact_phone, :message=> "Must enter mobile number in numerical form only!"
     validates_uniqueness_of :contact_phone, :message=> "This mobile number is already associated with another user!"
   
+  
+
+  field :request_no, type: Integer
+
+
+
   field :national_id, type: String
     validates_presence_of :national_id, :message=> "Must enter your ID!"
     validates_length_of :national_id, minimum: 14, maximum: 14, :message=> "ID must be of length 14.."
@@ -98,7 +104,7 @@ class Request
     self.save
   end
 
-  def matching_doners
+  def matching_donors
     blood_type.users.select{|u| u.can_donate? == true}
   end
 

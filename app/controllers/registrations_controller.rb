@@ -6,19 +6,23 @@ class RegistrationsController < Devise::RegistrationsController
     blood_type = BloodType.find_by(type: params[:user][:blood_type]) unless params[:user][:blood_type].blank?
 
     this_coordinates = [params[:user][:latitude], params[:user][:longitude]]
-    location = Location.new
-    location.coordinates = this_coordinates
-    location.country = params[:country] if params[:country]
-    location.city = params[:city] if params[:city]
-    location.province = params[:province] if params[:province]
-    location.address = params[:address]
-    location.save
+    @location = @user.location || Location.new
+    @location.coordinates = this_coordinates
+    @location.country = params[:country] if params[:country]
+    @location.city = params[:city] if params[:city]
+    @location.province = params[:province] if params[:province]
+    @location.address = params[:address]
+    @location.save
     @user.blood_type = blood_type
-    @user.location = location
+    @user.location = @location
     if @user.save
-        redirect_to user_url, notice: "Congrats! You successfully registered!"
+        flash[:notice] = "تم تسجيلك بنجاح"
+        sign_in_and_redirect(@user)
+
+        # redirect_to user_path(@user), notice: 
     else
         flash[:alert] = "الرجاء إدخال البيانات كاملة"
+
         render 'new'# alert: "Please complete all data correctly!"
     end
   end

@@ -1,12 +1,13 @@
 class RequestsController < ApplicationController
   before_action :authenticate_logging_in, only: [:edit, :update, :reopen, :update_location, :stop]
   before_action(:except => [:index, :new, :create]) { |c| c.prepare_request(params[:id]) }
-  before_action :authenicate_user!, only: [:reply]
+  before_action :authenticate_user!, only: [:reply]
   before_action(:only => [:update, :pause, :update_last_donated, :update_location, :stop]) { |c| c.require_authority(params[:id]) }
 
   def index
     if current_user
-      @requests = current_user.find_matching_requests_arround
+      #@requests = current_user.find_matching_requests_arround
+      @requests = Request.all
     else
       @requests = Request.all
     end
@@ -30,22 +31,27 @@ class RequestsController < ApplicationController
   def create
     @request = Request.new(params[:request].permit!)
     this_coordinates = [params[:request][:latitude], params[:request][:longitude]]
-    location = Location.new
-    location.coordinates = this_coordinates
-    location.country = params[:country] if params[:country]
-    location.city = params[:city] if params[:city]
-    location.province = params[:province] if params[:province]
-    location.address = params[:address]
-    location.save    @request.location = location
-    @request.blood_type = BloodType.find(params[:blood_type]) if params[:blood_type]
+    @location = @request.location.try(:full_address) || Location.new
+    @location.coordinates = this_coordinates
+    @location.country = params[:country] if params[:country]
+    @location.city = params[:city] if params[:city]
+    @location.province = params[:province] if params[:province]
+    @location.address = params[:address]
+    @request.location = @location
+    @location.save
+    @request.blood_type = BloodType.find_by(type: params[:request][:blood_type]) if params[:request][:blood_type]
     if current_user
       @request.user = current_user
       @request.national_id = current_user.national_id
     end
     if @request.save
+      @request.update request_no: Request.count
       redirect_to @request
     else
-      redirect_to new_request_path, alert: "Something went wrong"
+      flash[:notice] = @request.errors.full_messages
+      flash[:alert] = "الرجاء ادخال بيانات صحيحة"
+      render 'new'
+
     end
   end
 

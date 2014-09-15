@@ -1,5 +1,18 @@
 @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+.total-nav{
+  position: relative;
+  z-index: 10000;
+}
+
+
 /* line 260, scss/foundation/components/_global.scss */
+
+
+
+
+
+
 meta.foundation-version {
   font-family: "/5.2.2/";
 }
@@ -10320,17 +10333,22 @@ th.hide-for-touch {
 .empty a:hover, .coming_soon a:hover {
   text-decoration: underline;
 }
-
 /* line 45, scss/app.scss */
+
+.content.main_content{
+  padding-top: 30px;
+}
+
 .cover {
-  position: absolute;
+/*  position: absolute;
   overflow: scroll;
   width: 100%;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: 0;*/
+  padding: 60px 30px;
   background: #ba2830;
-  z-index: 9999;
+  /*z-index: 9999;*/
   -webkit-box-shadow: #cccccc 0px 5px 5px 0;
   -moz-box-shadow: #cccccc 0px 5px 5px 0;
   box-shadow: #cccccc 0px 5px 5px 0;
@@ -10338,21 +10356,21 @@ th.hide-for-touch {
 /* line 58, scss/app.scss */
 .cover .cover-content {
   display: block;
-  position: absolute;
+/*  position: absolute;
   margin: 30px auto 0;
   height: 750px;
   min-width: 80%;
   top: 50%;
-  left: 50%;
+  left: 50%;*/
   /*
   *  Where the magic happens
   *  Centering method from CSS Tricks
   *  http://css-tricks.com/centering-percentage-widthheight-elements/
   */
-  transform: translate(-50%, -50%);
+/*  transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);*/
 }
 /* line 76, scss/app.scss */
 .cover .cover-content .flex-video {
@@ -10360,11 +10378,11 @@ th.hide-for-touch {
   height: 100%;
 }
 /* line 79, scss/app.scss */
-.cover .cover-content .flex-video iframe {
+/*.cover .cover-content .flex-video iframe {
   height: 500px !important;
   width: 700px !important;
   padding: 150px 0 0;
-}
+}*/
 /* line 86, scss/app.scss */
 .cover .cover-content h1 {
   font-size: 27px;
@@ -10578,6 +10596,7 @@ a.split {
   background: url("blooddrop-enabled.png") top 5px right 10px no-repeat;
   background-size: auto 100px;
   padding-right: 120px;
+  height: 105px;
 }
 /* line 302, scss/app.scss */
 .donator_profile .donor-name .donor-name-inactive {
@@ -10768,11 +10787,15 @@ a.split {
   padding-right: 125px;
   padding-bottom: 20px;
 }
+.small{
+  font-size: 12px !important;
+  width: 80px !important;
+}
 /* line 502, scss/app.scss */
 .request_profile h1.donor_last_date_enabled {
   color: #ba2830;
   height: 65px;
-  width: 70px;
+
   line-height: 65px;
   position: absolute;
   left: 50%;

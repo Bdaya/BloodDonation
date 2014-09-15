@@ -11,7 +11,7 @@
     <!-- Back to User Profile -->
     <div class="column medium-6">
 
-      <%= button_to "إلغاء الحساب", registration_path(resource_name), data: { confirm: "هل أنت متأكد أنك تريد إلغاء الحساب?" }, method: :delete %>
+      <%= button_to "إلغاء الحساب", registration_path(resource_name), data: { confirm: "هل أنت متأكد أنك تريد إلغاء الحساب?" }, method: :delete, class: 'button' %>
       | <%= link_to 'العودة إلى الصفحة الشخصية', @user %>
     </div>
 
@@ -53,7 +53,7 @@
     <%= f.password_field :current_password, autocomplete: "off", :placeholder=>"كلمة السر الحالية" %></div>
 
   <!-- submit form -->
-  <div><%= f.submit "تعديل" %></div>
+  <div><%= f.submit "تعديل", class: 'button' %></div>
 <% end %>
 
 
