@@ -9,7 +9,7 @@ class Report
     validates_presence_of :reply, :message=> "Must belong to a certain reply!"
   belongs_to :request
 
-  private
+  #private
     def attach_to_request
       request = reply.request
       self.save

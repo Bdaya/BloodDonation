@@ -23,7 +23,7 @@
 <div class="request-list">
 
   <!-- Developer Review: start requests loop -->
-
+  <% @uncompleted_donations.each do |reply| %>
   <!-- Developer Review: if request is active -->
   <!-- request list active item-->
   <div class="single-request">
@@ -32,9 +32,7 @@
       <div class="column small-1 left close">
 
         <!-- Developer Request: cancel Request -->
-        <a href="#">
-          إلغاء ×
-        </a>
+        <%= link_to "إلغاء ×", cancel_reply_path, :method => "POST" %>
 
       </div>
     </div>
@@ -44,11 +42,11 @@
 
         <p>
           <!-- Developer Review: Request required bloodtype-->
-          AB+
+          <%= reply.request.blood_type %>
         </p>
         <p>
           <!-- Developer Review: Request Due Date-->
-          16/9
+          <%= reply.request.due_date.to_date %>
         </p>
       </div>
 
@@ -58,13 +56,13 @@
         <p>
           عدد أكياس الدم:
           <!-- Developer Review: Request Bloodtype no. -->
-          <span>6</span>
+          <span><%= reply.request.blood_bags %></span>
         </p>
 
         <p>
           عنوان المستشفى:
           <!-- Developer Review: Hospital address -->
-          <span>الجلاء</span>
+          <span><%= reply.request.location.full_address %></span>
         </p>
 
       </div>
@@ -73,13 +71,10 @@
       <div class="column small-4">
         <div class="row request-options">
 
-          <!-- Developer Review: send reply to request (replace # with link to reply to request) -->
-          <a class="button" href="#">تبرع</a>
-          </br>
-
           <!-- Developer Review: link to Request Page for more details -->
-          <a href="<!-- Developer Review: Replace with link to page link -->">مزيد من التفاصيل</a>
-          |
+          <a href="<%= request_path(reply.request) %>" class="button">مزيد من التفاصيل</a>
+
+          </br>
           <!-- Social Media share -->
           <div class="social-share">
 
@@ -100,31 +95,24 @@
     </div>
   </div>
 
+<%end%>
+
+<% @confirmed_donations.each do |reply| %>
   <!-- Developer Review: if request is done -->
   <!-- request list done item-->
   <div class="single-request">
 
-    <div class="row">
-      <div class="column small-1 left close">
-
-        <!-- Developer Request: cancel Request -->
-        <a href="#">
-          إلغاء ×
-        </a>
-
-      </div>
-    </div>
     <div class="row">
       <!-- Request status, Bloodtype, Due date-->
       <div class="column small-2 request-status done">
 
         <p>
           <!-- Developer Review: Request required bloodtype-->
-          AB+
+          <%= reply.request.blood_type %>
         </p>
         <p>
           <!-- Developer Review: Request Due Date-->
-          16/9
+          <%= reply.request.due_date.to_date %>
         </p>
       </div>
 
@@ -134,13 +122,13 @@
         <p>
           عدد أكياس الدم:
           <!-- Developer Review: Request Bloodtype no. -->
-          <span>6</span>
+          <span><%= reply.request.blood_bags %></span>
         </p>
 
         <p>
           عنوان المستشفى:
           <!-- Developer Review: Hospital address -->
-          <span>الجلاء</span>
+          <span><%= reply.request.location.full_address %></span>
         </p>
 
       </div>
@@ -149,13 +137,11 @@
       <div class="column small-4">
         <div class="row request-options">
 
-          <!-- Developer Review: send reply to request (replace # with link to reply to request) -->
-          <a class="button" href="#">تبرع</a>
-          </br>
-
           <!-- Developer Review: link to Request Page for more details -->
-          <a href="<!-- Developer Review: Replace with link to page link -->">مزيد من التفاصيل</a>
-          |
+          <a href="<%= request_path(reply.request) %>" class="button">مزيد من التفاصيل</a>
+
+
+          </br>
           <!-- Social Media share -->
           <div class="social-share">
 
@@ -175,6 +161,9 @@
 
     </div>
   </div>
+
+  <%end%>
+  <% @cancelled_donations.each do |reply| %>
 
   <!-- Developer Review: if request is canceled -->
   <!-- request list canceled item-->
@@ -184,64 +173,64 @@
       <!-- Request status, Bloodtype, Due date-->
       <div class="column small-2 request-status canceled">
 
-        <p>
-          <!-- Developer Review: Request required bloodtype-->
-          AB+
-        </p>
-        <p>
-          <!-- Developer Review: Request Due Date-->
-          16/9
-        </p>
-      </div>
+              <p>
+                <!-- Developer Review: Request required bloodtype-->
+                <%= reply.request.blood_type %>
+              </p>
+              <p>
+                <!-- Developer Review: Request Due Date-->
+                <%= reply.request.due_date.to_date %>
+              </p>
+            </div>
 
-      <!-- Request bloodbags no. , hopital address -->
-      <div class="column small-4">
+            <!-- Request bloodbags no. , hopital address -->
+            <div class="column small-4">
 
-        <p>
-          عدد أكياس الدم:
-          <!-- Developer Review: Request Bloodtype no. -->
-          <span>6</span>
-        </p>
+              <p>
+                عدد أكياس الدم:
+                <!-- Developer Review: Request Bloodtype no. -->
+                <span><%= reply.request.blood_bags %></span>
+              </p>
 
-        <p>
-          عنوان المستشفى:
-          <!-- Developer Review: Hospital address -->
-          <span>الجلاء</span>
-        </p>
+              <p>
+                عنوان المستشفى:
+                <!-- Developer Review: Hospital address -->
+                <span><%= reply.request.location.full_address %></span>
+              </p>
 
-      </div>
+            </div>
 
-      <!-- Reply to request, see more details, share request on social media -->
-      <div class="column small-4">
-        <div class="row request-options">
+            <!-- Reply to request, see more details, share request on social media -->
+            <div class="column small-4">
+              <div class="row request-options">
 
-          <!-- Developer Review: send reply to request (replace # with link to reply to request) -->
-          <a class="button" href="#">تبرع</a>
-          </br>
+                <!-- Developer Review: link to Request Page for more details -->
+                <a href="<%= request_path(reply.request) %>" class="button">مزيد من التفاصيل</a>
 
-          <!-- Developer Review: link to Request Page for more details -->
-          <a href="<!-- Developer Review: Replace with link to page link -->">مزيد من التفاصيل</a>
-          |
-          <!-- Social Media share -->
-          <div class="social-share">
 
-            <!-- Developer Review: Replace  request_url(r)  with link to request link -->
-            <!-- Facebook share -->
-            <a href="https://www.facebook.com/sharer/sharer.php?u=request_url(r) "><li class="fa fa-facebook"></li></a>
+                </br>
+                <!-- Social Media share -->
+                <div class="social-share">
 
-            <!-- Twitter share -->
-            <a href="https://twitter.com/intent/tweet?url=request_url(r)"><li class="fa fa-twitter"></li></a>
+                  <!-- Developer Review: Replace  request_url(r)  with link to request link -->
+                  <!-- Facebook share -->
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=request_url(r) "><li class="fa fa-facebook"></li></a>
 
-            <!-- G+ share -->
-            <a href="https://plus.google.com/share?url=request_url(r)"><li class="fa fa-google-plus"></li></a>
+                  <!-- Twitter share -->
+                  <a href="https://twitter.com/intent/tweet?url=request_url(r)"><li class="fa fa-twitter"></li></a>
 
-          </div>
-        </div>
-      </div>
+                  <!-- G+ share -->
+                  <a href="https://plus.google.com/share?url=request_url(r)"><li class="fa fa-google-plus"></li></a>
+
+                </div>
+              </div>
+            </div>
+
 
     </div>
   </div>
 
+<%end%>
   <!-- Developer Review: End if -->
   <!-- Developer Review: End loop -->
 </div>

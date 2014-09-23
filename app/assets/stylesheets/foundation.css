@@ -2983,7 +2983,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 /* line 219, scss/foundation/components/_dropdown.scss */
 .f-dropdown {
   position: absolute;
-  left: -9999px;
+  right: -99999px;
   list-style: none;
   margin-left: 0;
   width: 100%;
@@ -3045,7 +3045,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 /* line 222, scss/foundation/components/_dropdown.scss */
 .f-dropdown.drop-right {
   position: absolute;
-  left: -9999px;
+  right: -99999px;
   list-style: none;
   margin-left: 0;
   width: 100%;
@@ -3098,7 +3098,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 /* line 226, scss/foundation/components/_dropdown.scss */
 .f-dropdown.drop-left {
   position: absolute;
-  left: -9999px;
+  right: -99999px;
   list-style: none;
   margin-left: 0;
   width: 100%;
@@ -3153,7 +3153,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 /* line 230, scss/foundation/components/_dropdown.scss */
 .f-dropdown.drop-top {
   position: absolute;
-  left: -9999px;
+  right: -99999px;
   list-style: none;
   margin-left: 0;
   width: 100%;
@@ -3227,7 +3227,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 /* line 238, scss/foundation/components/_dropdown.scss */
 .f-dropdown.content {
   position: absolute;
-  left: -9999px;
+  right: -99999px;
   list-style: none;
   margin-left: 0;
   padding: 1.25rem;

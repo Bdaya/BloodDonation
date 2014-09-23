@@ -15,8 +15,8 @@ class Request
     validates_length_of :contact_phone, minimum: 11, maximum: 11, :message=> "Mobile number must be of length 11.."
     validates_numericality_of :contact_phone, :message=> "Must enter mobile number in numerical form only!"
     validates_uniqueness_of :contact_phone, :message=> "This mobile number is already associated with another user!"
-  
-  
+
+
 
   field :request_no, type: Integer
 
@@ -27,7 +27,7 @@ class Request
     validates_length_of :national_id, minimum: 14, maximum: 14, :message=> "ID must be of length 14.."
     validates_numericality_of :national_id, :message=> "Must enter ID in numerical form only!"
     validates_uniqueness_of :national_id, :message=> "This ID is already associated with another user!"
-    
+
   field :due_date, type: DateTime
     validates_presence_of :due_date, :message=> "Must enter the expected due date!"
 
@@ -39,7 +39,6 @@ class Request
   ##### Relations #####
   has_many :replies
   belongs_to :blood_type
-    validates_presence_of :blood_type, :message=> "Must choose certain blood type!"
   belongs_to :user
   has_many :reports
   ## END
@@ -105,7 +104,7 @@ class Request
   end
 
   def matching_donors
-    blood_type.users.select{|u| u.can_donate? == true}
+    blood_type.user.select{|u| u.can_donate? == true}
   end
 
   def notify_possible_donors

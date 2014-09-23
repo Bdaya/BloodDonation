@@ -41,7 +41,7 @@ Faselty::Application.routes.draw do
       post :update_location
     end
   end
-  
+
   resources :requests, except: [:delete] do
     member do
       post :reopen
@@ -57,6 +57,7 @@ Faselty::Application.routes.draw do
   resources :replies do
     member do
       post :report
+      post :confirm
       post :cancel
     end
   end

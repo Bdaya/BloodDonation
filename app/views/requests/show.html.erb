@@ -23,7 +23,7 @@
       <h1><%= @request.request_no %></h1>
 
       <!-- Developer Review: request Bloodtype -->
-      <p>فصيلة الدم: <span><%= @request.blood_type.type %></span></p>
+      <p>فصيلة الدم: <span><%= @request.blood_type %></span></p>
 
       <!-- Developer Review: hospital address -->
 
@@ -71,14 +71,16 @@
 
         <!-- Developer Review: no. of request replies, -->
         <h1 class="requests_awaiting_enabled">
-          <a href="#">
+          <a href="<%= replies_path(@request) %>">
             <%= @request.no_of_replies %>
           </a>
         </h1>
       </div>
 
       <p>
+        <a href="<%= replies_path(@request) %>">
         ردود المتبرعين
+      </a>
       </p>
     </div>
 
@@ -96,7 +98,7 @@
     <!-- request settings -->
     <% if user_signed_in? %>
     <a data-dropdown="request-settings" aria-controls="drop1" aria-expanded="false">إعدادات الحساب</a>
-    <ul id="request-settings" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+    <ul id="request-settings" class="f-dropdown" data-dropdown-content>
 
 
       <!-- Developer Review: edit info. -->
@@ -128,13 +130,13 @@
 
     |
     <!-- Developer Review: link to Request Page for more details -->
-    <a href="<!-- Developer Review: Replace with link to page link -->" data-reveal-id="more-request-details">مزيد من التفاصيل</a>
+    <a href="#" data-reveal-id="more-request-details">مزيد من التفاصيل</a>
 
     <div id="more-request-details" class="reveal-modal" data-reveal style="text-align:center;">
 
       <!-- Developer Review: if user signed in -->
         <!-- Developer Review: Contact Name -->
-        
+
         <% if user_signed_in? %>
 
           <p>الاسم: <span><%= @request.contact_name %></span></p>
@@ -170,13 +172,13 @@
 
       <!-- Developer Review: Replace  request_url(r)  with link to request link -->
       <!-- Facebook share -->
-      <a href="https://www.facebook.com/sharer/sharer.php?u=request_url(r) "><li class="fa fa-facebook"></li></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request_path(@request) %> "><li class="fa fa-facebook"></li></a>
 
       <!-- Twitter share -->
-      <a href="https://twitter.com/intent/tweet?url=request_url(r)"><li class="fa fa-twitter"></li></a>
+      <a href="https://twitter.com/intent/tweet?url=<%= request_path(@request) %>"><li class="fa fa-twitter"></li></a>
 
       <!-- G+ share -->
-      <a href="https://plus.google.com/share?url=request_url(r)"><li class="fa fa-google-plus"></li></a>
+      <a href="https://plus.google.com/share?url=<%= request_path(@request) %>"><li class="fa fa-google-plus"></li></a>
 
     </div>
   </div>

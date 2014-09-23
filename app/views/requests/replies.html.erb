@@ -23,6 +23,7 @@
 <div class="replies-list">
 
   <!-- Developer Review: start replies loop -->
+  <% @replies.each do |reply| %>
   <!-- single reply item -->
   <div class="single-reply column medium-4 large-3">
 
@@ -41,10 +42,11 @@
           <p>هل تريد إلغاء الرد؟ </br>(يمكنك إرسال تقرير عن مخالفة المتبرع للقواعد).</p>
 
           <!-- Developer Review: Cancel reply  -->
-          <a href="#" class="button">إلغاء الرد</a>
+          <%= link_to 'إلغاء الرد', cancel_reply_path, :method=>:post, :class=>"button" %>
 
           <!-- Developer Review: send report -->
-          <a href="#" class="button">إرسال تقرير</a>
+          <%= link_to 'إرسال تقرير', report_reply_path, :method=>:post, :class=>"button" %>
+
 
           <a class="close-reveal-modal">&#215;</a>
         </div>
@@ -56,17 +58,18 @@
     <div class="row donor-reply">
 
     <!-- Developer Review: donor name -->
-    <p>Test</p>
+    <p><%= reply.user.name %></p>
 
     <!-- Developer Review: donor phone no. -->
-    <p>0123519835</p>
+    <p><%= reply.user.phone %></p>
     </div>
 
     <!-- Developer Review: confirm donor -->
-    <a href="#" class="button">تأكيد التبرع</a>
+    <%= link_to 'تأكيد التبرع', confirm_reply_path, :method=>:post, :class=>"button" %>
   </div>
 
 
 
   <!-- Developer Review: End loop -->
+  <%end%>
 </div>

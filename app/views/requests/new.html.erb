@@ -115,21 +115,14 @@
 			      </div>
 
 			      <!-- Patient BloodType -->
-			      <div class="field">
-
-			        <select id="request_blood_type" name="request[blood_type]" required>
-			        <option value="">اختر فصيلة الدم</option>
-			        <option value="A+">A+</option>
-			        <option value="A-">A-</option>
-			        <option value="B+">B+</option>
-			        <option value="B-">B-</option>
-			        <option value="O+">O+</option>
-			        <option value="O-">O-</option>
-			        <option value="AB+">AB+</option>
-			        <option value="AB-">AB-</option></select>
-			        <small class="error">لا تنس اختيار فصيلة الدم.</small>
-
-			      </div>
+			    <!-- User BloodType -->
+						<div class="field">
+								<%= f.select(:blood_type, [["A+","A+"],["A-","A-"],
+																									["B+","B+"],["B-","B-"],
+																									["O+","O+"],["O-","O-"],
+																									["AB+","AB+"],["AB-","AB-"]], include_blank: 'اختر فصيلة الدم') %>
+								<small class="error">لا تنس اختيار فصيلة الدم.</small>
+						</div>
 
 			      <!-- Required # of BloodBags -->
 			      <div class="field">
@@ -147,7 +140,7 @@
 			        <small class="error">تأكد من كتابة التاريخ.</small>
 			        <script type="text/javascript">
 			          $(function() {
-			          $( "#datepicker" ).datepicker({dateFormat: 'dd-mm-yy'});
+			          $( "#datepicker" ).datepicker({dateFormat: 'dd/mm'});
 			          });
 			        </script>
 			      </div>
@@ -227,4 +220,3 @@
 		<!-- End of Request Form -->
 	</div>
 </div>
-

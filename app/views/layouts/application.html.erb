@@ -4,10 +4,9 @@
     <title>فصيلتي | <%= yield(:title) %></title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <%= javascript_include_tag "application", "vendor/modernizr" %>
-      <%= stylesheet_link_tag "app", :media => "all" %>
-      <%= stylesheet_link_tag "font-awesome", :media => "all" %>
-      <%= csrf_meta_tags %>
+      <%= javascript_include_tag "application", "vendor/modernizr", "foundation.min" %>
+      <%= stylesheet_link_tag "app" %>
+      <%= stylesheet_link_tag "font-awesome" %>
   </head>
   <body>
 
@@ -27,8 +26,8 @@
                 <li><%= link_to 'الصفحة الشخصية', user_path(current_user) %></li>
 
                 <!-- Settings Dropdown -->
-                <li class="drpdwn"><a href="#" data-dropdown="drop1" class="dropdown">إعدادات الحساب &raquo;</a></br>
-                  <ul id="drop1" data-dropdown-content class="f-dropdown">
+                <li class="drpdwn"><a href="#" data-dropdown="drop1" data-dropdown-init="" class="dropdown">إعدادات الحساب &raquo;</a>
+                  <ul id="drop1"  class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
 
                     <!-- User Availability -->
                     <li>
@@ -52,8 +51,9 @@
                     <li><%= link_to "تعديل البيانات", edit_user_registration_path(current_user) %></li>
 
                   </ul>
-                </li>
+
                 <!-- End of settings dropdown -->
+              </li>
 
                 <!-- User log out -->
                 <li><%= link_to "تسجيل الخروج", destroy_user_session_path, :method => :delete %></li>

@@ -25,7 +25,7 @@
       <h1><%= @user.name %></h1>
 
       <!-- Developer Review: User Bloodtype -->
-      <p>فصيلة الدم: <%= @blood_type %></p>
+      <p>فصيلة الدم: <%= @user.blood_type %></p>
 
     </div>
   </div>
@@ -43,7 +43,7 @@
           "donor_last_date_disabled">
            لم تتبرع بعد
            <!-- Developer Review: if donor donated, show donation time -->
-           <%else %>"donor_last_date_enabled"> <%= @user.last_donated %>
+           <%else %>"donor_last_date_enabled"> <%= @user.last_donated.strftime('%m/%d') %>
            <%end%></h1>
       </div>
 
@@ -72,7 +72,9 @@
       </div>
 
       <p>
+        <a href="<%= donations_user_path(@user) %>">
         الطلبات قيد الإنتظار
+      </a>
       </p>
     </div>
 
@@ -209,5 +211,3 @@
   </div>
 
 </div>
-
-<%= @requests.count %>

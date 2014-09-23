@@ -1,3 +1,4 @@
+# encoding: utf-8
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:settings, :update, :pause, :update_last_donated, :update_location]
   before_action { |c| c.prepare_user(params[:id]) }
@@ -6,7 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @requests = current_user.find_matching_requests_arround
-    @blood_type = current_user.blood_type.type
+    @blood_type = current_user.blood_type
   end
 
   def settings

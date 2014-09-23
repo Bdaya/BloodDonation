@@ -1,0 +1,21 @@
+<% title "تسجيل دخول الحالة" %>
+<div class="column large-8 sign-in">
+
+
+<h2>تسجيل دخول الحالة</h2>
+
+<%= form_for(@request, url: authenticate_request_path, :method =>"POST", :html => {"data-abide" => ''}) do |f| %>
+    <div>
+      <label>الرقم القومي
+      <%= f.text_field :national_id, autofocus: true, :required=>"" %>
+    </label>
+    <small class="error">يرجى كتابة الرقم القومي بشكل صحيح.</small>
+  </div>
+
+  <div>
+  <button type="submit" class=" column small-6 small-centered">ادخل</button>
+</div>
+<% end %>
+
+
+</div>

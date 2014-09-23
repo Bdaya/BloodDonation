@@ -1,3 +1,4 @@
+# encoding: utf-8
 class RequestsController < ApplicationController
   before_action :authenticate_logging_in, only: [:edit, :update, :reopen, :update_location, :stop]
   before_action(:except => [:index, :new, :create]) { |c| c.prepare_request(params[:id]) }
@@ -77,17 +78,17 @@ class RequestsController < ApplicationController
     if user_signed_in?
       redirect_to @request, alert: "Your are already signed in!"
     else
-      national_id = params[:national_id]
+      national_id = params[:request][:national_id]
       if national_id
         if @request.authenticate(national_id)
           session[:current_request_id] = @request.id
           session[:national_id] = national_id
           redirect_to @request, notice: "Successfully logged-in."
         else
-          redirect_to log_in_requests_path(@request), alert: "Wrong national ID! Please try again"
+          redirect_to log_in_request_path(@request), alert: "Wrong national ID! Please try again"
         end
       else
-        redirect_to log_in_requests_path(@request), alert: "You must enter a valid national ID!"
+        redirect_to log_in_request_path(@request), alert: "You must enter a valid national ID!"
       end
     end
   end
