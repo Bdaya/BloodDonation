@@ -1,4 +1,6 @@
-<!-- Scripts for Location Geocoding -->
+<!-- Page Title -->
+<% title "تسجيل حالة تبرع جديدة" %>
+
 <!-- Scripts for Location GeoCoding -->
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css"></link>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -220,3 +222,73 @@
 		<!-- End of Request Form -->
 	</div>
 </div>
+
+<script type="text/javascript">
+
+		$("#contact-information").find("input").change( function() {
+			var complete = false;
+			$("#contact-information").find("input").each( function() {
+				if ($(this).val().length === 0) {
+					complete = false;
+					return false;
+				}
+			else {
+				complete = true;
+			}
+		});
+
+		if (complete) {
+			$("#contact-information").find("a.disabled").removeClass("disabled").addClass("enabled");
+			$("dd.first-level").addClass("complete");
+		};
+
+		$("#patient-information").find("input").change( function() {
+			var complete = false;
+			$("#patient-information").find("input").each( function() {
+				if ($(this).val().length === 0) {
+					complete = false;
+					return false;
+				}
+			else {
+				complete = true;
+			}
+		});
+
+		if (complete) {
+			$("#patient-information").find("a.disabled").removeClass("disabled").addClass("enabled");
+			$("dd.second-level").addClass("complete");
+		};
+
+		});
+		});
+
+		$("#hospital-information").find("input").change( function() {
+			var complete = false;
+			$("#hospital-information").find("input").each( function() {
+				if ($(this).val().length === 0) {
+					complete = false;
+					return false;
+				}
+			else {
+				complete = true;
+			}
+		});
+
+		if (complete) {
+			$("#hospital-information").find("button").removeClass("disabled").addClass("enabled");
+			$("dd.third-level").addClass("complete");
+		};
+
+		});
+
+		$("#complete1").click( function () {
+			$("dd.first-level").removeClass("active");
+			$("dd.second-level").removeClass("disabled").addClass("active");
+		});
+
+		$("#complete2").click( function () {
+			$("dd.second-level").removeClass("active");
+			$("dd.third-level").removeClass("disabled").addClass("active");
+		});
+
+</script>

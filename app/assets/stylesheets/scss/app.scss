@@ -94,7 +94,9 @@
 			@include circle(55px, $primary-color);
 		}
 
-		.sign-form {
+		.sign-square {
+
+			margin: 0 0 40px;
 
 			h2{
 				margin:15px 0;
@@ -118,7 +120,11 @@
 			margin: 0 35%;
 		}
 
-    .sign{
+		.intro-square {
+			margin: 65px 0 0;
+		}
+
+    .sign-square, .intro-square{
 
       position:relative;
       border: 3px solid white;
@@ -202,11 +208,11 @@ dl.sign {
 		min-height:85px !important;
 	}
 	dd.disabled a, dd.disabled a:hover {
-		background: url('blooddrop-disabled.png') no-repeat top 10px right 10px;
+		background: url('blooddrop-disabled.png') no-repeat top 10px right 0;
 		background-size: 50px auto;
-		padding: 0px 70px 0px 0px;
+		padding: 5px 55px 0px 10px;
 		min-height: 80px;
-		font-size: 28px;
+		font-size: 25px;
 		text-align: right;
 		color: #ccc !important;
 		cursor:default;
@@ -215,22 +221,22 @@ dl.sign {
 	dd.active a, dd.active a:hover {
 		color:$primary-color !important;
 		background-color:#fff;
-		background: url('blooddrop-disabled.png') no-repeat top 10px right 10px;
+		background: url('blooddrop-disabled.png') no-repeat top 10px right 0;
 		background-size: 50px auto;
-		padding: 0px 70px 0px 0px;
+		padding: 5px 55px 0px 10px;
 		min-height: 50px;
-		font-size: 28px;
+		font-size: 25px;
 		text-align: right;
 	}
 
 	dd.complete a {
-		background: url('blooddrop-enabled.png') no-repeat top 10px right 10px;
+		background: url('blooddrop-enabled.png') no-repeat top 10px right 0;
 		background-size: 50px auto;
 		background-color: #fff;
 		color:$primary-color !important;
-		padding: 0px 70px 0px 0px;
+		padding: 5px 55px 0px 10px;
 		min-height: 50px;
-		font-size: 28px;
+		font-size: 25px;
 		text-align: right;
 	}
 
@@ -704,7 +710,7 @@ transform: translate(-50%, -50%);
 
 				li {
 					width:100%;
-					margin:0;		
+					margin:0;
 				 a {
 				display: block !important;
 				padding: 0.5rem !important;

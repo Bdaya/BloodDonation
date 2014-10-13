@@ -48,7 +48,7 @@
           <iframe src="//www.youtube.com/embed/_lST9cm5jts" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="column large-6 sign">
+      <div class="column large-6 intro-square">
         <!-- Faselty's Logo -->
         <img src="<%= image_path('cover-logo.png')%>" alt="Faselty's Logo" class="logo">
 
@@ -60,12 +60,12 @@
         </p>
 
         <h2> سجل حساب جديد </h2>
-        <%= link_to "متبرع جديد", new_user_registration_path, :class=> "button medium-4 column" %>
-        <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button medium-4 column" %>
+        <%= link_to "متبرع جديد", new_user_registration_path, :class=> "button medium-5 column" %>
+        <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button medium-5 column" %>
 
       </div>
 
-      <div class="column large-6 sign sign-form">
+      <div class="column large-6 sign-square">
         <h1>أو</h1>
         <h2> سجل الدخول</h2>
         <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {"data-abide" => ''}) do |f| %>
@@ -85,7 +85,7 @@
 
           <% if devise_mapping.rememberable? %>
             <div style="color:#fff; font-size:14px;">
-                <%= f.check_box :remember_me %> 
+                <%= f.check_box :remember_me %>
                 <span>تذكرني</span>
                  - <%= link_to "نسيت كلمة السر؟", new_password_path(resource_name) %>
             </div>

@@ -33,78 +33,6 @@ function showPosition(position) {
     x.innerHTML = "Latitude: " + position.coords.latitude +
     "<br>Longitude: " + position.coords.longitude;
 }
-
-
-$('.cover-content a').click( function() {
-  $(".cover").animate({ height:"0"}, 2000, function() { $(".cover").hide();});
-});
-
-$('.cover a').click( function() {
-  var elem = $( this );
-
-  if (elem.attr("href") == "#signup-donator") {
-    $(".main_content .about-content").hide();
-    $(".main_content a.donator").parent().addClass("active");
-    $(".top-bar li.register").addClass("active").removeClass("register");
-    $(".main_content .register-content").show();
-  };
-  if (elem.attr("href") == "#signup-patient") {
-    $(".main_content .about-content").hide();
-    $(".main_content a.patient").parent().addClass("active");
-    $(".top-bar li.register").addClass("active").removeClass("register");
-    $(".main_content .register-content").show();
-
-  };
-  if (elem.attr("href") == "#signin") {
-    $(".main_content .about-content").hide();
-    $(".top-bar li.register").addClass("active").removeClass("register");
-    $(".main_content .register-content").show();
-  };
-  if (elem.attr("href") == "#about") {
-    $(".main_content .register-content").hide();
-    $(".main_content .about-content").show();
-    $(".top-bar a[href='about.html']").parent().addClass("active");
-  };
-});
-
-$(".sign-up input").click( function() {
-  $(".sign-in").hide();
-  if ($(".sign-up").hasClass("large-6")) {
-    $(".sign-up").removeClass("large-6");
-    $(".sign-up").addClass("large-12");
-    $(".show").show();
-    $(".show a[href='#signin']").show();
-  };
-});
-
-$(".sign-in input").click( function() {
-  $(".sign-up").hide();
-  if ($(".sign-in").hasClass("large-6")) {
-    $(".sign-in").removeClass("large-6");
-    $(".sign-in").addClass("large-12");
-    $(".show").show();
-    $(".show a[href='#signup']").show();
-  };
-});
-
-$(".show a").click( function() {
-  if ($(".sign-in").hasClass("large-12")) {
-    $(".sign-in").removeClass("large-12");
-    $(".sign-in").addClass("large-6");
-
-  }
-
-  $(".sign-up").show();
-    if ($(".sign-up").hasClass("large-12")) {
-    $(".sign-up").removeClass("large-12");
-    $(".sign-up").addClass("large-6");
-
-  }
-  $(".sign-in").show();
-  $(".show").hide();
-  $(".show a").hide();
-});
-
  $(window).bind("load", function () {
 var footer = $(".footer");
 var pos = footer.position();
@@ -119,7 +47,7 @@ footer.css({
 });
 
 
-  $("#user-information").find("input").change( function() {
+  $("#user-information input").change( function() {
     var complete = false;
     $("#user-information").find("input").each( function() {
       if ($(this).val().length === 0) {
@@ -135,6 +63,7 @@ footer.css({
     $("#user-information").find("a.disabled").removeClass("disabled").addClass("enabled");
     $("dd.first-level").addClass("complete");
   };
+});
 
   $("#user-bloodtype").find("input").change( function() {
     var complete = false;
@@ -154,7 +83,7 @@ footer.css({
   };
 
   });
-  });
+
 
   $("#user-location").find("input").change( function() {
     var complete = false;
