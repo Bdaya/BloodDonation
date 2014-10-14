@@ -209,10 +209,10 @@ dl.sign {
 	}
 	dd.disabled a, dd.disabled a:hover {
 		background: url('blooddrop-disabled.png') no-repeat top 10px right 0;
-		background-size: 50px auto;
-		padding: 5px 55px 0px 10px;
+		background-size: 30px auto;
+		padding: 5px 35px 0px 10px;
 		min-height: 80px;
-		font-size: 25px;
+		font-size: 21px;
 		text-align: right;
 		color: #ccc !important;
 		cursor:default;
@@ -222,21 +222,21 @@ dl.sign {
 		color:$primary-color !important;
 		background-color:#fff;
 		background: url('blooddrop-disabled.png') no-repeat top 10px right 0;
-		background-size: 50px auto;
-		padding: 5px 55px 0px 10px;
+		background-size: 30px auto;
+		padding: 5px 35px 0px 10px;
 		min-height: 50px;
-		font-size: 25px;
+		font-size: 21px;
 		text-align: right;
 	}
 
 	dd.complete a {
 		background: url('blooddrop-enabled.png') no-repeat top 10px right 0;
-		background-size: 50px auto;
+		background-size: 30px auto;
 		background-color: #fff;
 		color:$primary-color !important;
-		padding: 5px 55px 0px 10px;
+		padding: 5px 35px 0px 10px;
 		min-height: 50px;
-		font-size: 25px;
+		font-size: 21px;
 		text-align: right;
 	}
 
@@ -251,7 +251,6 @@ dl.sign {
 		margin:0;
 		padding:5px !important;
 		border:none;
-		height:55px;
 	}
 }
 
@@ -736,7 +735,7 @@ transform: translate(-50%, -50%);
 			img {
 				height:image-height('logo.png') - 5;
 				width:image-width('logo.png') - 5;
-				margin:-50px 15px 0;
+				margin:-42px 15px 0;
 				background: $primary-color;
 			}
 
