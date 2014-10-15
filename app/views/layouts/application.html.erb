@@ -4,6 +4,8 @@
     <title>فصيلتي | <%= yield(:title) %></title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css"></link>
+        <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
       <%= javascript_include_tag "application", "vendor/modernizr", "foundation.min" %>
       <%= stylesheet_link_tag "app" %>
       <%= stylesheet_link_tag "font-awesome" %>

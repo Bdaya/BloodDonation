@@ -10492,10 +10492,10 @@ form.new_user dl.sign dd, form.new_request dl.sign dd {
 /* line 210, scss/app.scss */
 form.new_user dl.sign dd.disabled a, form.new_user dl.sign dd.disabled a:hover, form.new_request dl.sign dd.disabled a, form.new_request dl.sign dd.disabled a:hover {
   background: url("blooddrop-disabled.png") no-repeat top 10px right 0;
-  background-size: 30px auto;
-  padding: 5px 35px 0px 10px;
+  background-size: 45px auto;
+  padding: 5px 50px 0px 10px;
   min-height: 80px;
-  font-size: 21px;
+  font-size: 23px;
   text-align: right;
   color: #ccc !important;
   cursor: default;
@@ -10505,21 +10505,21 @@ form.new_user dl.sign dd.active a, form.new_user dl.sign dd.active a:hover, form
   color: #ba2830 !important;
   background-color: #fff;
   background: url("blooddrop-disabled.png") no-repeat top 10px right 0;
-  background-size: 30px auto;
-  padding: 5px 35px 0px 10px;
-  min-height: 50px;
-  font-size: 21px;
+  background-size: 45px auto;
+  padding: 5px 50px 0px 10px;
+  min-height: 80px;
+  font-size: 23px;
   text-align: right;
 }
 /* line 232, scss/app.scss */
-form.new_user dl.sign dd.complete a, form.new_request dl.sign dd.complete a {
+form.new_user dl.sign dd.complete a, form.new_user dl.sign dd a, form.new_request dl.sign dd.complete a, form.new_request dl.sign dd a {
   background: url("blooddrop-enabled.png") no-repeat top 10px right 0;
-  background-size: 30px auto;
+  background-size: 45px auto;
   background-color: #fff;
   color: #ba2830 !important;
-  padding: 5px 35px 0px 10px;
-  min-height: 50px;
-  font-size: 21px;
+  padding: 5px 50px 0px 10px;
+  min-height: 80px;
+  font-size: 23px;
   text-align: right;
 }
 /* line 246, scss/app.scss */
