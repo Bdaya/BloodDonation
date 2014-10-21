@@ -7,6 +7,73 @@
  <script src="https://rawgithub.com/sgruhier/typeahead-addresspicker/master/dist/typeahead.js"></script>
  <script src="https://rawgithub.com/sgruhier/typeahead-addresspicker/master/dist/typeahead-addresspicker.js"></script>
 
+ <style media="screen">
+   .typeahead,
+.tt-query,
+.tt-hint {
+width: 100%;
+height: 30px;
+padding: 8px 12px;
+font-size: 24px;
+line-height: 30px;
+border: 2px solid #ccc;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+outline: none;
+}
+.typeahead {
+background-color: #fff;
+}
+.typeahead:focus {
+border: 2px solid #0097cf;
+}
+.typeahead.empty {
+border: 2px solid red;
+}
+.tt-query {
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.tt-hint {
+color: #999;
+width: 430px;
+}
+.tt-dropdown-menu {
+
+padding: 8px 0;
+background-color: #fff;
+border: 1px solid #ccc;
+border: 1px solid rgba(0, 0, 0, 0.2);
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+-moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.tt-suggestion {
+padding: 3px 20px;
+font-size: 18px;
+line-height: 24px;
+}
+.tt-suggestion.tt-cursor {
+color: #fff;
+background-color: #0097cf;
+}
+
+#address {
+  margin-bottom:0;
+  direction:rtl !important;
+  width:100%;
+}
+
+#map {
+  margin-top:10px;
+}
+ </style>
+
 
 <div class="row register-content">
 
@@ -171,14 +238,14 @@
 
             <!-- Developer Review: review all the location section :D ! -->
             <!-- Fields section -->
-            <div class="fields_section">
+            <div class="fields_section" >
 
               <!-- Google map -->
 
 
               <!-- User Address -->
               <%= f.text_field :location, :required=>"", :placeholder=>"العنوان", :id =>"address" %>
-              <div id="#map" display=" height:500px; width:100%;"></div>
+              <div id="map" style=" height:300px; width:100%; display:block; margin:auto;"></div>
             </div>
             <!-- End of fields section-->
 
@@ -275,13 +342,17 @@
     });
 
 // instantiate the addressPicker suggestion engine (based on bloodhound)
-var addressPicker = new AddressPicker();
+var addressPicker = new AddressPicker({map: {id: '#map'}, marker: {draggable: true, visible: true}, zoom: 8, reverseGeocoding: true});
 
 // instantiate the typeahead UI
 $('#address').typeahead(null, {
   displayKey: 'description',
   source: addressPicker.ttAdapter()
 });
+
+// Bind some event to update map on autocomplete selection
+$('#address').bind("typeahead:selected", addressPicker.updateMap);
+$('#address').bind("typeahead:cursorchanged", addressPicker.updateMap);
 
 
 </script>
