@@ -16,98 +16,86 @@
     <!-- Navigation Bar -->
     <div class="total-nav">
 
-      <!--  top part of Navigation bar (sign-in/up, profile, options, social media links) -->
-      <div class=" up-bar">
-          <div class="row">
-            <div class="left">
-            <ul>
-
-              <!-- if user signed in: show (link to user Profile, settings dropdown(edit user, change availability), log out) -->
-              <% if user_signed_in? %>
-
-                <!-- User Profile -->
-                <li><%= link_to 'الصفحة الشخصية', user_path(current_user) %></li>
-
-                <!-- Settings Dropdown -->
-                <li class="drpdwn"><a href="#" data-dropdown="drop1" data-dropdown-init="" class="dropdown">إعدادات الحساب &raquo;</a>
-                  <ul id="drop1"  class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
-
-                    <!-- User Availability -->
-                    <li>
-
-                      <!-- Developer review: if user is available -->
-                      <% if !current_user.paused %>
-
-                        <!-- Developer review: pause user's account -->
-                        <%= link_to 'تجميد الحساب', pause_user_path(current_user), :method=>:post %>
-
-                      <!-- Developer review: if user Not Available -->
-                      <% else %>
-
-                        <!-- Developer review: resume user's account -->
-                        <%= link_to 'تفعيل الحساب', unpause_user_path(current_user), :method=>:post  %>
-                      <% end %>
-                    </li>
-                    <!-- End of user availability -->
-
-                    <!-- Edit user information -->
-                    <li><%= link_to "تعديل البيانات", edit_user_registration_path(current_user) %></li>
-
-                  </ul>
-
-                <!-- End of settings dropdown -->
-              </li>
-
-                <!-- User log out -->
-                <li><%= link_to "تسجيل الخروج", destroy_user_session_path, :method => :delete %></li>
-
-              <!-- if user not signed in: show sign in, sign up -->
-              <% else %>
-
-                <!-- sign in popup link -->
-                <li><a href="#" class="reveal-link" data-reveal-id="login">تسجيل الدخول</a></li>
-
-                <!-- sign up popup link -->
-                <li><a href="#" class="reveal-link" data-reveal-id="signup">تسجيل حساب جديد</a></li>
-
-              <% end %>
-              <!-- End of condition -->
-
-              <!-- social media links -->
-
-              <!-- Faselty Facebook Page -->
-              <a href="https://www.facebook.com/FaseltyMe" target="_blank"><i class="fa fa-facebook-square"></i></a>
-
-              <!-- Faselty Twitter Account -->
-              <a href="https://twitter.com/Faselty" target="_blank"><i class="fa fa-twitter-square"></i></a>
-
-              <!-- Faselty G+ Account -->
-              <a href="https://plus.google.com/u/3/108096126248367301464?cfem=1" target="_blank"><i class="fa fa-google-plus-square"></i></a>
-              <!-- End of social media links -->
-
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- End of top part of Nav. bar -->
-
       <!-- Down part of nav. bar (logo, links to contents pages) -->
       <nav class="top-bar row" data-topbar data-options="is_hover: false">
 
-        <!-- Top Navigation Bar Logo -->
-        <ul class="logo title-area">
-          <li>
-            <%= link_to root_path do %>
-              <%= image_tag image_path('logo.png') %>
-            <% end %>
-          </li>
-          <li class="toggle-topbar menu-icon"><a href="#"></a></li>
-        </ul>
-
         <!--Top Navigation Menu -->
         <section class="top-bar-section">
-          <ul class="left">
 
+          <!-- Top Navigation Bar Logo -->
+          <ul class="logo title-area">
+            <li>
+              <%= link_to root_path do %>
+                <%= image_tag image_path('logo.png') %>
+              <% end %>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+          </ul>
+          <ul class="left">
+            <!-- if user signed in: show (link to user Profile, settings dropdown(edit user, change availability), log out) -->
+            <% if user_signed_in? %>
+
+              <!-- User Profile -->
+              <li class="sign"><%= link_to 'الصفحة الشخصية', user_path(current_user) %></li>
+
+              <!-- Settings Dropdown -->
+              <li class="drpdwn sign"><a href="#" data-dropdown="drop1" data-dropdown-init="" class="dropdown">إعدادات الحساب &raquo;</a>
+                <ul id="drop1"  class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+
+                  <!-- User Availability -->
+                  <li>
+
+                    <!-- Developer review: if user is available -->
+                    <% if !current_user.paused %>
+
+                      <!-- Developer review: pause user's account -->
+                      <%= link_to 'تجميد الحساب', pause_user_path(current_user), :method=>:post %>
+
+                    <!-- Developer review: if user Not Available -->
+                    <% else %>
+
+                      <!-- Developer review: resume user's account -->
+                      <%= link_to 'تفعيل الحساب', unpause_user_path(current_user), :method=>:post  %>
+                    <% end %>
+                  </li>
+                  <!-- End of user availability -->
+
+                  <!-- Edit user information -->
+                  <li><%= link_to "تعديل البيانات", edit_user_registration_path(current_user) %></li>
+
+                </ul>
+
+              <!-- End of settings dropdown -->
+            </li>
+
+              <!-- User log out -->
+              <li class="sign"><%= link_to "تسجيل الخروج", destroy_user_session_path, :method => :delete %></li>
+
+            <!-- if user not signed in: show sign in, sign up -->
+            <% else %>
+
+              <!-- sign in popup link -->
+              <li class="sign"><a href="#" class="reveal-link" data-reveal-id="login">تسجيل الدخول</a></li>
+
+              <!-- sign up popup link -->
+              <li class="sign"><a href="#" class="reveal-link" data-reveal-id="signup">تسجيل حساب جديد</a></li>
+
+            <% end %>
+            <!-- End of condition -->
+
+            <!-- social media links -->
+
+            <!-- Faselty Facebook Page -->
+            <a href="https://www.facebook.com/FaseltyMe" target="_blank"><i class="fa fa-facebook-square"></i></a>
+
+            <!-- Faselty Twitter Account -->
+            <a href="https://twitter.com/Faselty" target="_blank"><i class="fa fa-twitter-square"></i></a>
+
+            <!-- Faselty G+ Account -->
+            <a href="https://plus.google.com/u/3/108096126248367301464?cfem=1" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+            <!-- End of social media links -->
+
+            <br/>
             <!-- Register Page -->
 
 
@@ -138,6 +126,9 @@
 
             <!-- Contact Us Page -->
             <li <% if current_page?(contact_contents_path) -%> class="active" <% end %>><%= link_to "للتواصل", contact_contents_path %></li>
+
+
+
           </ul>
         </section>
         <!-- End of Navigation Menu -->
@@ -158,7 +149,7 @@
           <%= link_to "متبرع جديد", new_user_registration_path, :class=>"button expand" %>
 
           <!-- new request -->
-          <%= link_to "حالة تبرع جديدة", new_request_path, :class=> "button expand" %>
+          <%= link_to "متلقٍ جديد", new_request_path, :class=> "button expand" %>
         </div>
       </div>
       <a class="close-reveal-modal">&#215;</a>
