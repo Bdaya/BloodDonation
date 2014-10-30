@@ -155,7 +155,7 @@ background-color: #0097cf;
               <div class="field">
 
                 <%= f.text_field :national_id, :required=>"", :placeholder=> "الرقم القومي" %>
-                <small class="error">يرجى كتابة الرقم القومي بشكل صحيح.</small>
+                <small class="error">يرجى كتابة الرقم القومي بشكل صحيح لا يقل عن ١٤ رقم.</small>
 
               </div>
 
@@ -201,7 +201,7 @@ background-color: #0097cf;
               <!-- User Age -->
               <div class="field">
 
-                <%= f.number_field :age, :required=>"", :placeholder=>"السن" %>
+                <%= f.text_field :age, :required=>"", :placeholder=>"السن" %>
                 <small class="error">يرجى كتابة السن لمعرفة إمكانية التبرع.</small>
 
               </div>
@@ -342,7 +342,7 @@ background-color: #0097cf;
     });
 
 // instantiate the addressPicker suggestion engine (based on bloodhound)
-var addressPicker = new AddressPicker({map: {id: '#map'}, marker: {draggable: true, visible: true}, zoom: 8, reverseGeocoding: true});
+var addressPicker = new AddressPicker({map: {id: '#map', zoom: 8}, marker: {draggable: true, visible: true}, reverseGeocoding: true});
 
 // instantiate the typeahead UI
 $('#address').typeahead(null, {
