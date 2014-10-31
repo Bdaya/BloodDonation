@@ -663,12 +663,16 @@ transform: translate(-50%, -50%);
 
 		.logo {
 
-
+			a {
+				outline: 0;
+			}
 			img {
 				height:image-height('logo.png') - 5;
 				width:image-width('logo.png') - 5;
 				margin:-43px 15px 0;
 				background: $primary-color;
+				z-index:99999;
+
 			}
 
 		}
