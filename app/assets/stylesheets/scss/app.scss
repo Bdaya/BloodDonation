@@ -598,12 +598,12 @@ transform: translate(-50%, -50%);
 	width:100%;
 	background:$primary-color;
 	background:#ba2830 url("http://i.imgur.com/dtWZ6gY.png") repeat-x;
-  height:90px;
+  height:100px;
 
 	a.logo{
     top:12px;
 		right: 170px;
-		bottom: 13px;
+		bottom: 23px;
     background:#ba2830;
     display:inline-block;
     width:171px;
@@ -613,7 +613,7 @@ transform: translate(-50%, -50%);
 
 	.up-bar {
 
-		height: $topbar-height + 10 ;
+		height: $topbar-height + 20 ;
 		color:#fff;
 		display:block;
 		width:100% !important;

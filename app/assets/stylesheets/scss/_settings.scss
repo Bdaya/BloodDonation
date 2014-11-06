@@ -1194,7 +1194,7 @@ $topbar-bg-color: rgba( $primary-color, 0 );
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
- $topbar-dropdown-bg: rgba( $primary-color, 0 );
+ $topbar-dropdown-bg: $primary-color ;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: normal;
