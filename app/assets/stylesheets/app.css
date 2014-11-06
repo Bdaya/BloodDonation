@@ -5912,7 +5912,7 @@ meta.foundation-mq-topbar {
   width: 100%;
   height: auto;
   display: block;
-  background: rgba(186, 40, 48, 0);
+  background: #ba2830;
   font-size: 16px;
   margin: 0;
 }
@@ -5935,7 +5935,7 @@ meta.foundation-mq-topbar {
   font-size: 0.875rem;
   font-weight: normal;
   text-transform: none;
-  background: rgba(186, 40, 48, 0);
+  background: #ba2830;
 }
 /* line 313, scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button {
@@ -10835,13 +10835,13 @@ a.split {
   width: 100%;
   background: #ba2830;
   background: #ba2830 url("http://i.imgur.com/dtWZ6gY.png") repeat-x;
-  height: 90px;
+  height: 100px;
 }
 /* line 603, scss/app.scss */
 .total-nav a.logo {
   top: 12px;
   right: 170px;
-  bottom: 13px;
+  bottom: 23px;
   background: #ba2830;
   display: inline-block;
   width: 171px;
@@ -10850,7 +10850,7 @@ a.split {
 }
 /* line 614, scss/app.scss */
 .total-nav .up-bar {
-  height: 50px;
+  height: 60px;
   color: #fff;
   display: block;
   width: 100% !important;
