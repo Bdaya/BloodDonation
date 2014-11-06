@@ -597,6 +597,19 @@ transform: translate(-50%, -50%);
 
 	width:100%;
 	background:$primary-color;
+	background:#ba2830 url("http://i.imgur.com/dtWZ6gY.png") repeat-x;
+  height:90px;
+
+	a.logo{
+    top:12px;
+		right: 170px;
+		bottom: 13px;
+    background:#ba2830;
+    display:inline-block;
+    width:171px;
+    height:65px;
+		position:absolute;
+}
 
 	.up-bar {
 
@@ -604,7 +617,8 @@ transform: translate(-50%, -50%);
 		color:#fff;
 		display:block;
 		width:100% !important;
-		border-bottom: 2.2px solid #fff;
+
+
 		a {
 			display:inline-block;
 			color:#fff;
@@ -625,7 +639,7 @@ transform: translate(-50%, -50%);
 			margin:0 10px;
 			max-height:50px;
 			top:0;
-			postion:relative;
+			position:relative;
 
 			a {
 				font-size:14px;
@@ -654,28 +668,7 @@ transform: translate(-50%, -50%);
 			}
 		}
 	}}
-	.top-bar {
 
-
-
-		}
-
-
-		.logo {
-
-			a {
-				outline: 0;
-			}
-			img {
-				height:image-height('logo.png') - 5;
-				width:image-width('logo.png') - 5;
-				margin:-43px 15px 0;
-				background: $primary-color;
-				z-index:99999;
-
-			}
-
-		}
 	}
 
 	.top-bar-section ul li.register:hover:not(.has-form) > a  { color:$primary-color !important;}

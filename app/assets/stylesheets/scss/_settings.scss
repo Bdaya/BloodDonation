@@ -1182,7 +1182,7 @@ $footer-height:45px;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: #BA2830;
+$topbar-bg-color: rgba( $primary-color, 0 );
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1194,7 +1194,7 @@ $topbar-bg-color: #BA2830;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
- $topbar-dropdown-bg: $primary-color;
+ $topbar-dropdown-bg: rgba( $primary-color, 0 );
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: normal;
