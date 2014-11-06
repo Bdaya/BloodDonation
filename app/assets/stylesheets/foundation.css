@@ -5795,11 +5795,9 @@ meta.foundation-mq-topbar {
 
 /* line 143, scss/foundation/components/_top-bar.scss */
 .top-bar {
-  overflow: hidden;
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #333333;
   margin-bottom: 0;
 }
 /* line 152, scss/foundation/components/_top-bar.scss */

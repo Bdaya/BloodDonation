@@ -15,6 +15,10 @@
 
     <!-- Navigation Bar -->
     <div class="total-nav">
+        <%= link_to(root_path, :class=>"logo") do %>
+          <%= image_tag image_path('logo.png') %>
+        <% end %>
+
 
       <!--  top part of Navigation bar (sign-in/up, profile, options, social media links) -->
       <div class=" up-bar">
@@ -96,11 +100,7 @@
 
         <!-- Top Navigation Bar Logo -->
         <ul class="logo title-area">
-          <li>
-            <%= link_to root_path do %>
-              <%= image_tag image_path('logo.png') %>
-            <% end %>
-          </li>
+
           <li class="toggle-topbar menu-icon"><a href="#"></a></li>
         </ul>
 
