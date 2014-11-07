@@ -92,7 +92,7 @@ background-color: #0097cf;
           <%= content_tag :div, msg, class: name %>
           <a href="#" class="close">&times;</a>
         </div>
-      <% end -%> 
+      <% end -%>
 
 
       <!-- New User Levels (Don't Change) -->
@@ -247,7 +247,7 @@ background-color: #0097cf;
               <%= f.text_field :location, :required=>"", :placeholder=>"العنوان", :id =>"address" %>
               <div id="map" style=" height:300px; width:100%; display:block; margin:auto;"></div>
 
-                <div class="row" style="height:0; overflow:hidden">
+                <div class="row" style="height:100px; overflow:hidden">
 
 							<!-- Latitude -->
 							<div class="small-6 column">
@@ -360,17 +360,27 @@ background-color: #0097cf;
     });
 
 // instantiate the addressPicker suggestion engine (based on bloodhound)
+
+
+
+function displayResults(result) {
+$("#user_latitude").val(result.lat());
+$("#user_longitude").val(result.lng());
+}
+$( function() {
 var addressPicker = new AddressPicker({map: {id: '#map', zoom: 8}, marker: {draggable: true, visible: true}, reverseGeocoding: true});
-
-// instantiate the typeahead UI
 $('#address').typeahead(null, {
-  displayKey: 'description',
-  source: addressPicker.ttAdapter()
+displayKey: 'description',
+source: addressPicker.ttAdapter()
 });
-
-// Bind some event to update map on autocomplete selection
-$('#address').bind("typeahead:selected", addressPicker.updateMap, function (event,result) { $("#user_latitude").val() == result.lat(); $("user_logitude")== result.lng();});
-$('#address').bind("typeahead:cursorchanged", addressPicker.updateMap);
-
+addressPicker.bindDefaultTypeaheadEvent($('#address'));
+$(addressPicker).on('addresspicker:selected', function (event, result) { displayResults(result)});
+$(addressPicker).on('addresspicker:predictions', function(event, result) {
+if (result && result.length > 0)
+$('#address').removeClass("empty")
+else
+$('#address').addClass("empty")
+})
+})
 
 </script>
