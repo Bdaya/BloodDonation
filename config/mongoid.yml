@@ -84,7 +84,7 @@ production:
     default:
       database: faselt_production
       hosts:
-        - faselty.me:27017
+        - 127.0.0.1:27017
       options:
         # consistency: :strong
         # In the test environment we lower the retries and retry interval to
