@@ -54,6 +54,8 @@ class User
   field :last_donated, type: DateTime
 
   belongs_to :blood_type
+    validates_presence_of :blood_type, :message=> "Must choose your Bloodtype!"
+  
   has_one :location, as: :locatable
     validates_presence_of :location, :message=> "Must choose hospital's location!"
 
