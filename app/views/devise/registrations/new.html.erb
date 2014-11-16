@@ -252,14 +252,14 @@ background-color: #0097cf;
 							<!-- Latitude -->
 							<div class="small-6 column">
 								<label>دائرة عرض
-								<%= f.text_field :latitude, input_html: {id: "latitude"}, :value=>"0" %>
+								<%= f.number_field :latitude, input_html: {id: "latitude"}, :value=>"0" %>
 								</label>
 							</div>
 
 							<!-- Longitude -->
 							<div class="small-6 column">
 								<label>خط طول
-								<%= f.text_field :longitude, input_html: {id: "longitude"}, :value=>"0" %>
+								<%= f.number_field :longitude, input_html: {id: "longitude"}, :value=>"0" %>
 								</label>
 							</div>
 
