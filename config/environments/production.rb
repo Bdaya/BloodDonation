@@ -77,10 +77,10 @@ Faselty::Application.configure do
     :enable_starttls_auto => true,  
     :address            => 'smtp.gmail.com',
     :port               => 587,
-    :domain             => 'gmail.com', #you can also use google.com
+    :domain             => 'faselty.me', #you can also use google.com
     :authentication     => :plain,
-    user_name: 'faselty.test@gmail.com',
-    password: 'faselty.development'
+    :user_name          => 'info@faselty.me',
+    :password           => 'faseltycantw8'
   }
   
   # Disable automatic flushing of the log to improve performance.
