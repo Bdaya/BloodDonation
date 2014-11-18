@@ -11010,18 +11010,18 @@ form button {
 }
 /* line 776, scss/app.scss */
 .single-request .active {
-  background: url("request-status-active.png") top 0.2rem right 25px no-repeat;
-  background-size: auto 110px;
+  background: url("request-status-active.png") top 0.2rem right 30px no-repeat;
+  background-size: auto 100px;
 }
 /* line 781, scss/app.scss */
 .single-request .done {
-  background: url("request-status-done.png") top 0.2rem right 25px no-repeat;
-  background-size: auto 110px;
+  background: url("request-status-done.png") top 0.2rem right 30px no-repeat;
+  background-size: auto 100px;
 }
 /* line 786, scss/app.scss */
 .single-request .canceled {
-  background: url("request-status-canceled.png") top 0.2rem right 25px no-repeat;
-  background-size: auto 110px;
+  background: url("request-status-canceled.png") top 0.2rem right 30px no-repeat;
+  background-size: auto 100px;
 }
 /* line 792, scss/app.scss */
 .single-request p {
