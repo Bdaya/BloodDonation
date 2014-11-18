@@ -109,7 +109,7 @@ class Request
 
   def notify_possible_donors
     matching_donors.each do |d|
-      UserMailer.new_request_email(d, self).deliver
+     UserMailer.new_request_email(d, self).deliver
     end
   end
 

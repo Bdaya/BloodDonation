@@ -79,8 +79,8 @@ Faselty::Application.configure do
     :port               => 587,
     :domain             => 'faselty.me', #you can also use google.com
     :authentication     => :plain,
-    :user_name          => 'info@faselty.me',
-    :password           => 'faseltycantw8'
+    :user_name          => 'samar@faselty.me',
+    :password           => 'faseltyc0m'
   }
   
   # Disable automatic flushing of the log to improve performance.
