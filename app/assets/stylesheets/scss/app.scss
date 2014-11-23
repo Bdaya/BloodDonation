@@ -252,9 +252,9 @@ a.split {
 		}
 
 		.request-active, .request-done, .request-cancelled {
-			background-position: top 0 right 10px;
-			background-size: auto 135px;
-			background-repeat: no-repeat;
+			background-position: top 0 right 10px !important;
+			background-size: auto 135px !important;
+			background-repeat: no-repeat !important;
 			padding-right: 125px;
 			padding-bottom:20px;
 		}
@@ -592,9 +592,9 @@ a.split {
 	}
 
 	.active, .done, .cancelled {
-		background-position: top 0.2rem right 30px;
-		background-size: auto 100px;
-		background-repeat: no-repeat;
+		background-position: top 0.2rem right 30px !important;
+		background-size: auto 100px !important;
+		background-repeat: no-repeat !important;
 	}
 
 	.active {
