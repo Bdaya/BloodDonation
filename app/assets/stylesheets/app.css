@@ -10521,9 +10521,9 @@ a.split {
 }
 /* line 254, scss/app.scss */
 .request_profile .request-name .request-active, .request_profile .request-name .request-done, .request_profile .request-name .request-cancelled {
-  background-position: top 0 right 10px;
-  background-size: auto 135px;
-  background-repeat: no-repeat;
+  background-position: top 0 right 10px !important;
+  background-size: auto 135px !important;
+  background-repeat: no-repeat !important;
   padding-right: 125px;
   padding-bottom: 20px;
 }
@@ -10852,9 +10852,9 @@ form button {
 }
 /* line 594, scss/app.scss */
 .single-request .active, .single-request .done, .single-request .cancelled {
-  background-position: top 0.2rem right 30px;
-  background-size: auto 100px;
-  background-repeat: no-repeat;
+  background-position: top 0.2rem right 30px !important;
+  background-size: auto 100px !important;
+  background-repeat: no-repeat !important;
 }
 /* line 600, scss/app.scss */
 .single-request .active {
