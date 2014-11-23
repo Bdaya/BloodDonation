@@ -252,14 +252,16 @@ a.split {
 		}
 
 		.request-active, .request-done, .request-cancelled {
-			background: top 0 right 10px no-repeat;
+			background-position: top 0 right 10px;
 			background-size: auto 135px;
+			background-repeat: no-repeat;
 			padding-right: 125px;
 			padding-bottom:20px;
 		}
 
 		.request-active {
 			background: url('request-status-active.png') ;
+			min-width:200px;
 		}
 
 		.request-done {
@@ -590,8 +592,9 @@ a.split {
 	}
 
 	.active, .done, .cancelled {
-		background: top 0.2rem right 30px no-repeat;
+		background-position: top 0.2rem right 30px;
 		background-size: auto 100px;
+		background-repeat: no-repeat;
 	}
 
 	.active {
