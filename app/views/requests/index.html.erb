@@ -39,7 +39,7 @@
         </p>
         <p class="small">
           <!-- Developer Review: Request Due Date-->
-          <%= request.due_date.to_date %>
+          <%= request.due_date.to_date.strftime('%m/%d') %>
         </p>
       </div>
 

@@ -44,7 +44,7 @@
         <!-- Last Donation Date -->
         <!-- Developer Review: Request Due date -->
         <h1 class="donor_last_date_enabled">
-          <%= @request.due_date.to_date %>
+          <%= @request.due_date.to_date.strftime('%m/%d') %>
         </h1>
       </div>
 
