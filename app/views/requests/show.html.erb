@@ -16,7 +16,7 @@
     <!-- Developer Review: if request is Active -->
 
      <!-- Developer Review: if request is cancelled-->
-    <div class="column small-6 request-<%= status %>">
+    <div class="column small-6 request-status <%= status %>">
 
     <!-- Developer Review: End of condition -->
 
@@ -43,7 +43,7 @@
 
         <!-- Last Donation Date -->
         <!-- Developer Review: Request Due date -->
-        <h1 class="donor_last_date_enabled">
+        <h1 class="donor_last_date enabled">
           <%= @request.due_date.to_date.strftime('%m/%d') %>
         </h1>
       </div>
@@ -71,7 +71,7 @@
       <div class="row">
 
         <!-- Developer Review: no. of request replies, -->
-        <h1 class="requests_awaiting_enabled">
+        <h1 class="requests_awaiting enabled">
           <a href="<%= replies_path(@request) %>">
             <%= @request.no_of_replies %>
           </a>

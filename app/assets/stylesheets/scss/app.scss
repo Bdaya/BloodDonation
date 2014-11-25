@@ -51,7 +51,8 @@ dl.sign {
 		min-height:85px !important;
 	}
 	dd.disabled a, dd.disabled a:hover, dd.active a, dd.active a:hover, dd.complete a, dd a {
-		background:no-repeat top 10px right 0;
+		background-repeat:no-repeat;
+		background-position: top 10px right 0;
 		background-size: 45px auto;
 		padding: 5px 50px 0px 10px;
 		min-height: 80px;
@@ -62,19 +63,18 @@ dl.sign {
 	}
 
   dd.disabled a, dd.disabled a:hover {
-  	background: url('blooddrop-disabled.png');
+  	background-image: url('blooddrop-disabled.png');
   }
 
 	dd.active a, dd.active a:hover {
 		color:$primary-color !important;
 		background-color:#fff;
-		background: url('blooddrop-disabled.png') no-repeat top 10px right 0;
+		background-image: url('blooddrop-disabled.png');
 
 	}
 
 	dd.complete a, dd a {
-		background: url('blooddrop-enabled.png') no-repeat top 10px right 0;
-		background-size: 45px auto;
+		background-image: url('blooddrop-enabled.png');
 		background-color: #fff;
 		color:$primary-color !important;
 	}
@@ -138,22 +138,23 @@ a.split {
 		}
 
 		.donor-name-active, .donor-name-inactive {
-			background: top 5px right 10px no-repeat;
+			background-position: top 5px right 10px;
+			background-repeat: no-repeat;
 			background-size: auto 100px;
 			padding-right: 120px;
 		}
 
 		.donator_name-active {
-			background: url('blooddrop-enabled.png');
+			background-image: url('blooddrop-enabled.png');
 		}
 
 		.donor-name-inactive {
-			background: url('blooddrop-disabled.png') ;
+			background-image: url('blooddrop-disabled.png') ;
 		}
 	}
 
-	h1.donor_last_date_enabled, h1.souls_saved_enabled, h1.requests_awaiting_enabled, h1.donor_last_date_disabled, h1.souls_saved_disabled, h1.requests_awaiting_disabled {
-
+	h1.donor_last_date, h1.souls_saved, h1.requests_awaiting {
+		background-repeat:no-repeat;
 		background-size: auto 60px;
 		height: 65px;
 		width:70px;
@@ -172,17 +173,17 @@ a.split {
 		-ms-transform: translate(-50%, -50%);
 	}
 
-	h1.donor_last_date_enabled {
+	h1.donor_last_date .enabled {
 		color: $primary-color;
 	}
 
-	h1.souls_saved_enabled {
-		background: url('lives_saved_enabled.png') no-repeat;
+	h1.souls_saved .enabled {
+		background-image: url('lives_saved_enabled.png') ;
 		color: $secondary-color;
 	}
 
-	h1.requests_awaiting_enabled {
-		background: url('requests_awaiting_enabled.png') no-repeat;
+	h1.requests_awaiting .enabled {
+		background-image: url('requests_awaiting_enabled.png') ;
 
 		color: $secondary-color;
 		margin-top:5px;
@@ -191,17 +192,17 @@ a.split {
 	}
 	}
 
-	h1.donor_last_date_disabled {
+	h1.donor_last_date .disabled {
 		color: #ccc;
 	}
 
-	h1.souls_saved_disabled {
-		background: url('lives_saved_disabled.png') no-repeat;
+	h1.souls_saved .disabled {
+		background-image: url('lives_saved_disabled.png');
 		color: $secondary-color;
 	}
 
-	h1.requests_awaiting_disabled {
-		background: url('requests_awaiting_disabled.png') no-repeat;
+	h1.requests_awaiting .disabled {
+		background-image: url('requests_awaiting_disabled.png');
 		margin-top:5px;
 	a {
 		color:#fff;
@@ -251,32 +252,34 @@ a.split {
 			color:$primary-color;
 		}
 
-		.request-active, .request-done, .request-cancelled {
-			background-position: top 0 right 10px !important;
-			background-size: auto 135px !important;
-			background-repeat: no-repeat !important;
+		.request-status {
+			background-position: top 0 right 10px ;
+			background-size: auto 135px ;
+			background-repeat: no-repeat;
+			min-width: 200px;
 			padding-right: 125px;
 			padding-bottom:20px;
 		}
 
-		.request-active {
-			background: url('request-status-active.png') ;
+		.request-status .active {
+			background-image: url('request-status-active.png') ;
 			min-width:200px;
 		}
 
-		.request-done {
-			background: url('request-status-done.png');
+		.request-status .done {
+			background-image: url('request-status-done.png');
 
 		}
-		.request-cancelled {
-			background: url('request-status-cancelled.png');
+		.request-status .cancelled {
+			background-image: url('request-status-cancelled.png');
 		}
 
 	}
 
-	h1.donor_last_date_enabled, h1.souls_saved_enabled, h1.requests_awaiting_enabled, h1.donor_last_date_disabled, h1.souls_saved_disabled, h1.requests_awaiting_disabled {
+	h1.donor_last_date, h1.requests_awaiting, h1.bloodbags {
 
 		background-size: auto 60px;
+		background-repeat: no-repeat;
 		height: 65px;
 		width:70px;
 		line-height:65px;
@@ -294,17 +297,17 @@ a.split {
 		-ms-transform: translate(-50%, -50%);
 	}
 
-	h1.donor_last_date_enabled {
+	h1.donor_last_date .enabled {
 		color: $primary-color;
 	}
 
 	h1.bloodbags {
-		background: url('blooddrop-enabled.png') no-repeat;
+		background-image: url('blooddrop-enabled.png');
 		color: $secondary-color;
 	}
 
-	h1.requests_awaiting_enabled {
-		background: url('requests_awaiting_enabled.png') no-repeat;
+	h1.requests_awaiting .enabled {
+		background-image: url('requests_awaiting_enabled.png') ;
 
 		color: $secondary-color;
 		margin-top:5px;
@@ -313,12 +316,12 @@ a.split {
 	}
 	}
 
-	h1.donor_last_date_disabled {
+	h1.donor_last_date .disabled {
 		color: #ccc;
 	}
 
-	h1.requests_awaiting_disabled {
-		background: url('requests_awaiting_disabled.png') no-repeat;
+	h1.requests_awaiting .disabled {
+		background-image: url('requests_awaiting_disabled.png') ;
 		margin-top:5px;
 	a {
 		color:#fff;
