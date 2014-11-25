@@ -155,6 +155,7 @@ a.split {
 
 	h1.donor_last_date, h1.souls_saved, h1.requests_awaiting {
 		background-repeat:no-repeat;
+		font-size: 2rem;
 		background-size: auto 60px;
 		height: 65px;
 		width:70px;
@@ -186,7 +187,7 @@ a.split {
 		background-image: url('requests_awaiting_enabled.png') ;
 
 		color: $secondary-color;
-		margin-top:5px;
+
 	a {
 		color:#fff;
 	}
@@ -201,9 +202,12 @@ a.split {
 		color: $secondary-color;
 	}
 
+	h1.requests_awaiting {
+		background-position: top 5px left 0;
+	}
 	h1.requests_awaiting .disabled {
 		background-image: url('requests_awaiting_disabled.png');
-		margin-top:5px;
+
 	a {
 		color:#fff;
 	}
@@ -236,16 +240,16 @@ a.split {
 	.request-name {
 
 		p {
-			font-size:1rem;
+			font-size:1.5rem;
 			margin: 0 0 5px;
 			text-align: right;
-			max-height: 35px;
+			min-height: 35px;
 		}
 
 		h1 {
 			text-align: right;
 			margin:10px 0;
-			max-height:35px;
+			min-height:35px;
 		}
 
 		h1, span {
@@ -256,7 +260,6 @@ a.split {
 			background-position: top 0 right 10px ;
 			background-size: auto 135px ;
 			background-repeat: no-repeat;
-			min-width: 200px;
 			padding-right: 125px;
 			padding-bottom:20px;
 		}
@@ -276,7 +279,7 @@ a.split {
 	}
 
 	h1.donor_last_date, h1.requests_awaiting, h1.bloodbags {
-
+		font-size: 2rem;
 		background-size: auto 60px;
 		background-repeat: no-repeat;
 		height: 65px;
@@ -303,13 +306,18 @@ a.split {
 	h1.bloodbags {
 		background-image: url('blooddrop-enabled.png');
 		color: $secondary-color;
+		background-position:right 15px top 0;
+	}
+
+	h1.requests_awaiting {
+		background-position: top 5px left 0;
 	}
 
 	h1.requests_awaiting.enabled {
 		background-image: url('requests_awaiting_enabled.png') ;
 
 		color: $secondary-color;
-		margin-top:5px;
+
 	a {
 		color:#fff;
 	}
@@ -321,7 +329,7 @@ a.split {
 
 	h1.requests_awaiting.disabled {
 		background-image: url('requests_awaiting_disabled.png') ;
-		margin-top:5px;
+
 	a {
 		color:#fff;
 	}
@@ -594,21 +602,22 @@ a.split {
 	}
 
 	.active, .done, .cancelled {
-		background-position: top 0.2rem right 30px !important;
-		background-size: auto 100px !important;
-		background-repeat: no-repeat !important;
+		background-position: top 0.2rem right 30px ;
+		background-size: auto 100px ;
+		background-repeat: no-repeat ;
+		min-width:200px;
 	}
 
 	.active {
-		background: url('request-status-active.png');
+		background-image: url('request-status-active.png');
 	}
 
 	.done {
-		background: url('request-status-done.png');
+		background-image: url('request-status-done.png');
 	}
 
 	.canceled {
-		background: url('request-status-canceled.png');
+		background-image: url('request-status-canceled.png');
 	}
 
 
