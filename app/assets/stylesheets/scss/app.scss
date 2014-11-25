@@ -261,16 +261,15 @@ a.split {
 			padding-bottom:20px;
 		}
 
-		.request-status .active {
+		.request-status.active {
 			background-image: url('request-status-active.png') ;
-			min-width:200px;
 		}
 
-		.request-status .done {
+		.request-status.done {
 			background-image: url('request-status-done.png');
 
 		}
-		.request-status .cancelled {
+		.request-status.cancelled {
 			background-image: url('request-status-cancelled.png');
 		}
 
@@ -297,7 +296,7 @@ a.split {
 		-ms-transform: translate(-50%, -50%);
 	}
 
-	h1.donor_last_date .enabled {
+	h1.donor_last_date.enabled {
 		color: $primary-color;
 	}
 
@@ -306,7 +305,7 @@ a.split {
 		color: $secondary-color;
 	}
 
-	h1.requests_awaiting .enabled {
+	h1.requests_awaiting.enabled {
 		background-image: url('requests_awaiting_enabled.png') ;
 
 		color: $secondary-color;
@@ -316,11 +315,11 @@ a.split {
 	}
 	}
 
-	h1.donor_last_date .disabled {
+	h1.donor_last_date.disabled {
 		color: #ccc;
 	}
 
-	h1.requests_awaiting .disabled {
+	h1.requests_awaiting.disabled {
 		background-image: url('requests_awaiting_disabled.png') ;
 		margin-top:5px;
 	a {
