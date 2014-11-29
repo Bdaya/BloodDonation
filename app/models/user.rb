@@ -59,8 +59,8 @@ class User
 
   has_many :requests
   has_many :replies
-
   
+
 
   ##### Methods #####
   def can_donate?
