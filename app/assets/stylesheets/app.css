@@ -10427,6 +10427,7 @@ a.split {
 /* line 156, scss/app.scss */
 .donator_profile h1.donor_last_date, .donator_profile h1.souls_saved, .donator_profile h1.requests_awaiting {
   background-repeat: no-repeat;
+  font-size: 2rem;
   background-size: auto 60px;
   height: 65px;
   width: 70px;
@@ -10444,106 +10445,108 @@ a.split {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-/* line 176, scss/app.scss */
+/* line 177, scss/app.scss */
 .donator_profile h1.donor_last_date .enabled {
   color: #ba2830;
 }
-/* line 180, scss/app.scss */
+/* line 181, scss/app.scss */
 .donator_profile h1.souls_saved .enabled {
   background-image: url("lives_saved_enabled.png");
   color: white;
 }
-/* line 185, scss/app.scss */
+/* line 186, scss/app.scss */
 .donator_profile h1.requests_awaiting .enabled {
   background-image: url("requests_awaiting_enabled.png");
   color: white;
-  margin-top: 5px;
 }
-/* line 190, scss/app.scss */
+/* line 191, scss/app.scss */
 .donator_profile h1.requests_awaiting .enabled a {
   color: #fff;
 }
-/* line 195, scss/app.scss */
+/* line 196, scss/app.scss */
 .donator_profile h1.donor_last_date .disabled {
   color: #ccc;
 }
-/* line 199, scss/app.scss */
+/* line 200, scss/app.scss */
 .donator_profile h1.souls_saved .disabled {
   background-image: url("lives_saved_disabled.png");
   color: white;
 }
-/* line 204, scss/app.scss */
+/* line 205, scss/app.scss */
+.donator_profile h1.requests_awaiting {
+  background-position: top 5px left 0;
+}
+/* line 208, scss/app.scss */
 .donator_profile h1.requests_awaiting .disabled {
   background-image: url("requests_awaiting_disabled.png");
-  margin-top: 5px;
 }
-/* line 207, scss/app.scss */
+/* line 211, scss/app.scss */
 .donator_profile h1.requests_awaiting .disabled a {
   color: #fff;
 }
-/* line 213, scss/app.scss */
+/* line 217, scss/app.scss */
 .donator_profile .donor-blocks .row {
   position: relative;
   height: 65px;
   margin-bottom: 10px;
 }
 
-/* line 222, scss/app.scss */
+/* line 226, scss/app.scss */
 .request_profile {
   vertical-align: center;
 }
-/* line 224, scss/app.scss */
+/* line 228, scss/app.scss */
 .request_profile h1 {
   font-size: 1.5rem;
   text-align: center;
   color: #333;
 }
-/* line 229, scss/app.scss */
+/* line 233, scss/app.scss */
 .request_profile p {
   text-align: center;
   font-size: 1.2rem;
   color: #333;
 }
-/* line 238, scss/app.scss */
+/* line 242, scss/app.scss */
 .request_profile .request-name p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0 0 5px;
   text-align: right;
-  max-height: 35px;
+  min-height: 35px;
 }
-/* line 245, scss/app.scss */
+/* line 249, scss/app.scss */
 .request_profile .request-name h1 {
   text-align: right;
   margin: 10px 0;
-  max-height: 35px;
+  min-height: 35px;
 }
-/* line 251, scss/app.scss */
+/* line 255, scss/app.scss */
 .request_profile .request-name h1, .request_profile .request-name span {
   color: #ba2830;
 }
-/* line 255, scss/app.scss */
+/* line 259, scss/app.scss */
 .request_profile .request-name .request-status {
   background-position: top 0 right 10px;
   background-size: auto 135px;
   background-repeat: no-repeat;
-  min-width: 200px;
   padding-right: 125px;
   padding-bottom: 20px;
 }
-/* line 264, scss/app.scss */
+/* line 267, scss/app.scss */
 .request_profile .request-name .request-status.active {
   background-image: url("request-status-active.png");
 }
-/* line 268, scss/app.scss */
+/* line 271, scss/app.scss */
 .request_profile .request-name .request-status.done {
   background-image: url("request-status-done.png");
 }
-/* line 272, scss/app.scss */
+/* line 275, scss/app.scss */
 .request_profile .request-name .request-status.cancelled {
   background-image: url("request-status-cancelled.png");
 }
-/* line 278, scss/app.scss */
+/* line 281, scss/app.scss */
 .request_profile h1.donor_last_date, .request_profile h1.requests_awaiting, .request_profile h1.bloodbags {
+  font-size: 2rem;
   background-size: auto 60px;
   background-repeat: no-repeat;
   height: 65px;
@@ -10562,49 +10565,52 @@ a.split {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-/* line 299, scss/app.scss */
+/* line 302, scss/app.scss */
 .request_profile h1.donor_last_date.enabled {
   color: #ba2830;
 }
-/* line 303, scss/app.scss */
+/* line 306, scss/app.scss */
 .request_profile h1.bloodbags {
   background-image: url("blooddrop-enabled.png");
   color: white;
+  background-position: right 15px top 0;
 }
-/* line 308, scss/app.scss */
+/* line 312, scss/app.scss */
+.request_profile h1.requests_awaiting {
+  background-position: top 5px left 0;
+}
+/* line 316, scss/app.scss */
 .request_profile h1.requests_awaiting.enabled {
   background-image: url("requests_awaiting_enabled.png");
   color: white;
-  margin-top: 5px;
 }
-/* line 313, scss/app.scss */
+/* line 321, scss/app.scss */
 .request_profile h1.requests_awaiting.enabled a {
   color: #fff;
 }
-/* line 318, scss/app.scss */
+/* line 326, scss/app.scss */
 .request_profile h1.donor_last_date.disabled {
   color: #ccc;
 }
-/* line 322, scss/app.scss */
+/* line 330, scss/app.scss */
 .request_profile h1.requests_awaiting.disabled {
   background-image: url("requests_awaiting_disabled.png");
-  margin-top: 5px;
 }
-/* line 325, scss/app.scss */
+/* line 333, scss/app.scss */
 .request_profile h1.requests_awaiting.disabled a {
   color: #fff;
 }
-/* line 331, scss/app.scss */
+/* line 339, scss/app.scss */
 .request_profile .request-blocks .row {
   position: relative;
   height: 65px;
   margin-bottom: 10px;
 }
-/* line 338, scss/app.scss */
+/* line 346, scss/app.scss */
 .request_profile .request-options {
   text-align: center;
 }
-/* line 341, scss/app.scss */
+/* line 349, scss/app.scss */
 .request_profile .request-options a.button {
   max-height: 50px;
   line-height: 40px;
@@ -10613,11 +10619,11 @@ a.split {
   padding: 0;
   margin: 1rem 0 0.5rem;
 }
-/* line 350, scss/app.scss */
+/* line 358, scss/app.scss */
 .request_profile .request-options .social-share {
   display: inline-block;
 }
-/* line 354, scss/app.scss */
+/* line 362, scss/app.scss */
 .request_profile .request-options .social-share a, .request_profile .request-options .social-share p {
   padding: 0 5px;
   font-size: 1.25rem;
@@ -10625,41 +10631,41 @@ a.split {
   line-height: 30px;
   max-height: 30px;
 }
-/* line 360, scss/app.scss */
+/* line 368, scss/app.scss */
 .request_profile .request-options .social-share a :hover, .request_profile .request-options .social-share p :hover {
   color: #000;
 }
 
-/* line 370, scss/app.scss */
+/* line 378, scss/app.scss */
 .footer {
   background: #ccc;
   height: 45px;
   overflow: hidden;
   text-align: center;
 }
-/* line 378, scss/app.scss */
+/* line 386, scss/app.scss */
 .footer p {
   display: inline-block;
   color: white;
   line-height: 45px;
 }
-/* line 384, scss/app.scss */
+/* line 392, scss/app.scss */
 .footer .column {
   height: 45px;
 }
-/* line 387, scss/app.scss */
+/* line 395, scss/app.scss */
 .footer .social {
   float: left;
   height: 45px;
 }
-/* line 392, scss/app.scss */
+/* line 400, scss/app.scss */
 .footer .social p {
   display: inline-block;
   color: white;
   line-height: 45px;
   vertical-align: top;
 }
-/* line 399, scss/app.scss */
+/* line 407, scss/app.scss */
 .footer .social li {
   color: white;
   font-size: 2.1875rem;
@@ -10667,7 +10673,7 @@ a.split {
   text-align: center;
   width: 100%;
 }
-/* line 408, scss/app.scss */
+/* line 416, scss/app.scss */
 .footer .social a {
   width: 50px;
   height: 45px;
@@ -10675,14 +10681,14 @@ a.split {
   display: inline-block;
 }
 
-/* line 416, scss/app.scss */
+/* line 424, scss/app.scss */
 .total-nav {
   width: 100%;
   background: #ba2830;
   background: #ba2830 url("http://i.imgur.com/dtWZ6gY.png") repeat-x;
   height: 100px;
 }
-/* line 423, scss/app.scss */
+/* line 431, scss/app.scss */
 .total-nav a.logo {
   top: 12px;
   right: 7%;
@@ -10693,29 +10699,29 @@ a.split {
   height: 65px;
   position: absolute;
 }
-/* line 434, scss/app.scss */
+/* line 442, scss/app.scss */
 .total-nav .up-bar {
   height: 60px;
   color: #fff;
   display: block;
   width: 100% !important;
 }
-/* line 442, scss/app.scss */
+/* line 450, scss/app.scss */
 .total-nav .up-bar a {
   display: inline-block;
   color: #fff;
   font-size: 30px;
   line-height: 50px;
 }
-/* line 449, scss/app.scss */
+/* line 457, scss/app.scss */
 .total-nav .up-bar .left {
   max-height: 50px;
 }
-/* line 453, scss/app.scss */
+/* line 461, scss/app.scss */
 .total-nav .up-bar ul {
   text-decoration: none;
 }
-/* line 457, scss/app.scss */
+/* line 465, scss/app.scss */
 .total-nav .up-bar ul li {
   display: inline-block;
   margin: 0 10px;
@@ -10723,21 +10729,21 @@ a.split {
   top: 0;
   position: relative;
 }
-/* line 464, scss/app.scss */
+/* line 472, scss/app.scss */
 .total-nav .up-bar ul li a {
   font-size: 14px;
   line-height: 50px;
 }
-/* line 472, scss/app.scss */
+/* line 480, scss/app.scss */
 .total-nav .up-bar ul li.drpdwn .f-dropdown {
   right: -99999px;
 }
-/* line 476, scss/app.scss */
+/* line 484, scss/app.scss */
 .total-nav .up-bar ul li.drpdwn .f-dropdown li {
   width: 100%;
   margin: 0;
 }
-/* line 479, scss/app.scss */
+/* line 487, scss/app.scss */
 .total-nav .up-bar ul li.drpdwn .f-dropdown li a {
   display: block !important;
   padding: 0.5rem !important;
@@ -10747,44 +10753,44 @@ a.split {
   border: none;
 }
 
-/* line 494, scss/app.scss */
+/* line 502, scss/app.scss */
 .top-bar-section ul li.register:hover:not(.has-form) > a {
   color: #ba2830 !important;
 }
 
-/* line 497, scss/app.scss */
+/* line 505, scss/app.scss */
 form button {
   margin: 5px 0;
 }
 
-/* line 502, scss/app.scss */
+/* line 510, scss/app.scss */
 .main_content {
   padding: 65px 50px 70px;
   min-height: 500px;
 }
-/* line 509, scss/app.scss */
+/* line 517, scss/app.scss */
 .main_content .tabs-content p {
   text-align: justify;
 }
-/* line 517, scss/app.scss */
+/* line 525, scss/app.scss */
 .main_content .tabs-content .vertical {
   margin-right: 5px;
 }
-/* line 521, scss/app.scss */
+/* line 529, scss/app.scss */
 .main_content dl.tabs {
   margin: 0;
 }
-/* line 524, scss/app.scss */
+/* line 532, scss/app.scss */
 .main_content dl.tabs .column {
   text-align: center;
   padding: 0 !important;
 }
-/* line 528, scss/app.scss */
+/* line 536, scss/app.scss */
 .main_content dl.tabs dd.active a, .main_content dl.tabs dd:hover a {
   color: #fff;
 }
 
-/* line 534, scss/app.scss */
+/* line 542, scss/app.scss */
 .single-reply {
   background: #f9f9f9;
   margin: 15px;
@@ -10796,26 +10802,26 @@ form button {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 542, scss/app.scss */
+/* line 550, scss/app.scss */
 .single-reply .close a {
   font-size: 16px;
   color: #999;
   text-align: left;
   margin: 2px 20px;
 }
-/* line 549, scss/app.scss */
+/* line 557, scss/app.scss */
 .single-reply .donor-reply {
   background: url("blooddrop-enabled.png") top 0.2rem right 25px no-repeat;
   background-size: auto 110px;
   padding-right: 120px;
 }
-/* line 554, scss/app.scss */
+/* line 562, scss/app.scss */
 .single-reply .donor-reply p {
   font-size: 30px;
   color: #ba2830;
   max-height: 30px;
 }
-/* line 560, scss/app.scss */
+/* line 568, scss/app.scss */
 .single-reply a.button {
   padding: 0 50px !important;
   min-width: 80%;
@@ -10825,7 +10831,7 @@ form button {
   margin: 1rem 9% 0.5rem !important;
 }
 
-/* line 572, scss/app.scss */
+/* line 580, scss/app.scss */
 .single-request {
   background: #f9f9f9;
   margin: 15px 0px;
@@ -10836,42 +10842,43 @@ form button {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 578, scss/app.scss */
+/* line 586, scss/app.scss */
 .single-request .close a {
   font-size: 16px;
   color: #999;
   text-align: left;
   margin: 2px 0;
 }
-/* line 585, scss/app.scss */
+/* line 593, scss/app.scss */
 .single-request .request-status {
   padding-right: 120px;
 }
-/* line 589, scss/app.scss */
+/* line 597, scss/app.scss */
 .single-request .request-status p {
   font-size: 30px;
   color: #ba2830;
   max-height: 30px;
 }
-/* line 596, scss/app.scss */
+/* line 604, scss/app.scss */
 .single-request .active, .single-request .done, .single-request .cancelled {
-  background-position: top 0.2rem right 30px !important;
-  background-size: auto 100px !important;
-  background-repeat: no-repeat !important;
+  background-position: top 0.2rem right 30px;
+  background-size: auto 100px;
+  background-repeat: no-repeat;
+  min-width: 200px;
 }
-/* line 602, scss/app.scss */
+/* line 611, scss/app.scss */
 .single-request .active {
-  background: url("request-status-active.png");
-}
-/* line 606, scss/app.scss */
-.single-request .done {
-  background: url("request-status-done.png");
-}
-/* line 610, scss/app.scss */
-.single-request .canceled {
-  background: url("request-status-canceled.png");
+  background-image: url("request-status-active.png");
 }
 /* line 615, scss/app.scss */
+.single-request .done {
+  background-image: url("request-status-done.png");
+}
+/* line 619, scss/app.scss */
+.single-request .canceled {
+  background-image: url("request-status-canceled.png");
+}
+/* line 624, scss/app.scss */
 .single-request p {
   text-align: right;
   font-size: 24px;
@@ -10880,11 +10887,11 @@ form button {
   line-height: 30px;
   margin: 1rem 0 !important;
 }
-/* line 623, scss/app.scss */
+/* line 632, scss/app.scss */
 .single-request p span {
   color: #ba2830;
 }
-/* line 627, scss/app.scss */
+/* line 636, scss/app.scss */
 .single-request a.button {
   padding: 0 50px !important;
   min-width: 80%;
@@ -10893,15 +10900,15 @@ form button {
   font-size: 24px;
   margin: 1rem 0 0.5rem !important;
 }
-/* line 636, scss/app.scss */
+/* line 645, scss/app.scss */
 .single-request .request-options {
   text-align: center;
 }
-/* line 640, scss/app.scss */
+/* line 649, scss/app.scss */
 .single-request .social-share {
   display: inline-block;
 }
-/* line 644, scss/app.scss */
+/* line 653, scss/app.scss */
 .single-request .social-share a, .single-request .social-share p {
   padding: 0 5px;
   font-size: 1.25rem;
@@ -10909,72 +10916,72 @@ form button {
   line-height: 30px;
   max-height: 30px;
 }
-/* line 650, scss/app.scss */
+/* line 659, scss/app.scss */
 .single-request .social-share a :hover, .single-request .social-share p :hover {
   color: #000;
 }
 
-/* line 658, scss/app.scss */
+/* line 667, scss/app.scss */
 .request_content h2 {
   font-size: 16px;
   display: inline-block;
 }
-/* line 662, scss/app.scss */
+/* line 671, scss/app.scss */
 .request_content p {
   display: inline-block;
   text-align: center;
   font-size: 18px;
 }
-/* line 668, scss/app.scss */
+/* line 677, scss/app.scss */
 .request_content .main_data {
   margin: 0 0 35px;
 }
-/* line 672, scss/app.scss */
+/* line 681, scss/app.scss */
 .request_content .donator_confirmations {
   padding: 0 !important;
 }
-/* line 676, scss/app.scss */
+/* line 685, scss/app.scss */
 .request_content .donator_confirmations .donator_name {
   padding: 0;
 }
-/* line 678, scss/app.scss */
+/* line 687, scss/app.scss */
 .request_content .donator_confirmations .donator_name h2 {
   padding: 23px 0;
   width: 100%;
   text-align: center;
   margin: 0 !important;
 }
-/* line 686, scss/app.scss */
+/* line 695, scss/app.scss */
 .request_content .donator_confirmations .confirmation {
   padding: 0;
   text-align: center;
   background: #ba2830;
 }
-/* line 690, scss/app.scss */
+/* line 699, scss/app.scss */
 .request_content .donator_confirmations .confirmation a {
   padding: 20px 0;
   display: block;
   background: #ba2830;
   color: white;
 }
-/* line 699, scss/app.scss */
+/* line 708, scss/app.scss */
 .request_content .more .more-content {
   padding: 0 10px;
 }
-/* line 703, scss/app.scss */
+/* line 712, scss/app.scss */
 .request_content .more .more-content .more-patient-details, .request_content .more .more-content .share-patient-social {
   display: inline-block;
 }
-/* line 708, scss/app.scss */
+/* line 717, scss/app.scss */
 .request_content .more .more-content .share-patient-social a {
   padding: 0 5px;
   font-size: 1.25rem;
 }
-/* line 712, scss/app.scss */
+/* line 721, scss/app.scss */
 .request_content .more .more-content .share-patient-social a :hover {
   color: #000;
 }
-/* line 721, scss/app.scss */
+/* line 730, scss/app.scss */
 .request_content .due-date p {
   width: 150px;
   height: 150px;
@@ -11003,12 +11010,12 @@ form button {
 }
 
 @media only screen and (max-width: 64.063em) {
-  /* line 749, scss/app.scss */
+  /* line 758, scss/app.scss */
   .footer {
     height: 90px;
     text-align: center;
   }
-  /* line 752, scss/app.scss */
+  /* line 761, scss/app.scss */
   .footer .social {
     float: none;
   }
