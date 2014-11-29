@@ -21,6 +21,12 @@ gem 'underscore-rails'
 gem 'foundation-rails'
 gem "font-awesome-rails"
 
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'twitter'
+gem 'fb_graph'
+gem 'nifty-generators'
+
 group :development do
   gem 'letter_opener'
 end
@@ -49,3 +55,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "mocha", group: :test
