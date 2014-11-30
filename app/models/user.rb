@@ -8,7 +8,7 @@ class User
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
 
   ## Database authenticatable
@@ -56,10 +56,11 @@ class User
   belongs_to :blood_type
   has_one :location, as: :locatable
     validates_presence_of :location, :message=> "Must choose hospital's location!"
+ 
 
   has_many :requests
   has_many :replies
-  
+  has_many :authentications
 
 
   ##### Methods #####
@@ -109,5 +110,14 @@ class User
     near_requests = Request.active.select{ |r| r.blood_type == blood_type}.select{ |r| Geocoder::Calculations.distance_between(current_place.coordinates, r.coordinates) <= distance_in_miles }
     near_requests
   end
+
+  def apply_omniauth(omni)
+   authentications.build(:provider => omni['provider'],
+   :uid => omni['uid'],
+   :token => omni['credentials'].token,
+   :token_secret => omni['credentials'].secret)
+ end
+
+  
 
 end

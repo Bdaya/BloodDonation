@@ -161,6 +161,11 @@
           <%= link_to "متلقٍ جديد", new_request_path, :class=> "button expand" %>
         </div>
       </div>
+      <div class="row">
+	سجل دخولك كمتبرع عن طريق:
+	<%= link_to "Twitter", user_omniauth_authorize_path(:twitter) %>
+        <%= link_to "Facebook", user_omniauth_authorize_path(:facebook) %>
+      </div>
       <a class="close-reveal-modal">&#215;</a>
     </div>
     <!-- End of sign-up popup -->
@@ -196,6 +201,10 @@
             <button type="submit" class=" column small-4 small-centered">ادخل</button>
           <% end %>
           <!-- End of login form -->
+	  أو ﻊﻧ ﻁﺮﻴﻗ:
+        <%= link_to "Twitter", user_omniauth_authorize_path(:twitter) %>
+        <%= link_to "Facebook", user_omniauth_authorize_path(:facebook) %>
+
         </div>
       </div>
       <a class="close-reveal-modal">&#215;</a>

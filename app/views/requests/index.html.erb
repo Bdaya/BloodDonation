@@ -14,6 +14,7 @@
 
   <!-- Developer Review: start requests loop -->
   <% @requests.each do |request| %>
+  <% if request.hospital_name != "test" %>
   <!-- Developer Review: if request is active -->
 
   <!-- request list active item-->
@@ -96,6 +97,7 @@
 
 
   <!-- Developer Review: End if -->
+  <% end %>
   <% end %>
   <% unless @requests.any? %>
     <h2>لا توجد حالات حالياً</h2>
