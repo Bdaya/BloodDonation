@@ -60,7 +60,6 @@ class User
 
   has_many :requests
   has_many :replies
-  has_many :authentications
 
 
   ##### Methods #####
@@ -110,13 +109,6 @@ class User
     near_requests = Request.active.select{ |r| r.blood_type == blood_type}.select{ |r| Geocoder::Calculations.distance_between(current_place.coordinates, r.coordinates) <= distance_in_miles }
     near_requests
   end
-
-  def apply_omniauth(omni)
-   authentications.build(:provider => omni['provider'],
-   :uid => omni['uid'],
-   :token => omni['credentials'].token,
-   :token_secret => omni['credentials'].secret)
- end
 
   
 

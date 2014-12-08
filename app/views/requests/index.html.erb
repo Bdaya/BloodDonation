@@ -11,12 +11,11 @@
 </div>
 
 <div class="request-list">
-
+<% if @requests.any? %>
   <!-- Developer Review: start requests loop -->
   <% @requests.each do |request| %>
-  <% if request.hospital_name != "test" %>
   <!-- Developer Review: if request is active -->
-
+  <% if request.hospital_name != "test" %>
   <!-- request list active item-->
   <div class="single-request">
 
@@ -99,7 +98,7 @@
   <!-- Developer Review: End if -->
   <% end %>
   <% end %>
-  <% unless @requests.any? %>
+  <% else %>
     <h2>لا توجد حالات حالياً</h2>
   <% end -%>
   <!-- Developer Review: End loop -->

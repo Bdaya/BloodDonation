@@ -19,11 +19,7 @@ class RegistrationsController < Devise::RegistrationsController
 	
         flash[:notice] = "تم تسجيلك بنجاح"
         sign_in_and_redirect(@user)
-        super
-        session[:omniauth] = nil unless @user.new_record?
-        # redirect_to user_path(@user), notice: 
     else
-        flash[:alert] = "الرجاء إدخال البيانات كاملة"
 
         render 'new'# alert: "Please complete all data correctly!"
     end
