@@ -60,9 +60,11 @@ class User
 
   has_many :requests
   has_many :replies
+  has_many :social_providers
 
 
   ##### Methods #####
+  
   def can_donate?
     return true unless last_donated
 
@@ -110,6 +112,20 @@ class User
     near_requests
   end
 
-  
+    # update from OAuth
+ 
+   def update_from_oauth(auth, provider_type)
+     self.email = auth[:info][:email] if self.email.blank?
+       case provider_type
+        when :twitter
+           name = auth[:info][:name].split(' ')
+           self.first_name ||= name[0]
+           self.last_name ||= name[1]
+           
+        when :facebook
+           self.name ||= auth[:info][:first_name] + auth[:info][:last_name]
+           
+        end
+     end
 
 end

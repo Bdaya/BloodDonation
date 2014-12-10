@@ -26,6 +26,7 @@ gem 'omniauth-facebook'
 gem 'twitter'
 gem 'fb_graph'
 gem 'nifty-generators'
+gem 'protected_attributes'
 
 group :development do
   gem 'letter_opener'
