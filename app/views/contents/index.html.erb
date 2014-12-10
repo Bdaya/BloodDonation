@@ -50,6 +50,12 @@
             وتكنولوجيا المعلومات المتعددة،
             <%= link_to "إعرف المزيد..", about_contents_path %>
           </p>
+	<div class="row"><div class="column small-6 small-centered social_provider">
+        <p>يمكنك تسجيل متبرع جديد أو تسجيل الدخول ﻊﻧ ﻁﺮﻴﻗ: </p>
+        <%= link_to(user_omniauth_authorize_path(:twitter)) do %> <i class="fa fa-twitter-square"></i><%end%>
+        <%= link_to(user_omniauth_authorize_path(:facebook)) do %> <i class="fa fa-facebook-square"></i> <%end%>
+        </div>
+
         </div>
 
         <div class="column medium-5">
@@ -90,7 +96,8 @@
             <% end %>
 
           </div>
-
+	 
+	</div>
         </div>
 
 

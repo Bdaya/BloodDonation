@@ -13,6 +13,13 @@
   </head>
   <body>
 
+<style>
+  .social_provider { text-align:center;}
+  .social_provider p { font-weight:bold; font-size:1.5rem;}
+  .social_provider a { font-size: 3rem;}
+  .cover .medium-5 { text-align: center;}
+</style>
+
     <!-- Navigation Bar -->
     <div class="total-nav">
         <%= link_to(root_path, :class=>"logo") do %>
@@ -161,6 +168,13 @@
           <%= link_to "متلقٍ جديد", new_request_path, :class=> "button expand" %>
         </div>
       </div>
+      <div class="row">
+	<div class="column small-6 small-centered social_provider">
+	<p>سجل دخولك كمتبرع عن طريق:</p>
+	<%= link_to(user_omniauth_authorize_path(:twitter)) do %> <i class="fa fa-twitter-square"></i><%end%>
+        <%= link_to(user_omniauth_authorize_path(:facebook)) do %> <i class="fa fa-facebook-square"></i> <%end%>
+	</div>
+      </div>
       <a class="close-reveal-modal">&#215;</a>
     </div>
     <!-- End of sign-up popup -->
@@ -168,7 +182,7 @@
     <!-- sign-in popup -->
     <div id="login" class="reveal-modal" data-reveal>
       <div class="row" style="text-align:center;">
-        <div class="column small-6 centered">
+        <div class="column small-6 small-centered">
           <h2> سجل الدخول</h2>
 
           <!-- login form -->
@@ -196,6 +210,11 @@
             <button type="submit" class=" column small-4 small-centered">ادخل</button>
           <% end %>
           <!-- End of login form -->
+	<div class="column small-6 small-centered social_provider">
+<p>أو عن طريق</p>
+          <%= link_to(user_omniauth_authorize_path(:twitter)) do %> <i class="fa fa-twitter-square"></i><%end%>
+        <%= link_to(user_omniauth_authorize_path(:facebook)) do %> <i class="fa fa-facebook-square"></i> <%end%>
+	</div>
         </div>
       </div>
       <a class="close-reveal-modal">&#215;</a>
@@ -209,7 +228,7 @@
       <!-- Page content -->
 
       <!-- Error Message -->
-      <% flash.each do |name, msg| %>
+       <% flash.each do |name, msg| %>
         <div data-alert class="alert-box" id="error_explanation" >
 
           <!-- Developer Review: Render message -->

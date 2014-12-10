@@ -85,11 +85,14 @@ background-color: #0097cf;
     <%= form_for(resource, :html => {"data-abide" => ''}, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
       <!-- Developer Review: Error message -->
-       <% flash.each do |name, msg| -%>
+       <% if @user.errors.any? %>
         <div data-alert class="alert-box" id="error_explanation" >
-
+        <% @user.errors.full_messages.each do |msg| %>
          <!-- Developer Review: Render message-->
-          <%= content_tag :div, msg, class: name %>
+	<div class="name">
+          <%= msg %>
+	</div>
+	<% end %>
           <a href="#" class="close">&times;</a>
         </div>
       <% end -%>

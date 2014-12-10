@@ -2,6 +2,11 @@
 class RegistrationsController < Devise::RegistrationsController
   before_action(:only => [:create]) { |c| c.check_important_params(params) }
   def create
+     super
+      if current_user and session[:sp_id].present?
+        current_user.social_providers << SocialProvider.find_by_id_and_user_id(session[:sp_id], nil)
+      end
+    
     @user = User.new(params[:user].permit!)
     blood_type = BloodType.find_by(type: params[:user][:blood_type]) unless params[:user][:blood_type].blank?
 
@@ -16,16 +21,17 @@ class RegistrationsController < Devise::RegistrationsController
     @user.blood_type = blood_type
     @user.location = @location
     if @user.save
+	
         flash[:notice] = "تم تسجيلك بنجاح"
         sign_in_and_redirect(@user)
-
-        # redirect_to user_path(@user), notice: 
     else
-        flash[:alert] = "الرجاء إدخال البيانات كاملة"
 
         render 'new'# alert: "Please complete all data correctly!"
     end
+    
   end
+
+
     # build_resource(sign_up_params)
 
     # resource_saved = resource.save

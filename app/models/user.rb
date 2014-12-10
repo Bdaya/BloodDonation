@@ -8,7 +8,7 @@ class User
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
 
   ## Database authenticatable
@@ -56,13 +56,15 @@ class User
   belongs_to :blood_type
   has_one :location, as: :locatable
     validates_presence_of :location, :message=> "Must choose hospital's location!"
+ 
 
   has_many :requests
   has_many :replies
-  
+  has_many :social_providers
 
 
   ##### Methods #####
+  
   def can_donate?
     return true unless last_donated
 
@@ -109,5 +111,21 @@ class User
     near_requests = Request.active.select{ |r| r.blood_type == blood_type}.select{ |r| Geocoder::Calculations.distance_between(current_place.coordinates, r.coordinates) <= distance_in_miles }
     near_requests
   end
+
+    # update from OAuth
+ 
+   def update_from_oauth(auth, provider_type)
+     self.email = auth[:info][:email] if self.email.blank?
+       case provider_type
+        when :twitter
+           name = auth[:info][:name].split(' ')
+           self.first_name ||= name[0]
+           self.last_name ||= name[1]
+           
+        when :facebook
+           self.name ||= auth[:info][:first_name] + auth[:info][:last_name]
+           
+        end
+     end
 
 end
