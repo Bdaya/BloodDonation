@@ -23,6 +23,7 @@ gem "font-awesome-rails"
 
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 gem 'twitter'
 gem 'fb_graph'
 gem 'nifty-generators'

@@ -27,6 +27,11 @@ class SocialProvider
     where(provider_type: :twitter)
   end
 
+  def self.google_oauth2
+    where(provider_type: :google_oauth2)
+  end
+
+
   def self.find_for_oauth(auth, provider_type)
     social_provider = self.where(pid: auth[:uid].to_s, provider_type: provider_type).first
     if social_provider.nil?
@@ -49,13 +54,16 @@ class SocialProvider
     case provider_type
     when :twitter
       self.token = credentials[:token]
-      self.secret = credentials[:secret]
+      self.secret = creidentials[:secret]
       self.url = auth[:info][:urls][:Twitter]
     when :facebook
       self.token = credentials[:token]
       self.url = auth[:extra][:raw_info][:link]
-    
-    end
+    when :google_oauth2
+      self.token = credentials[:token]
+      self.refresh_token = credentials[:refresh_token]
+      self.url = auth[:extra][:raw_info][:profile]
+   end
   end
 end
 

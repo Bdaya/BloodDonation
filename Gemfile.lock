@@ -125,6 +125,9 @@ GEM
       rack (~> 1.0)
     omniauth-facebook (2.0.0)
       omniauth-oauth2 (~> 1.2)
+    omniauth-google-oauth2 (0.2.6)
+      omniauth (> 1.0)
+      omniauth-oauth2 (~> 1.1)
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -140,6 +143,8 @@ GEM
     origin (2.1.1)
     orm_adapter (0.5.0)
     polyglot (0.3.5)
+    protected_attributes (1.0.8)
+      activemodel (>= 4.0.1, < 5.0)
     rack (1.5.2)
     rack-oauth2 (1.0.8)
       activesupport (>= 2.3)
@@ -237,7 +242,9 @@ DEPENDENCIES
   mongoid (~> 4.0.0.rc1)!
   nifty-generators
   omniauth-facebook
+  omniauth-google-oauth2
   omniauth-twitter
+  protected_attributes
   rails (= 4.0.4)
   sass-rails (~> 4.0.2)
   sdoc

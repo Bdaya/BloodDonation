@@ -124,7 +124,10 @@ class User
            
         when :facebook
            self.name ||= auth[:info][:first_name] + auth[:info][:last_name]
-           
+        when :google_oauth2
+           name = auth[:info][:name].split(' ')
+           self.first_name ||= name[0]
+           self.last_name ||= name[1] 
         end
      end
 

@@ -173,6 +173,8 @@
 	<p>سجل دخولك كمتبرع عن طريق:</p>
 	<%= link_to(user_omniauth_authorize_path(:twitter)) do %> <i class="fa fa-twitter-square"></i><%end%>
         <%= link_to(user_omniauth_authorize_path(:facebook)) do %> <i class="fa fa-facebook-square"></i> <%end%>
+        <%= link_to(user_omniauth_authorize_path(:google_oauth2)) do %> <i class="fa fa-google-plus-square"></i> <%end%>
+
 	</div>
       </div>
       <a class="close-reveal-modal">&#215;</a>
@@ -214,6 +216,8 @@
 <p>أو عن طريق</p>
           <%= link_to(user_omniauth_authorize_path(:twitter)) do %> <i class="fa fa-twitter-square"></i><%end%>
         <%= link_to(user_omniauth_authorize_path(:facebook)) do %> <i class="fa fa-facebook-square"></i> <%end%>
+	<%= link_to(user_omniauth_authorize_path(:google_oauth2)) do %> <i class="fa fa-google-plus-square"></i> <%end%>
+
 	</div>
         </div>
       </div>
