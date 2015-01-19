@@ -1,0 +1,811 @@
+@import "settings";
+@import "foundation";
+@import "font-awesome";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/layout.scss";
+
+
+/* General */
+
+.content{
+	line-height: 30px;
+}
+
+
+/* Coming soon pages, Empty content style */
+
+.empty, .coming_soon {
+	color: #ddd;
+	font-size: rem-calc(30);
+	height:100%;
+	width:100%;
+	text-align: center;
+
+	p {
+			font-size: rem-calc(30) !important;
+			display:block;
+			position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	}
+
+	a:hover {
+		text-decoration: underline
+	}
+}
+
+
+/* sign up form */
+
+form.new_user, form.new_request {
+dl.sign {
+	dd {
+		min-height:85px !important;
+	}
+	dd.disabled a, dd.disabled a:hover, dd.active a, dd.active a:hover, dd.complete a, dd a {
+		background-repeat:no-repeat;
+		background-position: top 10px right 0;
+		background-size: 45px auto;
+		padding: 5px 50px 0px 10px;
+		min-height: 80px;
+		font-size: 23px;
+		text-align: right;
+		color: #ccc !important;
+		cursor:default;
+	}
+
+  dd.disabled a, dd.disabled a:hover {
+  	background-image: url('blooddrop-disabled.png');
+  }
+
+	dd.active a, dd.active a:hover {
+		color:$primary-color !important;
+		background-color:#fff;
+		background-image: url('blooddrop-disabled.png');
+
+	}
+
+	dd.complete a, dd a {
+		background-image: url('blooddrop-enabled.png');
+		background-color: #fff;
+		color:$primary-color !important;
+	}
+
+
+}
+
+.fields_section {
+	min-height:400px;
+}
+
+	a.button, dd button {
+		margin:0;
+		padding:5px !important;
+		border:none;
+	}
+}
+
+a.split {
+	font-weight: bolder;
+}
+
+/* donor profile page */
+
+.donator_profile {
+	vertical-align: center;
+	h1 {
+		font-size:1.5rem;
+		text-align:center;
+		color:#333;
+	}
+	p {
+
+		text-align: center;
+		font-size: 1.2rem;
+		color:#333;
+	}
+
+	.donor-request-list {
+		border:1px solid $primary-color;
+		position:relative;
+		min-height:300px;
+		padding:0;
+
+		.header {
+			margin:0;
+			min-height:40px;
+			background: $primary-color;
+			display:block;
+			width:100%;
+
+			h3 {
+				color:#fff;
+				margin:0 20px;
+				line-height:40px;
+				font-size:24px;
+			}
+		}
+	}
+	.donor-name {
+		h1, p {
+			text-align: right !important;
+		}
+
+		.donor-name-active, .donor-name-inactive {
+			background-position: top 5px right 10px;
+			background-repeat: no-repeat;
+			background-size: auto 100px;
+			padding-right: 120px;
+		}
+
+		.donator_name-active {
+			background-image: url('blooddrop-enabled.png');
+		}
+
+		.donor-name-inactive {
+			background-image: url('blooddrop-disabled.png') ;
+		}
+	}
+
+	h1.donor_last_date, h1.souls_saved, h1.requests_awaiting {
+		background-repeat:no-repeat;
+		font-size: 2rem;
+		background-size: auto 60px;
+		height: 65px;
+		width:70px;
+		line-height:65px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		/*
+		*  Where the magic happens
+		*  Centering method from CSS Tricks
+		*  http://css-tricks.com/centering-percentage-widthheight-elements/
+		*/
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+	}
+
+	h1.donor_last_date .enabled {
+		color: $primary-color;
+	}
+
+	h1.souls_saved .enabled {
+		background-image: url('lives_saved_enabled.png') ;
+		color: $secondary-color;
+	}
+
+	h1.requests_awaiting .enabled {
+		background-image: url('requests_awaiting_enabled.png') ;
+
+		color: $secondary-color;
+
+	a {
+		color:#fff;
+	}
+	}
+
+	h1.donor_last_date .disabled {
+		color: #ccc;
+	}
+
+	h1.souls_saved .disabled {
+		background-image: url('lives_saved_disabled.png');
+		color: $secondary-color;
+	}
+
+	h1.requests_awaiting {
+		background-position: top 5px left 0;
+	}
+	h1.requests_awaiting .disabled {
+		background-image: url('requests_awaiting_disabled.png');
+
+	a {
+		color:#fff;
+	}
+	}
+
+	.donor-blocks {
+		.row {
+			position:relative;
+			height:65px;
+			margin-bottom:10px;
+		}
+	}
+}
+
+
+/* request profile page */
+
+.request_profile {
+	vertical-align: center;
+	h1 {
+		font-size:1.5rem;
+		text-align:center;
+		color:#333;
+	}
+	p {
+
+		text-align: center;
+		font-size: 1.2rem;
+		color:#333;
+	}
+
+	.request-name {
+
+		p {
+			font-size:1.5rem;
+			margin: 0 0 5px;
+			text-align: right;
+			min-height: 35px;
+		}
+
+		h1 {
+			text-align: right;
+			margin:10px 0;
+			min-height:35px;
+		}
+
+		h1, span {
+			color:$primary-color;
+		}
+
+		.request-status {
+			background-position: top 0 right 10px ;
+			background-size: auto 135px ;
+			background-repeat: no-repeat;
+			padding-right: 125px;
+			padding-bottom:20px;
+		}
+
+		.request-status.active {
+			background-image: url('request-status-active.png') ;
+		}
+
+		.request-status.done {
+			background-image: url('request-status-done.png');
+
+		}
+		.request-status.cancelled {
+			background-image: url('request-status-cancelled.png');
+		}
+
+	}
+
+	h1.donor_last_date, h1.requests_awaiting, h1.bloodbags {
+		font-size: 2rem;
+		background-size: auto 60px;
+		background-repeat: no-repeat;
+		height: 65px;
+		width:70px;
+		line-height:65px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		/*
+		*  Where the magic happens
+		*  Centering method from CSS Tricks
+		*  http://css-tricks.com/centering-percentage-widthheight-elements/
+		*/
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+	}
+
+	h1.donor_last_date.enabled {
+		color: $primary-color;
+	}
+
+	h1.bloodbags {
+		background-image: url('blooddrop-enabled.png');
+		color: $secondary-color;
+		background-position:right 15px top 0;
+	}
+
+	h1.requests_awaiting {
+		background-position: top 5px left 0;
+	}
+
+	h1.requests_awaiting.enabled {
+		background-image: url('requests_awaiting_enabled.png') ;
+
+		color: $secondary-color;
+
+	a {
+		color:#fff;
+	}
+	}
+
+	h1.donor_last_date.disabled {
+		color: #ccc;
+	}
+
+	h1.requests_awaiting.disabled {
+		background-image: url('requests_awaiting_disabled.png') ;
+
+	a {
+		color:#fff;
+	}
+	}
+
+	.request-blocks {
+		.row {
+			position:relative;
+			height:65px;
+			margin-bottom:10px;
+		}
+	}
+
+	.request-options {
+		text-align:center;
+
+		a.button {
+		max-height: 50px;
+		line-height:40px;
+		font-size: 22px;
+		min-width: 350px;
+		padding:0;
+		margin: 1rem 0 0.5rem;
+		}
+
+		.social-share {
+			display: inline-block;
+
+
+			a,p {
+				padding: 0 5px;
+				font-size: rem-calc(20);
+				display: inline-block;
+				line-height: 30px;
+				max-height:30px;
+				:hover {
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+
+/* footer */
+
+.footer {
+	background: #ccc;
+	height:$footer-height;
+	overflow:hidden;
+	text-align:center;
+
+
+
+	p {
+		display:inline-block;
+		color:$secondary-color;
+		line-height: $footer-height;
+	}
+
+	.column {
+		height: $footer-height;
+	}
+	.social {
+
+		float: $opposite-direction;
+		height: $footer-height;
+
+		p {
+		display:inline-block;
+		color:$secondary-color;
+		line-height: $footer-height;
+		vertical-align: top;
+		}
+
+		li {
+			color: $secondary-color;
+			font-size: rem-calc(35);
+			line-height:$footer-height;
+			text-align: center;
+			width:100%;
+
+		}
+
+		a {
+			width: 50px;
+			height:$footer-height;
+			margin: 0 5px;
+			display:inline-block;
+		}
+	}
+}
+
+/* Header, main menu */
+.total-nav {
+
+	width:100%;
+	background:$primary-color;
+	background:#ba2830 url("http://i.imgur.com/dtWZ6gY.png") repeat-x;
+  height:100px;
+
+	a.logo{
+    top:12px;
+		right: 7%;
+		bottom: 23px;
+    background:#ba2830;
+    display:inline-block;
+    width:171px;
+    height:65px;
+		position:absolute;
+}
+
+	.up-bar {
+
+		height: $topbar-height + 20 ;
+		color:#fff;
+		display:block;
+		width:100% !important;
+
+
+		a {
+			display:inline-block;
+			color:#fff;
+			font-size:30px;
+			line-height:50px;
+		}
+
+		.left {
+			max-height:50px;
+		}
+
+		ul {
+
+			text-decoration:none;
+
+		li {
+			display:inline-block;
+			margin:0 10px;
+			max-height:50px;
+			top:0;
+			position:relative;
+
+			a {
+				font-size:14px;
+				line-height:50px;
+			}
+		}
+
+			li.drpdwn {
+
+			.f-dropdown {
+				right:-99999px;
+
+
+				li {
+					width:100%;
+					margin:0;
+				 a {
+				display: block !important;
+				padding: 0.5rem !important;
+				color: #555 !important;
+				margin: 0;
+				background:none;
+				border: none;
+			}
+		}
+			}
+		}
+	}}
+
+	}
+
+	.top-bar-section ul li.register:hover:not(.has-form) > a  { color:$primary-color !important;}
+
+	form {
+		button {
+			margin: 5px 0 ;
+		}
+	}
+
+.main_content {
+	padding:(25px + $topbar-height) 50px ($footer-height + 25px);
+
+	min-height:500px;
+
+
+	.tabs-content {
+		p {
+			text-align: justify;
+		}
+
+	}
+
+
+
+	.tabs-content .vertical {
+		margin-right:5px;
+	}
+
+	dl.tabs {
+		margin:0;
+
+		.column {
+		text-align: center;
+		padding:0 !important;
+	}
+	dd.active  a, dd:hover a {
+		color: #fff;
+	}
+}
+}
+
+/* replies page */
+
+.single-reply {
+	background: #f9f9f9;
+	margin: 15px;
+	padding:10px;
+	float:right;
+	@include border-radius(5px);
+
+
+	.close a {
+		font-size: 16px;
+		color:#999;
+		text-align:left;
+		margin: 2px 20px;
+	}
+
+	.donor-reply {
+
+		background: url('blooddrop-enabled.png') top 0.2rem right 25px no-repeat;
+		background-size: auto 110px;
+		padding-right: 120px;
+		p {
+			font-size:30px;
+			color:$primary-color;
+			max-height: 30px;
+		}
+	}
+		a.button {
+			padding: 0 50px !important;
+			min-width:80%;
+			min-height:40px;
+			line-height: 40px;
+			font-size: 24px;
+			margin:1rem 9% 0.5rem !important;
+		}
+
+}
+
+/* requests list page */
+
+.single-request {
+	background: #f9f9f9;
+	margin: 15px 0px;
+	padding:10px;
+	@include border-radius(5px);
+
+	.close a {
+		font-size: 16px;
+		color:#999;
+		text-align:left;
+		margin: 2px 0;
+	}
+
+	.request-status {
+
+
+		padding-right: 120px;
+		p {
+			font-size:30px;
+			color:$primary-color;
+			max-height: 30px;
+		}
+	}
+
+	.active, .done, .cancelled {
+		background-position: top 0.2rem right 30px ;
+		background-size: auto 100px ;
+		background-repeat: no-repeat ;
+		min-width:200px;
+	}
+
+	.active {
+		background-image: url('request-status-active.png');
+	}
+
+	.done {
+		background-image: url('request-status-done.png');
+	}
+
+	.canceled {
+		background-image: url('request-status-canceled.png');
+	}
+
+
+	p {
+		text-align: right;
+		font-size: 24px;
+		color: #333;
+		max-height: 30px;
+		line-height: 30px;
+		margin: 1rem 0 !important;
+
+		span {
+			color: $primary-color;
+		}
+	}
+	a.button {
+		padding: 0 50px !important;
+		min-width:80%;
+		min-height:40px;
+		line-height: 40px;
+		font-size: 24px;
+		margin:1rem 0 0.5rem !important;
+	}
+
+	.request-options {
+		text-align: center;
+	}
+
+	.social-share {
+		display: inline-block;
+
+
+		a,p {
+			padding: 0 5px;
+			font-size: rem-calc(20);
+			display: inline-block;
+			line-height: 30px;
+			max-height:30px;
+			:hover {
+				color: #000;
+			}
+		}
+	}
+}
+
+.request_content {
+	h2 {
+		font-size:16px;
+		display: inline-block;
+	}
+	p {
+		display:inline-block;
+		text-align: center;
+		font-size: 18px;
+
+	}
+	.main_data {
+		margin: 0 0 35px;
+	}
+
+	.donator_confirmations {
+
+
+		padding:0 !important;
+		.donator_name{
+			padding:0;
+		h2 {
+			padding:23px 0;
+			width:100%;
+			text-align: center;
+			margin: 0 !important;
+		}
+		}
+
+		.confirmation {
+			padding:0;
+			text-align:center;
+			background:$primary-color;
+			a{
+			padding:20px 0;
+			display:block;
+			background: $primary-color;
+			color: $secondary-color;
+		}
+		}
+	}
+
+	.more .more-content {
+		padding: 0 10px;
+
+
+		.more-patient-details, .share-patient-social {
+			display: inline-block;
+		}
+
+		.share-patient-social {
+			a {
+				padding: 0 5px;
+				font-size: rem-calc(20);
+
+				:hover {
+					color: #000;
+				}
+			}
+		}
+	}
+
+	.due-date {
+
+			p {
+				@include circle(150px, $primary-color);
+				display:block;
+				color:$secondary-color;
+				text-align:center;
+				font-size:rem-calc(30);
+				line-height:150px;
+				margin: auto;
+				    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    /*
+    *  Where the magic happens
+    *  Centering method from CSS Tricks
+    *  http://css-tricks.com/centering-percentage-widthheight-elements/
+    */
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+			}
+		}
+}
+
+/* adjustments for big screens footer */
+
+@media only screen and (max-width: 64.063em) {
+	.footer {
+		height: $footer-height*2;
+		text-align: center;
+		.social { float:none;}
+	}
+
+
+	} /* min-width 1025px, large screens */
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switch",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
