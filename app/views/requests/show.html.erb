@@ -12,6 +12,8 @@
     <% status = 'done' if @request.fulfilled? %>
     <% status = 'cancelled' if @request.banned || @request.stopped %>
     <% status = 'active' %>
+    <% blood = @request.blood_type.type if @request.blood_type %>
+    <% blood = "N/A" if !(@request.blood_type) %>
     <!-- Developer Review: request status -->
     <!-- Developer Review: if request is Active -->
 
@@ -24,7 +26,7 @@
       <h1><%= @request.request_no %></h1>
 
       <!-- Developer Review: request Bloodtype -->
-      <p>فصيلة الدم: <span><%= @request.blood_type.type %></span></p>
+      <p>فصيلة الدم: <span><%= blood %></span></p>
 
       <!-- Developer Review: hospital address -->
 

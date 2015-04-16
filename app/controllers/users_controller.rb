@@ -22,6 +22,12 @@ class UsersController < ApplicationController
     @user.reports
   end
 
+  def userlist
+  if current_user.email == "samar.eldemeiri@gmail.com"  || "heba@faselty.me"
+    @users = User.all
+  end
+  end
+
   def donations
     @all_donations = @user.replies
     @confirmed_donations = @user.confirmed_donations

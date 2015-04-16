@@ -12,9 +12,11 @@ class RequestsController < ApplicationController
     else
       @requests = Request.all
     end
+
   end
 
   def show
+    blood_type = @request.blood_type
   end
 
   def edit

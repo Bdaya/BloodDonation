@@ -35,6 +35,7 @@ Faselty::Application.routes.draw do
 
   resources :users, only: [:show, :update] do
     member do
+      get :userlist
       get :settings
       get :reports
       get :donations

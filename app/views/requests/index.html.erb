@@ -35,7 +35,11 @@
 
         <p>
           <!-- Developer Review: Request required bloodtype-->
+	  <% if request.blood_type? %>
           <%= request.blood_type.type %>
+	  <% else %>
+	  N/A
+	  <%end %>
         </p>
         <p class="small">
           <!-- Developer Review: Request Due Date-->

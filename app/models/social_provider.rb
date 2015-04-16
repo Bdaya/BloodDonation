@@ -54,7 +54,7 @@ class SocialProvider
     case provider_type
     when :twitter
       self.token = credentials[:token]
-      self.secret = creidentials[:secret]
+      self.secret = credentials[:secret]
       self.url = auth[:info][:urls][:Twitter]
     when :facebook
       self.token = credentials[:token]

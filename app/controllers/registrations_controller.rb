@@ -1,12 +1,7 @@
 # encoding: utf-8
 class RegistrationsController < Devise::RegistrationsController
-  before_action(:only => [:create]) { |c| c.check_important_params(params) }
-  def create
-     super
-      if current_user and session[:sp_id].present?
-        current_user.social_providers << SocialProvider.find_by_id_and_user_id(session[:sp_id], nil)
-      end
-    
+#  before_action(:only => [:create]) { |c| c.check_important_params(params) }
+  def create 
     @user = User.new(params[:user].permit!)
     blood_type = BloodType.find_by(type: params[:user][:blood_type]) unless params[:user][:blood_type].blank?
 
@@ -23,10 +18,10 @@ class RegistrationsController < Devise::RegistrationsController
     if @user.save
 	
         flash[:notice] = "تم تسجيلك بنجاح"
-        sign_in_and_redirect(@user)
+	sign_in_and_redirect(@user)     
     else
 
-        render 'new'# alert: "Please complete all data correctly!"
+	render 'new'# alert: "Please complete all data correctly!"
     end
     
   end

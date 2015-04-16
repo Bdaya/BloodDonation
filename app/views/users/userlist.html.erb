@@ -1,0 +1,15 @@
+<% if current_user.email == "samar.eldemeiri@gmail.com" || "heba@faselty.me" %>
+<ol style="direction:ltr;">
+<% @users.each do |user| %>
+
+<li>
+<ul style="list-style:none;">
+<li><b>Name: </b><%= user.name %></li>
+<li><b>Mobile: </b><%= user.phone %></li>
+<li><b>Email: </b><%= user.email %></li>
+<li><b>Bloodtype: </b><% if user.blood_type? %><%= user.blood_type.type %><%else%> N/A<%end%><li>
+</ul>
+<br /> <br />
+<% end %>
+</ol>
+<% end %>
