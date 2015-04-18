@@ -1,7 +1,7 @@
 # encoding: utf-8
 class RequestsController < ApplicationController
   before_action :authenticate_logging_in, only: [:edit, :update, :reopen, :update_location, :stop]
-  before_action(:except => [:index, :new, :create]) { |c| c.prepare_request(params[:id]) }
+  before_action(:except => [:index, :new, :create, :receive_sms_requests]) { |c| c.prepare_request(params[:id]) }
   before_action :authenticate_user!, only: [:reply]
   before_action(:only => [:update, :pause, :update_last_donated, :update_location, :stop]) { |c| c.require_authority(params[:id]) }
 
@@ -120,6 +120,18 @@ class RequestsController < ApplicationController
     else
       redirect_to root_url, alert: "The request's blood type doesn't match yours!"
     end
+  end
+
+  def receive_sms_requests
+    # account_sid = "ACXXXXXXXXXXXXXXXXX"
+    # auth_token = "YYYYYYYYYYYYYYYYYY"
+    # client = Twilio::REST::Client.new account_sid, auth_token
+    # client.account.messages.list.each do |message|
+    #   ##convert the msg to a request
+    # end
+  end
+
+  def send_sms
   end
 
   # private

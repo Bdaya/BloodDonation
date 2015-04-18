@@ -1,9 +1,9 @@
 Faselty::Application.routes.draw do
-  
+
   devise_for :admins
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :registrations => "registrations"}
 
-  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -54,6 +54,9 @@ Faselty::Application.routes.draw do
       post :stop
       post :reply
       get :replies
+    end
+    collection do
+      get :receive_sms_requests
     end
   end
 
