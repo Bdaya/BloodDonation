@@ -28,6 +28,7 @@ gem 'twitter'
 gem 'fb_graph'
 gem 'nifty-generators'
 gem 'protected_attributes'
+gem 'activeadmin-mongoid', github: 'pencilcheck/activeadmin-mongoid', branch: 'patch-1'
 
 group :development do
   gem 'letter_opener'
