@@ -2,8 +2,6 @@
 <% title "تسجيل حالة تبرع جديدة" %>
 
 <!-- Scripts for Location GeoCoding -->
-<script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js"></script>
-<script src="https://rawgithub.com/sgruhier/typeahead-addresspicker/master/dist/typeahead-addresspicker.js"></script>
 <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
@@ -76,7 +74,7 @@ margin-top:10px;
 
 
 <!-- Page Title -->
-<% title "تسجيل حالة تبرع جديدة" %>
+
 
 
 <div class="row">
@@ -142,7 +140,7 @@ margin-top:10px;
 			      <!-- Contact Email -->
 			      <div class="field">
 
-			        <%= f.text_field :email, :required=>"", :pattern=>"email", :placeholder=>"البريد الإلكتروني" %>
+			        <%= f.text_field :email, :required=>"", :placeholder=>"البريد الإلكتروني" %>
 			        <small class="error">تأكد من كتابة البريد الإلكتروني بشكل صحيح.</small>
 
 			      </div>
@@ -196,7 +194,7 @@ margin-top:10px;
 			      <!-- Required # of BloodBags -->
 			      <div class="field">
 
-			        <%= f.number_field :blood_bags, :required=>"", :placeholder=>"عدد أكياس الدم" %>
+			        <%= f.text_field :blood_bags, :required=>"", :placeholder=>"عدد أكياس الدم" %>
 			        <small class="error">تأكد من عدد أكياس الدم.</small>
 
 			      </div>
@@ -207,12 +205,12 @@ margin-top:10px;
 
 			        <%= f.text_field :due_date, :required=>"", :placeholder=>"مهلة انتهاء الطلب" , :id=>"datepicker"%>
 			        <small class="error">تأكد من كتابة التاريخ.</small>
-			        <script type="text/javascript">
-			          $(function() {
-			          $( "#datepicker" ).datepicker();
-			          });
-			        </script>
 			      </div>
+						<script type="text/javascript">
+							$(function() {
+							$( "#datepicker" ).datepicker();
+							});
+						</script>
 
 		    	</div>
 					<!-- End of Fields section -->
@@ -258,11 +256,12 @@ margin-top:10px;
   </div>
 
 						<!-- Google map -->
-						<div id="map" style="width:100%; height:300px"></div><br/>
+						<div id="map" style="width:100%; height:300px;"></div><br/>
 
 						<!-- User Address -->
 						<%= f.text_field :location, :required=>"", :placeholder=>"العنوان", value: "", :id => "address" %>
-<!--<div class="row" style="height:100px; overflow:hidden">
+<!--
+<div class="row" style="height:100px; overflow:hidden">
 
 
 							<div class="small-6 column">
@@ -276,8 +275,8 @@ margin-top:10px;
 								</label>
 							</div>
 
-						</div>-->
-
+						</div>
+-->
 					</div>
 					<!-- End of fields section-->
 					<!-- End of fields section -->
@@ -373,27 +372,49 @@ margin-top:10px;
 		});
 
 		// instantiate the addressPicker suggestion engine (based on bloodhound)
-		
 
-function displayResults(result) {
 
-return true;
-}
-$( function() {
-var addressPicker = new AddressPicker({map: {id: '#map', zoom: 8}, marker: {draggable: true, visible: true}, reverseGeocoding: true});
-$('#address').typeahead(null, {
-displayKey: 'description',
-source: addressPicker.ttAdapter()
-});
-addressPicker.bindDefaultTypeaheadEvent($('#address'));
-$(addressPicker).on('addresspicker:selected', function (event, result) { displayResults(result)});
-$(addressPicker).on('addresspicker:predictions', function(event, result) {
-if (result && result.length > 0)
-$('#address').removeClass("empty")
-else
-$('#address').addClass("empty")
-})
-})
+		// map geolocating
+
+		$(function(){
+
+
+		   $("#address").geocomplete({
+		     map: "#map",
+				location:  [26.820553, 30.802498000000014],
+				mapOptions: {
+					map_type: "mobile"
+				},
+		     details: "form ",
+		     markerOptions: {
+		       draggable: true
+		     }
+		   });
+
+
+
+		   $("#address").geocomplete().bind("geocode:result", function(event, results){
+		     $("#request_latitude").val(results.geometry.location.lat());
+		     $("#request_longitude").val(results.geometry.location.lng());
+		  });
+
+		   $("#address").bind("geocode:dragged", function(event, latLng){
+		     $("#request_latitude").val(latLng.lat());
+		     $("#request_longitude").val(latLng.lng());
+		     $("#reset").show();
+		   });
+
+
+		   $("#reset").click(function(){
+		     $("#geocomplete").geocomplete("resetMarker");
+		     $("#reset").hide();
+		     return false;
+		   });
+
+		   $("#find").click(function(){
+		     $("#address").trigger("geocode");
+		   }).click();
+		 });
 
 
 </script>

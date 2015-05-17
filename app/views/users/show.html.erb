@@ -25,7 +25,7 @@
       <h1><%= @user.name %></h1>
 
       <!-- Developer Review: User Bloodtype -->
-      <p>فصيلة الدم: <%= @user.blood_type.type %></p>
+      <p>فصيلة الدم: <%= @user.blood_type.type if @user.blood_type? %></p>
     </div>
   </div>
 

@@ -104,7 +104,7 @@ class Request
   end
 
   def matching_donors
-    blood_type.users.select{|u| u.can_donate? == true}
+    blood_type.user.select{|u| u.can_donate? == true}
   end
 
   def notify_possible_donors

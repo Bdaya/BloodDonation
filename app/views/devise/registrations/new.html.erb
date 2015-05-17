@@ -4,8 +4,7 @@
 <!-- Scripts for Location GeoCoding -->
 
 
- <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js"></script>
- <script src="https://rawgithub.com/sgruhier/typeahead-addresspicker/master/dist/typeahead-addresspicker.js"></script>
+
 
  <style media="screen">
    .typeahead,
@@ -149,7 +148,7 @@ background-color: #0097cf;
               <!-- User Email -->
               <div>
 
-                  <%= f.email_field :email, :required=>"", :pattern=>"email", :placeholder=>"البريد الإلكتروني" %>
+                  <%= f.email_field :email, :required=>"", :placeholder=>"البريد الإلكتروني" %>
                   <small class="error">يرجى إدخال البريد الإلكتروني بشكل صحيح.</small>
 
               </div>
@@ -255,14 +254,14 @@ background-color: #0097cf;
 							<!-- Latitude -->
 							<div class="small-6 column">
 								<label>دائرة عرض
-								<%= f.number_field :latitude, input_html: {id: "latitude"}, :value=>"0" %>
+								<%= f.text :latitude, input_html: {id: "latitude"}, :value=>"0" %>
 								</label>
 							</div>
 
 							<!-- Longitude -->
 							<div class="small-6 column">
 								<label>خط طول
-								<%= f.number_field :longitude, input_html: {id: "longitude"}, :value=>"0" %>
+								<%= f.text_field :longitude, input_html: {id: "longitude"}, :value=>"0" %>
 								</label>
 							</div>
 
@@ -362,28 +361,45 @@ background-color: #0097cf;
       $("dd.third-level").removeClass("disabled").addClass("active");
     });
 
-// instantiate the addressPicker suggestion engine (based on bloodhound)
+// map geolocating
+
+$(function(){
+
+  		   $("#address").geocomplete({
+  		     map: "#map",
+  				location:  [26.820553, 30.802498000000014],
+  				mapOptions: {
+  					map_type: "mobile"
+  				},
+  		     details: "form ",
+  		     markerOptions: {
+  		       draggable: true
+  		     }
+  		   });
 
 
+   $("#address").geocomplete().bind("geocode:result", function(event, results){
+     $("#user_latitude").val(results.geometry.location.lat());
+     $("#user_longitude").val(results.geometry.location.lng());
+  });
 
-function displayResults(result) {
-$("#user_latitude").val(result.lat());
-$("#user_longitude").val(result.lng());
-}
-$( function() {
-var addressPicker = new AddressPicker({map: {id: '#map', zoom: 8}, marker: {draggable: true, visible: true}, reverseGeocoding: true});
-$('#address').typeahead(null, {
-displayKey: 'description',
-source: addressPicker.ttAdapter()
-});
-addressPicker.bindDefaultTypeaheadEvent($('#address'));
-$(addressPicker).on('addresspicker:selected', function (event, result) { displayResults(result)});
-$(addressPicker).on('addresspicker:predictions', function(event, result) {
-if (result && result.length > 0)
-$('#address').removeClass("empty")
-else
-$('#address').addClass("empty")
-})
-})
+   $("#address").bind("geocode:dragged", function(event, latLng){
+     $("#user_latitude").val(latLng.lat());
+     $("#user_longitude").val(latLng.lng());
+     $("#reset").show();
+   });
+
+
+   $("#reset").click(function(){
+     $("#geocomplete").geocomplete("resetMarker");
+     $("#reset").hide();
+     return false;
+   });
+
+   $("#find").click(function(){
+     $("#address").trigger("geocode");
+   }).click();
+ });
+
 
 </script>
